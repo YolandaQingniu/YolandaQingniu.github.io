@@ -594,18 +594,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8F7B;&#x725B;&#x84DD;&#x7259;android-sdk">&#x8F7B;&#x725B;&#x84DD;&#x7259;android SDK</h1>
-<p>&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x9700;&#x8981;&#x653E;&#x7F6E;SDK&#x6587;&#x4EF6;&#x548C;Demo&#x9879;&#x76EE;&#x6587;&#x4EF6;</p>
-<blockquote>
-<p>Demo&#x6587;&#x4EF6;&#x4E2D;&#x4E5F;&#x9700;&#x8981;&#x52A0;&#x5165;&#x6700;&#x65B0;&#x7684;SDK&#x6587;&#x4EF6;</p>
-</blockquote>
-<h2 id="sdk&#x63A5;&#x5165;&#x6B65;&#x9AA4;">SDK&#x63A5;&#x5165;&#x6B65;&#x9AA4;</h2>
-<p>1&#x3001;&#x52A0;&#x5165;jar&#x5305;&#x548C;so&#x6587;&#x4EF6;
-2&#x3001;&#x52A0;&#x5165;&#x8F7B;&#x725B;&#x63D0;&#x4F9B;&#x7684;&#x521D;&#x59CB;&#x6587;&#x4EF6;&#xFF08;&#x9700;&#x8981;&#x8DDF;&#x8F7B;&#x725B;&#x5546;&#x52A1;&#x5BF9;&#x63A5;&#x4EBA;&#x58EB;&#x7533;&#x8BF7;&#xFF09;
-3&#x3001;&#x4F7F;&#x7528;</p>
-<p>&#x5173;&#x952E;&#x7C7B;&#x548C;&#x65B9;&#x6CD5;&#x8BF4;&#x660E;</p>
+                                <h1 id="&#x8F7B;&#x725B;&#x84DD;&#x7259;android-sdk">&#x8F7B;&#x725B;&#x84DD;&#x7259;Android SDK</h1>
+<h2 id="&#x6700;&#x65B0;&#x7248;&#x672C;-v010-&#x4E0B;&#x8F7D;&#x5730;&#x5740;">&#x6700;&#x65B0;&#x7248;&#x672C; <code>v0.1.0</code> <a href="https://github.com/YolandaQingniu/sdk-android-demo/releases/download/v0.1.0/qnsdk-0.1.0-Android.zip" target="_blank">&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></h2>
+<h2 id="sdk&#x6587;&#x4EF6;&#x8BF4;&#x660E;">SDK&#x6587;&#x4EF6;&#x8BF4;&#x660E;</h2>
+<h3 id="&#x7EDF;&#x4E00;&#x5F15;&#x5165;">&#x7EDF;&#x4E00;&#x5F15;&#x5165;</h3>
+<h4 id="&#x5BFC;&#x5165;demo&#x9879;&#x76EE;&#x7684;lib&#x4E2D;&#x7684;jar&#x6587;&#x4EF6;qnsdk-xxxjar&#x548C;&#x5BF9;&#x5E94;&#x7684;so&#x6587;&#x4EF6;">&#x5BFC;&#x5165;demo&#x9879;&#x76EE;&#x7684;lib&#x4E2D;&#x7684;jar&#x6587;&#x4EF6;(qnsdk-xxx.jar)&#x548C;&#x5BF9;&#x5E94;&#x7684;so&#x6587;&#x4EF6;</h4>
+<h3 id="&#x64CD;&#x4F5C;">&#x64CD;&#x4F5C;</h3>
+<h4 id="qnbleapi">QNBleApi</h4>
+<p>&#x8BE5;&#x7C7B;&#x4E3A;SDK&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x7C7B;&#xFF0C;&#x63D0;&#x4F9B;SDK&#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x64CD;&#x4F5C;</p>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<h4 id="qnconfig">QNConfig</h4>
+<p>&#x8BE5;&#x7C7B;&#x4E3A;SDK&#x7684;&#x8BBE;&#x7F6E;&#x7C7B;&#xFF0C;&#x5305;&#x62EC;&#x626B;&#x63CF;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x79E4;&#x5355;&#x4F4D;&#x663E;&#x793A;&#x7B49;&#x914D;&#x7F6E;</p>
+<h3 id="&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h3>
+<h4 id="qnbledevicediscoverylistener">QNBleDeviceDiscoveryListener</h4>
+<p>&#x63D0;&#x4F9B;&#x626B;&#x63CF;&#x79E4;&#x65F6;&#x7684;&#x56DE;&#x8C03;,&#x56DE;&#x8C03;&#x7684;&#x79E4;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x4E3A;QNBleDevice</p>
+<h4 id="qnbledevice">QNBleDevice</h4>
+<p>&#x626B;&#x63CF;&#x8BBE;&#x5907;&#x7684;&#x5BF9;&#x8C61;</p>
+<h4 id="qnuser">QNUser</h4>
+<p>&#x7531;app&#x5411;SDK&#x63D0;&#x4F9B;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#xFF0C;&#x8BBE;&#x7F6E;&#x8FDE;&#x63A5;&#x65F6;&#x9700;&#x8981;&#x7528;&#x5230;</p>
+<h4 id="qnbleconnectionchangelistener">QNBleConnectionChangeListener</h4>
+<p>&#x63D0;&#x4F9B;&#x79E4;&#x5728;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x5404;&#x79CD;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x4EE5;&#x53CA;&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E2D;&#x79E4;&#x7684;&#x6D4B;&#x91CF;&#x72B6;&#x6001;</p>
+<h4 id="qndatalistener">QNDataListener</h4>
+<p>&#x63D0;&#x4F9B;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5305;&#x62EC;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x3001;&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x3001;&#x5B58;&#x50A8;&#x6570;&#x636E;</p>
+<h4 id="qnscaledata">QNScaleData</h4>
+<p>&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5BF9;&#x8C61;</p>
+<h4 id="qnscalestoredata">QNScaleStoreData</h4>
+<p>&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5BF9;&#x8C61;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
+<h4 id="qnscaleitemdata">QNScaleItemData</h4>
+<p>&#x6BCF;&#x4E2A;&#x6307;&#x6807;&#x7684;&#x8BE6;&#x7EC6;&#x6570;&#x636E;&#x5BF9;&#x8C61;</p>
+<h3 id="&#x9519;&#x8BEF;&#x4FE1;&#x606F;">&#x9519;&#x8BEF;&#x4FE1;&#x606F;</h3>
+<h4 id="checkstatus">CheckStatus</h4>
+<p>&#x5C55;&#x793A;&#x4E86;SDK&#x4E2D;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
+<h2 id="sdk&#x8C03;&#x7528;&#x6B65;&#x9AA4;">SDK&#x8C03;&#x7528;&#x6B65;&#x9AA4;</h2>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316;SDK <code>(QNBleApi)initSdk</code></li>
+<li>&#x5F00;&#x542F;&#x626B;&#x63CF; <code>(QNBleApi)startBleDeviceDiscovery</code><ul>
+<li>&#x5F00;&#x542F;&#x626B;&#x63CF;&#x9700;&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x8BBE;&#x5907;&#x7684;&#x76D1;&#x542C; <code>(QNBleApi)setBleDeviceDiscoveryListener</code></li>
+<li>&#x5F00;&#x542F;&#x626B;&#x63CF;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x626B;&#x63CF;&#x5BF9;&#x8C61;QNConfig,&#x53EF;&#x4EE5;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;&#x6216;&#x83B7;&#x53D6;&#x4E0A;&#x6B21;&#x8BBE;&#x7F6E;&#x7684;&#x5BF9;&#x8C61; <code>(QNBleApi)getConfig</code></li>
+</ul>
+</li>
+<li>&#x8BBE;&#x7F6E;&#x626B;&#x63CF;&#x914D;&#x7F6E; &#xFF08;&#x6B65;&#x9AA4;2&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x5BF9;&#x8C61;&#xFF09;<ul>
+<li>&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x4FE1;&#x606F; <code>(QNConfig *)new QNConfig()</code><ul>
+<li>&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x53EA;&#x626B;&#x63CF;&#x5F00;&#x673A;&#x7684;&#x79E4; <code>onlyScreenOn</code></li>
+<li>&#x8BBE;&#x7F6E;&#x626B;&#x63CF;&#x5230;&#x79E4;&#x65F6;&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x591A;&#x6B21; <code>allowDuplicates</code></li>
+<li>&#x8BBE;&#x7F6E;&#x626B;&#x63CF;&#x7684;&#x65F6;&#x95F4; <code>duration</code></li>
+<li>&#x8BBE;&#x7F6E;&#x79E4;&#x7AEF;&#x663E;&#x793A;&#x7684;&#x5355;&#x4F4D; <code>unit</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x8BBE;&#x7F6E;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x76D1;&#x542C; <code>(QNBleApi)setBleConnectionChangeListener</code></li>
+<li>&#x8BBE;&#x7F6E;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;&#x76D1;&#x542C; <code>(QNBleApi)setDataListener</code></li>
+<li>&#x6784;&#x5EFA;&#x8FDE;&#x63A5;&#x79E4;&#x7684;&#x7528;&#x6237;&#x5BF9;&#x8C61; <code>(QNBleApi)buildUser:String userId,int height,String gender,Date birthday,QNResultCallback callback</code></li>
+<li>&#x8FDE;&#x63A5;&#x8BBE;&#x5907; <code>connectDevice:QNBleDevice device,QNUser user,QNResultCallback callback</code></li>
+</ol>
 <h2 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
-<p>&#x7F16;&#x8BD1;&#x65F6;&#xFF0C;targetSdkVersion &#x5728;23&#x53CA;&#x4EE5;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x83B7;&#x53D6;&#x5B9A;&#x4F4D;&#x6743;&#x9650;&#xFF0C;&#x624D;&#x80FD;&#x626B;&#x63CF;&#x5230;&#x8BBE;&#x5907;&#x3002;</p>
+<ul>
+<li>&#x5FC5;&#x987B;&#x5728;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x7533;&#x8BF7;&#x84DD;&#x7259;&#x6743;&#x9650;&#x3001;&#x4F4D;&#x7F6E;&#x6743;&#x9650;&#x3001;&#x7F51;&#x7EDC;&#x6743;&#x9650;&#xFF08;&#x79BB;&#x7EBF;SDK&#x4E0D;&#x9700;&#x8981;&#xFF09;</li>
+<li>&#x5FC5;&#x987B;&#x5728;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;SDK&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x670D;&#x52A1;&#xFF1A;com.qingniu.qnble.scanner.BleScanService&#xFF0C;com.qingniu.scale.ble.ScaleBleService</li>
+<li>targetSdkVersion &#x5728;23&#x53CA;&#x4EE5;&#x4E0A;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x83B7;&#x53D6;&#x5B9A;&#x4F4D;&#x6743;&#x9650;&#xFF0C;&#x624D;&#x80FD;&#x626B;&#x63CF;&#x5230;&#x8BBE;&#x5907;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x81EA;&#x5DF1;&#x7533;&#x8BF7;</li>
+</ul>
 
                                 
                                 </section>
@@ -649,7 +697,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"ios/README.md","ref":"ios/README.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/README.md","mtime":"2018-05-09T03:56:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T06:59:19.899Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"ios/README.md","ref":"ios/README.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/README.md","mtime":"2018-05-12T09:06:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T09:16:27.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
