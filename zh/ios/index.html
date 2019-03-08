@@ -670,12 +670,25 @@
 <h3 id="&#x9519;&#x8BEF;&#x4FE1;&#x606F;">&#x9519;&#x8BEF;&#x4FE1;&#x606F;</h3>
 <h4 id="qnerrorcodeh">QNErrorCode.h</h4>
 <p>&#x8BE5;&#x5934;&#x6587;&#x4EF6;&#x5C55;&#x793A;&#x4E86;SDK&#x4E2D;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x7C7B;&#x578B;</p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<h3 id="cocoapods&#x5B89;&#x88C5;">cocoapods&#x5B89;&#x88C5;:</h3>
+<ul>
+<li>&#x5148;&#x5B89;&#x88C5;Cocoapods&#xFF1B;</li>
+<li>&#x901A;&#x8FC7; pod repo update &#x66F4;&#x65B0;QNSDK&#x7684;cocoapods&#x7248;&#x672C;&#x3002;</li>
+<li>&#x5728;Podfile&#x5BF9;&#x5E94;&#x7684;target&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;pod &apos;QNSDK&apos;&#xFF0C;&#x5E76;&#x6267;&#x884C;pod install</li>
+<li>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;CocoaPods&#x751F;&#x6210;&#x7684;.xcworkspace&#x8FD0;&#x884C;&#x5DE5;&#x7A0B;&#x3002;</li>
+<li>&#x5728;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5934;&#x5F15;&#x5165;&#x5934;&#x6587;&#x4EF6;<code>#import &lt;QNSDK/QNDeviceSDK.h&gt;</code></li>
+</ul>
+<h3 id="&#x624B;&#x52A8;&#x5B89;&#x88C5;">&#x624B;&#x52A8;&#x5B89;&#x88C5;:</h3>
+<ul>
+<li>&#x4E0B;&#x8F7D;SDK&#x5B89;&#x88C5;&#x5305;&#x81F3;&#x5DE5;&#x7A0B;</li>
+<li>&#x5F15;&#x5165;SDK&#x8DEF;&#x5F84; &#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt;&#x3010;Search Paths&#x3011;-&gt;&#x3010;LibrarySearch Paths&#x3011;&#x4E2D;&#x6DFB;&#x52A0;SDK&#x8DEF;&#x5F84;</li>
+<li>&#x914D;&#x7F6E;&#x94FE;&#x63A5;&#x5668; &#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt; &#x3010;Linking&#x3011;-&gt; &#x3010;Other Linker Flags&#x3011;&#x4E2D;&#x6DFB;&#x52A0; <code>-ObjC</code>&#x3001;<code>-all_load</code>&#x3001;<code>-force_load [SDK&#x8DEF;&#x5F84;]</code> &#x5176;&#x4E2D;&#x4E4B;&#x4E00;</li>
+</ul>
 <h2 id="sdk&#x8C03;&#x7528;&#x6B65;&#x9AA4;">SDK&#x8C03;&#x7528;&#x6B65;&#x9AA4;</h2>
 <h3 id="1-&#x5DE5;&#x7A0B;&#x7684;&#x914D;&#x7F6E;">1. &#x5DE5;&#x7A0B;&#x7684;&#x914D;&#x7F6E;</h3>
 <ul>
 <li>&#x5728;Info.plist&#x4E2D;&#x6709;&#x5BF9; &quot;Privacy - Bluetooth Peripheral Usage Description&quot; &#x952E; &#x8FDB;&#x884C;&#x84DD;&#x7259;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</li>
-<li>&#x5F15;&#x5165;SDK&#x8DEF;&#x5F84; &#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt;&#x3010;Search Paths&#x3011;-&gt;&#x3010;LibrarySearch Paths&#x3011;&#x4E2D;&#x6DFB;&#x52A0;SDK&#x8DEF;&#x5F84;</li>
-<li>&#x914D;&#x7F6E;&#x94FE;&#x63A5;&#x5668; &#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt; &#x3010;Linking&#x3011;-&gt; &#x3010;Other Linker Flags&#x3011;&#x4E2D;&#x6DFB;&#x52A0; <code>-ObjC</code>&#x3001;<code>-all_load</code>&#x3001;<code>-force_load [SDK&#x8DEF;&#x5F84;]</code> &#x5176;&#x4E2D;&#x4E4B;&#x4E00;</li>
 </ul>
 <h3 id="2-&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6B65;&#x9AA4;">2. &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6B65;&#x9AA4;</h3>
 <ol>
@@ -754,7 +767,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ios","level":"1.3","depth":1,"next":{"title":"主要流程","level":"1.4","depth":1,"path":"flow.md","ref":"flow.md","articles":[]},"previous":{"title":"android","level":"1.2","depth":1,"path":"android/README.md","ref":"android/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"ios/README.md","mtime":"2019-02-19T08:33:59.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T02:44:08.821Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"ios","level":"1.3","depth":1,"next":{"title":"主要流程","level":"1.4","depth":1,"path":"flow.md","ref":"flow.md","articles":[]},"previous":{"title":"android","level":"1.2","depth":1,"path":"android/README.md","ref":"android/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"ios/README.md","mtime":"2019-03-08T06:06:21.367Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T06:10:48.009Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
