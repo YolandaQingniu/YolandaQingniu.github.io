@@ -912,7 +912,7 @@
 <h3 id="&#x9996;&#x6B21;&#x4F7F;&#x7528;">&#x9996;&#x6B21;&#x4F7F;&#x7528;</h3>
 <p>&#x9996;&#x6B21;&#x4F7F;&#x7528;&#x65F6;</p>
 <h4 id="1-&#x626B;&#x63CF;&#x8BBE;&#x5907;">1. &#x626B;&#x63CF;&#x8BBE;&#x5907;</h4>
-<p>&#x8C03;&#x7528;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x7684; API&#xFF0C;&#x626B;&#x63CF;&#x5230;&#x8F7B;&#x725B;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF08;QNBleDevice&#xFF09;,&#x5E76;&#x5224;&#x65AD; <code>isSupportWifi</code> &#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A;true&#xFF0C;&#x5982;&#x679C;true&#x5219;&#x652F;&#x6301;Wifi&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x8C03;&#x7528;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x7684; API&#xFF0C;&#x626B;&#x63CF;&#x5230;&#x8F7B;&#x725B;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF08;QNBleDevice&#xFF09;,&#x5E76;&#x5224;&#x65AD; <code>isSupportWifi</code> &#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A; true&#xFF0C;&#x5982;&#x679C; true &#x5219;&#x652F;&#x6301; Wifi &#x529F;&#x80FD;&#x3002;</p>
 <h4 id="2-&#x6CE8;&#x518C;&#x8BBE;&#x5907;">2. &#x6CE8;&#x518C;&#x8BBE;&#x5907;</h4>
 <p>WiFi &#x8BBE;&#x5907;&#x9700;&#x8981;&#x8DDF;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#xFF0C;&#x8C03;&#x7528; API <a href="../api/QNBleApi.html#registerwifibledevice">&#x5411;&#x8F7B;&#x725B;&#x4E91;&#x6CE8;&#x518C; WiFi &#x84DD;&#x7259;&#x53CC;&#x6A21;&#x8BBE;&#x5907;</a></p>
 <blockquote>
@@ -959,12 +959,14 @@
 <td style="text-align:left">Double</td>
 <td style="text-align:left">58.8</td>
 <td style="text-align:left">kg</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">&#x6D4B;&#x91CF;&#x65F6;&#x95F4;</td>
 <td style="text-align:left">measure_time</td>
 <td style="text-align:left">Data</td>
 <td style="text-align:left">2019-04-29 15:21:18</td>
+<td style="text-align:left"></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -973,6 +975,7 @@
 <td style="text-align:left">String</td>
 <td style="text-align:left">F0:FE:6B:CB:75:6A</td>
 <td style="text-align:left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">&#x578B;&#x53F7; ID</td>
@@ -980,13 +983,23 @@
 <td style="text-align:left">String</td>
 <td style="text-align:left">0000</td>
 <td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6570;&#x636E;&#x4FE1;&#x606F;</td>
+<td style="text-align:left">hmac</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x7EED;&#x7528;&#x6765;&#x751F;&#x6210;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x5BF9;&#x5E94; SDK &#x4E2D;&#x7684;<code>hmac</code>&#x5B57;&#x6BB5;</td>
 </tr>
 <tr>
 <td style="text-align:left">&#x7B7E;&#x540D;</td>
 <td style="text-align:left">sign</td>
 <td style="text-align:left">String</td>
+<td style="text-align:left">JSON &#x683C;&#x5F0F;</td>
 <td style="text-align:left"></td>
-<td style="text-align:left">&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x7EED;&#x7528;&#x6765;&#x751F;&#x6210;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x5BF9;&#x5E94;SDK&#x4E2D;&#x7684;<code>hmac</code>&#x5B57;&#x6BB5;</td>
+<td style="text-align:left">&#x7B7E;&#x540D;&#xFF0C;&#x8BE6;&#x89C1;&#x7B7E;&#x540D;&#x7B97;&#x6CD5;</td>
 </tr>
 </tbody>
 </table>
@@ -1177,36 +1190,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">&#x72B6;&#x6001;&#x7801;</td>
-<td style="text-align:left">code</td>
-<td style="text-align:left">&#x662F;</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">20000</td>
-<td style="text-align:left">&#x6210;&#x529F;/&#x5931;&#x8D25;</td>
-</tr>
-<tr>
 <td style="text-align:left">&#x7528;&#x6237;&#x6807;&#x8BC6;</td>
 <td style="text-align:left">user_id</td>
 <td style="text-align:left">&#x662F;</td>
 <td style="text-align:left">String</td>
 <td style="text-align:left">qn888888</td>
 <td style="text-align:left">&#x8F7B;&#x725B;&#x5206;&#x914D;&#x7684;&#x5408;&#x4F5C;&#x65B9; ID</td>
-</tr>
-<tr>
-<td style="text-align:left">&#x72B6;&#x6001;&#x7801;</td>
-<td style="text-align:left">code</td>
-<td style="text-align:left">&#x662F;</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">20000</td>
-<td style="text-align:left">&#x6210;&#x529F;/&#x5931;&#x8D25;</td>
-</tr>
-<tr>
-<td style="text-align:left">&#x8FD4;&#x56DE;&#x4FE1;&#x606F;</td>
-<td style="text-align:left">msg</td>
-<td style="text-align:left">&#x5426;</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">success /fail</td>
-<td style="text-align:left">&#x6210;&#x529F;&#x6216;&#x9519;&#x8BEF;&#x7684;&#x63CF;&#x8FF0;</td>
 </tr>
 <tr>
 <td style="text-align:left">&#x6D4B;&#x91CF;&#x65F6;&#x95F4;</td>
@@ -1226,11 +1215,11 @@
 </tr>
 <tr>
 <td style="text-align:left">&#x578B;&#x53F7;</td>
-<td style="text-align:left">ID</td>
 <td style="text-align:left">model_id</td>
 <td style="text-align:left">&#x662F;</td>
 <td style="text-align:left">String</td>
 <td style="text-align:left">0000</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">&#x6307;&#x6807;&#x6570;&#x7EC4;</td>
@@ -1295,19 +1284,19 @@ a328c2ec0a60cbbc9961a1189f61e97b</p>
 3&#x3001;&#x5BA2;&#x6237;&#x4E91;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x548C;&#x7528;&#x6237;&#x4E4B;&#x524D;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5C1D;&#x8BD5;&#x5224;&#x65AD;&#x8BE5;&#x6761;&#x8BBE;&#x5907;&#x7684;&#x6240;&#x5C5E;&#x4EBA;&#xFF0C;&#x5982;&#x679C;&#x5224;&#x65AD;&#x51FA;&#x6765;&#xFF0C;&#x5C31;&#x628A;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x8D44;&#x6599;&#x56DE;&#x4F20;&#x7ED9;&#x8F7B;&#x725B;&#x4E91;.
 4&#x3001;&#x8F7B;&#x725B;&#x4E91;&#x6536;&#x5230;&#x5BA2;&#x6237;&#x4E91;&#x56DE;&#x4F20;&#x7684;&#x7528;&#x6237;&#x8D44;&#x6599;&#xFF0C;&#x518D;&#x7ED3;&#x5408;&#x79E4;&#x7AEF;&#x6570;&#x636E;&#xFF0C;&#x8BA1;&#x7B97;&#x51FA;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x3002;
 5&#x3001;&#x8F7B;&#x725B;&#x4E91;&#x5C06;&#x5B8C;&#x6574;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x63A8;&#x9001;&#x81F3;&#x5BA2;&#x6237;&#x4E91;&#x3002;
-6&#x3001;&#x5BA2;&#x6237;&#x4E91;&#x5C06;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x63A8;&#x9001;&#x81F3;APP&#xFF0C;&#x5C55;&#x793A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7ED9;&#x5BA2;&#x6237;&#x770B;&#x3002;</p>
+6&#x3001;&#x5BA2;&#x6237;&#x4E91;&#x5C06;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x63A8;&#x9001;&#x81F3; APP&#xFF0C;&#x5C55;&#x793A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7ED9;&#x5BA2;&#x6237;&#x770B;&#x3002;</p>
 <p><strong>&#x5339;&#x914D;&#x5230;&#x591A;&#x7528;&#x6237;&#x6D4B;&#x91CF;</strong>
 &#x5176;&#x4E2D;&#x4E0A;&#x8FF0;&#x6B65;&#x9AA4;&#x4E2D;&#xFF0C;&#x7B2C;<code>3</code>&#x6B65;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x67E5;&#x627E;&#x6D4B;&#x91CF;&#x7528;&#x6237;&#x5931;&#x8D25;&#xFF0C;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x60C5;&#x51B5;&#xFF1A;
 1&#x3001;&#x6CA1;&#x6709;&#x7528;&#x6237;&#x7ED1;&#x5B9A;&#x8BE5;&#x8BBE;&#x5907;
 &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E22;&#x5F03;&#xFF0C;&#x53D1;&#x6325;&#x4E03;&#x725B;&#x4E91;&#xFF0C;&#x672A;&#x5339;&#x914D;&#x5230;&#x6570;&#x636E;&#x3002;
-2&#x3001;&#x6709;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x540C;&#x65F6;&#x7ED1;&#x5B9A;&#x4E86;&#x8BE5;&#x8BBE;&#x5907;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x6709;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x540C;&#x65F6;&#x5728;&#x4F7F;&#x7528;&#x8BE5;&#x8BBE;&#x5907;&#x3002;&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x51FA;&#x662F;&#x54EA;&#x4E2A;&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;&#x79E4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x56FE;&#xFF0C;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;APP&#x4E2D;&#x91C7;&#x7528;&#x7684;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x65B9;&#x6848;&#x3002;</p>
+2&#x3001;&#x6709;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x540C;&#x65F6;&#x7ED1;&#x5B9A;&#x4E86;&#x8BE5;&#x8BBE;&#x5907;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x6709;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x540C;&#x65F6;&#x5728;&#x4F7F;&#x7528;&#x8BE5;&#x8BBE;&#x5907;&#x3002;&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x51FA;&#x662F;&#x54EA;&#x4E2A;&#x7528;&#x6237;&#x5728;&#x4F7F;&#x7528;&#x79E4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x56FE;&#xFF0C;&#x6211;&#x4EEC;&#x81EA;&#x5DF1; APP &#x4E2D;&#x91C7;&#x7528;&#x7684;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x65B9;&#x6848;&#x3002;</p>
 <p><img src="../images/sbyh.png" alt="&#x8BC6;&#x522B;&#x7528;&#x6237;"></p>
 <p>3&#x3001;&#x5982;&#x679C;&#x901A;&#x8FC7;&#x4E0A;&#x56FE;&#x65B9;&#x6848;&#xFF0C;&#x80FD;&#x591F;&#x552F;&#x4E00;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x5219;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x6D4B;&#x91CF;&#x6D41;&#x7A0B;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x8FD8;&#x662F;&#x8BC6;&#x522B;&#x51FA;&#x591A;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x5219;&#x53EF;&#x53C2;&#x7167;&#x4E0B;&#x9762;&#x6D41;&#x7A0B;&#x3002;</p>
 <iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBzY2FsZSBhcyDnp6RcbnBhcnRpY2lwYW50IHFuIGFzIOi9u-eJm-S6kVxucGFydGljaXBhbnQgY3MgYXMg5a6i5oi35LqRXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5cblxuc2NhbGUtPj5xbjog5LiK5Lyg5rWL6YeP5pWw5o2uXG5xbi0-PmNzOiDovazlj5HmtYvph4_mlbDmja5cbmNzLT4-Y3M6IOafpeWIsOe7keWumuiuvuWkh-eahOeUqOaIt1xucW4tLT5xbjog6Zi75aGe562J5b6F5a6i5oi35LqR5Zue5Lyg55So5oi35L-h5oGvXG5jcy0-PmNzOiDljLnphY3liLDlpJrkuKrnlKjmiLdcbmNzLT4-Y3M6IOaKiuaVsOaNruWFiOS_neWtmOiHs-aVsOaNruW6k1xuY3MtPj5xbjog6YCa55-l5peg5Yy56YWN55So5oi3XG5jcy0-PmFwcDog5o6o6YCB5pWw5o2u6IezQVBQXG5hcHAtPj5hcHA6IOeUqOaIt-iupOmihuaVsOaNrlxuYXBwLT4-YXBwOiDosIPnlKhTREvnlJ_kuqflrozmlbTmtYvph4_mlbDmja5cbmFwcC0-PmNzOiDmiormlbDmja7kv53lrZjoh7PkupHnq68iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="600"></iframe>
 
 <blockquote>
 <p>&#x4E0A;&#x56FE;&#x63D0;&#x5230;&#x7684;<code>&#x8C03;&#x7528;SDK&#x751F;&#x6210;&#x5B8C;&#x6574;&#x6D4B;&#x91CF;&#x6570;&#x636E;</code>&#x65B9;&#x6CD5;&#x662F;&#xFF1A;<a href="../api/QNScaleStoreData.html#buildStoreData">QNScaleStoreData.buildStoreData</a>
-&#x8BE2;&#x95EE;&#x7528;&#x6237;&#x8D44;&#x6599;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7B7E;&#x540D;(sign)&#x4E5F;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x548C;&#x4E0B;&#x53D1;&#x81F3;APP&#xFF0C;&#x7528;&#x6765;&#x8C03;&#x7528;SDK&#x751F;&#x4EA7;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x3002;</p>
+&#x8BE2;&#x95EE;&#x7528;&#x6237;&#x8D44;&#x6599;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7B7E;&#x540D;(sign)&#x4E5F;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x548C;&#x4E0B;&#x53D1;&#x81F3; APP&#xFF0C;&#x7528;&#x6765;&#x8C03;&#x7528; SDK &#x751F;&#x4EA7;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x3002;</p>
 </blockquote>
 
                                 
@@ -1352,7 +1341,7 @@ a328c2ec0a60cbbc9961a1189f61e97b</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"普通蓝牙秤-带有Wifi功能","level":"1.4.3","depth":2,"next":{"title":"广播秤","level":"1.4.4","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"previous":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/flow_dm.md","mtime":"2020-01-09T08:18:27.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-09T08:19:46.547Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"普通蓝牙秤-带有Wifi功能","level":"1.4.3","depth":2,"next":{"title":"广播秤","level":"1.4.4","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"previous":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/flow_dm.md","mtime":"2020-01-15T08:22:20.096Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-15T08:07:00.394Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
