@@ -1,8 +1,12 @@
-var ghpages = require('gh-pages');
+var ghpages = require("gh-pages");
 
-ghpages.publish('_book',{
-    branch:"master",
-    repo:"https://github.com/YolandaQingniu/YolandaQingniu.github.io.git",
-}, function(err) {
-    console.log(err)
-});
+ghpages.publish(
+  "_book",
+  {
+    branch: "master",
+    repo: "https://github.com/YolandaQingniu/YolandaQingniu.github.io.git"
+  },
+  function(err) {
+    console.log(err);
+  }
+);
