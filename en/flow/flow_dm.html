@@ -1,0 +1,1401 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Ordinary Bluetooth scale-with Wifi function · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="broadcast_scale.html" />
+    
+    
+    <link rel="prev" href="ble_scale_custom_connect.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guide/android.html">
+            
+                <a href="../guide/android.html">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guide/ios.html">
+            
+                <a href="../guide/ios.html">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    work process
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
+            
+                <a href="ble_scale.html">
+            
+                    
+                    Ordinary Bluetooth scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ble_scale_custom_connect.html">
+            
+                <a href="ble_scale_custom_connect.html">
+            
+                    
+                    Ordinary Bluetooth scale-self-managed Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="flow_dm.html">
+            
+                <a href="flow_dm.html">
+            
+                    
+                    Ordinary Bluetooth scale-with Wifi function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="broadcast_scale.html">
+            
+                <a href="broadcast_scale.html">
+            
+                    
+                    Broadcast scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="broadcast_scale_custom_scan.html">
+            
+                <a href="broadcast_scale_custom_scan.html">
+            
+                    
+                    Broadcast Scale-Custom Bluetooth Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="kitchen_scale.html">
+            
+                <a href="kitchen_scale.html">
+            
+                    
+                    Kitchen scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="kitchen_scale_custom_scan.html">
+            
+                <a href="kitchen_scale_custom_scan.html">
+            
+                    
+                    Kitchen Scale-Custom Bluetooth Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html">
+            
+                    
+                    QNBleApi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#initsdk">
+            
+                    
+                    initSdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbledevicediscoverylistener">
+            
+                    
+                    setBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#startbledevicediscovery">
+            
+                    
+                    startBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#stopbledevicediscovery">
+            
+                    
+                    stopBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevice">
+            
+                    
+                    connectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#disconnectdevice">
+            
+                    
+                    disconnectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#registerwifibledevice">
+            
+                    
+                    registerWiFiBleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbleconnectionchangelistener">
+            
+                    
+                    setBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setScaleDataListener">
+            
+                    
+                    setScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setloglistener">
+            
+                    
+                    setLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getconfig">
+            
+                    
+                    getConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#convertweightwithtargetunit">
+            
+                    
+                    convertWeightWithTargetUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#builduser">
+            
+                    
+                    buildUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#builddevice">
+            
+                    
+                    buildDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#buildprotocolhandler">
+            
+                    
+                    buildProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#buildbroadcastdevice">
+            
+                    
+                    buildBroadcastDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevicesetwifi">
+            
+                    
+                    connectDeviceSetWiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api/QNUtils.html">
+            
+                <a href="../api/QNUtils.html">
+            
+                    
+                    QNUtils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api/QNResultCallback.html">
+            
+                <a href="../api/QNResultCallback.html">
+            
+                    
+                    QNResultCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../api/QNBleDevice.html">
+            
+                <a href="../api/QNBleDevice.html">
+            
+                    
+                    QNBleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../api/QNBleBroadcastDevice.html">
+            
+                <a href="../api/QNBleBroadcastDevice.html">
+            
+                    
+                    QNBleBroadcastDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleKitchenDevice.html">
+            
+                <a href="../api/QNBleKitchenDevice.html">
+            
+                    
+                    QNBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../api/QNUser.html">
+            
+                <a href="../api/QNUser.html">
+            
+                    
+                    QNUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNLogListener.html">
+            
+                <a href="../api/QNLogListener.html">
+            
+                    
+                    QNLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNConfig.html">
+            
+                <a href="../api/QNConfig.html">
+            
+                    
+                    QNConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNWiFiConfig.html">
+            
+                <a href="../api/QNWiFiConfig.html">
+            
+                    
+                    QNWiFiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNBleConnectionChangeListener.html">
+            
+                <a href="../api/QNBleConnectionChangeListener.html">
+            
+                    
+                    QNBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNBleDeviceDiscoveryListener.html">
+            
+                <a href="../api/QNBleDeviceDiscoveryListener.html">
+            
+                    
+                    QNBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNScaleData.html">
+            
+                <a href="../api/QNScaleData.html">
+            
+                    
+                    QNScaleData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNShareData.html">
+            
+                <a href="../api/QNShareData.html">
+            
+                    
+                    QNShareData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNScaleStoreData.html">
+            
+                <a href="../api/QNScaleStoreData.html">
+            
+                    
+                    QNScaleStoreData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNScaleItemData.html">
+            
+                <a href="../api/QNScaleItemData.html">
+            
+                    
+                    QNScaleItemData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNBleProtocolHandler.html">
+            
+                <a href="../api/QNBleProtocolHandler.html">
+            
+                    
+                    QNBleProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNBleProtocolDelegate.html">
+            
+                <a href="../api/QNBleProtocolDelegate.html">
+            
+                    
+                    QNBleProtocolDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Schedule
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../attouched_list/faq.html">
+            
+                <a href="../attouched_list/faq.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../attouched_list/body_indexes.html">
+            
+                <a href="../attouched_list/body_indexes.html">
+            
+                    
+                    Body index constant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../attouched_list/device_type.html">
+            
+                <a href="../attouched_list/device_type.html">
+            
+                    
+                    Device type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../attouched_list/body_shape.html">
+            
+                <a href="../attouched_list/body_shape.html">
+            
+                    
+                    Body shape comparison table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../attouched_list/error_code.html">
+            
+                <a href="../attouched_list/error_code.html">
+            
+                    
+                    Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/scan_error.html">
+            
+                <a href="../attouched_list/scan_error.html">
+            
+                    
+                    Scanning Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/scale_state.html">
+            
+                <a href="../attouched_list/scale_state.html">
+            
+                    
+                    Scale state definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../history/history.html">
+            
+                <a href="../history/history.html">
+            
+                    
+                    Update log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Ordinary Bluetooth scale-with Wifi function</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dual-mode-scale-access-guide">Dual mode scale access guide</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The &quot;dual-mode scale&quot; mentioned here refers to a body fat scale with two data transmission functions: WiFi and Bluetooth</p>
+<h2 id="function">Function</h2>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>Set the ssid and password for WiFi</p>
+<p>Data transfer for weighing</p>
+<h3 id="wifi">WiFi</h3>
+<p>Weighing data transmission</p>
+<h2 id="wifi-usage-process">WiFi usage process</h2>
+<h3 id="first-time-using">first time using</h3>
+<p>When using for the first time</p>
+<h4 id="1-scanning-device">1. Scanning device</h4>
+<p>Call the API of the ordinary Bluetooth scale, scan the Bluetooth device (QNBleDevice), and determine whether the value of <code>isSupportWifi</code> is true. If true, the Wifi function is supported.</p>
+<h4 id="2-register-device">2. Register Device</h4>
+<p>The WiFi device needs to register with the server and call the API <a href="../api/QNBleApi.html#registerwifibledevice">register WiFi dual-mode device with Qingniu Cloud</a></p>
+<blockquote>
+<p>This method requires a network, please ensure that the method is successfully executed, otherwise the cloud cannot receive the measurement data forwarded by our cloud
+The method can be successfully executed once, but it has no adverse effects multiple times.</p>
+</blockquote>
+<h4 id="3-configure-wifi">3. Configure WiFi</h4>
+<p>The WiFi ssid and password are not saved at the scale end when leaving the factory. At this time, you need to call the relevant APP of Bluetooth to configure the scale end.</p>
+<blockquote>
+<p>Networking API Please see <a href="../api/QNBleApi.html#connectdevicesetwifi">Networking for WiFi Bluetooth Dual Mode Device</a></p>
+</blockquote>
+<h2 id="4-writing-network-interfaces">4. Writing network interfaces</h2>
+<p>Provide the address prefix of the client&apos;s cloud server, such as: <a href="http://www.baidu.com/scale/" target="_blank">http://www.baidu.com/scale/</a></p>
+<blockquote>
+<p>We collectively refer to our company&apos;s servers as:Light Cow Cloud, the customer&apos;s server is: Merchant Cloud</p>
+</blockquote>
+<h3 id="ask-user-profile-interface">Ask user profile interface</h3>
+<h4 id="scenes">Scenes</h4>
+<p>Preconditions: The scale has been successfully registered, the scale has been configured with the network, and Bluetooth is not connected during the measurement.</p>
+<p>At this time, the data will be uploaded to the light cow cloud via WiFi, and then the light cow cloud will forward the relevant information such as weight and measurement time to the merchant cloud.</p>
+<p>At this time, the merchant cloud needs to query the user who is bound to the device in the service, and return the user information to the light cow cloud, and then the light cow combines the user data to calculate and then pass the data through <a href="#push-measurement-data-service">Push Measurement Data Service</a>.</p>
+<h4 id="basic">Basic</h4>
+<p>Interface address: prefix + user_info, example: address is <a href="http://www.baidu.com/accept/user_info" target="_blank">http://www.baidu.com/accept/user_info</a> where <code>user_info</code> is appended to the provided interface address prefix</p>
+<p>Request method: <code>GET</code></p>
+<blockquote>
+<p>Normally, the response will not be sent again after success, and it will not be sent again in the case of failure.</p>
+</blockquote>
+<h4 id="request-parameters">Request parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field name</th>
+<th style="text-align:left">variable name</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Example values</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">body weight</td>
+<td style="text-align:left">weight</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">58.8</td>
+<td style="text-align:left">kg</td>
+</tr>
+<tr>
+<td style="text-align:left">measure time</td>
+<td style="text-align:left">measure_time</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">2019-04-29 15:21:18</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">F0:FE:6B:CB:75:6A</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Model ID</td>
+<td style="text-align:left">model_id</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">0000</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Data information</td>
+<td style="text-align:left">hmac</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">This can be used later to generate measurement data, corresponding to the <code>hmac</code> field in the SDK</td>
+</tr>
+<tr>
+<td style="text-align:left">signature</td>
+<td style="text-align:left">sign</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">JSON format</td>
+<td style="text-align:left">Signature, see signature algorithm for details</td>
+</tr>
+</tbody>
+</table>
+<h4 id="return-data">Return data</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field name</th>
+<th style="text-align:left">variable name</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Example values</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Return status</td>
+<td style="text-align:left">status</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">20000</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">height</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">176.7</td>
+<td style="text-align:left">cm</td>
+</tr>
+<tr>
+<td style="text-align:left">gender</td>
+<td style="text-align:left">gender</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0 female 1 male</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">birthday</td>
+<td style="text-align:left">birthday</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">1986-01-01</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Body type</td>
+<td style="text-align:left">user_shape</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">aims</td>
+<td style="text-align:left">user_goal</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Clothing weight</td>
+<td style="text-align:left">clothing_weight</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">1.2</td>
+<td style="text-align:left">kg</td>
+</tr>
+<tr>
+<td style="text-align:left">Whether athlete</td>
+<td style="text-align:left">sport_flag</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0 No 1 Yes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">User ID</td>
+<td style="text-align:left">user_id</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">1001</td>
+</tr>
+</tbody>
+</table>
+<p>Examples are:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;20000&quot;</span>,
+  <span class="hljs-string">&quot;user_info&quot;</span>: {
+    <span class="hljs-string">&quot;height&quot;</span>: <span class="hljs-number">160.0</span>,
+    <span class="hljs-string">&quot;gender&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;birthday&quot;</span>: <span class="hljs-string">&quot;1986-01-01&quot;</span>,
+    <span class="hljs-string">&quot;user_shape&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;user_goal&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;clothing_weight&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;sport_flag&quot;</span>: <span class="hljs-number">0</span>
+  }
+}
+</code></pre>
+<p>If no user is matched, there is no user_info key</p>
+<h3 id="push-measurement-data-service">Push measurement data service</h3>
+<h4 id="scenes">Scenes</h4>
+<p>After receiving the user data returned by Merchant Cloud, Qingniu Cloud will calculate the fitness data, and then push the data to Merchant Cloud through this interface</p>
+<h4 id="basic">Basic</h4>
+<p>Interface address: prefix + measure, example: address is <a href="http://www.baidu.com/accept/measure" target="_blank">http://www.baidu.com/accept/measure</a> where <code>measure</code> is appended to the provided interface address prefix</p>
+<p>Request method: <code>POST</code></p>
+<blockquote>
+<p>During the notification interaction, if Light Cow received a response from the partner that was not successful or timed out, Light Cow thought that the notification failed, and Light Cow would periodically re-initiate the notification through a certain strategy to maximize the success rate of the notification, but Light Cow does not guarantee the notification. Finally succeed. (Notification frequency is 15/30/180/1800/3600, unit: second)
+In addition, in general, the response will not be sent again after a successful response. In the case of failure, the same notification may be sent to the partner system multiple times. Partner systems must be able to handle duplicate notifications correctly.</p>
+</blockquote>
+<h4 id="request-parameters">Request parameters</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field name</th>
+<th style="text-align:left">variable name</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Example values</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Partner ID</td>
+<td style="text-align:left">partner_id</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">qn888888</td>
+<td style="text-align:left">Partner ID assigned by Light Cattle</td>
+</tr>
+<tr>
+<td style="text-align:left">status code</td>
+<td style="text-align:left">code</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">20000</td>
+<td style="text-align:left">success failure</td>
+</tr>
+<tr>
+<td style="text-align:left">returned messages</td>
+<td style="text-align:left">msg</td>
+<td style="text-align:left">no</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">success/fail</td>
+<td style="text-align:left">Specific description of success or error</td>
+</tr>
+<tr>
+<td style="text-align:left">Index content</td>
+<td style="text-align:left">resultData</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">JSON format data, see table below</td>
+<td style="text-align:left">Measured indicator specific information</td>
+</tr>
+<tr>
+<td style="text-align:left">Random string</td>
+<td style="text-align:left">nonce_str</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">067428733252</td>
+<td style="text-align:left">Random string, no more than 32 bits</td>
+</tr>
+<tr>
+<td style="text-align:left">signature</td>
+<td style="text-align:left">sign</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">JSON format</td>
+<td style="text-align:left">Signature, see signature algorithm for details</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field name</th>
+<th style="text-align:left">variable name</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Example values</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">User ID</td>
+<td style="text-align:left">user_id</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">qn888888</td>
+<td style="text-align:left">Partner ID assigned by Light Cattle</td>
+</tr>
+<tr>
+<td style="text-align:left">measure time</td>
+<td style="text-align:left">measurement_at</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">2019-04-30 15:48:53</td>
+<td style="text-align:left">Measured indicator specific information</td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">F0:FE:6B:CB:75:6A</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">model</td>
+<td style="text-align:left">model_id</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">0000</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Indicator array</td>
+<td style="text-align:left">item_list</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Array format</td>
+<td style="text-align:left">type:<a href="../attouched_list/body_indexes.html">Indicator constant</a> value:Index value</td>
+</tr>
+</tbody>
+</table>
+<p>Examples are as follows</p>
+<pre><code>{
+&quot;code&quot; : &quot;20000&quot;, &quot;msg&quot; : &quot;success&quot;, &quot;partner_id&quot; : &quot;ade2e33efefdvdf&quot;, &quot;resultData&quot; : &quot;{\&quot;measurement_at\&quot;:\&quot;2019-04-30 18:22:53\&quot;,\&quot;user_id\&quot;:1001,
+\&quot;mac\&quot;:\&quot;F0:FE:6B:CB:75:6A\&quot;,\&quot;model_id\&quot;:\&quot;0005\&quot;,
+\&quot;item_list\&quot;:[{\&quot;type\&quot;:1,\&quot;value\&quot;:25.35},{\&quot;type\&quot;:2,\&quot;value\&quot;:9.9},{\&quot;type\&quot;:3,\&quot;value\&quot;:5.1},{\&quot;type\&quot;:4,\&quot;value\&quot;:4.7},{\&quot;type\&quot;:5,\&quot;value\&quot;:1},{\&quot;type\&quot;:6,\&quot;value\&quot;:74.5},{\&quot;type\&quot;:7,\&quot;value\&quot;:63.2},{\&quot;type\&quot;:8,\&quot;value\&quot;:16.5},{\&quot;type\&quot;:9,\&quot;value\&quot;:90.0},{\&quot;type\&quot;:11,\&quot;value\&quot;:13.7},{\&quot;type\&quot;:16,\&quot;value\&quot;:93}]}&quot;,
+&quot;nonce_str&quot; : &quot;067428733252&quot;,
+&quot;sign&quot; : &quot;ef2b9e9a4dc03f764e033947859dedd3&quot;
+}
+</code></pre><h4 id="return-parameters">Return parameters</h4>
+<p>Just return success/fail</p>
+<h3 id="signature-algorithm">Signature Algorithm</h3>
+<p>The data interaction between Light Cow and the partner system will be digitally signed.At present, only the MD5 method is supported. When signing, you need to use the secret assigned when you enter Light Cow (a pair of partner_id/secret will be assigned when you enter Light Cow.
+secret is used for signature, please keep the key assigned by Qingniu properly)
+Parameters involved in signing: In the light cattle request parameter list, except for the sign parameter, the other parameters that need to be used are the parameters to be signed.
+The steps for signature generation are as follows:</p>
+<ol>
+<li>Put these parameters in a Map and remove the signature parameters:sign</li>
+<li>Sort the remaining parameters in ascending order of key (order from a to z, if the same first letter is encountered, see the second letter, and so on)</li>
+<li>After sorting is complete, press key&amp;The value key-value pair format is concatenated into a string stringA, removing data where value is empty.</li>
+<li>Combine the above string with the secret allocated on the back to form a new string</li>
+<li>Use MD5 to sign the assembled string and verify that the signature is the sign in the parameter.</li>
+</ol>
+<p>Pay special attention to the following important rules:</p>
+<ol>
+<li>If the parameter value is empty, do not participate in signature&#xFF1B;</li>
+<li>When verifying the return of the call or proactively notifying the signature, the sign parameter transmitted does not participate in the signature, and the generated signature is checked against the sign value.</li>
+<li>Light cattle interface may add fields, and the extended fields must be supported when verifying signatures</li>
+</ol>
+<p>Example:
+Requested parameters:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;partner_id&quot;</span>: <span class="hljs-string">&quot;1111&quot;</span>,
+  <span class="hljs-string">&quot;user_code&quot;</span>: <span class="hljs-string">&quot;921026&quot;</span>,
+  <span class="hljs-string">&quot;nonce_str&quot;</span>: <span class="hljs-string">&quot;11eeewwwwwq112s&quot;</span>,
+  <span class="hljs-string">&quot;sign&quot;</span>: <span class="hljs-string">&quot;a328c2ec0a60cbbc9961a1189f61e97b&quot;</span>
+}
+</code></pre>
+<p>splice:
+stringA = &#x201C;nonce_str=11eeewwwwwq112s&amp;partner_id=1111&amp;user_code=921026&#x201D;
+Splicing on the secret: after ekskdsd8sd88s833 &quot;nonce_str = 11eeewwwwwq112s&amp;partner_id=1111&amp;user_code=921026ekskd sd8sd88s833&quot;
+MD5 signature value:
+a328c2ec0a60cbbc9961a1189f61e97b</p>
+<h3 id="during-daily-use">During daily use</h3>
+<h4 id="wifi-data-interaction-timing-diagram">WIFI data interaction timing diagram</h4>
+<p><strong>Normal measurement process</strong></p>
+<p>as follows:</p>
+<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBzY2FsZSBhcyDnp6RcbnBhcnRpY2lwYW50IHFuIGFzIOi9u-eJm-S6kVxucGFydGljaXBhbnQgY3MgYXMg5a6i5oi35LqRXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5cblxuc2NhbGUtPj5xbjog5LiK5Lyg5rWL6YeP5pWw5o2uXG5xbi0-PmNzOiDovazlj5HmtYvph4_mlbDmja5cbmNzLT4-Y3M6IOafpeWIsOe7keWumuiuvuWkh-eahOeUqOaIt1xucW4tLT5xbjog6Zi75aGe562J5b6F5a6i5oi35LqR5Zue5Lyg55So5oi35L-h5oGvXG5jcy0-PnFuOiDlm57kvKDnlKjmiLfotYTmlplcbnFuLT4-cW46IOiuoeeul-eUqOaIt-aVsOaNrlxucW4tPj5jczog5Zue5Lyg5pWw5o2u5Yiw5a6i5oi35LqRXG5jcy0-PmFwcDog5o6o6YCB5pWw5o2u6IezQVBQIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0" frameborder="0" width="750" height="600"></iframe>
+
+<ol>
+<li>After the user measures on the scale, the data will be sent to the light cow cloud first</li>
+<li>According to <a href="../api/QNBleApi.html#registerwifibledevice">Register Device Method</a>, Light Cow Cloud judges that the device belongs to the customer, and then forwards the data to the cloud address that the customer has filled in.</li>
+<li>The customer cloud tries to determine the owner of the device according to the previous relationship between the device and the user. If it is determined, it returns the user&apos;s information to Qingniu Cloud.</li>
+<li>Qingniu Cloud received the user data returned by the customer cloud, combined with the data at the scale end, to calculate the complete measurement data.</li>
+<li>Light Cow Cloud pushes complete measurement data to the customer cloud.</li>
+<li>The customer cloud pushes the measurement data to the APP and displays the measurement data to the customer.</li>
+</ol>
+<p><strong>Matching to multi-user measurements</strong>
+Among the above steps, in step <code>3</code>, it may find that the measurement user fails, and the following situations occur:</p>
+<ol>
+<li>No users are bound to this device
+In this case, the measurement data can be directly discarded to play the seven cow cloud, and the data is not matched.</li>
+<li>Multiple users are bound to the device at the same time, or multiple users are using the device at the same time. It is impossible to determine which user is using the scale, you can refer to the figure below, the user identification scheme adopted in our own APP.</li>
+</ol>
+<p><img src="../images/sbyh.png" alt="Identify user"></p>
+<ol>
+<li>If a user can be uniquely identified through the scheme in the figure above, proceed according to the normal measurement process. If multiple users are still identified, refer to the following process.</li>
+</ol>
+<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBzY2FsZSBhcyDnp6RcbnBhcnRpY2lwYW50IHFuIGFzIOi9u-eJm-S6kVxucGFydGljaXBhbnQgY3MgYXMg5a6i5oi35LqRXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5cblxuc2NhbGUtPj5xbjog5LiK5Lyg5rWL6YeP5pWw5o2uXG5xbi0-PmNzOiDovazlj5HmtYvph4_mlbDmja5cbmNzLT4-Y3M6IOafpeWIsOe7keWumuiuvuWkh-eahOeUqOaIt1xucW4tLT5xbjog6Zi75aGe562J5b6F5a6i5oi35LqR5Zue5Lyg55So5oi35L-h5oGvXG5jcy0-PmNzOiDljLnphY3liLDlpJrkuKrnlKjmiLdcbmNzLT4-Y3M6IOaKiuaVsOaNruWFiOS_neWtmOiHs-aVsOaNruW6k1xuY3MtPj5xbjog6YCa55-l5peg5Yy56YWN55So5oi3XG5jcy0-PmFwcDog5o6o6YCB5pWw5o2u6IezQVBQXG5hcHAtPj5hcHA6IOeUqOaIt-iupOmihuaVsOaNrlxuYXBwLT4-YXBwOiDosIPnlKhTREvnlJ_kuqflrozmlbTmtYvph4_mlbDmja5cbmFwcC0-PmNzOiDmiormlbDmja7kv53lrZjoh7PkupHnq68iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="600"></iframe>
+
+<blockquote>
+<p>The method mentioned in the above picture that calls the SDK to generate complete measurement data is: <a href="../api/QNScaleStoreData.html#buildStoreData">QNScaleStoreData.buildStoreData</a>
+The sign in the query user profile interface also needs to be saved and sent to the APP, which is used to call the SDK production measurement data.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ble_scale_custom_connect.html" class="navigation navigation-prev " aria-label="Previous page: Ordinary Bluetooth scale-self-managed Bluetooth">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="broadcast_scale.html" class="navigation navigation-next " aria-label="Next page: Broadcast scale">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ordinary Bluetooth scale-with Wifi function","level":"1.4.3","depth":2,"next":{"title":"Broadcast scale","level":"1.4.4","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"previous":{"title":"Ordinary Bluetooth scale-self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/flow_dm.md","mtime":"2020-04-15T12:38:10.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-15T12:41:09.378Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

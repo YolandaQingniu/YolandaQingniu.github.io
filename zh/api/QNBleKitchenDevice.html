@@ -12,9 +12,14 @@
         
         
     
+    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -44,6 +49,9 @@
         
     
         
+    
+
+
     
 
         
@@ -155,20 +163,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../flow/ble_scale_custom_connect.html">
-            
-                <a href="../flow/ble_scale_custom_connect.html">
-            
-                    
-                    普通蓝牙秤-自主管理蓝牙
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../flow/flow_dm.html">
+        <li class="chapter " data-level="1.4.2" data-path="../flow/flow_dm.html">
             
                 <a href="../flow/flow_dm.html">
             
@@ -181,7 +176,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../flow/ble_scale_wsp.html">
+        <li class="chapter " data-level="1.4.3" data-path="../flow/ble_scale_wsp.html">
             
                 <a href="../flow/ble_scale_wsp.html">
             
@@ -194,51 +189,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../flow/broadcast_scale.html">
-            
-                <a href="../flow/broadcast_scale.html">
-            
-                    
-                    广播秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6" data-path="../flow/broadcast_scale_custom_scan.html">
-            
-                <a href="../flow/broadcast_scale_custom_scan.html">
-            
-                    
-                    广播秤-自定义蓝牙扫描
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.7" data-path="../flow/kitchen_scale.html">
+        <li class="chapter " data-level="1.4.4" data-path="../flow/kitchen_scale.html">
             
                 <a href="../flow/kitchen_scale.html">
             
                     
                     厨房秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.8" data-path="../flow/kitchen_scale_custom_scan.html">
-            
-                <a href="../flow/kitchen_scale_custom_scan.html">
-            
-                    
-                    厨房秤-自定义蓝牙扫描
             
                 </a>
             
@@ -1095,7 +1051,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="qnblekitchendevice">QNBleKitchenDevice</h1>
-<p>&#x8F7B;&#x725B;&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
+<p>Yolanda&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
 <p>&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x662F;&#x4E00;&#x6B3E;&#x65E0;&#x9700;&#x8FDE;&#x63A5;&#xFF0C;&#x901A;&#x8FC7;&#x63A5;&#x6536;&#x8BBE;&#x5907;&#x53D1;&#x51FA;&#x7684;&#x5E7F;&#x64AD;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7684;&#x8BBE;&#x5907;&#x3002;&#x8BE5;&#x79E4;&#x4E0E;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x4E0D;&#x540C;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x5728;&#x626B;&#x63CF;&#x5230;&#x5468;&#x56F4;&#x7684;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x8D77;&#x5BF9;&#x5468;&#x56F4;&#x67D0;&#x4E00;&#x8BBE;&#x5907;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x5426;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x5468;&#x56F4;&#x7684;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x4E0D;&#x5F71;&#x54CD;&#x4ECE;&#x5DF2;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x4E2D;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x7684;&#x6D4B;&#x91CF;&#x4FE1;&#x606F;&#x3002;</p>
 <p>&#x7136;&#x800C;&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x7531;&#x4E8E;&#x662F;&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x5468;&#x56F4;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x8FDB;&#x800C;&#x5206;&#x6790;&#x76F8;&#x5173;&#x7684;&#x6D4B;&#x91CF;&#x4FE1;&#x606F;&#xFF0C;&#x65E0;&#x9700;&#x5BF9;&#x67D0;&#x4E00;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;&#x56E0;&#x6B64;&#x5018;&#x82E5;&#x5728;&#x4F7F;&#x7528;&#x5E7F;&#x64AD;&#x79E4;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x505C;&#x6B62;&#x4E86;&#x5BF9;&#x5468;&#x56F4;&#x8BBE;&#x5907;&#x7684;&#x626B;&#x63CF;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x8FD9;&#x6B21;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x3002;</p>
 <h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
@@ -1198,14 +1154,19 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2020-01-15T08:10:40.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-27T08:28:54.695Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2020-04-15T12:38:10.873Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-15T12:41:09.378Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -1231,6 +1192,8 @@
         <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

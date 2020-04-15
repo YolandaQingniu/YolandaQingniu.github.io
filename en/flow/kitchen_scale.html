@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="zh" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>广播秤-自定义蓝牙扫描 · GitBook</title>
+        <title>Kitchen scale · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,9 +12,14 @@
         
         
     
+    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -46,6 +51,9 @@
         
     
 
+
+    
+
         
     
     
@@ -57,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="kitchen_scale.html" />
+    <link rel="next" href="kitchen_scale_custom_scan.html" />
     
     
-    <link rel="prev" href="broadcast_scale.html" />
+    <link rel="prev" href="broadcast_scale_custom_scan.html" />
     
 
     </head>
@@ -71,7 +79,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -94,7 +102,7 @@
                 <a href="../">
             
                     
-                    概述
+                    Overview
             
                 </a>
             
@@ -133,7 +141,7 @@
                 <span>
             
                     
-                    工作流程
+                    work process
             
                 </span>
             
@@ -147,7 +155,7 @@
                 <a href="ble_scale.html">
             
                     
-                    普通蓝牙秤
+                    Ordinary Bluetooth scale
             
                 </a>
             
@@ -160,7 +168,7 @@
                 <a href="ble_scale_custom_connect.html">
             
                     
-                    普通蓝牙秤-自主管理蓝牙
+                    Ordinary Bluetooth scale-self-managed Bluetooth
             
                 </a>
             
@@ -173,7 +181,7 @@
                 <a href="flow_dm.html">
             
                     
-                    普通蓝牙秤-带有 Wifi 功能
+                    Ordinary Bluetooth scale-with Wifi function
             
                 </a>
             
@@ -181,25 +189,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="ble_scale_wsp.html">
-            
-                <a href="ble_scale_wsp.html">
-            
-                    
-                    WSP 蓝牙 WiFi 秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.5" data-path="broadcast_scale.html">
+        <li class="chapter " data-level="1.4.4" data-path="broadcast_scale.html">
             
                 <a href="broadcast_scale.html">
             
                     
-                    广播秤
+                    Broadcast scale
             
                 </a>
             
@@ -207,12 +202,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.6" data-path="broadcast_scale_custom_scan.html">
+        <li class="chapter " data-level="1.4.5" data-path="broadcast_scale_custom_scan.html">
             
                 <a href="broadcast_scale_custom_scan.html">
             
                     
-                    广播秤-自定义蓝牙扫描
+                    Broadcast Scale-Custom Bluetooth Scan
             
                 </a>
             
@@ -220,12 +215,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="kitchen_scale.html">
+        <li class="chapter active" data-level="1.4.6" data-path="kitchen_scale.html">
             
                 <a href="kitchen_scale.html">
             
                     
-                    厨房秤
+                    Kitchen scale
             
                 </a>
             
@@ -233,12 +228,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="kitchen_scale_custom_scan.html">
+        <li class="chapter " data-level="1.4.7" data-path="kitchen_scale_custom_scan.html">
             
                 <a href="kitchen_scale_custom_scan.html">
             
                     
-                    厨房秤-自定义蓝牙扫描
+                    Kitchen Scale-Custom Bluetooth Scan
             
                 </a>
             
@@ -294,19 +289,6 @@
     
         <li class="chapter " data-level="1.5.1.2" data-path="../api/QNBleApi.html">
             
-                <a href="../api/QNBleApi.html#setsysblestatelistener">
-            
-                    
-                    setSysBleStateListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
-            
                 <a href="../api/QNBleApi.html#setbledevicediscoverylistener">
             
                     
@@ -318,7 +300,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#startbledevicediscovery">
             
@@ -331,7 +313,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#stopbledevicediscovery">
             
@@ -344,7 +326,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#connectdevice">
             
@@ -357,33 +339,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
-            
-                <a href="../api/QNBleApi.html#connectwspdevice">
-            
-                    
-                    connectWspDevice
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
-            
-                <a href="../api/QNBleApi.html#connectdevicesetwifi">
-            
-                    
-                    connectDeviceSetWiFi
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#disconnectdevice">
             
@@ -396,7 +352,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#registerwifibledevice">
             
@@ -409,7 +365,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#setbleconnectionchangelistener">
             
@@ -422,7 +378,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#setScaleDataListener">
             
@@ -435,7 +391,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#setloglistener">
             
@@ -448,7 +404,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#getconfig">
             
@@ -461,7 +417,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#convertweightwithtargetunit">
             
@@ -474,7 +430,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#builduser">
             
@@ -487,7 +443,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#builddevice">
             
@@ -500,7 +456,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.18" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#buildprotocolhandler">
             
@@ -513,7 +469,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.19" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#buildbroadcastdevice">
             
@@ -526,7 +482,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.20" data-path="../api/QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
             
                 <a href="../api/QNBleApi.html#connectdevicesetwifi">
             
@@ -539,38 +495,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.21" data-path="../api/QNBleApi.html">
-            
-                <a href="../api/QNBleApi.html#generatescaledata">
-            
-                    
-                    generateScaleData
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../api/QNBleProtocolDelegate.html">
-            
-                <a href="../api/QNBleProtocolDelegate.html">
-            
-                    
-                    QNBleProtocolDelegate
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.3" data-path="../api/QNUtils.html">
+        <li class="chapter " data-level="1.5.2" data-path="../api/QNUtils.html">
             
                 <a href="../api/QNUtils.html">
             
@@ -583,7 +513,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../api/QNResultCallback.html">
+        <li class="chapter " data-level="1.5.3" data-path="../api/QNResultCallback.html">
             
                 <a href="../api/QNResultCallback.html">
             
@@ -596,7 +526,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../api/QNBleDevice.html">
+        <li class="chapter " data-level="1.5.4" data-path="../api/QNBleDevice.html">
             
                 <a href="../api/QNBleDevice.html">
             
@@ -609,7 +539,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleBroadcastDevice.html">
+        <li class="chapter " data-level="1.5.5" data-path="../api/QNBleBroadcastDevice.html">
             
                 <a href="../api/QNBleBroadcastDevice.html">
             
@@ -622,7 +552,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../api/QNBleKitchenDevice.html">
+        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleKitchenDevice.html">
             
                 <a href="../api/QNBleKitchenDevice.html">
             
@@ -635,7 +565,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="../api/QNUser.html">
+        <li class="chapter " data-level="1.5.7" data-path="../api/QNUser.html">
             
                 <a href="../api/QNUser.html">
             
@@ -648,20 +578,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="../api/QNBleStateListener.html">
-            
-                <a href="../api/QNBleStateListener.html">
-            
-                    
-                    QNBleStateListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.10" data-path="../api/QNScaleDataListener.html">
+        <li class="chapter " data-level="1.5.8" data-path="../api/QNScaleDataListener.html">
             
                 <a href="../api/QNScaleDataListener.html">
             
@@ -674,7 +591,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="../api/QNLogListener.html">
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNLogListener.html">
             
                 <a href="../api/QNLogListener.html">
             
@@ -687,7 +604,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.12" data-path="../api/QNConfig.html">
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNConfig.html">
             
                 <a href="../api/QNConfig.html">
             
@@ -700,7 +617,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.13" data-path="../api/QNWiFiConfig.html">
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNWiFiConfig.html">
             
                 <a href="../api/QNWiFiConfig.html">
             
@@ -713,98 +630,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.14" data-path="../api/QNScaleDataListener.html">
-            
-                <a href="../api/QNScaleDataListener.html">
-            
-                    
-                    QNScaleDataListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.15" data-path="../api/QNWspScaleDataListener.html">
-            
-                <a href="../api/QNWspScaleDataListener.html">
-            
-                    
-                    QNWspScaleDataListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleStateListener.html">
-            
-                <a href="../api/QNBleStateListener.html">
-            
-                    
-                    QNBleStateListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.17" data-path="../api/QNLogListener.html">
-            
-                <a href="../api/QNLogListener.html">
-            
-                    
-                    QNLogListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.18" data-path="../api/QNConfig.html">
-            
-                <a href="../api/QNConfig.html">
-            
-                    
-                    QNConfig
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.19" data-path="../api/QNWiFiConfig.html">
-            
-                <a href="../api/QNWiFiConfig.html">
-            
-                    
-                    QNWiFiConfig
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.20" data-path="../api/QNWspConfig.html">
-            
-                <a href="../api/QNWspConfig.html">
-            
-                    
-                    QNWspConfig
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.21" data-path="../api/QNBleConnectionChangeListener.html">
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNBleConnectionChangeListener.html">
             
                 <a href="../api/QNBleConnectionChangeListener.html">
             
@@ -817,7 +643,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.22" data-path="../api/QNBleDeviceDiscoveryListener.html">
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNBleDeviceDiscoveryListener.html">
             
                 <a href="../api/QNBleDeviceDiscoveryListener.html">
             
@@ -830,7 +656,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.23" data-path="../api/QNScaleData.html">
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNScaleData.html">
             
                 <a href="../api/QNScaleData.html">
             
@@ -843,7 +669,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.24" data-path="../api/QNShareData.html">
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNShareData.html">
             
                 <a href="../api/QNShareData.html">
             
@@ -856,7 +682,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.25" data-path="../api/QNScaleStoreData.html">
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNScaleStoreData.html">
             
                 <a href="../api/QNScaleStoreData.html">
             
@@ -869,7 +695,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.26" data-path="../api/QNScaleItemData.html">
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNScaleItemData.html">
             
                 <a href="../api/QNScaleItemData.html">
             
@@ -882,7 +708,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.27" data-path="../api/QNBleProtocolHandler.html">
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNBleProtocolHandler.html">
             
                 <a href="../api/QNBleProtocolHandler.html">
             
@@ -895,7 +721,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.28" data-path="../api/QNBleProtocolDelegate.html">
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNBleProtocolDelegate.html">
             
                 <a href="../api/QNBleProtocolDelegate.html">
             
@@ -918,7 +744,7 @@
                 <span>
             
                     
-                    附表
+                    Schedule
             
                 </span>
             
@@ -932,7 +758,7 @@
                 <a href="../attouched_list/faq.html">
             
                     
-                    常见问题
+                    Frequently Asked Questions
             
                 </a>
             
@@ -945,7 +771,7 @@
                 <a href="../attouched_list/body_indexes.html">
             
                     
-                    身体指标常量
+                    Body index constant
             
                 </a>
             
@@ -958,7 +784,7 @@
                 <a href="../attouched_list/device_type.html">
             
                     
-                    设备类型
+                    Device type
             
                 </a>
             
@@ -971,7 +797,7 @@
                 <a href="../attouched_list/body_shape.html">
             
                     
-                    体型对照表
+                    Body shape comparison table
             
                 </a>
             
@@ -984,7 +810,7 @@
                 <a href="../attouched_list/error_code.html">
             
                     
-                    错误码
+                    Error Code
             
                 </a>
             
@@ -997,7 +823,7 @@
                 <a href="../attouched_list/scan_error.html">
             
                     
-                    扫描错误码
+                    Scanning Error Code
             
                 </a>
             
@@ -1010,7 +836,7 @@
                 <a href="../attouched_list/scale_state.html">
             
                     
-                    秤状态定义
+                    Scale state definition
             
                 </a>
             
@@ -1018,25 +844,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scale_event.html">
-            
-                <a href="../attouched_list/scale_event.html">
-            
-                    
-                    秤事件定义
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.9" data-path="../history/history.html">
+        <li class="chapter " data-level="1.6.8" data-path="../history/history.html">
             
                 <a href="../history/history.html">
             
                     
-                    更新日志
+                    Update log
             
                 </a>
             
@@ -1056,7 +869,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -1079,7 +892,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >广播秤-自定义蓝牙扫描</a>
+        <a href=".." >Kitchen scale</a>
     </h1>
 </div>
 
@@ -1094,20 +907,122 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E7F;&#x64AD;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;">&#x5E7F;&#x64AD;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;</h1>
-<p>&#x8BE5;&#x7BC7;&#x7AE0;&#x662F;&#x7ED9;&#x5BF9;&#x84DD;&#x7259;&#x6709;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#xFF0C;&#x5E76;&#x5728;APP&#x4E2D;&#x6709;&#x81EA;&#x5DF1;&#x84DD;&#x7259;&#x6846;&#x67B6;&#x7684;&#x7528;&#x6237;&#x4F7F;&#x7528; </p>
-<p>&#x5E7F;&#x64AD;&#x79E4;&#x5728;&#x6D4B;&#x91CF;&#x65F6;&#xFF0C;&#x4F1A;&#x4E0D;&#x65AD;&#x5411;&#x5916;&#x53D1;&#x5C04;&#x84DD;&#x7259;&#x5E7F;&#x64AD;&#x4FE1;&#x53F7;&#xFF0C;&#x91CC;&#x9762;&#x4F1A;&#x5305;&#x542B;&#x7528;&#x6237;&#x79F0;&#x91CD;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
-<p>&#x4E0B;&#x6587;&#x7684;&#x8BF4;&#x660E;&#x662F;&#x57FA;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x5DF2;&#x7ECF;&#x5BF9;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x6709;&#x4E86;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#x3002;&#x5982;&#x679C;&#x9047;&#x5230;&#x5F88;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;SDK&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x7684;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x3002;</p>
-<p>&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5927;&#x7EA6;&#x5982;&#x4E0B;&#xFF1A;</p>
-<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ek56uvXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5LqR56uvXG5cbnVzZXItPj5hcHA65omT5byAQVBQXG5hcHAtLT5hcHA6IOWQr-WKqOaJq-aPj1xudXNlci0-PnNjYWxlOiDouKnkuq7np6RcbnNjYWxlLT4-YXBwOiDlj5HlsITok53niZnlub_mkq1cbmFwcC0-PmFwcDog6Kej5p6Q5bm_5pKt5pWw5o2uKOmHjemHj-OAgeWNleS9jeOAgeeKtuaAgeetiSlcbnVzZXItLT51c2VyOiDnq5nnqLNcbnNjYWxlLT4-YXBwOiDnqLPlrprmlbDmja5cbmFwcC0tPmFwcDog6K6h566X5L2T6ISC5pWw5o2uXG5hcHAtPj51c2VyOiDmmL7npLrlrozmlbTmtYvph4_nu5PmnpxcbmFwcC0-PnNlcnZlcjog5LiK5Lyg5rWL6YeP5pWw5o2uXG51c2VyLS0-dXNlcjog5LiL56ek5bm25p-l55yL5pWw5o2uXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="600"></iframe>
+                                <h1 id="kitchen-scale">Kitchen Scale</h1>
+<p>When the kitchen scale is measuring, it will continuously emit a Bluetooth broadcast signal, which will contain weighing information.</p>
+<p>The workflow of this device is the same as [broadcast_scale.md]:</p>
+<h2 id="one-initialization">One. initialization</h2>
+<p>Use <a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a> for initialization, which has been introduced in the previous article, <a href="../#development-process">Please see</a></p>
+<h2 id="two-scanning">Two. scanning</h2>
+<h3 id="1-set-the-bluetooth-scan-callback-listener-class">1. Set the Bluetooth scan callback listener class</h3>
+<p>Before scanning, you need to set the listening class. The method is <a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>. This method only needs to be called once. When you do n&#x2019;t need to scan, remember to set it to null/nil.</p>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).setBleDeviceDiscoveryListener(<span class="hljs-keyword">new</span> QNBleDeviceDiscoveryListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
+<span class="hljs-comment">//The device does not need to handle callbacks there</span>
+    }
 
-<h2 id="&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;">&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;</h2>
-<p>&#x4F7F;&#x7528;<a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a>&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x524D;&#x6587;&#x5DF2;&#x6709;&#x76F8;&#x5173;&#x4ECB;&#x7ECD;&#xFF0C;<a href="../#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x8BF7;&#x67E5;&#x770B;</a></p>
-<h2 id="&#x4E8C;&#x3001;&#x626B;&#x63CF;">&#x4E8C;&#x3001;&#x626B;&#x63CF;</h2>
-<p>&#x81EA;&#x884C;&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;</p>
-<p>&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x540E;&#xFF0C;&#x628A;&#x626B;&#x63CF;&#x5230;&#x7684;&#x5E7F;&#x64AD;&#x4FE1;&#x606F;&#x4F20;&#x7ED9;SDK&#xFF0C;&#x901A;&#x8FC7;<a href="../api/QNBleApi.html#buildbroadcastdevice">QNBleApi.buildBroadcastDevice</a></p>
-<h2 id="&#x7ED3;&#x679C;&#x5904;&#x7406;">&#x7ED3;&#x679C;&#x5904;&#x7406;</h2>
-<p>&#x62FF;&#x5230;<a href="../api/QNBleBroadcastDevice.html">QNBleBroadcastDevice</a>&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x9762;&#x7684;&#x5904;&#x7406;&#x8BF7;&#x53C2;&#x8003;<a href="broadcast_scale.html">&#x5E7F;&#x64AD;&#x79E4;&#x63A5;&#x5165;&#x6D41;&#x7A0B;</a></p>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStartScan</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">//start scanning back</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStopScan</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">//back to the end of the scan</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScanFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code)</span> </span>{
+<span class="hljs-comment">//If the scan fails, an error code will be returned. For details, please refer to the error code details page.</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBroadcastDeviceDiscover</span><span class="hljs-params">(QNBleBroadcastDevice device)</span> </span>{
+<span class="hljs-comment">//Broadcast scale, this kind of equipment needs to handle events in this callback</span>
+    }
+     <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+<span class="hljs-comment">//Kitchen scale, this type of equipment needs to handle events in this callback</span>
+    }
+});
+</code></pre>
+<p>iOS example:</p>
+<pre><code>//set proxy
+QNBleApi *bleApi = [QNBleApi sharedBleApi];
+bleApi.discoveryListener = self;
+
+//Implement the proxy method
+- (void)onDeviceDiscover:(QNBleDevice *)device {
+//The device does not need to handle callbacks there
+}
+
+- (void)onBroadcastDeviceDiscover:(QNBleBroadcastDevice *)device {
+//Broadcast scale, this kind of equipment needs to handle events in this callback
+
+}
+
+- (void)onKitchenDeviceDiscover:(QNBleKitchenDevice *)device {
+//Kitchen scale, this type of equipment needs to handle events in this callback
+
+}
+
+- (void)onStopScan {
+//Callback when scanning is stopped
+}
+
+- (void)onStartScan {
+//Callback when scanning starts
+}
+</code></pre><h3 id="2-start-the-scan">2. Start the scan</h3>
+<p>Make sure that Bluetooth is turned on. Android also needs to check the <code>location permission</code> and<code>location switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
+<blockquote>
+<p>After Android 6.0, targetSdkVersion&gt;= 23 or more APP, you need to obtain positioning permission for Bluetooth scanning. For detailed instructions, please see <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
+The location service switch is not compulsory, but some phones do not turn on this switch and cannot scan the device, which is related to each mobile phone system
+iOS13 system adds Bluetooth usage permission. You need to check whether you have the usage permission, confirm that it is authorized and Bluetooth is turned on, then start scanning.</p>
+</blockquote>
+<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>, and the scanned device data will be in the scanning interface set above <a href="../api/QNBleDeviceDiscoveryListener.html">QNBleDeviceDiscoveryListener</a> Callback.</p>
+<p>In addition, some feature settings for scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>. These options should be sufficient.</p>
+<blockquote>
+<p>Usually APP has an interface dedicated to measurement. We usually perform Bluetooth scanning after the interface is displayed, and stop scanning when the interface disappears.</p>
+</blockquote>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).startBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+<span class="hljs-comment">//This method does not return to the device, but indicates whether the scan was started successfully</span>
+                <span class="hljs-keyword">if</span> (code != CheckStatus.OK.getCode()) {
+                   ToastMaker.show(ScanActivity.<span class="hljs-keyword">this</span>,code+<span class="hljs-string">&quot;:&quot;</span>+msg);
+                }
+            }
+        });
+</code></pre>
+<p>iOS example:</p>
+<pre><code>//start scanning
+[[QNBleApi sharedBleApi] startBleDeviceDiscovery:^(NSError *error) {
+//The callback here indicates whether the scan method was started successfully
+    if (error) {
+        NSLog([NSString stringWithFormat:@&quot;Failed to start scan method, reason: %@&quot;,error]);
+    }
+}];
+</code></pre><h2 id="three-results-processing">three. Results processing</h2>
+<p>android example:</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> != device &amp;&amp; device.getMac().equals(mBleDevice.getMac())) {
+<span class="hljs-comment">//Data processing</span>
+    }
+}
+</code></pre>
+<p>iOS example:</p>
+<pre><code># pragma mark-Kitchen scale processing logic
+- (void)onKitchenDeviceDiscover:(QNBleKitchenDevice *)device {
+//Data processing
+}
+</code></pre><p>At this point, the basic process of the broadcast scale has been completed, and the APP can save the data and display the data by itself after receiving the parsed data.
+For other problems, you can refer to the code in the Demo first. If you have any questions, you can also check <a href="../attouched_list/faq.html">Common Problems</a>. You haven&apos;t found related issues in the FAQ. You can try to search the SDK for related APIs or instructions. If not, please contact our technicians for assistance.</p>
+<p>The demo address is as follows:
+<a href="https://github.com/YolandaQingniu/sdk-ios-demo.git" target="_blank">iOSDemo</a></p>
+<p><a href="https://github.com/YolandaQingniu/qnscalesdk.git" target="_blank">AndroidDemo</a></p>
 
                                 
                                 </section>
@@ -1135,12 +1050,12 @@
 
             
                 
-                <a href="broadcast_scale.html" class="navigation navigation-prev " aria-label="Previous page: 广播秤">
+                <a href="broadcast_scale_custom_scan.html" class="navigation navigation-prev " aria-label="Previous page: Broadcast Scale-Custom Bluetooth Scan">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="kitchen_scale.html" class="navigation navigation-next " aria-label="Next page: 厨房秤">
+                <a href="kitchen_scale_custom_scan.html" class="navigation navigation-next " aria-label="Next page: Kitchen Scale-Custom Bluetooth Scan">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1151,14 +1066,19 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"广播秤-自定义蓝牙扫描","level":"1.4.6","depth":2,"next":{"title":"厨房秤","level":"1.4.7","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"广播秤","level":"1.4.5","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/broadcast_scale_custom_scan.md","mtime":"2020-01-15T08:10:40.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-27T08:28:54.695Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.6","depth":2,"next":{"title":"Kitchen Scale-Custom Bluetooth Scan","level":"1.4.7","depth":2,"path":"flow/kitchen_scale_custom_scan.md","ref":"flow/kitchen_scale_custom_scan.md","articles":[]},"previous":{"title":"Broadcast Scale-Custom Bluetooth Scan","level":"1.4.5","depth":2,"path":"flow/broadcast_scale_custom_scan.md","ref":"flow/broadcast_scale_custom_scan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2020-04-15T12:38:10.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-15T12:41:09.378Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -1184,6 +1104,8 @@
         <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
