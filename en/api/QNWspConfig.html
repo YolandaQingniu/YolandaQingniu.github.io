@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="zh" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNBleConnectionChangeListener · GitBook</title>
+        <title>QNWspConfig · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNBleDeviceDiscoveryListener.html" />
+    <link rel="next" href="QNBleConnectionChangeListener.html" />
     
     
-    <link rel="prev" href="QNWspConfig.html" />
+    <link rel="prev" href="QNWiFiConfig.html" />
     
 
     </head>
@@ -79,7 +79,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -102,7 +102,7 @@
                 <a href="../">
             
                     
-                    概述
+                    Overview
             
                 </a>
             
@@ -141,7 +141,7 @@
                 <span>
             
                     
-                    工作流程
+                    work process
             
                 </span>
             
@@ -155,7 +155,7 @@
                 <a href="../flow/ble_scale.html">
             
                     
-                    普通蓝牙秤
+                    Common Bluetooth scale
             
                 </a>
             
@@ -168,7 +168,7 @@
                 <a href="../flow/flow_dm.html">
             
                     
-                    普通蓝牙秤-带有 Wifi 功能
+                    Common Bluetooth scale-with Wifi function
             
                 </a>
             
@@ -181,7 +181,7 @@
                 <a href="../flow/ble_scale_wsp.html">
             
                     
-                    WSP 蓝牙 WiFi 秤
+                    WSP Bluetooth WiFi scale
             
                 </a>
             
@@ -194,7 +194,7 @@
                 <a href="../flow/kitchen_scale.html">
             
                     
-                    厨房秤
+                    Kitchen scale
             
                 </a>
             
@@ -747,7 +747,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.20" data-path="QNWspConfig.html">
+        <li class="chapter active" data-level="1.5.20" data-path="QNWspConfig.html">
             
                 <a href="QNWspConfig.html">
             
@@ -760,7 +760,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.21" data-path="QNBleConnectionChangeListener.html">
+        <li class="chapter " data-level="1.5.21" data-path="QNBleConnectionChangeListener.html">
             
                 <a href="QNBleConnectionChangeListener.html">
             
@@ -874,7 +874,7 @@
                 <span>
             
                     
-                    附表
+                    Schedule
             
                 </span>
             
@@ -888,7 +888,7 @@
                 <a href="../attouched_list/faq.html">
             
                     
-                    常见问题
+                    FAQ
             
                 </a>
             
@@ -901,7 +901,7 @@
                 <a href="../attouched_list/body_indexes.html">
             
                     
-                    身体指标常量
+                    Body Index Constant
             
                 </a>
             
@@ -914,7 +914,7 @@
                 <a href="../attouched_list/device_type.html">
             
                     
-                    设备类型
+                    Device Type
             
                 </a>
             
@@ -927,7 +927,7 @@
                 <a href="../attouched_list/body_shape.html">
             
                     
-                    体型对照表
+                    Body shape comparison table
             
                 </a>
             
@@ -940,7 +940,7 @@
                 <a href="../attouched_list/error_code.html">
             
                     
-                    错误码
+                    Error Code
             
                 </a>
             
@@ -953,7 +953,7 @@
                 <a href="../attouched_list/scan_error.html">
             
                     
-                    扫描错误码
+                    Scan Error Code
             
                 </a>
             
@@ -966,7 +966,7 @@
                 <a href="../attouched_list/scale_state.html">
             
                     
-                    秤状态定义
+                    Scale State Definition
             
                 </a>
             
@@ -979,7 +979,7 @@
                 <a href="../attouched_list/scale_event.html">
             
                     
-                    秤事件定义
+                    Scale event definition
             
                 </a>
             
@@ -992,7 +992,7 @@
                 <a href="../attouched_list/test_list.html">
             
                     
-                    测试用例
+                    Test Case
             
                 </a>
             
@@ -1005,7 +1005,7 @@
                 <a href="../history/history.html">
             
                     
-                    更新日志
+                    Update Log
             
                 </a>
             
@@ -1025,7 +1025,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -1048,7 +1048,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNBleConnectionChangeListener</a>
+        <a href=".." >QNWspConfig</a>
     </h1>
 </div>
 
@@ -1063,58 +1063,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnbleconnectionchangelistener">QNBleConnectionChangeListener</h1>
-<p>&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x53D8;&#x5316;&#x76D1;&#x542C;&#x63A5;&#x53E3;</p>
-<h2 id="onconnecting">onConnecting</h2>
-<p>&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#xFF0C;&#x5728;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x540E;&#xFF0C;&#x4F1A;&#x9A6C;&#x4E0A;&#x56DE;&#x8C03;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+                                <h1 id="qnwspconfig">QNWspConfig</h1>
+<p>WSP device configuration class, which controls WSP operation</p>
+<h2 id="attributes">Attributes</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x540D;&#x79F0;</th>
-<th style="text-align:left">&#x7C7B;&#x578B;</th>
-<th style="text-align:left">&#x8BF4;&#x660E;</th>
+<th style="text-align:left">name</th>
+<th style="text-align:left">Types of</th>
+<th style="text-align:left">Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleDevice.html">QNBleDevice</a></td>
-<td style="text-align:left">&#x72B6;&#x6001;&#x53D8;&#x5316;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="onconnected">onConnected</h2>
-<p>&#x8BBE;&#x5907;&#x5DF2;&#x8FDE;&#x63A5;&#x6210;&#x529F;
-&#x4F1A;&#x56DE;&#x8C03;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-<h2 id="onservicesearchcomplete">onServiceSearchComplete</h2>
-<p>&#x8BBE;&#x5907;&#x7684;&#x670D;&#x52A1;&#x641C;&#x7D22;&#x5B8C;&#x6210;&#xFF0C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x5728; onConnected&#x540E;&#x9762;&#x8C03;&#x7528;</p>
-<h2 id="ondisconnecting">onDisconnecting</h2>
-<p>&#x6B63;&#x5728;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x8C03;&#x7528;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x9A6C;&#x4E0A;&#x56DE;&#x8C03;</p>
-<h2 id="ondisconnected">onDisconnected</h2>
-<p>&#x84DD;&#x7259;&#x65AD;&#x5F00;&#x4E86;&#x8FDE;&#x63A5;</p>
-<h2 id="onconnecterror">onConnectError</h2>
-<p>&#x51FA;&#x73B0;&#x4E86;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;</p>
-<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x540D;&#x79F0;</th>
-<th style="text-align:left">&#x7C7B;&#x578B;</th>
-<th style="text-align:left">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleDevice.html">QNBleDevice</a></td>
-<td style="text-align:left"></td>
-<td>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">wifiConfig</td>
+<td style="text-align:left"><a href="QNWiFiConfig.html">QNWiFiConfig</a></td>
+<td style="text-align:left">Whether to configure the network, when the value is null, no network operation is performed&#xFF1B;When the value is the QNWiFiConfig object, configure the network according to the value in the object</td>
 </tr>
 <tr>
-<td style="text-align:left">errorCode</td>
-<td style="text-align:left">int</td>
-<td style="text-align:left">&#x9519;&#x8BEF;&#x7801;&#x53C2;&#x8003;<a href="../attouched_list/error_code.html">&#x9644;&#x8868;-&#x9519;&#x8BEF;&#x7801;</a>&#xFF0C;IOS&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">deleteUsers</td>
+<td style="text-align:left">[int]</td>
+<td style="text-align:left">User index collection to be deleted</td>
+</tr>
+<tr>
+<td style="text-align:left">curUser</td>
+<td style="text-align:left"><a href="QNUser.html">QNUser</a></td>
+<td style="text-align:left">Current measurement user</td>
+</tr>
+<tr>
+<td style="text-align:left">isRegist</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Whether user registration is required, with the isChange attribute, only one of them is allowed to be true</td>
+</tr>
+<tr>
+<td style="text-align:left">isChange</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Whether user information needs to be modified, and the isRegist attribute, only one of which is true</td>
+</tr>
+<tr>
+<td style="text-align:left">isVisitor</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Whether to use visitors for measurement, it is not necessary to set isRegist and isChange when using visitors for measurement, and <a href="QNUser.html">QNUser</a> does not need to set index&#x3001;secret</td>
+</tr>
+<tr>
+<td style="text-align:left">dataUrl</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Data transmission address, only works when wifiConfig has value, otherwise it can be set to null, the format requires <code>http://hostname:port/path/</code>, the maximum length is 128 bytes</td>
+</tr>
+<tr>
+<td style="text-align:left">otaUrl</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">OTA upgrade address, only works when wifiConfig has value, otherwise it can be set to null, the format requires <code>protocol://hostname[:port]/path/</code>, the maximum length is 128 bytes</td>
+</tr>
+<tr>
+<td style="text-align:left">encryption</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">The communication key must be 16 bytes, and only works if wifiConfig has a value, otherwise it can be set to null</td>
 </tr>
 </tbody>
 </table>
@@ -1145,12 +1149,12 @@
 
             
                 
-                <a href="QNWspConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNWspConfig">
+                <a href="QNWiFiConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNWiFiConfig">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QNBleDeviceDiscoveryListener.html" class="navigation navigation-next " aria-label="Next page: QNBleDeviceDiscoveryListener">
+                <a href="QNBleConnectionChangeListener.html" class="navigation navigation-next " aria-label="Next page: QNBleConnectionChangeListener">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1161,7 +1165,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleConnectionChangeListener","level":"1.5.21","depth":2,"next":{"title":"QNBleDeviceDiscoveryListener","level":"1.5.22","depth":2,"path":"api/QNBleDeviceDiscoveryListener.md","ref":"api/QNBleDeviceDiscoveryListener.md","articles":[]},"previous":{"title":"QNWspConfig","level":"1.5.20","depth":2,"path":"api/QNWspConfig.md","ref":"api/QNWspConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleConnectionChangeListener.md","mtime":"2020-05-14T05:48:27.961Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNWspConfig","level":"1.5.20","depth":2,"next":{"title":"QNBleConnectionChangeListener","level":"1.5.21","depth":2,"path":"api/QNBleConnectionChangeListener.md","ref":"api/QNBleConnectionChangeListener.md","articles":[]},"previous":{"title":"QNWiFiConfig","level":"1.5.19","depth":2,"path":"api/QNWiFiConfig.md","ref":"api/QNWiFiConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNWspConfig.md","mtime":"2020-05-22T12:10:39.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

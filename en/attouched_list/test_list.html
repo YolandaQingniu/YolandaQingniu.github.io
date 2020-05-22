@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="zh" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>错误码 · GitBook</title>
+        <title>Test Case · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="scan_error.html" />
+    <link rel="next" href="../history/history.html" />
     
     
-    <link rel="prev" href="body_shape.html" />
+    <link rel="prev" href="scale_event.html" />
     
 
     </head>
@@ -79,7 +79,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -102,7 +102,7 @@
                 <a href="../">
             
                     
-                    概述
+                    Overview
             
                 </a>
             
@@ -141,7 +141,7 @@
                 <span>
             
                     
-                    工作流程
+                    work process
             
                 </span>
             
@@ -155,7 +155,7 @@
                 <a href="../flow/ble_scale.html">
             
                     
-                    普通蓝牙秤
+                    Common Bluetooth scale
             
                 </a>
             
@@ -168,7 +168,7 @@
                 <a href="../flow/flow_dm.html">
             
                     
-                    普通蓝牙秤-带有 Wifi 功能
+                    Common Bluetooth scale-with Wifi function
             
                 </a>
             
@@ -181,7 +181,7 @@
                 <a href="../flow/ble_scale_wsp.html">
             
                     
-                    WSP 蓝牙 WiFi 秤
+                    WSP Bluetooth WiFi scale
             
                 </a>
             
@@ -194,7 +194,7 @@
                 <a href="../flow/kitchen_scale.html">
             
                     
-                    厨房秤
+                    Kitchen scale
             
                 </a>
             
@@ -874,7 +874,7 @@
                 <span>
             
                     
-                    附表
+                    Schedule
             
                 </span>
             
@@ -888,7 +888,7 @@
                 <a href="faq.html">
             
                     
-                    常见问题
+                    FAQ
             
                 </a>
             
@@ -901,7 +901,7 @@
                 <a href="body_indexes.html">
             
                     
-                    身体指标常量
+                    Body Index Constant
             
                 </a>
             
@@ -914,7 +914,7 @@
                 <a href="device_type.html">
             
                     
-                    设备类型
+                    Device Type
             
                 </a>
             
@@ -927,7 +927,7 @@
                 <a href="body_shape.html">
             
                     
-                    体型对照表
+                    Body shape comparison table
             
                 </a>
             
@@ -935,12 +935,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.5" data-path="error_code.html">
+        <li class="chapter " data-level="1.6.5" data-path="error_code.html">
             
                 <a href="error_code.html">
             
                     
-                    错误码
+                    Error Code
             
                 </a>
             
@@ -953,7 +953,7 @@
                 <a href="scan_error.html">
             
                     
-                    扫描错误码
+                    Scan Error Code
             
                 </a>
             
@@ -966,7 +966,7 @@
                 <a href="scale_state.html">
             
                     
-                    秤状态定义
+                    Scale State Definition
             
                 </a>
             
@@ -979,7 +979,7 @@
                 <a href="scale_event.html">
             
                     
-                    秤事件定义
+                    Scale event definition
             
                 </a>
             
@@ -987,12 +987,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="test_list.html">
+        <li class="chapter active" data-level="1.6.9" data-path="test_list.html">
             
                 <a href="test_list.html">
             
                     
-                    测试用例
+                    Test Case
             
                 </a>
             
@@ -1005,7 +1005,7 @@
                 <a href="../history/history.html">
             
                     
-                    更新日志
+                    Update Log
             
                 </a>
             
@@ -1025,7 +1025,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -1048,7 +1048,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >错误码</a>
+        <a href=".." >Test Case</a>
     </h1>
 </div>
 
@@ -1063,347 +1063,135 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9519;&#x8BEF;&#x7801;">&#x9519;&#x8BEF;&#x7801;</h1>
-<h3 id="&#x64CD;&#x4F5C;&#x6B63;&#x5E38;">&#x64CD;&#x4F5C;&#x6B63;&#x5E38;</h3>
+                                <h1 id="test-case">Test case</h1>
+<p><a href="SDK_Checklist.xlsx">Excel version download address</a></p>
+<blockquote>
+<p>You can download the file with the right mouse button</p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x5E38;&#x91CF;</th>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x7801;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
-<th style="text-align:left">&#x89E3;&#x91CA;</th>
-<th style="text-align:left">&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
+<th style="text-align:center">Use case number</th>
+<th style="text-align:center">Use case title</th>
+<th style="text-align:center">priority</th>
+<th style="text-align:center">Preconditions</th>
+<th style="text-align:center">Test procedure</th>
+<th style="text-align:center">Checkpoints and precautions</th>
+<th style="text-align:center">expected results</th>
+<th style="text-align:center">Remarks</th>
+<th style="text-align:center">Test Results</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">OK</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">success</td>
-<td style="text-align:left">&#x64CD;&#x4F5C;&#x6210;&#x529F;</td>
-<td style="text-align:left">&#x65E0;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x521D;&#x59CB;&#x5316;&#x76F8;&#x5173;&#x9519;&#x8BEF;">&#x521D;&#x59CB;&#x5316;&#x76F8;&#x5173;&#x9519;&#x8BEF;</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x5E38;&#x91CF;</th>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x7801;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
-<th style="text-align:left">&#x89E3;&#x91CA;</th>
-<th style="text-align:left">&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ERROR_INVALIDATE_APP_ID</td>
-<td style="text-align:left">1001</td>
-<td style="text-align:left">app id is invalidate</td>
-<td style="text-align:left">APPID &#x65E0;&#x6548;</td>
-<td style="text-align:left">&#x4F7F;&#x7528;&#x6B63;&#x786E;&#x7684; APPID</td>
+<td style="text-align:center">SDK_01</td>
+<td style="text-align:center">Verify that it can be installed and run on the phone normally</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Install the application package on the phone<br>2. Open the app</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Enter the measurement module normally</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_NOT_INIT_SDK</td>
-<td style="text-align:left">1002</td>
-<td style="text-align:left">please call the method &quot;initSdk&quot; first</td>
-<td style="text-align:left">&#x672A;&#x8C03;&#x7528; initSDK &#x65B9;&#x6CD5;</td>
-<td style="text-align:left">&#x5148;&#x8C03;&#x7528; initSDK</td>
+<td style="text-align:center">SDK_02</td>
+<td style="text-align:center">Verify that the Bluetooth shutdown prompt is normal</td>
+<td style="text-align:center">in</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Turn off the phone&apos;s Bluetooth<br>2. Add connection scale</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Interface prompt:<br>&#x201C;Bluetooth off&#x201D;Hints like</td>
+<td style="text-align:center">This is based on the client company&apos;s own Bluetooth shutdown prompt</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_FIRST_DATA_FILE_URI</td>
-<td style="text-align:left">1003</td>
-<td style="text-align:left">the first data file uri is error, please provide the correct one</td>
-<td style="text-align:left">&#x521D;&#x59CB;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7684; Uri &#x6709;&#x8BEF;</td>
-<td style="text-align:left">&#x63D0;&#x4F9B;&#x6B63;&#x786E;&#x7684;&#x8DEF;&#x5F84;</td>
+<td style="text-align:center">SDK_03</td>
+<td style="text-align:center">Verify that the normal data can be measured and the IOS and Android measurement results are consistent</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Must be measured barefoot</td>
+<td style="text-align:center">1. Install and open the SDK application<br>2. Enter personal physical information, such as height: 161cm, age 1991-01-01, male<br>3. Use the same data of Android and IOS to weigh the scale and measure one complete</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The measurement data of Android and iOS are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_PACKAGE_NAME</td>
-<td style="text-align:left">1004</td>
-<td style="text-align:left">the Android Package Name is Error ,Please Check it Or Contact the SDK Provider</td>
-<td style="text-align:left">&#x5B89;&#x5353;&#x7684;<code>&#x5305;&#x540D;</code>&#x4E0D;&#x6B63;&#x786E;</td>
-<td style="text-align:left">&#x68C0;&#x67E5;&#x5305;&#x540D;&#x662F;&#x5426;&#x6B63;&#x786E;&#x6216;&#x8054;&#x7CFB; SDK &#x63D0;&#x4F9B;&#x5546;</td>
+<td style="text-align:center">SDK_04</td>
+<td style="text-align:center">Verify that the measurement indicators for wearing shoes are normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Shoe measurement</td>
+<td style="text-align:center">1. Enter your own personal data<br>2. Connect the scale and measure a complete data on the scale</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The interface display is normal, the measurement data results only show two indicators of weight and BMI</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_BUNDLE_ID</td>
-<td style="text-align:left">1005</td>
-<td style="text-align:left">the IOS APP Bundle Id is Error ,Please Check it Or Contact the SDK Provider</td>
-<td style="text-align:left">IOS &#x7684; <code>Bundle Id</code> &#x4E0D;&#x6B63;&#x786E;</td>
-<td style="text-align:left">&#x68C0;&#x67E5;&#x5305;&#x540D;&#x662F;&#x5426;&#x6B63;&#x786E;&#x6216;&#x8054;&#x7CFB; SDK &#x63D0;&#x4F9B;&#x5546;</td>
+<td style="text-align:center">SDK_05</td>
+<td style="text-align:center">Verify that the number of indicators is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Must be measured barefoot</td>
+<td style="text-align:center">1. Edit normal profile<br>2. Connect a scale to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Measurement indicators show the same as expected</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_INIT_FILE</td>
-<td style="text-align:left">1006</td>
-<td style="text-align:left">The config file content is wrong ,Please provide the correct one</td>
-<td style="text-align:left">&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6709;&#x8BEF;</td>
-<td style="text-align:left">&#x8BA9;Yolanda&#x516C;&#x53F8;&#x53E6;&#x5916;&#x63D0;&#x4F9B;&#x4E2A;&#x521D;&#x59CB;&#x6587;&#x4EF6;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x84DD;&#x7259;&#x76F8;&#x5173;&#x9519;&#x8BEF;">&#x84DD;&#x7259;&#x76F8;&#x5173;&#x9519;&#x8BEF;</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x5E38;&#x91CF;</th>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x7801;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
-<th style="text-align:left">&#x89E3;&#x91CA;</th>
-<th style="text-align:left">&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ERROR_BLUETOOTH_CLOSED</td>
-<td style="text-align:left">1101</td>
-<td style="text-align:left">the bluetooth is closed,please enable it first</td>
-<td style="text-align:left">&#x84DD;&#x7259;&#x5DF2;&#x5173;&#x95ED;</td>
-<td style="text-align:left">&#x63D0;&#x793A;&#x7528;&#x6237;&#x6253;&#x5F00;&#x84DD;&#x7259;&#xFF0C;android &#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x6253;&#x5F00;&#x84DD;&#x7259;</td>
+<td style="text-align:center">SDK_06</td>
+<td style="text-align:center">Verify that switching between different gender measurement data is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Use an Android phone: edit your personal data, and measure the complete data for each of the male and female scales<br>2. Change the IOS phone again: use the same data on the scale to measure a piece of data for men and women</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The data measured on both sides of the platform are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_LOCATION_PERMISSION</td>
-<td style="text-align:left">1102</td>
-<td style="text-align:left">your app need the android authorize the location permission</td>
-<td style="text-align:left">&#x9700;&#x6C42;&#x6388;&#x6743;&#x5B9A;&#x4F4D;&#x6743;&#x9650;</td>
-<td style="text-align:left">&#x9700;&#x8981;&#x5148;&#x8BA9;&#x7528;&#x6237;&#x6388;&#x6743;&#x5B9A;&#x4F4D;</td>
+<td style="text-align:center">SDK_07</td>
+<td style="text-align:center">Verify that the data for different height measurements is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Recommended height input range is 40cm--240cm, minimum is 40cm, maximum is 240cm</td>
+<td style="text-align:center">1. Enter 40cm, 161cm, 240cm respectively, other body data will not change<br>2. Connect the scale to the scale and measure a complete data with the three different heights above</td>
+<td style="text-align:center">Take 56kg body weight as an example</td>
+<td style="text-align:center">1. The height is the lowest, and the measured body fat rate is the highest. Body fat rate at 70%<br>2. Height is 161cm, body fat rate is within the normal range<br>3. The height is the highest and the measured body fat rate is the lowest. Body fat rate at 5.1%</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_BLE_ERROR</td>
-<td style="text-align:left">1103</td>
-<td style="text-align:left">bluetooth internal error occurred</td>
-<td style="text-align:left">&#x8C03;&#x7528;&#x84DD;&#x7259;&#x65F6;&#xFF0C;&#x51FA;&#x73B0;&#x4E86;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;&#x3002;</td>
-<td style="text-align:left">&#x53EF;&#x5C1D;&#x8BD5;&#x91CD;&#x65B0;&#x64CD;&#x4F5C;&#xFF0C;&#x6216;&#x63D0;&#x793A;&#x7528;&#x6237;&#x91CD;&#x542F;&#x84DD;&#x7259;&#x3002;</td>
+<td style="text-align:center">SDK_08</td>
+<td style="text-align:center">Verify correct measurement data for different ages</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Recommended age range 4 years old-80 years old</td>
+<td style="text-align:center">Android and ios use the same data for measurement&#xFF1B;<br>1. Enter the birthday as 5 years old, 28 years old, 80 years old, other information remains unchanged<br>2. Connect a scale with a different age to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The data measured on both sides of the platform are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_CONNECT_WHEN_CONNECTING</td>
-<td style="text-align:left">1104</td>
-<td style="text-align:left">bluetooth is doing connect, you should not call connect right now</td>
-<td style="text-align:left">&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x7531;&#x518D;&#x6B21;&#x8C03;&#x7528;&#x4E86;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</td>
-<td style="text-align:left">&#x84DD;&#x7259;&#x65AD;&#x5F00;&#x524D;&#xFF0C;&#x4E0D;&#x8981;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</td>
+<td style="text-align:center">SDK_09</td>
+<td style="text-align:center">Verify that switching between kg, Ib, kg, and st units is normal.</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Set the pound unit, the scale does not support the pound, the scale defaults kg, set the st unit, the scale does not support, the scale defaults Ib</td>
+<td style="text-align:center">1. Edit personal data, switch between different units<br>2. Connect scales in different units</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The unit displayed on the scale is the same as the unit set on the phone</td>
+<td style="text-align:center">App supports display units according to your company&apos;s needs</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:left">ERROR_CONNECT_WHEN_HAS_CONNECTED</td>
-<td style="text-align:left">1105</td>
-<td style="text-align:left">bluetooth is connected another scale, please disconnect it first</td>
-<td style="text-align:left">&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;&#x60C5;&#x51B5;&#xFF0C;&#x518D;&#x6B21;&#x8C03;&#x7528;&#x4E86;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</td>
-<td style="text-align:left">&#x5148;&#x65AD;&#x5F00;&#x4E4B;&#x524D;&#x7684;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#xFF0C;&#x518D;&#x8C03;&#x7528;&#x8FDE;&#x63A5;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLUETOOTH_UNKNOWN</td>
-<td style="text-align:left">1106</td>
-<td style="text-align:left">the bluetooth state is unknown, this state may appear when the bluetooth is not prepared on the IOS</td>
-<td style="text-align:left">&#x84DD;&#x7259;&#x72B6;&#x6001;&#x672A;&#x77E5;</td>
-<td style="text-align:left">&#x53EF;&#x80FD;&#x662F;&#x8BBE;&#x5907;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5728; IOS &#x5E73;&#x53F0;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLUETOOTH_RESETTING</td>
-<td style="text-align:left">1107</td>
-<td style="text-align:left">the system is resetting the bluetooth, try again later</td>
-<td style="text-align:left">&#x6B63;&#x5728;&#x91CD;&#x542F;&#x84DD;&#x7259;&#x7CFB;&#x7EDF;</td>
-<td style="text-align:left">&#x7A0D;&#x540E;&#x518D;&#x8BD5;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLUETOOTH_UNSUPPORTED</td>
-<td style="text-align:left">1108</td>
-<td style="text-align:left">the phone/pad is not support BLE, try another phone/pad</td>
-<td style="text-align:left">&#x624B;&#x673A;&#x4E0D;&#x652F;&#x6301;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x4F7F;&#x7528;</td>
-<td style="text-align:left">&#x6362;&#x4E2A;&#x8BBE;&#x5907;&#x8BD5;&#x8BD5;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLUETOOTH_UNAUTHORIZED</td>
-<td style="text-align:left">1109</td>
-<td style="text-align:left">bluetooth is unauthorized, ask user authorize</td>
-<td style="text-align:left">&#x672A;&#x6388;&#x6743;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x8BBE;&#x5907;</td>
-<td style="text-align:left">&#x8BF7;&#x6C42;&#x7528;&#x6237;&#x6388;&#x6743; APP &#x84DD;&#x7259;&#x6743;&#x9650;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLE_CONNECT_FAIL</td>
-<td style="text-align:left">1110</td>
-<td style="text-align:left">failed to connect scale, try reconnect</td>
-<td style="text-align:left">&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;</td>
-<td style="text-align:left">&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLE_DISCONNECTING</td>
-<td style="text-align:left">1111</td>
-<td style="text-align:left">it is disconnecting th scale, try again later</td>
-<td style="text-align:left">&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x6B63;&#x5728;&#x65AD;&#x5F00;</td>
-<td style="text-align:left">&#x7A0D;&#x540E;&#x518D;&#x8BD5;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLE_NONE_SCAN</td>
-<td style="text-align:left">1112</td>
-<td style="text-align:left">No bluetooth device has been scanned</td>
-<td style="text-align:left">&#x6CA1;&#x6709;&#x626B;&#x63CF;&#x5230;&#x4EFB;&#x4F55;&#x84DD;&#x7259;&#x8BBE;&#x5907;</td>
-<td style="text-align:left">&#x63D0;&#x793A;&#x7528;&#x6237;&#x91CD;&#x542F;&#x84DD;&#x7259;&#x548C;&#x79E4;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_BLE_CONNECT_OVERTIME</td>
-<td style="text-align:left">1113</td>
-<td style="text-align:left">Connect device timeout</td>
-<td style="text-align:left">&#x5728;&#x6307;&#x5B9A;&#x7684;&#x8FDE;&#x63A5;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x6CA1;&#x6709;&#x6210;&#x529F;</td>
-<td style="text-align:left">&#x91CD;&#x65B0;&#x8FDE;&#x63A5;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x9519;&#x8BEF;">&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x9519;&#x8BEF;</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x5E38;&#x91CF;</th>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x7801;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
-<th style="text-align:left">&#x89E3;&#x91CA;</th>
-<th style="text-align:left">&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ERROR_ILLEGAL_ARGUMENT</td>
-<td style="text-align:left">1201</td>
-<td style="text-align:left">illegal argument,please check the api document</td>
-<td style="text-align:left">&#x9519;&#x8BEF;&#x7684;&#x53C2;&#x6570;</td>
-<td style="text-align:left">&#x67E5;&#x770B; API &#x6587;&#x6863;&#xFF0C;&#x4F20;&#x5165;&#x6B63;&#x786E;&#x7684;&#x53C2;&#x6570;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_MISS_DISCOVERY_LISTENER</td>
-<td style="text-align:left">1202</td>
-<td style="text-align:left">miss the discovery listener, please set the listener first</td>
-<td style="text-align:left">&#x626B;&#x63CF;&#x65F6;&#xFF0C;&#x672A;&#x8BBE;&#x7F6E;&#x626B;&#x63CF;&#x76D1;&#x542C;&#x65B9;&#x6CD5;</td>
-<td style="text-align:left">&#x5148;&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x5668;&#x518D;&#x8C03;&#x7528;&#x626B;&#x63CF;&#x84DD;&#x7259;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_MISS_DATA_LISTENER</td>
-<td style="text-align:left">1203</td>
-<td style="text-align:left">miss the data listener, please set the listener first</td>
-<td style="text-align:left">&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x65F6;&#xFF0C;&#x672A;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;</td>
-<td style="text-align:left">&#x5148;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_ID_EMPTY</td>
-<td style="text-align:left">1204</td>
-<td style="text-align:left">the user id argument is null or empty</td>
-<td style="text-align:left">user_id &#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_GENDER</td>
-<td style="text-align:left">1205</td>
-<td style="text-align:left">the gender argument is wrong, please pass the &quot;male&quot; or &quot;female&quot;</td>
-<td style="text-align:left">&#x4F20;&#x7684;&#x7528;&#x6237;&#x6027;&#x522B;&#x503C;&#x9519;&#x8BEF; &#x4F20;</td>
-<td style="text-align:left">male &#x6216; female</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_HEIGHT</td>
-<td style="text-align:left">1206</td>
-<td style="text-align:left">the height argument is wrong, please pass the value within 40 and 240 cm</td>
-<td style="text-align:left">&#x8EAB;&#x9AD8;&#x4E0D;&#x5BF9;</td>
-<td style="text-align:left">&#x4F20; 40~240cm &#x7684;&#x503C;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_BIRTHDAY</td>
-<td style="text-align:left">1207</td>
-<td style="text-align:left">the birthday argument is wrong, please pass the date before today</td>
-<td style="text-align:left">&#x751F;&#x65E5;&#x4E0D;&#x5BF9;</td>
-<td style="text-align:left">&#x4E0D;&#x8981;&#x4F20;&#x6BD4;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x66F4;&#x665A;&#x7684;&#x503C;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_START_SERVICE_BACKGROUND</td>
-<td style="text-align:left">1208</td>
-<td style="text-align:left">after <strong>Android O</strong>,not allowed to start service in background</td>
-<td style="text-align:left">&#x5728; Android O &#x4E4B;&#x540E;,&#x540E;&#x53F0;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x4F1A;&#x62A5;&#x9519;</td>
-<td style="text-align:left">&#x5728; app &#x5904;&#x4E8E;&#x524D;&#x53F0;&#x65F6;&#x542F;&#x52A8;&#x670D;&#x52A1;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_ATHLETE_TYPE</td>
-<td style="text-align:left">1209</td>
-<td style="text-align:left">the athleteType argument is wrong, only allow 0 or 1</td>
-<td style="text-align:left">&#x53EA;&#x5141;&#x8BB8;&#x586B;&#x5199; 0 &#x6216; 1</td>
-<td style="text-align:left">&#x68C0;&#x67E5;&#x586B;&#x5199;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_USER_SHAPE_GOAL_TYPE</td>
-<td style="text-align:left">1210</td>
-<td style="text-align:left">the shape or goal argument is wrong</td>
-<td style="text-align:left">shapeType &#x6216;&#x8005; goalType &#x53C2;&#x6570;&#x5339;&#x914D;&#x9519;&#x8BEF;</td>
-<td style="text-align:left">&#x68C0;&#x67E5;&#x586B;&#x5199;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_DEVICE_TYPE</td>
-<td style="text-align:left">1211</td>
-<td style="text-align:left">the device type is wrong</td>
-<td style="text-align:left">&#x8BBE;&#x5907;&#x7C7B;&#x578B;&#x9519;&#x8BEF;</td>
-<td style="text-align:left">&#x68C0;&#x67E5;&#x8BBE;&#x5907;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_WIFI_PARAMS</td>
-<td style="text-align:left">1212</td>
-<td style="text-align:left">the WiFi params is wrong</td>
-<td style="text-align:left">WiFi &#x914D;&#x7F6E;&#x53C2;&#x6570;&#x50A8;&#x51FA;&#x9519;</td>
-<td style="text-align:left">&#x67E5;&#x770B;<a href="../api/QNWiFiConfig.html">QNWiFiConfig</a>&#x76F8;&#x5173;&#x6587;&#x6863;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_REGISTER_DEVICE</td>
-<td style="text-align:left">1213</td>
-<td style="text-align:left">register device is fail</td>
-<td style="text-align:left">&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x5931;&#x8D25;</td>
-<td style="text-align:left">&#x5177;&#x4F53;&#x9519;&#x8BEF;&#x539F;&#x56E0;&#x67E5;&#x770B;&#x9519;&#x8BEF;&#x8FD4;&#x56DE;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_NOCOMPLETE_MEASURE</td>
-<td style="text-align:left">1214</td>
-<td style="text-align:left">you can get data when measurement complete</td>
-<td style="text-align:left">&#x83B7;&#x53D6;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5931;&#x8D25;</td>
-<td style="text-align:left">&#x8BF7;&#x7B49;&#x5F85;&#x6D4B;&#x91CF;&#x5B8C;&#x6210;&#x540E;&#x83B7;&#x53D6;&#x6D4B;&#x91CF;&#x6570;&#x636E;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_NOSUPPORT_MODIFY</td>
-<td style="text-align:left">1215</td>
-<td style="text-align:left">not supported modifying units</td>
-<td style="text-align:left">&#x4E0D;&#x652F;&#x6301;&#x4FEE;&#x6539;&#x5355;&#x4F4D;</td>
-<td style="text-align:left">&#x8BF7;&#x67E5;&#x770B;<a href="../api/QNBleBroadcastDevice.html">QNBleBroadcastDevice</a>&#x662F;&#x5426;&#x652F;&#x6301;&#x4FEE;&#x6539;&#x5355;&#x4F4D;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_WSP_USER_INDEX</td>
-<td style="text-align:left">1216</td>
-<td style="text-align:left">the user&apos;s index is wrong</td>
-<td style="text-align:left">&#x7528;&#x6237;index &#x672A;&#x8BBE;&#x7F6E;&#x6216;&#x8BBE;&#x7F6E;&#x4E0D;&#x5408;&#x6CD5;</td>
-<td style="text-align:left">&#x8BF7;&#x68C0;&#x67E5;&#x6784;&#x5EFA;&#x7528;&#x6237;&#x65F6;&#x662F;&#x5426;&#x6709;&#x8BBE;&#x7F6E;index,&#x6216;&#x8005;&#x662F;&#x5426;&#x5728;&#x5408;&#x7406;&#x8303;&#x56F4;[1,8]</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_WSP_USER_SECRET</td>
-<td style="text-align:left">1217</td>
-<td style="text-align:left">the user&apos;s secret index</td>
-<td style="text-align:left">&#x7528;&#x6237; secret &#x672A;&#x8BBE;&#x7F6E;&#x6216;&#x8BBE;&#x7F6E;&#x4E0D;&#x5408;&#x6CD5;</td>
-<td style="text-align:left">&#x8BF7;&#x68C0;&#x67E5;&#x6784;&#x5EFA;&#x7528;&#x6237;&#x65F6;&#x662F;&#x5426;&#x6709;&#x8BBE;&#x7F6E;secret&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5426;&#x5728;&#x5408;&#x7406;&#x8303;&#x56F4;[1,9999]</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x5171;&#x4EAB;&#x79E4;&#x76F8;&#x5173;&#x9519;&#x8BEF;">&#x5171;&#x4EAB;&#x79E4;&#x76F8;&#x5173;&#x9519;&#x8BEF;</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x5E38;&#x91CF;</th>
-<th style="text-align:left">&#x9519;&#x8BEF;&#x7801;</th>
-<th style="text-align:left">&#x542B;&#x4E49;</th>
-<th style="text-align:left">&#x89E3;&#x91CA;</th>
-<th style="text-align:left">&#x89E3;&#x51B3;&#x65B9;&#x6848;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ERROR_CODER</td>
-<td style="text-align:left">1301</td>
-<td style="text-align:left">coder is error</td>
-<td style="text-align:left">&#x4E8C;&#x7EF4;&#x7801;&#x9519;&#x8BEF;</td>
-<td style="text-align:left">&#x8BF7;&#x8054;&#x7CFB;&#x5BA2;&#x670D;&#x5904;&#x7406;</td>
-</tr>
-<tr>
-<td style="text-align:left">ERROR_CODER_INVALID</td>
-<td style="text-align:left">1302</td>
-<td style="text-align:left">coder invalid</td>
-<td style="text-align:left">&#x4E8C;&#x7EF4;&#x7801;&#x5931;&#x6548;</td>
-<td style="text-align:left">&#x8BF7;&#x91CD;&#x65B0;&#x751F;&#x6210;</td>
+<td style="text-align:center">SDK_10</td>
+<td style="text-align:center">Verify that the measured data of the modified data is larger than the measured data before the modification</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Edit personal data and connect to the scale<br>The scale measures a complete piece of data<br>2. Modify personal information, (the modified information is different from the previous one), weigh on the scale again to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The two measurement data are very different</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
@@ -1434,12 +1222,12 @@
 
             
                 
-                <a href="body_shape.html" class="navigation navigation-prev " aria-label="Previous page: 体型对照表">
+                <a href="scale_event.html" class="navigation navigation-prev " aria-label="Previous page: Scale event definition">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="scan_error.html" class="navigation navigation-next " aria-label="Next page: 扫描错误码">
+                <a href="../history/history.html" class="navigation navigation-next " aria-label="Next page: Update Log">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1450,7 +1238,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"错误码","level":"1.6.5","depth":2,"next":{"title":"扫描错误码","level":"1.6.6","depth":2,"path":"attouched_list/scan_error.md","ref":"attouched_list/scan_error.md","articles":[]},"previous":{"title":"体型对照表","level":"1.6.4","depth":2,"path":"attouched_list/body_shape.md","ref":"attouched_list/body_shape.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"attouched_list/error_code.md","mtime":"2020-05-14T05:48:27.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"Test Case","level":"1.6.9","depth":2,"next":{"title":"Update Log","level":"1.6.10","depth":2,"path":"history/history.md","ref":"history/history.md","articles":[]},"previous":{"title":"Scale event definition","level":"1.6.8","depth":2,"path":"attouched_list/scale_event.md","ref":"attouched_list/scale_event.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"attouched_list/test_list.md","mtime":"2020-05-22T12:10:39.142Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

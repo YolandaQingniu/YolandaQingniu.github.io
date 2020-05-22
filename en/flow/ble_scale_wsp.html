@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="zh" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>普通蓝牙秤 · GitBook</title>
+        <title>WSP Bluetooth WiFi scale · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,8 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="flow_dm.html" />
+    <link rel="next" href="kitchen_scale.html" />
     
+    
+    <link rel="prev" href="flow_dm.html" />
     
 
     </head>
@@ -77,7 +79,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -100,7 +102,7 @@
                 <a href="../">
             
                     
-                    概述
+                    Overview
             
                 </a>
             
@@ -139,7 +141,7 @@
                 <span>
             
                     
-                    工作流程
+                    work process
             
                 </span>
             
@@ -148,12 +150,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="ble_scale.html">
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
             
                 <a href="ble_scale.html">
             
                     
-                    普通蓝牙秤
+                    Common Bluetooth scale
             
                 </a>
             
@@ -166,7 +168,7 @@
                 <a href="flow_dm.html">
             
                     
-                    普通蓝牙秤-带有 Wifi 功能
+                    Common Bluetooth scale-with Wifi function
             
                 </a>
             
@@ -174,12 +176,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="ble_scale_wsp.html">
+        <li class="chapter active" data-level="1.4.3" data-path="ble_scale_wsp.html">
             
                 <a href="ble_scale_wsp.html">
             
                     
-                    WSP 蓝牙 WiFi 秤
+                    WSP Bluetooth WiFi scale
             
                 </a>
             
@@ -192,7 +194,7 @@
                 <a href="kitchen_scale.html">
             
                     
-                    厨房秤
+                    Kitchen scale
             
                 </a>
             
@@ -872,7 +874,7 @@
                 <span>
             
                     
-                    附表
+                    Schedule
             
                 </span>
             
@@ -886,7 +888,7 @@
                 <a href="../attouched_list/faq.html">
             
                     
-                    常见问题
+                    FAQ
             
                 </a>
             
@@ -899,7 +901,7 @@
                 <a href="../attouched_list/body_indexes.html">
             
                     
-                    身体指标常量
+                    Body Index Constant
             
                 </a>
             
@@ -912,7 +914,7 @@
                 <a href="../attouched_list/device_type.html">
             
                     
-                    设备类型
+                    Device Type
             
                 </a>
             
@@ -925,7 +927,7 @@
                 <a href="../attouched_list/body_shape.html">
             
                     
-                    体型对照表
+                    Body shape comparison table
             
                 </a>
             
@@ -938,7 +940,7 @@
                 <a href="../attouched_list/error_code.html">
             
                     
-                    错误码
+                    Error Code
             
                 </a>
             
@@ -951,7 +953,7 @@
                 <a href="../attouched_list/scan_error.html">
             
                     
-                    扫描错误码
+                    Scan Error Code
             
                 </a>
             
@@ -964,7 +966,7 @@
                 <a href="../attouched_list/scale_state.html">
             
                     
-                    秤状态定义
+                    Scale State Definition
             
                 </a>
             
@@ -977,7 +979,7 @@
                 <a href="../attouched_list/scale_event.html">
             
                     
-                    秤事件定义
+                    Scale event definition
             
                 </a>
             
@@ -990,7 +992,7 @@
                 <a href="../attouched_list/test_list.html">
             
                     
-                    测试用例
+                    Test Case
             
                 </a>
             
@@ -1003,7 +1005,7 @@
                 <a href="../history/history.html">
             
                     
-                    更新日志
+                    Update Log
             
                 </a>
             
@@ -1023,7 +1025,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -1046,7 +1048,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >普通蓝牙秤</a>
+        <a href=".." >WSP Bluetooth WiFi scale</a>
     </h1>
 </div>
 
@@ -1061,210 +1063,206 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;">&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;</h1>
-<p>&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x662F;&#x6211;&#x53F8;&#x9500;&#x552E;&#x6700;&#x666E;&#x901A;&#x7684;&#x79E4;&#xFF0C;&#x5B83;&#x7684;&#x84DD;&#x7259;&#x540D;&#x901A;&#x5E38;&#x4E3A;&#xFF1A;<code>QN-Scale</code>&#x6216;<code>QN-Scale1</code>&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x84DD;&#x7259;&#x540D;&#x7684;&#x79E4;&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#x5E76;&#x65E0;&#x533A;&#x522B;&#x3002;</p>
-<p>&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5927;&#x7EA6;&#x5982;&#x4E0B;&#xFF1A;</p>
-<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cbnBhcnRpY2lwYW50IHVzZXIgYXMg55So5oi3XG5wYXJ0aWNpcGFudCBzY2FsZSBhcyDnp6Tnq69cbnBhcnRpY2lwYW50IGFwcCBhcyBBUFBcbnBhcnRpY2lwYW50IHNlcnZlciBhcyDkupHnq69cblxudXNlciAtPj4gYXBwOiDmiZPlvIBBUFBcbmFjdGl2YXRlIGFwcFxuYXBwIC0tPiBhcHA6IOWQr-WKqOaJq-aPj1xudXNlciAtPj4gc2NhbGU6IOi4qeS6ruenpFxuYWN0aXZhdGUgc2NhbGVcbnNjYWxlLS0-YXBwOiDlj5HpgIHok53niZnlub_mkq1cbmFwcC0tPmFwcDog5Yik5pat5piv5L2T6ISC56ek77yM5YGc5q2i5omr5o-PXG5hcHAtPj5zY2FsZTog5Y-R6LW36JOd54mZ6L-e5o6lXG5zY2FsZS0-PmFwcDog5ZCM5oSP6L-e5o6lXG5hcHAtLT5hcHA66L-e5o6l5oiQ5Yqf5bm25Yid5aeL5YyWXG5zY2FsZSAtLT5zY2FsZTog6L-e5o6l5oiQ5Yqf5bm25Yid5aeL5YyWXG5zY2FsZS0-PmFwcDog5Y-R6LW35o-h5omL5ZG95LukXG5hcHAtPj5zY2FsZTog5Zue5bqU5o-h5omL5ZG95LukXG5sb29wIOa1i-mHj-WunuaXtlxuc2NhbGUtLT5hcHA6IOensOmHjeWunuaXtuaVsOaNrlxuc2NhbGUtLT5hcHA6IOensOmHjeWunuaXtuaVsOaNrlxuZW5kXG51c2VyLS0-dXNlcjog56uZ56izXG5zY2FsZS0-PmFwcDog6YCa55-l5L2T6YeN56iz5a6aXG5zY2FsZS0tPnNjYWxlOua1i-mHj-mYu-aKl1xuc2NhbGUtPj5hcHA6IOWPkemAgemYu-aKl-aVsOaNrlxuYXBwLS0-YXBwOuiuoeeul-S9k-iEguaVsOaNrlxuc2NhbGUtLT5zY2FsZTog5rWL6YeP5b-D546H5pWw5o2uXG5zY2FsZS0-PmFwcDog5LiK5Lyg5b-D546H5pWw5o2uXG5kZWFjdGl2YXRlIHNjYWxlXG5hcHAtPj51c2VyOiDmmL7npLrlrozmlbTmtYvph4_nu5PmnpxcbmFwcC0-PiBzZXJ2ZXI6IOS4iuS8oOa1i-mHj-aVsOaNrlxuZGVhY3RpdmF0ZSBhcHBcbnVzZXItLT51c2VyOiDkuIvnp6Tlubbmn6XnnIvmlbDmja5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19" frameborder="0" width="750" height="1080"></iframe>
+                                <h1 id="wsp-bluetooth-wifi-scale">WSP Bluetooth WiFi scale</h1>
+<p>WSP Bluetooth WiFi scale is a smart device launched by our company that supports automatic recognition of user measurements, directly displays the measurement results on the scale display without the app, and automatically uploads the measurement results.</p>
+<p>This device avoids the step in which users need to use Bluetooth to connect to the device in order to make detailed measurements during the measurement process, and improves the user experience. As long as the device is connected to the network and the user information to be measured is registered with the device once, the user can subsequently use the app without the app. Registered users can measure on the scale without using a mobile phone. After the measurement is completed, the scale will automatically identify which registered user the measurement data belongs to. After successful recognition, the indicators of the measurement will be displayed on the device and the measurement data Last time to the corresponding server.</p>
+<h2 id="brief-description-of-scale-user">Brief description of scale user</h2>
+<p>At present, the WSP device allows up to 8 users, and users on the scale end need to register users with the device through Bluetooth connection. When 8 users have been registered and the user is registered with the device again, the scale will return to the status of registration failure. Therefore, before registering users, it is recommended to determine whether you need to delete the invalid users in the scale to avoid invalid users occupying resources.</p>
+<p>When registering a user with the device, the user key needs to be issued to the device (the key is generally generated by the server for the user&apos;s unique identifier). When the registration is successful, the device will record the user key and return the user&apos;s unique sequence number. Therefore, after successfully registering the user, the app needs to save the serial number and secret key that the device returns to the user. When updating user data via Bluetooth connection or measuring via Bluetooth connection, the user &#x2019;s serial number and secret key must be used to access the designated user on the scale side successfully. At the same time, the serial number is also used as an identification of the registered user to which the uploaded measurement data belongs, and as a necessary condition for deleting the user.</p>
+<ul>
+<li>registered user</li>
+</ul>
+<p>The scale can cache the registered user information, and identify the user to which the measurement data when the Bluetooth is not connected by the registered user information, so as to obtain detailed measurement data using the identified user information</p>
+<ul>
+<li>Visit users</li>
+</ul>
+<p>When operating the scale, you need to access the registered user first, and then you can enter the corresponding operation after successful access, such as modifying user information&#x3001;Connect to Bluetooth for measurement, etc.</p>
+<ul>
+<li>delete users</li>
+</ul>
+<p>After the user has been registered with the scale, subsequent users unbind the scale, and the user on the scale side needs to be deleted to avoid resource occupation</p>
+<h2 id="visitor-mode-measurement">Visitor Mode Measurement</h2>
+<p>Guest mode is a common channel measurement method provided by the scale body. This method does not require registered users to use it directly. Guest mode uses temporary users. The existence time of this user is from connection to disconnection. Temporary user when the device is disconnected That is to destroy, while in the guest mode will not generate and receive stored data</p>
+<h2 id="wsp-device-protocol-brief">WSP Device Protocol Brief</h2>
+<p>The protocol of the wsp device is basically optimized and modified in <a href="../attouched_list/WSP_v1.0.0.pdf">WSP Official Agreement</a>. The wsp protocol interaction is more complicated. The following are the parts involved in the device protocol</p>
+<p>Aspects covered by the agreement:</p>
+<ul>
+<li>User</li>
+<li>registered user</li>
+<li>Visit users</li>
+<li>Update user information</li>
+<li>Age</li>
+<li>Height</li>
+<li>Gender</li>
+<li>delete users</li>
+<li>Measurement</li>
+<li>Measurement status</li>
+<li>Real-time weight</li>
+<li>Storing data</li>
+<li>Measurement data</li>
+<li>Distribution network</li>
+<li>WiFi name</li>
+<li>WiFi password</li>
+<li>Data upload address</li>
+<li>OTA upgrade address</li>
+<li>Communication key</li>
+<li>Distribution results</li>
+<li>Other</li>
+<li>Unit</li>
+</ul>
+<p>The device involves many aspects, and the communication process between protocols and the enabling method are strictly required. Our company has packaged it into SDK for easy access.</p>
+<h2 id="workflow-in-different-situations">Workflow in different situations</h2>
+<ul>
+<li>The first time to use the binding distribution network</li>
+</ul>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5hcHA6IOaJk-W8gEFQUOi_m-WFpea1i-mHj1xudXNlci0-PnNjYWxlOiDnlKjmiLfouKnnp6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNlcnZlcjog6K-35rGC5b6F5Yig6Zmk55So5oi3XG5zZXJ2ZXItPj5hcHA6IOS4i-WPkeW-heWIoOmZpOeUqOaIt1xuYXBwLT4-c2VydmVyOiDor7fmsYLlr4bpkqVcbnNlcnZlci0-PmFwcDog5LiL5Y-R5a-G6ZKlXG5hcHAtPj5zY2FsZTog5Y-R6LW36L-e5o6lXG5zY2FsZS0-PmFwcDog5bu656uL6JOd54mZ6L-e5o6lXG5hcHAtPj5zY2FsZTog5ZCM5q2l5pe26Ze0XG5hcHAtPj5zY2FsZTog5ZCM5q2l5Y2V5L2NXG5hcHAtPj5zY2FsZTog5Y-R6YCB5Yig6Zmk55So5oi35ZG95LukXG5zY2FsZS0-PnNjYWxlOiDliKDpmaTnlKjmiLdcbmFwcC0-PnNjYWxlOiDms6jlhoznlKjmiLdcbnNjYWxlLT4-YXBwOiDov5Tlm57ntKLlvJXlgLxcbmFwcC0-PnNlcnZlcjog5Y-R6YCB5Y2g5L2N5oiQ5Yqf5L-h5oGvXG5hcHAtPj5zY2FsZTog6K6_6Zeu55So5oi3XG5hcHAtPj5zY2FsZTog5pu05paw5oCn5YirXG5hcHAtPj5zY2FsZTog5pu05paw6Lqr6auYXG5hcHAtPj5zY2FsZTog5pu05paw55Sf5pelXG5hcHAtPj5zY2FsZTog5pu05paw5bm06b6EXG5hcHAtPj5zY2FsZTog5pu05paw566X5rOVXG51c2VyLT4-c2NhbGU656ew6YeNXG5sb29wOiDmnKrnqLPlrprph43ph4_mtYvph49cbnNjYWxlLT4-YXBwOiDlrp7ml7bnp7Dph43ph43ph49cbmVuZFxudXNlci0-PnNjYWxlOiDnq5nnqLNcbnNjYWxlLT4-YXBwOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546H77yI6Iul5pSv5oyB77yJXG5zY2FsZS0-PmFwcDog56iz5a6a5rWL6YeP5pWw5o2uXG5hcHAtPj5zY2FsZTog5pat5byA6L-e5o6lXG5zY2FsZS0-PnVzZXI6IOWxleekuua1i-mHj-aVsOaNrlxudXNlci0-PnNjYWxlOiDkuIvnp6RcbmFwcC0-PnVzZXI6IOWxleekuuivpue7hua1i-mHj-aVsOaNrlxuYXBwLT4-c2VydmVyOiDkuIrkvKDnlKjmiLfmtYvph4_mlbDmja5cbmFwcC0-PnVzZXI6IOaPkOekuumFjee9kVxudXNlci0-PmFwcDog54K55Ye76L-b5YWl6YWN572RXG5hcHAtPj5zZXJ2ZXI6IOivt-axguWKoOWvhuWvhumSpe-8jE9UQemTvuaOpeetiVxudXNlci0-PnNjYWxlOiDouKnkuq7np6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNjYWxlOiDlj5Hotbfov57mjqVcbnNjYWxlLT4-YXBwOiDlu7rnq4vok53niZnov57mjqVcbmFwcC0-PnNjYWxlOiDlkIzmraXml7bpl7RcbmFwcC0-PnNjYWxlOiDlkIzmraXljZXkvY1cbmFwcC0-PnNjYWxlOiDorr_pl67nlKjmiLdcbmFwcC0-PnNjYWxlOiDpgJrnn6Xov5vlhaXphY3nvZFcbmFwcC0-PnNjYWxlOiDlj5HpgIF3aWZp5ZCN56ewXG5hcHAtPj5zY2FsZTog5Y-R6YCBd2lmaeWvhueggVxuYXBwLT4-c2NhbGU6IOWPkemAgeacjeWKoeWZqOWcsOWdgFxuYXBwLT4-c2NhbGU6IOWPkemAgU9UQeWcsOWdgFxuYXBwLT4-c2NhbGU6IOWPkemAgeWKoOWvhuWvhumSpVxuYXBwLT4-c2VydmVyOiDpgJrnn6XmnI3liqHlmajlj5jmm7TpgJrorq_lr4bpkqVcbnNjYWxlLT4-c2NhbGU6IOi_nuaOpXdpZmlcbnNjYWxlLT4-YXBwOiDkuIrlj5HphY3nvZHnu5PmnpxcbmFwcC0-PnNjYWxlOiDmlq3lvIDov57mjqVcbnNjYWxlLT4-c2VydmVyOiDlj5HpgIHor7fmsYLvvIzmtYvor5Xpk77mjqVcbnNlcnZlci0-PnNjYWxlOiDlk43lupTor7fmsYJcbmFwcC0-PnNlcnZlcjog5L-d5a2Y6YWN572R57uT5p6cXG5hcHAtPj51c2VyOiDlsZXnpLrphY3nvZHnu5PmnpxcblxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" frameborder="0" width="750" height="1950"></iframe>
 
-<h2 id="&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;">&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;</h2>
-<p>&#x4F7F;&#x7528;<a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a>&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x524D;&#x6587;&#x5DF2;&#x6709;&#x76F8;&#x5173;&#x4ECB;&#x7ECD;&#xFF0C;<a href="../#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x8BF7;&#x67E5;&#x770B;</a></p>
-<h2 id="&#x4E8C;&#x3001;&#x626B;&#x63CF;">&#x4E8C;&#x3001;&#x626B;&#x63CF;</h2>
-<h3 id="1-&#x8BBE;&#x7F6E;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x76D1;&#x542C;&#x7C7B;">1. &#x8BBE;&#x7F6E;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x76D1;&#x542C;&#x7C7B;</h3>
-<p>&#x5728;&#x626B;&#x63CF;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x7C7B;&#xFF0C;&#x65B9;&#x6CD5;&#x4E3A;<a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x5373;&#x53EF;&#xFF0C;&#x5728;&#x786E;&#x5B9A;&#x4E0D;&#x9700;&#x8981;&#x626B;&#x63CF;&#x8BB0;&#x5F97;&#x8BBE;&#x7F6E;&#x4E3A; null/nil</p>
-<p>android &#x793A;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li><p>Measurement with Bluetooth connection</p>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5hcHA6IOaJk-W8gEFQUOi_m-WFpea1i-mHj1xudXNlci0-PnNjYWxlOiDnlKjmiLfouKnnp6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNjYWxlOiDlj5Hotbfov57mjqVcbnNjYWxlLT4-YXBwOiDlu7rnq4vok53niZnov57mjqVcbmFwcC0-PnNjYWxlOiDlkIzmraXml7bpl7RcbmFwcC0-PnNjYWxlOiDlkIzmraXljZXkvY1cbmFwcC0-PnNjYWxlOiDorr_pl67nlKjmiLdcbmFwcC0-PnNjYWxlOiDmm7TmlrDmgKfliKtcbmFwcC0-PnNjYWxlOiDmm7TmlrDouqvpq5hcbmFwcC0-PnNjYWxlOiDmm7TmlrDnlJ_ml6VcbmFwcC0-PnNjYWxlOiDmm7TmlrDlubTpvoRcbmFwcC0-PnNjYWxlOiDmm7TmlrDnrpfms5VcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5hcHA6IOWunuaXtuensOmHjemHjemHj1xuZW5kXG51c2VyLT4-c2NhbGU6IOermeeos1xuc2NhbGUtPj5hcHA6IOmHjemHj-eos-Wumlxuc2NhbGUtPj5zY2FsZTog5rWL5Lq65L2T55Sf54mp6Zi75oqXXG5zY2FsZS0-PnNjYWxlOiDmtYvph4_lv4PnjofvvIjoi6XmlK_mjIHvvIlcbnNjYWxlLT4-YXBwOiDnqLPlrprmtYvph4_mlbDmja5cbmFwcC0-PnNjYWxlOiDmlq3lvIDov57mjqVcbnNjYWxlLT4-dXNlcjog5bGV56S65rWL6YeP5pWw5o2uXG51c2VyLT4-c2NhbGU6IOS4i-enpFxuYXBwLT4-dXNlcjog5bGV56S66K-m57uG5rWL6YeP5pWw5o2uXG5hcHAtPj5zZXJ2ZXI6IOS4iuS8oOeUqOaIt-a1i-mHj-aVsOaNrlxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" frameborder="0" width="750" height="950"></iframe>
+</li>
+<li><p>Normal measurement</p>
+</li>
+</ul>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5zY2FsZTog55So5oi36Lip56ekXG5zY2FsZS0-PnNjYWxlOiDov57mjqXot6_nlLHlmahcbnNjYWxlLT4-c2VydmVyOiDor6Lpl67ljYfnuqfkv6Hmga9cbnNlcnZlci0-PnNjYWxlOiDml6DljYfnuqfkv6Hmga_kuI7nlKjmiLflj5jmm7Tkv6Hmga9cbnNjYWxlLT4-c2VydmVyOiDnoa7orqTliKDpmaTnlKjmiLdcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5zY2FsZTog5a6e5pe256ew6YeN6YeN6YePXG5lbmRcbnVzZXItPj5zY2FsZTog56uZ56izXG5zY2FsZS0-PnNjYWxlOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-mHj-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546H77yI6Iul5pSv5oyB77yJXG5zY2FsZS0-PnNjYWxlOiDor4bliKvnlKjmiLdcbnNjYWxlLT4-dXNlcjog5bGV56S65rWL6YeP5pWw5o2uXG51c2VyLT4-c2NhbGU6IOS4i-enpFxubG9vcDog5LiK5Lyg5a2Y5YKo5pWw5o2uXG5zY2FsZS0-PnNlcnZlcjog5LiK5Lyg5a2Y5YKo5pWw5o2uXG5zZXJ2ZXItPj5zY2FsZTog5Zue5aSN5pS25YiwXG5lbmRcbnNjYWxlLT4-c2VydmVyOiDkuIrlj5HmtYvph4_mlbDmja5cbnNlcnZlci0-PnNjYWxlOiDlm57lpI3mlLbliLBcbnVzZXItPj5hcHA6IOaJk-W8gEFQUFxuYXBwLT4-c2VydmVyOiDmi4nlj5bmnIDmlrDmlbDmja5cbnNlcnZlci0-PmFwcDog5LiL5Y-R5rWL6YeP5pWw5o2uXG5hcHAtPj51c2VyOiDlsZXnpLror6bnu4bmtYvph4_mlbDmja5cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" frameborder="0" width="750" height="990"></iframe>
+
+<ul>
+<li>Measurement of unidentified users<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5zY2FsZTog55So5oi36Lip56ekXG5zY2FsZS0-PnNjYWxlOiDov57mjqXot6_nlLHlmahcbnNjYWxlLT4-c2VydmVyOiDor6Lpl67ljYfnuqfkv6Hmga9cbnNlcnZlci0-PnNjYWxlOiDml6DljYfnuqfkv6Hmga_kuI7nlKjmiLflj5jmm7Tkv6Hmga9cbnNjYWxlLT4-c2VydmVyOiDnoa7orqTliKDpmaTnlKjmiLdcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5zY2FsZTog5a6e5pe256ew6YeN6YeN6YePXG5lbmRcbnVzZXItPj5zY2FsZTog56uZ56izXG5zY2FsZS0-PnNjYWxlOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-mHj-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546HKOiLpeaUr-aMgSlcbnNjYWxlLT4-c2NhbGU6IOivhuWIq-eUqOaIt1xuc2NhbGUtPj51c2VyOiDmj5DnpLrmiZPlvIBBUFDlpITnkIZcbnVzZXItPj5zY2FsZTog5LiL56ekXG5zY2FsZS0-PnNlcnZlcjog5LiK5Y-R5pyq55-l5rWL6YeP5pWw5o2uXG51c2VyLT4-YXBwOiDmiZPlvIBBUFBcbmFwcC0-PnNlcnZlcjog5ouJ5Y-W5pyA5paw5pWw5o2uXG5zZXJ2ZXItPj5hcHA6IOS4i-WPkeacquefpea1i-mHj-aVsOaNrlxuYXBwLT4-dXNlcjog5bGV56S65pyq55-l5rWL6YeP5pWw5o2uXG51c2VyLT4-YXBwOiDorqTpoobmtYvph4_mlbDmja5cbmFwcC0-PnVzZXI6IOWxleekuuivpue7hua1i-mHj-aVsOaNrlxuYXBwLT4-c2VydmVyOiDkuIrlj5HorqTpoobnu5Pmnpxcblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" frameborder="0" width="750" height="990"></iframe>
+
+</li>
+</ul>
+<h2 id="one&#x3001;initialization">One&#x3001;initialization</h2>
+<p>Use <a href="../api/QNBleApi.html#initsdk">QNBleApi.initSdk</a> to initialize</p>
+<h2 id="2-scanning">2. scanning</h2>
+<h3 id="1-set-the-bluetooth-scan-callback-monitor-class">1. Set the Bluetooth scan callback monitor class</h3>
+<p>Before scanning, you need to set the listener class. The method is <a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>. This method only needs to be called once. When you do not need to scan, remember to set to null/nil</p>
+<p>android example:</p>
 <pre><code class="lang-java">QNBleApi.getInstance(context).setBleDeviceDiscoveryListener(<span class="hljs-keyword">new</span> QNBleDeviceDiscoveryListener() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5904;&#x7406;</span>
+<span class="hljs-comment">//This method calls back the device object, which can be processed by the device object</span>
     }
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStartScan</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//&#x5F00;&#x59CB;&#x626B;&#x63CF;&#x7684;&#x56DE;&#x5230;</span>
+<span class="hljs-comment">//Back to start scanning</span>
     }
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStopScan</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">//&#x7ED3;&#x675F;&#x626B;&#x63CF;&#x7684;&#x56DE;&#x5230;</span>
+<span class="hljs-comment">//return to the end of the scan</span>
     }
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScanFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code)</span> </span>{
-        <span class="hljs-comment">//&#x626B;&#x63CF;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x4F1A;&#x6709;&#x9519;&#x8BEF;&#x7801;&#x8FD4;&#x56DE;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x8003; &#x9519;&#x8BEF;&#x7801;&#x8BE6;&#x60C5;&#x9875;</span>
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBroadcastDeviceDiscover</span><span class="hljs-params">(QNBleBroadcastDevice device)</span> </span>{
-        <span class="hljs-comment">//&#x5E7F;&#x64AD;&#x79E4;&#x7684;&#x6570;&#x636E;&#x56DE;&#x8C03;&#xFF0C;&#x8BE5;&#x5904;&#x53EA;&#x4F1A;&#x56DE;&#x8C03;&#x5E7F;&#x64AD;&#x79E4;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-comment">//The callback for the scan failure will be returned with an error code. For details, please refer to the error code details page</span>
     }
 });
 </code></pre>
-<p>iOS &#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>//&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;
+<p>iOS example:</p>
+<pre><code>//set proxy
 QNBleApi *bleApi = [QNBleApi sharedBleApi];
 bleApi.discoveryListener = self;
 
-//&#x5B9E;&#x73B0;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;
+//Implement the proxy method
 - (void)onDeviceDiscover:(QNBleDevice *)device {
-    //&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x53D1;&#x73B0;&#x8BBE;&#x5907;&#x540E;&#x56DE;&#x8C03;
-}
-
-- (void)onBroadcastDeviceDiscover:(QNBleBroadcastDevice *)device {
-    //&#x6536;&#x5230;&#x5E7F;&#x64AD;&#x79E4;&#x6570;&#x636E;&#x65F6;&#x56DE;&#x8C03;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x4F1A;&#x56DE;&#x8C03;&#x5E7F;&#x64AD;&#x79E4;&#x7684;&#x6570;&#x636E;
+//This method will call back after the device is found
 }
 
 - (void)onStopScan {
-    //&#x505C;&#x6B62;&#x626B;&#x63CF;&#x65F6;&#x56DE;&#x8C03; 
+//Callback when scanning is stopped
 }
 
 - (void)onStartScan {
-    //&#x5F00;&#x59CB;&#x626B;&#x63CF;&#x65F6;&#x56DE;&#x8C03; 
+//Callback when starting scanning
 }
-</code></pre><h3 id="2-&#x542F;&#x52A8;&#x626B;&#x63CF;">2. &#x542F;&#x52A8;&#x626B;&#x63CF;</h3>
-<p>&#x786E;&#x8BA4;&#x84DD;&#x7259;&#x5DF2;&#x6253;&#x5F00;&#xFF0C;&#x5B89;&#x5353;&#x8FD9;&#x8FB9;&#x8FD8;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x4E0B;<code>&#x5B9A;&#x4F4D;&#x6743;&#x9650;</code>&#x548C;<code>&#x5B9A;&#x4F4D;&#x5F00;&#x5173;</code>&#x3002;&#x5982;&#x679C;&#x786E;&#x8BA4;&#x84DD;&#x7259;&#x5DF2;&#x6253;&#x5F00;&#xFF0C;&#x5B9A;&#x4F4D;&#x6743;&#x9650;&#x5DF2;&#x6388;&#x6743;&#xFF0C;&#x5B9A;&#x4F4D;&#x670D;&#x52A1;&#x5F00;&#x5173;&#x5DF2;&#x6253;&#x5F00;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x84DD;&#x7259;&#x626B;&#x63CF;</p>
+</code></pre><h3 id="2-start-the-scan">2. Start the scan</h3>
+<p>Confirm that Bluetooth is turned on, and Android needs to check the <code>location permission</code> and<code>location switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
 <blockquote>
-<p>&#x5B89;&#x5353; 6.0 &#x4EE5;&#x540E;&#xFF0C;&#x5BF9; targetSdkVersion&gt;=23 &#x4EE5;&#x4E0A;&#x7684; APP&#xFF0C;&#x8FDB;&#x884C;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x5B9A;&#x4F4D;&#x6743;&#x9650;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x67E5;&#x770B;<a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">&#x5173;&#x4E8E;</a>
-&#x5B9A;&#x4F4D;&#x670D;&#x52A1;&#x5F00;&#x5173;&#x4E0D;&#x662F;&#x5F3A;&#x5236;&#x6027;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x67D0;&#x4E9B;&#x624B;&#x673A;&#x4E0D;&#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x5F00;&#x5173;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x626B;&#x63CF;&#x5230;&#x8BBE;&#x5907;&#xFF0C;&#x8DDF;&#x5404;&#x5BB6;&#x7684;&#x624B;&#x673A;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;</p>
-<p>iOS13&#x7CFB;&#x7EDF;&#x589E;&#x52A0;&#x4E86;&#x84DD;&#x7259;&#x4F7F;&#x7528;&#x6743;&#x9650;&#xFF0C;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x4F7F;&#x7528;&#x6743;&#x9650;&#xFF0C;&#x786E;&#x8BA4;&#x5DF2;&#x6388;&#x6743;&#x5E76;&#x4E14;&#x84DD;&#x7259;&#x5DF2;&#x6253;&#x5F00;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F00;&#x59CB;&#x626B;&#x63CF;</p>
+<p>After Android 6.0, targetSdkVersion&gt;= 23 App above, you need to obtain positioning permission for Bluetooth scanning, please check <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
+The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.</p>
+<p>iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning</p>
 </blockquote>
-<p>&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x4E3A;<a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>&#xFF0C;&#x626B;&#x63CF;&#x5230;&#x7684;&#x8BBE;&#x5907;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5728;&#x4E0A;&#x9762;&#x8BBE;&#x7F6E;&#x7684;&#x626B;&#x63CF;&#x63A5;&#x53E3;&#x4E2D;<a href="../api/QNBleDeviceDiscoveryListener.html">QNBleDeviceDiscoveryListener</a>&#x56DE;&#x8C03;&#x3002;</p>
-<p>&#x53E6;&#x5916;&#x6709;&#x5173;&#x626B;&#x63CF;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<a href="../api/QNConfig.html">QNConfig</a>&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x57FA;&#x672C;&#x8986;&#x76D6;&#x3002;</p>
+<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-called-back-in-the-<a href="../api/qnbledevicediscoverylistener.md">qnbledevicediscoverylistener</a> in the scanning interface set above.</p>
+<p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, and the content to be set has been basically covered.</p>
 <blockquote>
-<p>&#x901A;&#x5E38; APP &#x4F1A;&#x6709;&#x4E2A;&#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x6D4B;&#x91CF;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x662F;&#x5728;&#x754C;&#x9762;&#x663E;&#x793A;&#x4E4B;&#x540E;&#x8FDB;&#x884C;&#x84DD;&#x7259;&#x626B;&#x63CF;&#xFF0C;&#x754C;&#x9762;&#x6D88;&#x5931;&#x7684;&#x65F6;&#x5019;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x3002;</p>
+<p>Usually APP will have an interface dedicated to measurement. We generally perform Bluetooth scanning after the interface is displayed, and stop scanning when the interface disappears.</p>
 </blockquote>
-<p>android&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>android example:</p>
 <pre><code class="lang-java">QNBleApi.getInstance(context).startBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
             <span class="hljs-meta">@Override</span>
             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
-                <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x56DE;&#x5230;&#x8BBE;&#x5907;&#xFF0C;&#x800C;&#x662F;&#x8868;&#x793A;&#x626B;&#x63CF;&#x662F;&#x5426;&#x542F;&#x52A8;&#x6210;&#x529F;</span>
+<span class="hljs-comment">//This method does not return to the device, but indicates whether the scan was started successfully</span>
                 <span class="hljs-keyword">if</span> (code != CheckStatus.OK.getCode()) {
                    ToastMaker.show(ScanActivity.<span class="hljs-keyword">this</span>,code+<span class="hljs-string">&quot;:&quot;</span>+msg);
                 }
             }
         });
 </code></pre>
-<p>iOS&#x793A;&#x4F8B;:</p>
-<pre><code>//&#x542F;&#x52A8;&#x626B;&#x63CF;
+<p>iOS example:</p>
+<pre><code>//start scan
 [[QNBleApi sharedBleApi] startBleDeviceDiscovery:^(NSError *error) {
-    //&#x8BE5;&#x5904;&#x56DE;&#x8C03;&#x8868;&#x793A;&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x6210;&#x529F;
+//The callback here indicates whether the scan method is successfully started
     if (error) {
-        NSLog([NSString stringWithFormat:@&quot;&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x5931;&#x8D25;,&#x539F;&#x56E0;: %@&quot;,error]);
+        NSLog([NSString stringWithFormat:@&quot;Failed to start scanning method, reason: %@&quot;,error]);
     }
 }];
-</code></pre><h2 id="&#x4E09;&#x3001;&#x8FDE;&#x63A5;">&#x4E09;&#x3001;&#x8FDE;&#x63A5;</h2>
-<p>&#x6536;&#x5230;&#x56DE;&#x8C03;&#x8BBE;&#x5907;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#xFF08;&#x8FD9;&#x4E2A;&#x5C5E;&#x4E8E; APP &#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7684;&#x8BDD;&#x5C31;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;</p>
-<p>&#x8FDE;&#x63A5;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x8BBE;&#x7F6E;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x548C;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x56DE;&#x8C03;&#x3002;</p>
-<p>&#x8BBE;&#x7F6E;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#setbleconnectionchangelistener">QNBleApi.setBleConnectionChangeListener</a>&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x540C;&#x8BBE;&#x7F6E;&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x591A;&#x6B21;&#x8FDE;&#x63A5;&#x4E5F;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#xFF0C;&#x5982;&#x679C;&#x786E;&#x5B9A;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A; null/nil</p>
-<p>android&#x793A;&#x4F8B;:</p>
-<pre><code class="lang-java">QNBleApi.getInstance(context).setBleConnectionChangeListener(<span class="hljs-keyword">new</span> QNBleConnectionChangeListener() {
-    <span class="hljs-comment">//&#x6B63;&#x5728;&#x8FDE;&#x63A5;</span>
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnecting</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        setBleStatus(QNScaleStatus.STATE_CONNECTING);
-    }
-    <span class="hljs-comment">//&#x5DF2;&#x8FDE;&#x63A5;</span>
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnected</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        setBleStatus(QNScaleStatus.STATE_CONNECTED);
-    }
-
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceSearchComplete</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        <span class="hljs-comment">//&#x8BE5;&#x72B6;&#x6001;&#x662F;&#x641C;&#x7D22;&#x670D;&#x52A1;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x5E38;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x65E0;&#x9700;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</span>
-    }
-
-    <span class="hljs-comment">//&#x6B63;&#x5728;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x8C03;&#x7528;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x9A6C;&#x4E0A;&#x56DE;&#x8C03;</span>
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDisconnecting</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        setBleStatus(QNScaleStatus.STATE_DISCONNECTING);
-    }
-
-    <span class="hljs-comment">// &#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x540E;&#x56DE;&#x8C03;</span>
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDisconnected</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
-        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
-    }
-
-    <span class="hljs-comment">//&#x51FA;&#x73B0;&#x4E86;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#xFF0C;&#x9519;&#x8BEF;&#x7801;&#x53C2;&#x8003;&#x9644;&#x8868;</span>
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConnectError</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">int</span> errorCode)</span> </span>{
-        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
-    }
-});
-</code></pre>
-<p>iOS&#x793A;&#x4F8B;:</p>
-<pre><code>- (void)onConnecting:(QNBleDevice *)device {
-    //&#x5F00;&#x59CB;&#x8FDE;&#x63A5;&#x7684;&#x56DE;&#x8C03;
-}
-
-- (void)onConnected:(QNBleDevice *)device {
-    //&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;
-}
-
-- (void)onServiceSearchComplete:(QNBleDevice *)device {
-    //&#x53D1;&#x73B0;&#x670D;&#x52A1;&#x5B8C;&#x6210;&#x7684;&#x56DE;&#x8C03;
-}
-
-- (void)onDisconnecting:(QNBleDevice *)device {
-    //&#x6B63;&#x5728;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x56DE;&#x8C03;
-}
-
-- (void)onConnectError:(QNBleDevice *)device error:(NSError *)error {
-    //&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#x7684;&#x56DE;&#x8C03;
-}
-</code></pre><p>&#x8BBE;&#x7F6E;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#xFF0C;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#setscaledatalistener">QNBleApi.setScaleDataListener</a>&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A; null/nil</p>
-<p>android&#x793A;&#x4F8B;&#xFF1A;</p>
+</code></pre><h2 id="three&#x3001;connection">three&#x3001;connection</h2>
+<p>After receiving the callback device, you can determine whether it is a device that needs to be connected (this is the business logic of APP), and if so, connect it.</p>
+<p>Before connecting, you need to set the connection status callback and measurement data callback.</p>
+<p>The method for setting the connection status callback is: <a href="../api/QNBleApi.html#setbleconnectionchangelistener">QNBleApi.setBleConnectionChangeListener</a>, this method is the same as setting the scan callback method, multiple connections only need to be set once, if it is determined that no longer need to connect Time, set to null/nil</p>
+<p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setscaledatalistener">QNBleApi.setScaleDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
+<p>android example:</p>
 <pre><code class="lang-java">QNBleApi.getInstance(context).setScaleDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetUnsteadyWeight</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
-        <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x4F53;&#x91CD;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x6B21;&#x6D4B;&#x91CF;&#x4E2D;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x56DE;&#x8C03;&#x591A;&#x6B21;&#xFF0C;&#x76F4;&#x5230;&#x6570;&#x636E;&#x7A33;&#x5B9A;&#xFF0C;&#x62FF;&#x5230;&#x5B8C;&#x6574;&#x6570;&#x636E;.</span>
+<span class="hljs-comment">//This method received unstable weight data. During one measurement, this method will call back multiple times until the data is stable and complete data is obtained.</span>
     }
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetScaleData</span><span class="hljs-params">(QNBleDevice device, QNScaleData data)</span> </span>{
-        <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;</span>
+<span class="hljs-comment">//The method is to receive the complete measurement data</span>
     }
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetStoredScale</span><span class="hljs-params">(QNBleDevice device, List&lt;QNScaleStoreData&gt; storedDataList)</span> </span>{
-        <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x79E4;&#x7AEF;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;demo&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;</span>
+<span class="hljs-comment">//This method is to receive the stored data on the scale side, the processing method of the stored data can refer to the demo, or you can define it yourself</span>
     }
 
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetElectric</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">int</span> electric)</span> </span>{
-        <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x662F;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#x7535;&#x91CF;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x53EA;&#x6709;&#x5145;&#x7535;&#x6B3E;&#x79E4;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x7535;&#x91CF;&#x624D;&#x6709;&#x610F;&#x4E49;</span>
-    }
-
-    <span class="hljs-comment">//&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</span>
+<span class="hljs-comment">//Connection status during measurement</span>
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScaleStateChange</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">int</span> status)</span> </span>{
         setBleStatus(status);
     }
 });
 </code></pre>
-<p>iOS&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>iOS example:</p>
 <pre><code>- (void)onGetUnsteadyWeight:(QNBleDevice *)device weight:(double)weight {
-    //&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x4F53;&#x91CD;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x6B21;&#x6D4B;&#x91CF;&#x4E2D;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x56DE;&#x8C03;&#x591A;&#x6B21;&#xFF0C;&#x76F4;&#x5230;&#x6570;&#x636E;&#x7A33;&#x5B9A;&#xFF0C;&#x62FF;&#x5230;&#x5B8C;&#x6574;&#x6570;&#x636E;
+//This method received unstable weight data. During one measurement, the method will call back multiple times until the data is stable and complete data is obtained
 }
 
 - (void)onGetScaleData:(QNBleDevice *)device data:(QNScaleData *)scaleData {
-    //&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;
+//The method is to receive the complete measurement data
 }
 
 - (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
-    //&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x6536;&#x5230;&#x4E86;&#x79E4;&#x7AEF;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;demo&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;
-}
-
-- (void)onGetElectric:(NSUInteger)electric device:(QNBleDevice *)device {
-    //&#x8FD9;&#x4E2A;&#x662F;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#x7535;&#x91CF;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x53EA;&#x6709;&#x5145;&#x7535;&#x6B3E;&#x79E4;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x7535;&#x91CF;&#x624D;&#x6709;&#x610F;&#x4E49;
+//This method is to receive the stored data on the scale side, the processing method of the stored data can refer to the demo, or you can define it yourself
 }
 
 - (void)onScaleStateChange:(QNBleDevice *)device scaleState:(QNScaleState)state {
-    //&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;
+//Connection status during measurement
 }
-</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x524D;&#xFF0C;&#x6700;&#x597D;&#x628A;&#x4E4B;&#x524D;&#x7684;&#x626B;&#x63CF;&#x7ED9;&#x505C;&#x6B62;&#xFF08;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x90E8;&#x5206;&#x624B;&#x673A;&#x540C;&#x65F6;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x548C;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#xFF0C;&#x4F1A;&#x964D;&#x4F4E;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x7684;&#x5931;&#x8D25;&#x7387;&#xFF09;&#x3002;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x540E;&#xFF0C;&#x5EF6;&#x8FDF;&#x4E2A; 200~500ms &#x518D;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#xFF0C;&#x4F1A;&#x63D0;&#x5347;&#x8FDE;&#x63A5;&#x7684;&#x6210;&#x529F;&#x7387;&#x3002;
-&#x505C;&#x6B62;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#stopbledevicediscovery">QNBleApi.stopBleDeviceDiscovery</a>&#x3002;</p>
-<p>android&#x793A;&#x4F8B;&#xFF1A;</p>
+
+- (void)wspRegisterUserComplete:(QNBleDevice *)device user:(QNUser *)user {
+//callback for registered user success
+}
+
+- (void)onScaleEventChange:(QNBleDevice *)device scaleEvent:(QNScaleEvent)scaleEvent {
+//callback of device transaction
+}
+</code></pre><p>In addition, before calling the connection, it is best to stop the previous scan (we found that some mobile phones have Bluetooth scanning and Bluetooth connection at the same time, which will reduce the failure rate of successful connection). After stopping the scan, delaying the call for 200 ~ 500ms before calling the connection will increase the success rate of the connection.
+The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbledevicediscovery">QNBleApi.stopBleDeviceDiscovery</a>.</p>
+<p>android example:</p>
 <pre><code class="lang-java">QNBleApi.getInstance(context).stopBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
@@ -1274,39 +1272,30 @@ bleApi.discoveryListener = self;
     }
 });
 </code></pre>
-<p>iOS&#x793A;&#x4F8B;&#xFF1A;</p>
+<p>iOS example:</p>
 <pre><code>[[QNBleApi sharedBleApi] stopBleDeviceDiscovery:^(NSError *error) {
-    //&#x8BE5;&#x5904;&#x56DE;&#x8C03;&#x8868;&#x793A;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x6210;&#x529F;
+//The callback here indicates whether the method to stop scanning is successful
     if (error) {
-        NSLog([NSString stringWithFormat:@&quot;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x5931;&#x8D25;,&#x539F;&#x56E0;: %@&quot;,error]);
+        NSLog([NSString stringWithFormat:@&quot;Failed to stop scanning method, reason: %@&quot;,error]);
     }
 }];
-</code></pre><p>&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x7684;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4F20;Yolanda&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;(<a href="../api/QNBleDevice.html">QNBleDevice</a>)&#x4EE5;&#x53CA;Yolanda&#x7528;&#x6237;&#x8D44;&#x6599;&#x5BF9;&#x8C61;&#xFF08;<a href="../api/QNUser.html">QNUser</a>&#xFF09;&#xFF0C;&#x5176;&#x4E2D;<a href="../api/QNBleDevice.html">QNBleDevice</a><a href="../api/QNUser.html">QNUser</a>&#x7684;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#builduser">QNBleApi.buildUser</a>&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x65B9;&#x6CD5;&#x8BF4;&#x660E;&#x3002;</p>
-<p>&#x524D;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x786E;&#x8BA4; OK &#x540E;&#xFF0C;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4E86;&#xFF0C;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#connectdevice">QNBleApi.connectDevice</a>&#x3002;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E3A;&#x4E0A;&#x8FF0;<a href="../api/QNBleConnectionChangeListener.html">QNBleConnectionChangeListener</a></p>
-<p>android&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-java">QNBleApi.getInstance(context).connectDevice(device, user, <span class="hljs-keyword">new</span> QNResultCallback() {
-                <span class="hljs-meta">@Override</span>
-                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
-                    <span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x65B9;&#x6CD5;&#x8C03;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x6210;&#x529F;</span>
-                }
-            });
+</code></pre><p>The method of connecting the device needs to pass the Yolanda Bluetooth device object (<a href="../api/QNBleDevice.html">QNBleDevice</a>) and the Yolanda user profile object (<a href="../api/QNUser.html">QNUser</a>), where <a href="../api/QNBleDevice.html">QNBleDevice</a><a href="../api/QNUser.html">QNUser</a> is created as: <a href="../api/QNBleApi.html#builduser">QNBleApi.buildUser</a>, the specific method of use can be Refer to the method description.</p>
+<p>After confirming OK in the previous operation, you can finally connect. The connection method is: <a href="../api/QNBleApi.html#connectdevice">QNBleApi.connectDevice</a>.-the-connection-status-callback-method-is-the-above-<a href="../api/qnbleconnectionchangelistener.md">qnbleconnectionchangelistener</a></p>
+<p>android example:</p>
+<pre><code class="lang-java">
+
 </code></pre>
-<p>iOS&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code>[[QNBleApi sharedBleApi] connectDevice:device user:user callback:^(NSError *error) {
-    //&#x8BE5;&#x5904;&#x56DE;&#x8C03;&#x8868;&#x793A;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x662F;&#x5426;&#x6210;&#x529F;
-    if (error) {
-        NSLog([NSString stringWithFormat:@&quot;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x5931;&#x8D25;,&#x539F;&#x56E0;: %@&quot;,error]);
-    }  
-}];
-</code></pre><h2 id="&#x79F0;&#x91CD;&#x8FC7;&#x7A0B;">&#x79F0;&#x91CD;&#x8FC7;&#x7A0B;</h2>
-<p>&#x79F0;&#x91CD;&#x8FC7;&#x7A0B;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x72B6;&#x6001;&#x4F1A;&#x5728;&#x4E0A;&#x8FF0;&#x63D0;&#x5230;&#x7684;<a href="../api/QNScaleDataListener.html">QNScaleDataListener</a>&#x4E2D;&#x8FDB;&#x884C;&#x56DE;&#x8C03;</p>
-<h2 id="&#x6D4B;&#x91CF;&#x7ED3;&#x675F;">&#x6D4B;&#x91CF;&#x7ED3;&#x675F;</h2>
-<p>&#x6536;&#x5230;&#x7A33;&#x5B9A;&#x6570;&#x636E;&#x540E;&#xFF08;&#x5373;&#x6536;&#x5230;<a href="../api/QNScaleDataListener.html#ongetscalesata">QNScaleDataListener.onGetScaleData</a>&#xFF09;&#x5373;&#x8868;&#x793A;&#x6D4B;&#x91CF;&#x5B8C;&#x6210;&#x3002;&#x6B64;&#x65F6;&#x79E4;&#x7AEF;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x65AD;&#x5F00;&#x84DD;&#x7259;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x7B49;&#x79E4;&#x606F;&#x5C4F;&#x4E00;&#x5C0F;&#x4F1A;&#xFF08;&#x53EF;&#x80FD;&#x662F; 2 &#x5206;&#x949F;&#xFF09;&#x624D;&#x4F1A;&#x65AD;&#x5F00;&#x84DD;&#x7259;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5C3D;&#x5FEB;&#x65AD;&#x5F00;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6536;&#x5230;&#x7A33;&#x5B9A;&#x6570;&#x636E;&#x540E;&#x5EF6;&#x65F6; 2s &#x8C03;&#x7528;&#x65B9;&#x6CD5;<a href="../api/QNBleApi.html#disconnectdevice">QNBleApi.disconnectDevice</a>&#x6765;&#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x3002;</p>
-<p>&#x81F3;&#x6B64;&#xFF0C;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x8D70;&#x5B8C;&#xFF0C;APP &#x53EF;&#x4EE5;&#x5728;&#x6536;&#x5230;&#x7A33;&#x5B9A;&#x6570;&#x636E;&#x540E;&#x81EA;&#x884C;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x548C;&#x5C55;&#x793A;&#x6570;&#x636E;&#x3002;&#x6570;&#x636E;&#x6807;&#x51C6;&#x5224;&#x65AD;&#x53EF;&#x4EE5;&#x6211;&#x53F8;&#x7684;&#x65B9;&#x5F0F;-<a href="../attouched_list/SDK&#x6307;&#x6807;&#x6807;&#x51C6;&#x63CF;&#x8FF0;.pdf">SDK &#x6307;&#x6807;&#x6807;&#x51C6;&#x63CF;&#x8FF0;</a>&#x3002;</p>
-<p>&#x5176;&#x4ED6;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x5148;&#x53C2;&#x8003; Demo &#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x95EE;&#x9898;&#x8FD8;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="../attouched_list/faq.html">&#x5E38;&#x89C1;&#x95EE;&#x9898;</a>&#x3002;&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x8FD8;&#x672A;&#x627E;&#x5230;&#x76F8;&#x5173;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5728; SDK &#x4E2D;&#x641C;&#x7D22;&#x4E0B;&#x662F;&#x5426;&#x6709;&#x76F8;&#x5173; API &#x6216;&#x8BF4;&#x660E;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x6211;&#x53F8;&#x6280;&#x672F;&#x4EBA;&#x5458;&#x8FDB;&#x884C;&#x534F;&#x52A9;&#x5BF9;&#x63A5;&#x3002;</p>
-<p>Demo &#x5730;&#x5740;&#x5982;&#x4E0B;&#xFF1A;
-<a href="https://github.com/YolandaQingniu/sdk-ios-demo.git" target="_blank">iOSDemo</a></p>
-<p><a href="https://github.com/YolandaQingniu/qnscalesdk.git" target="_blank">AndroidDemo</a></p>
+<p>iOS example:</p>
+<pre><code>//Set the operation configuration of wsp device
+    QNWspConfig *config = [[QNWspConfig alloc] init];
+    [[QNBleApi sharedBleApi] connectWspDevice:device config:config callback:^(NSError *error) {
+
+    }];
+</code></pre><h2 id="weighing-process">Weighing process</h2>
+<p>The data and status of the weighing process will be recalled in the above-mentioned <a href="../api/QNScaleDataListener.html">QNScaleDataListener</a></p>
+<h2 id="end-of-measurement">End of measurement</h2>
+<p>After receiving stable data (that is, <a href="../api/QNScaleDataListener.html#ongetscalesata">QNScaleDataListener.onGetScaleData</a>), the measurement is completed. When the measurement is completed, the device will automatically disconnect.</p>
+<p>At this point, the basic process of the device has been completed, and the APP can save the data and display the data after receiving the stable data. Data standards can be judged by our company-<a href="../attouched_list/SDK%20indicator%20standard%20description.pdf">SDK indicator standard description</a>.</p>
 
                                 
                                 </section>
@@ -1334,8 +1323,12 @@ bleApi.discoveryListener = self;
 
             
                 
+                <a href="flow_dm.html" class="navigation navigation-prev " aria-label="Previous page: Common Bluetooth scale-with Wifi function">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="flow_dm.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 普通蓝牙秤-带有 Wifi 功能">
+                
+                <a href="kitchen_scale.html" class="navigation navigation-next " aria-label="Next page: Kitchen scale">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1346,7 +1339,7 @@ bleApi.discoveryListener = self;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"普通蓝牙秤","level":"1.4.1","depth":2,"next":{"title":"普通蓝牙秤-带有 Wifi 功能","level":"1.4.2","depth":2,"path":"flow/flow_dm.md","ref":"flow/flow_dm.md","articles":[]},"previous":{"title":"工作流程","level":"1.4","depth":1,"ref":"","articles":[{"title":"普通蓝牙秤","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},{"title":"普通蓝牙秤-带有 Wifi 功能","level":"1.4.2","depth":2,"path":"flow/flow_dm.md","ref":"flow/flow_dm.md","articles":[]},{"title":"WSP 蓝牙 WiFi 秤","level":"1.4.3","depth":2,"path":"flow/ble_scale_wsp.md","ref":"flow/ble_scale_wsp.md","articles":[]},{"title":"厨房秤","level":"1.4.4","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/ble_scale.md","mtime":"2020-05-14T05:48:28.003Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"WSP Bluetooth WiFi scale","level":"1.4.3","depth":2,"next":{"title":"Kitchen scale","level":"1.4.4","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"Common Bluetooth scale-with Wifi function","level":"1.4.2","depth":2,"path":"flow/flow_dm.md","ref":"flow/flow_dm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale_wsp.md","mtime":"2020-05-22T12:10:39.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-22T12:11:23.642Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
