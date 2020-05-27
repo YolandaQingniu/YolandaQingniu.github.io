@@ -1276,10 +1276,17 @@ bleApi.discoveryListener = self;
     }
 }];
 </code></pre><p>&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x7684;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4F20;Yolanda&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;(<a href="../api/QNBleDevice.html">QNBleDevice</a>)&#x4EE5;&#x53CA;Yolanda&#x7528;&#x6237;&#x8D44;&#x6599;&#x5BF9;&#x8C61;&#xFF08;<a href="../api/QNUser.html">QNUser</a>&#xFF09;&#xFF0C;&#x5176;&#x4E2D;<a href="../api/QNBleDevice.html">QNBleDevice</a><a href="../api/QNUser.html">QNUser</a>&#x7684;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#builduser">QNBleApi.buildUser</a>&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x65B9;&#x6CD5;&#x8BF4;&#x660E;&#x3002;</p>
-<p>&#x524D;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x786E;&#x8BA4; OK &#x540E;&#xFF0C;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4E86;&#xFF0C;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#connectdevice">QNBleApi.connectDevice</a>&#x3002;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E3A;&#x4E0A;&#x8FF0;<a href="../api/QNBleConnectionChangeListener.html">QNBleConnectionChangeListener</a></p>
+<p>&#x524D;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x786E;&#x8BA4; OK &#x540E;&#xFF0C;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4E86;&#xFF0C;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#x4E3A;&#xFF1A;<a href="../api/QNBleApi.html#connectwspdevice">QNBleApi.connectWspDevice</a>&#x3002;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E3A;&#x4E0A;&#x8FF0;<a href="../api/QNBleConnectionChangeListener.html">QNBleConnectionChangeListener</a></p>
 <p>android &#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-java">
-
+    QNWspConfig qnWspConfig = new QNWspConfig();
+    //.......进行配置设置
+    mQNBleApi.connectWspDevice(device, qnWspConfig, new QNResultCallback() {
+        @Override
+        public void onResult(int code, String msg) {
+            QNLogUtils.log("WspScaleActivity", "wifi 配置code:" + code + ",msg:" + msg);
+        }
+    });
 </code></pre>
 <p>iOS &#x793A;&#x4F8B;&#xFF1A;</p>
 <pre><code>    //&#x8BBE;&#x7F6E;wsp&#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;&#x914D;&#x7F6E;
