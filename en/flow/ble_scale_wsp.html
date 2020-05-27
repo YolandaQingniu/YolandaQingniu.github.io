@@ -1267,10 +1267,17 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
     }
 }];
 </code></pre><p>The method of connecting the device needs to pass the Yolanda Bluetooth device object (<a href="../api/QNBleDevice.html">QNBleDevice</a>) and the Yolanda user profile object (<a href="../api/QNUser.html">QNUser</a>), where <a href="../api/QNBleDevice.html">QNBleDevice</a><a href="../api/QNUser.html">QNUser</a> is created as: <a href="../api/QNBleApi.html#builduser">QNBleApi.buildUser</a>, the specific method of use can be Refer to the method description.</p>
-<p>After confirming OK in the previous operation, you can finally connect. The connection method is: <a href="../api/QNBleApi.html#connectdevice">QNBleApi.connectDevice</a>.-the-connection-status-callback-method-is-the-above-<a href="../api/qnbleconnectionchangelistener.md">qnbleconnectionchangelistener</a></p>
+<p>After confirming OK in the previous operation, you can finally connect. The connection method is: <a href="../api/QNBleApi.html#connectwspdevice">QNBleApi.connectWspDevice</a>.-the-connection-status-callback-method-is-the-above-<a href="../api/qnbleconnectionchangelistener.md">qnbleconnectionchangelistener</a></p>
 <p>android example:</p>
 <pre><code class="lang-java">
-
+    QNWspConfig qnWspConfig = new QNWspConfig();
+    //.......Make configuration settings
+    mQNBleApi.connectWspDevice(device, qnWspConfig, new QNResultCallback() {
+        @Override
+        public void onResult(int code, String msg) {
+            QNLogUtils.log("WspScaleActivity", "wifi 配置code:" + code + ",msg:" + msg);
+        }
+    });
 </code></pre>
 <p>iOS example:</p>
 <pre><code>//Set the operation configuration of wsp device
