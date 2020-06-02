@@ -365,10 +365,10 @@
     
         <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
             
-                <a href="../api/QNBleApi.html#setScaleDataListener">
+                <a href="../api/QNBleApi.html#setDataListener">
             
                     
-                    setScaleDataListener
+                    setDataListener
             
                 </a>
             
@@ -1199,9 +1199,9 @@ The location service switch is not mandatory, but some phones do not turn on thi
 - (void)onConnectError:(QNBleDevice *)device error:(NSError *)error {
 //callback for connection failure
 }
-</code></pre><p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setscaledatalistener">QNBleApi.setScaleDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
+</code></pre><p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setdatalistener">QNBleApi.setDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
 <p>android example:</p>
-<pre><code class="lang-java">QNBleApi.getInstance(context).setScaleDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
+<pre><code class="lang-java">QNBleApi.getInstance(context).setDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetUnsteadyWeight</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
 <span class="hljs-comment">//This method received unstable weight data. During one measurement, this method will call back multiple times until the data is stable and complete data is obtained.</span>
