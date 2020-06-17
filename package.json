@@ -1,0 +1,34 @@
+{
+  "name": "sdk-doc",
+  "version": "1.0.0",
+  "description": "该文档用于引导给Yolanda客户接入",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getPlugins": "gitbook install ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/YolandaQingniu/YolandaQingniu.github.io.git"
+  },
+  "keywords": [
+    "ble",
+    "sdk",
+    "yolanda",
+    "qingniu",
+    "scale",
+    "bodyfat"
+  ],
+  "author": "hdr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YolandaQingniu/YolandaQingniu.github.io/issues"
+  },
+  "homepage": "https://github.com/YolandaQingniu/YolandaQingniu.github.io#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  },
+  "dependencies": {
+    "gitbook-plugin-mermaid-gb3": "^2.1.0"
+  }
+}
