@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>android · GitBook</title>
+        <title>broadcast scale · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ios.html" />
+    <link rel="next" href="broadcast_scale_custom_scan.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="ble_scale_custom_connect.html" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="android.html">
+        <li class="chapter " data-level="1.2" data-path="../guide/android.html">
             
-                <a href="android.html">
+                <a href="../guide/android.html">
             
                     
                     android
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="ios.html">
+        <li class="chapter " data-level="1.3" data-path="../guide/ios.html">
             
-                <a href="ios.html">
+                <a href="../guide/ios.html">
             
                     
                     ios
@@ -142,9 +142,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../flow/ble_scale.html">
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
             
-                <a href="../flow/ble_scale.html">
+                <a href="ble_scale.html">
             
                     
                     Ordinary Bluetooth Scale
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../flow/ble_scale_custom_connect.html">
+        <li class="chapter " data-level="1.4.2" data-path="ble_scale_custom_connect.html">
             
-                <a href="../flow/ble_scale_custom_connect.html">
+                <a href="ble_scale_custom_connect.html">
             
                     
                     Ordinary Bluetooth Scale - Manage Bluetooth Autonomously
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../flow/broadcast_scale.html">
+        <li class="chapter active" data-level="1.4.3" data-path="broadcast_scale.html">
             
-                <a href="../flow/broadcast_scale.html">
+                <a href="broadcast_scale.html">
             
                     
                     broadcast scale
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../flow/broadcast_scale_custom_scan.html">
+        <li class="chapter " data-level="1.4.4" data-path="broadcast_scale_custom_scan.html">
             
-                <a href="../flow/broadcast_scale_custom_scan.html">
+                <a href="broadcast_scale_custom_scan.html">
             
                     
                     Broadcast Scale - Custom Bluetooth Scan
@@ -819,7 +819,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >android</a>
+        <a href=".." >broadcast scale</a>
     </h1>
 </div>
 
@@ -834,55 +834,215 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="android-quick-integration">Android Quick Integration</h1>
-<h2 id="android-studio">Android Studio</h2>
-<h3 id="android-using-gradle-integration">Android using gradle integration</h3>
-<ul>
-<li>Add <strong>jitpack</strong> support to <strong>build.gradle</strong> in the root of your project<pre><code>  Allprojects {
-Repositories {
-//Other warehouse configuration
-Maven { url &apos;https://jitpack.io&apos; }
-  }
-}
-</code></pre></li>
-<li><p>Add dependencies in <strong>build.gradle</strong> in the root of your module</p>
-<pre><code>&lt;!--The version number here, 0.6.4-beta2 can be specified as any release version --&gt;
-&lt;!--If you want to always use the latest version you can replace 0.6.4-beta2 for master-SNAPSHOT --&gt;
-Dependencies {
-      ...
-      Compile &apos;com.github.YolandaQingniu:qnscalesdk:0.6.4-beta2&apos;
-}
-</code></pre><h3 id="eclipse">Eclipse</h3>
-</li>
-<li><p>Download the latest <a href="https://github.com/YolandaQingniu/qnscalesdk/releases/download/0.6.4-beta2/qnsdk-0.6.4-beta2-Android.zip" target="_blank">jar and so library</a>, import and download Jar and so library</p>
-</li>
-<li>Apply for Bluetooth permissions, location permissions, network permissions in the manifest file (not required for offline SDK)<pre><code class="lang-xml"> <span class="hljs-comment">&lt;!--Bluetooth Permission--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH_ADMIN&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--6.0 and later need to apply dynamically --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!-- used to store logs --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.READ_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--If it is online sdk requires network permissions --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span>
+                                <h1 id="broadcast-scale">Broadcast scale</h1>
+<p>When the broadcast scale is measured, it will continuously emit Bluetooth broadcast signals, which will contain the information weighed by the user.</p>
+<p>The workflow of this device is approximately as follows:</p>
+<p><iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIFVzZXJcbnBhcnRpY2lwYW50IHNjYWxlIGFzIFNjYWxlXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMgQ2xvdWRcblxudXNlci0-PiBhcHA6IE9wZW4gdGhlIGFwcFxuYXBwLT4gYXBwOiBzdGFydCBzY2FuXG51c2VyLT4-IHNjYWxlOiBzdGVwIG9uIHRoZSBzY2FsZVxuc2NhbGUtPj4gYXBwOiBsYXVuY2ggQmx1ZXRvb3RoIGJyb2FkY2FzdFxuYXBwLT4-IGFwcDogUGFyc2UgYnJvYWRjYXN0IGRhdGEgKHdlaWdodCwgdW5pdCwgc3RhdHVzLCBldGMuKVxudXNlci0tPnVzZXI6IHN0YW5kIGZpcm1cbnNjYWxlLT4-IGFwcDogc3RhYmxlIGRhdGFcbmFwcC0-IGFwcDogQ2FsY3VsYXRlIGJvZHkgZmF0IGRhdGFcbmFwcC0-PnVzZXI6IERpc3BsYXkgZnVsbCBtZWFzdXJlbWVudCByZXN1bHRzXG5hcHAtPj4gc2VydmVyOiB1cGxvYWQgbWVhc3VyZW1lbnQgZGF0YVxudXNlci0tPnVzZXI6IGxvd2VyIHNjYWxlIGFuZCB2aWV3IGRhdGEiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="600"></iframe></iframe></p>
+<h2 id="i-initialization">I. Initialization</h2>
+<p>Initialization using <a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a>, as described above, <a href="../#%20development%20process">Please check</a></p>
+<h2 id="ii-scanning">II, scanning</h2>
+<h3 id="1-set-the-bluetooth-scan-callback-listener-class">1. Set the Bluetooth scan callback listener class</h3>
+<p>Before scanning, you need to set the listener class, the method is <a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>, this method only needs to be called once, in the process of determining that you do not need to scan, remember to set to null/nil</p>
+<p>Android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).setBleDeviceDiscoveryListener(<span class="hljs-keyword">new</span> QNBleDeviceDiscoveryListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
+        <span class="hljs-comment">// The device does not have to deal with the callback there</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onStartScan</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//Start scanning back</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onStopScan</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//End the scan back</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onScanFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code)</span> </span>{
+        <span class="hljs-comment">// Scan the failed callback, there will be an error code to return, you can refer to the error code details page</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onBroadcastDeviceDiscover</span><span class="hljs-params">(QNBleBroadcastDevice device)</span> </span>{
+        <span class="hljs-comment">// Broadcast scale, this type of device needs to handle events in this callback</span>
+    }
+});
 </code></pre>
-</li>
-<li>Need to register the components in the SDK in <strong>AndroidManifest.xml</strong>:<pre><code class="lang-xml">  <span class="hljs-comment">&lt;!-- Bluetooth Scanning Service --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.qnble.scanner.BleScanService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!-- Bluetooth connection service --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!--Requires compatibility with broadcast scales, you need to register the following services, the version after 0.6.4 can be used without this service --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot;</span>/&gt;</span>
+<p>iOS example:</p>
+<pre><code>// Set the proxy
+QNBleApi *bleApi = [QNBleApi sharedBleApi];
+bleApi.discoveryListener = self;
+
+// Implement the proxy method
+- (void)onDeviceDiscover:(QNBleDevice *)device {
+    // The device does not have to deal with the callback there
+}
+
+- (void)onBroadcastDeviceDiscover:(QNBleBroadcastDevice *)device {
+    // Broadcast scale, this type of device needs to handle events in this callback
+
+}
+
+- (void)onStopScan {
+    // Stop the scan callback
+}
+
+- (void)onStartScan {
+    // call back when starting scanning
+}
+</code></pre><h3 id="2-start-scanning">2. Start scanning</h3>
+<p>Confirm that Bluetooth is turned on, and Android needs to check the &apos;Positioning Permissions&apos; and `Positioning Switches&apos;. If you confirm that Bluetooth is turned on, the targeting rights are authorized, and the location service switch is turned on, you can start Bluetooth scanning.</p>
+<blockquote>
+<p>After Android 6.0, for the targetSdkVersion&gt;=23 or more, Bluetooth scanning needs to obtain the positioning permission. For details, please check <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
+The location service switch is not mandatory, but some mobile phones do not turn this switch on, nor can they scan the device, which is related to each mobile phone system.
+iOS13 system adds Bluetooth usage rights, need to check if there is permission to use, confirm that authorization is enabled and Bluetooth is turned on, start scanning</p>
+</blockquote>
+<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>, and the scanned device data will be in the scan interface set above <a href="../api/QNBleDeviceDiscoveryListener.html">QNBleDeviceDiscoveryListener</a> Callback.</p>
+<p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>. These options should be sufficient.</p>
+<blockquote>
+<p>Usually the APP will have an interface dedicated to measurement. We usually perform Bluetooth scanning after the interface is displayed, and stop scanning when the interface disappears.</p>
+</blockquote>
+<p>Android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).startBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+                <span class="hljs-comment">//This method does not return to the device, but indicates whether the scan was successfully started.</span>
+                If (code != CheckStatus.OK.getCode()) {
+                   ToastMaker.show(ScanActivity.<span class="hljs-keyword">this</span>,code+<span class="hljs-string">&quot;:&quot;</span>+msg);
+                }
+            }
+        });
 </code></pre>
-</li>
-<li>The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project.</li>
-</ul>
-<h2 id="confusing-configuration-proguard-rules">confusing configuration (proguard-rules)</h2>
-<pre><code>-keep class com.qingniu.scale.model.BleScaleData{*;}
-</code></pre><h2 id="other">other</h2>
-<p>For the integration of configuration files, refer to the demo. Put it in the <code>assets</code> directory, then use the &quot;file:///android_asset/filename.qn&quot; to pass the file path during initialization.</p>
+<p>iOS example:</p>
+<pre><code>// Start the scan
+[[QNBleApi sharedBleApi] startBleDeviceDiscovery:^(NSError *error) {
+    // This callback indicates whether the startup scan method is successful
+    If (error) {
+        NSLog([NSString stringWithFormat:@&quot; failed to start the scan method, reason: %@&quot;, error]);
+    }
+}];
+</code></pre><h2 id="iii-results-processing">III. Results Processing</h2>
+<p>To receive data, you need to send the setup unit data and determine if there is stable data.</p>
+<p>Android example:</p>
+<pre><code class="lang-java"><span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onBroadcastDeviceDiscover</span><span class="hljs-params">(QNBleBroadcastDevice device)</span> </span>{
+    If (<span class="hljs-keyword">null</span> != device &amp;&amp; device.getMac().equals(mBleDevice.getMac())) {
+        currentDevice = device;
+        weightTv.setText(initWeight(device.getWeight()));
+        If (device.isComplete()) {
+            QNScaleData qnScaleData = device.generateScaleData(qnUser, <span class="hljs-keyword">new</span> QNResultCallback() {
+                <span class="hljs-meta">@Override</span>
+                <span class="hljs-function">Public <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+                    Log.e(<span class="hljs-string">&quot;generateScaleData&quot;</span>, <span class="hljs-string">&quot;result&quot;</span> + code + <span class="hljs-string">&quot;,msg:&quot;</span> + msg);
+                }
+            });
+            <span class="hljs-comment">//This is used to de-weight</span>
+            If (currentMeasureCode != device.getMeasureCode()) {
+                onReceiveScaleData(qnScaleData);
+            }
+            currentMeasureCode = device.getMeasureCode();
+        }
+    }
+}
+</code></pre>
+<p>iOS example:</p>
+<pre><code>#pragma mark - Broadcast Scale Processing Logic
+- (void)connectBroadcastDevice:(QNBleBroadcastDevice *)device {
+    If (self.connectBroadcastDevice) {
+        Return;
+    }
+    self.connectBroadcastDevice = device;
+    [self setLingingStyleUI];
+    [self setLingSucceedStyleUI];
+    //Because the broadcast scale has no connection process, when we start measuring, we can think that it has been connected successfully, and set a timer. If the broadcast data of the device is not received within the specified time, the device is considered to be off or the user is Not using the device
+    // time interval, you can set it according to different situations
+    [self setBroadcastTimerWithInterval:5];
+}
+
+- (void)measuringBroadcastDevice:(QNBleBroadcastDevice *)device {
+    If (self.connectBroadcastDevice == nil) {
+        Return;
+    }
+
+    //Because the broadcast scale has no connection process, when starting a broadcast scale measurement, the other device information is filtered, and only the information of the corresponding device at the start of measurement is obtained.
+    If ([self.connectBroadcastDevice.mac isEqualToString:device.mac] == NO) {
+        Return;
+    }
+
+    // Set the unit information of the scale
+    // When the device supports the modification of the unit, and the unit on the scale and the unit of the preparation device, modify the unit of the device
+    // The current broadcast scale does not support ST, even if the ST unit will be set to lb, so currently not recommended for the broadcast scale to issue ST
+    QNUnit unit = self.config.unit;
+    If (unit == QNUnitST) {
+        Unit = QNUnitLB;
+    }
+
+    If (device.supportUnitChange &amp;&amp; device.unit != unit) {
+        [device syncUnitCallback:^(NSError *error) {
+            // But when the method calls an exception, it will reply with an error message
+        }];
+    }
+
+    //When the specified device data is received, the timer is updated to determine whether the scale is off or the user is not using the device.
+    [self setBroadcastTimerWithInterval:5];
+
+    Double weight = [self.bleApi convertWeightWithTargetUnit:device.weight unit:[self.bleApi getConfig].unit];
+    self.unstableWeightLabel.text = [NSString stringWithFormat:@&quot;%.2f&quot;,weight];
+
+    If (device.isComplete == NO) {
+        [self setMeasuringWeightStyleUI];
+    }
+
+    //Because the measurement is completed, it will receive multiple completed broadcast data, which is used to avoid the problem of collecting duplicate data.
+    If (device.isComplete &amp;&amp; self.broadcastMesasureCompleteCount != device.measureCode) {
+        self.broadcastMesasureCompleteCount = device.measureCode;
+        // Measurement is completed
+        QNScaleData *scaleData = [device generateScaleDataWithUser:self.user callback:^(NSError *error) {
+
+        }];
+        [self.scaleDataAry removeAllObjects];
+        For (QNScaleItemData *item in [scaleData getAllItem]) {
+            [self.scaleDataAry addObject:item];
+        }
+        [self.tableView reloadData];
+        [self setMeasuringResistanceStyleUI];
+    }
+
+}
+
+- (void)setBroadcastTimerWithInterval:(NSTimeInterval)interval {
+    [self removeBroadcastTimer];
+    __weak __typeof(self)weakSelf = self;
+    self.broadcastTimer = [NSTimer scheduledTimerWithTimeInterval:interval block:^(NSTimer * _Nonnull timer) {
+        // When you do not receive new broadcast data, you can think that you are no longer measuring weight (disconnected meaning)
+        [weakSelf disconnectBroadcastDevice];
+    } repeats:NO];
+}
+
+- (void)removeBroadcastTimer {
+    [self.broadcastTimer invalidate];
+    self.broadcastTimer = nil;
+}
+
+
+- (void)disconnectBroadcastDevice {
+    self.connectBroadcastDevice = nil;
+    [self removeBroadcastTimer];
+    [self setDisconnectStyleUI];
+    // Stop scanning after disconnecting, just the processing logic of demo
+    [self.bleApi stopBleDeviceDiscorvery:^(NSError *error) {
+
+    }];
+}
+</code></pre><h2 id="end-of-measurement">End of measurement</h2>
+<p>After receiving the stable data (ie receiving <code>device.isComplete()</code>), the measurement is completed.</p>
+<p>At this point, the basic process of the broadcast scale has been completed, and the APP can save the data and display the data by itself after receiving the stable data. The data standard can be judged by our company - <a href="../attouched_list/indicator_standard_description.pdf">Indicator standard description</a>.</p>
+<p>For other questions, please refer to the code in the Demo. If you have any problems, you can check <a href="../attouched_list/faq.html">FAQ</a>. Frequently asked questions have not been found, you can try to search the SDK for relevant APIs or instructions, if not, please contact our technical staff to assist in docking.</p>
+<p>The Demo address is as follows:
+<a href="https://github.com/YolandaQingniu/sdk-ios-demo.git" target="_blank">iOSDemo</a></p>
+<p><a href="https://github.com/YolandaQingniu/qnscalesdk.git" target="_blank">AndroidDemo</a></p>
 
                                 
                                 </section>
@@ -910,12 +1070,12 @@ Dependencies {
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Overview">
+                <a href="ble_scale_custom_connect.html" class="navigation navigation-prev " aria-label="Previous page: Ordinary Bluetooth Scale - Manage Bluetooth Autonomously">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ios.html" class="navigation navigation-next " aria-label="Next page: ios">
+                <a href="broadcast_scale_custom_scan.html" class="navigation navigation-next " aria-label="Next page: Broadcast Scale - Custom Bluetooth Scan">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -926,7 +1086,7 @@ Dependencies {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-06-09T11:29:27.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T01:52:41.508Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"broadcast scale","level":"1.4.3","depth":2,"next":{"title":"Broadcast Scale - Custom Bluetooth Scan","level":"1.4.4","depth":2,"path":"flow/broadcast_scale_custom_scan.md","ref":"flow/broadcast_scale_custom_scan.md","articles":[]},"previous":{"title":"Ordinary Bluetooth Scale - Manage Bluetooth Autonomously","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/broadcast_scale.md","mtime":"2020-06-09T11:29:27.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T01:52:41.508Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

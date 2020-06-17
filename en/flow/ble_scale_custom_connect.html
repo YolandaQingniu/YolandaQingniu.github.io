@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>android · GitBook</title>
+        <title>Ordinary Bluetooth Scale - Manage Bluetooth Autonomously · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ios.html" />
+    <link rel="next" href="broadcast_scale.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="ble_scale.html" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="android.html">
+        <li class="chapter " data-level="1.2" data-path="../guide/android.html">
             
-                <a href="android.html">
+                <a href="../guide/android.html">
             
                     
                     android
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="ios.html">
+        <li class="chapter " data-level="1.3" data-path="../guide/ios.html">
             
-                <a href="ios.html">
+                <a href="../guide/ios.html">
             
                     
                     ios
@@ -142,9 +142,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../flow/ble_scale.html">
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
             
-                <a href="../flow/ble_scale.html">
+                <a href="ble_scale.html">
             
                     
                     Ordinary Bluetooth Scale
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../flow/ble_scale_custom_connect.html">
+        <li class="chapter active" data-level="1.4.2" data-path="ble_scale_custom_connect.html">
             
-                <a href="../flow/ble_scale_custom_connect.html">
+                <a href="ble_scale_custom_connect.html">
             
                     
                     Ordinary Bluetooth Scale - Manage Bluetooth Autonomously
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../flow/broadcast_scale.html">
+        <li class="chapter " data-level="1.4.3" data-path="broadcast_scale.html">
             
-                <a href="../flow/broadcast_scale.html">
+                <a href="broadcast_scale.html">
             
                     
                     broadcast scale
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../flow/broadcast_scale_custom_scan.html">
+        <li class="chapter " data-level="1.4.4" data-path="broadcast_scale_custom_scan.html">
             
-                <a href="../flow/broadcast_scale_custom_scan.html">
+                <a href="broadcast_scale_custom_scan.html">
             
                     
                     Broadcast Scale - Custom Bluetooth Scan
@@ -819,7 +819,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >android</a>
+        <a href=".." >Ordinary Bluetooth Scale - Manage Bluetooth Autonomously</a>
     </h1>
 </div>
 
@@ -834,55 +834,107 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="android-quick-integration">Android Quick Integration</h1>
-<h2 id="android-studio">Android Studio</h2>
-<h3 id="android-using-gradle-integration">Android using gradle integration</h3>
-<ul>
-<li>Add <strong>jitpack</strong> support to <strong>build.gradle</strong> in the root of your project<pre><code>  Allprojects {
-Repositories {
-//Other warehouse configuration
-Maven { url &apos;https://jitpack.io&apos; }
-  }
-}
-</code></pre></li>
-<li><p>Add dependencies in <strong>build.gradle</strong> in the root of your module</p>
-<pre><code>&lt;!--The version number here, 0.6.4-beta2 can be specified as any release version --&gt;
-&lt;!--If you want to always use the latest version you can replace 0.6.4-beta2 for master-SNAPSHOT --&gt;
-Dependencies {
-      ...
-      Compile &apos;com.github.YolandaQingniu:qnscalesdk:0.6.4-beta2&apos;
-}
-</code></pre><h3 id="eclipse">Eclipse</h3>
-</li>
-<li><p>Download the latest <a href="https://github.com/YolandaQingniu/qnscalesdk/releases/download/0.6.4-beta2/qnsdk-0.6.4-beta2-Android.zip" target="_blank">jar and so library</a>, import and download Jar and so library</p>
-</li>
-<li>Apply for Bluetooth permissions, location permissions, network permissions in the manifest file (not required for offline SDK)<pre><code class="lang-xml"> <span class="hljs-comment">&lt;!--Bluetooth Permission--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH_ADMIN&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--6.0 and later need to apply dynamically --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!-- used to store logs --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.READ_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--If it is online sdk requires network permissions --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span>
-</code></pre>
-</li>
-<li>Need to register the components in the SDK in <strong>AndroidManifest.xml</strong>:<pre><code class="lang-xml">  <span class="hljs-comment">&lt;!-- Bluetooth Scanning Service --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.qnble.scanner.BleScanService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!-- Bluetooth connection service --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!--Requires compatibility with broadcast scales, you need to register the following services, the version after 0.6.4 can be used without this service --&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot;</span>/&gt;</span>
-</code></pre>
-</li>
-<li>The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project.</li>
-</ul>
-<h2 id="confusing-configuration-proguard-rules">confusing configuration (proguard-rules)</h2>
-<pre><code>-keep class com.qingniu.scale.model.BleScaleData{*;}
-</code></pre><h2 id="other">other</h2>
-<p>For the integration of configuration files, refer to the demo. Put it in the <code>assets</code> directory, then use the &quot;file:///android_asset/filename.qn&quot; to pass the file path during initialization.</p>
+                                <h1 id="ordinary-bluetooth-scale-autonomous-management-of-bluetooth">Ordinary Bluetooth scale-Autonomous management of Bluetooth</h1>
+<p>This chapter is for users who have a certain understanding of Bluetooth and have their own Bluetooth framework in the app.</p>
+<blockquote>
+<p>If you are not familiar with Bluetooth, or do not have your own Bluetooth framework, it is not recommended to use this method to access, otherwise it will increase the cost of access</p>
+</blockquote>
+<p><iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBzY2FsZSBhcyBTY2FsZVxuUGFydGljaXBhbnQgYXBwIGFzIEFQUFxucGFydGljaXBhbnQgc2RrIGFzIFNES1xuXG5zY2FsZS0-PiBzY2FsZTogc2VuZCBicm9hZGNhc3Qgb24gYnJpZ2h0IHNjcmVlblxuYXBwLT4-IGFwcDogc2NhbiBzdXJyb3VuZGluZyBicm9hZGNhc3RcbmFwcC0-PiBzY2FsZTogc2NhbiB0byBkZXZpY2VcbmFwcC0-PiBzZGs6IGNhbGwgYnVpbGREZXZpY2VcbnNkay0-PiBhcHA6IGJ1aWxkIFFOQmxlRGV2aWNlXG5hcHAtPj4gYXBwOiBkZXRlcm1pbmUgaWYgaXQgaXMgdGhlIHRhcmdldCBkZXZpY2VcbmFwcC0-PiBzZGs6IGNhbGwgYnVpbGRQcm90b2NvbEhhbmRsZXJcbnNkay0-PiBhcHA6IHJldHVybiBRTkJsZVByb3RvdG9sSGFuZGxlclxuYXBwLT4-IHNjYWxlOiBCbHVldG9vdGggY29ubmVjdGlvblxuc2NhbGUtPj4gYXBwOiBTdWNjZXNzZnVsIGNvbm5lY3Rpb25cbmFwcC0-PiBhcHA6IERpc2NvdmVyeSBzZXJ2aWNlXG5hcHAtPj4gYXBwOiBlbmFibGUgZmVhdHVyZSB2YWx1ZVxuYXBwLT4-IHNkazogQ2FsbCBRTkJsZVByb3RvdG9sSGFuZGxlci5wcmVwYXJlXG5zZGstPj4gc2RrOiBwcm90b2NvbCBwcm9jZXNzaW5nIGNsYXNzIGluaXRpYWxpemF0aW9uIGNvbXBsZXRlZFxuc2NhbGUtPj4gYXBwOiBTZW5kIEJsdWV0b290aCBkYXRhXG5hcHAtPj4gc2RrOiBjYWxsIG9uR2V0QmxlRGF0YVxuc2RrLT4-IHNkazogYW5hbHlzaXMgZGF0YVxuc2RrLT4-IGFwcDogcmV0dXJuIGRhdGFcbnNjYWxlLT4-IHNkazogbWVhc3VyZW1lbnQgY29tcGxldGVkXG5zZGstPj4gYXBwOiBjYWxjdWxhdGUgYW5kIHJldHVybiBzdGFibGUgZGF0YVxuc2NhbGUtPj4gYXBwOiBEaXNjb25uZWN0XG5hcHAtPj4gYXBwOiBwcm9jZXNzIGFuZCBkaXNwbGF5IGRhdGEiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="1200"> </ iframe></iframe></p>
+<h2 id="first-start-bluetooth-scanning">First, start Bluetooth scanning</h2>
+<p>The customer initiates and stops the Bluetooth scan, and transmits the scanned device information to our SDK (call <a href="../api/QNBleApi.html#builddevice">QNBleApi.buildDevice</a>). If it belongs to our device, the SDK will Will build <a href="../api/QNBleDevice.html">QNBleDevice</a>, if it is not our device, it will return null/nil.</p>
+<blockquote>
+<p>Usually the Bluetooth of our device is called QN-Scale or QN-Scale1, and we can usually filter our products by this Bluetooth name.
+After getting the target device, it is up to the APP to decide whether to stop scanning. We usually recommend stopping the Bluetooth scan before connecting.</p>
+</blockquote>
+<h2 id="ii-create-a-bluetooth-protocol-proxy-class">II. Create a Bluetooth protocol proxy class</h2>
+<p>Create your own Bluetooth protocol proxy class <a href="../api/QNBleProtocolDelegate.html">QNBleProtocolDelegate</a> and implement all its methods. The specific implementation can be our <strong>Demo</strong></p>
+<h2 id="iii-create-a-bluetooth-protocol-processing-class">III. Create a Bluetooth protocol processing class</h2>
+<p>Create <a href="../api/QNBleProtocolHandler.html">protocol processing class QNBleProtocolHandler</a> using <a href="../api/QNBleApi.html#buildprotocolhandler">QNBleApi.buildProtocolHandler</a></p>
+<h2 id="iv-connect-yourself-to-bluetooth">IV. Connect yourself to Bluetooth</h2>
+<p>Connect devices using the system API or your own Bluetooth framework.</p>
+<p>The logic of this part is handled by the APP itself.</p>
+<h2 id="&#x4E94;-discover-service-enable-feature-value">&#x4E94;, Discover service, enable feature value</h2>
+<p>Our scale uses two sets of services, one device will only contain one set. The APP needs to traverse all the services to find one of the service IDs. If a set is found, the feature values &#x200B;&#x200B;that need to be called back are enabled according to the feature values &#x200B;&#x200B;in the table below.</p>
+<p>After enabling the eigenvalue, call <code>prepare</code> of <a href="../api/QNBleProtocolHandler.html">QNBleProtocolHandler</a> and pass the UUID of the service used.</p>
+<h3 id="the-first-set">The first set</h3>
+<p>The service ID is: <code>FFE0</code>
+Use some eigenvalues &#x200B;&#x200B;below it, as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">UUID</th>
+<th style="text-align:left">Attribute</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FFE1</td>
+<td style="text-align:left">Notify</td>
+<td style="text-align:left">Main data callback feature value</td>
+</tr>
+<tr>
+<td style="text-align:left">FFE3</td>
+<td style="text-align:left">Write</td>
+<td style="text-align:left">The main data is written to the feature value</td>
+</tr>
+<tr>
+<td style="text-align:left">FFE2</td>
+<td style="text-align:left">Indicate</td>
+<td style="text-align:left">Secondary data callback feature values, note that this property is Indicate, Android&apos;s enablement may be a bit different</td>
+</tr>
+<tr>
+<td style="text-align:left">FFE4</td>
+<td style="text-align:left">Write</td>
+<td style="text-align:left">Secondary data callback eigenvalue</td>
+</tr>
+<tr>
+<td style="text-align:left">2A19</td>
+<td style="text-align:left">Read</td>
+<td style="text-align:left">Charge scale power characteristic value</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The UUID of the feature value is only provided in the form of 32 bits. If Android needs to use 128 bits, it will be stitched by itself.
+For example, the 128 bits of FFE0 are: 0000ffe0-0000-1000-8000-00805f9b34fb</p>
+</blockquote>
+<h3 id="the-second-set">The second set</h3>
+<p>The service ID is: <code>FFF0</code>
+There are only two feature values &#x200B;&#x200B;below it, one for data callbacks and one for data writes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">UUID</th>
+<th style="text-align:left">Attribute</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FFF1</td>
+<td style="text-align:left">Notify</td>
+<td style="text-align:left">Data callback feature value</td>
+</tr>
+<tr>
+<td style="text-align:left">FFF2</td>
+<td style="text-align:left">Write</td>
+<td style="text-align:left">Data write feature value</td>
+</tr>
+<tr>
+<td style="text-align:left">2A19</td>
+<td style="text-align:left">Read</td>
+<td style="text-align:left">Charge scale power characteristic value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-interaction">Data interaction</h2>
+<p>Once the eigenvalue is enabled, you can receive the data uploaded by the scale.</p>
+<p>After the APP receives the callback data of the scale end, it sends it to the SDK for parsing by the method <a href="../api/QNBleProtocolHandler.html#ongetbledata">QNBleProtocolHandler.onGetBleData</a>, and the parsed data will pass <a href="../api/QNScaleDataListener.%20Md">QNScaleDataListener</a> callback.</p>
+<p>In addition, if you need to write data, the APP will be written by <a href="../api/QNBleProtocolDelegate.html#writecharacteristicvalue">QNBleProtocolDelegate.writeCharacteristicValue</a>.</p>
+<h2 id="measurement-completed">Measurement completed</h2>
+<p>After the measurement is completed, the complete data will be recalled by <a href="../api/QNScaleDataListener.html">QNScaleDataListener</a>, after which the scale will actively disconnect.</p>
+<p>The next time you connect, you need to recreate <a href="../api/QNBleProtocolDelegate.html">QNBleProtocolDelegate</a> and <a href="../api/QNBleProtocolHandler.html">QNBleProtocolHandler</a></p>
 
                                 
                                 </section>
@@ -910,12 +962,12 @@ Dependencies {
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Overview">
+                <a href="ble_scale.html" class="navigation navigation-prev " aria-label="Previous page: Ordinary Bluetooth Scale">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ios.html" class="navigation navigation-next " aria-label="Next page: ios">
+                <a href="broadcast_scale.html" class="navigation navigation-next " aria-label="Next page: broadcast scale">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -926,7 +978,7 @@ Dependencies {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-06-09T11:29:27.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T01:52:41.508Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Ordinary Bluetooth Scale - Manage Bluetooth Autonomously","level":"1.4.2","depth":2,"next":{"title":"broadcast scale","level":"1.4.3","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"previous":{"title":"Ordinary Bluetooth Scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale_custom_connect.md","mtime":"2020-06-09T11:29:27.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T01:52:41.508Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
