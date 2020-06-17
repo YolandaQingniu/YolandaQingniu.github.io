@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="zh" >
+<html lang="en" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>厨房秤-自定义蓝牙扫描 · GitBook</title>
+        <title>Test Case · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,9 +12,14 @@
         
         
     
+    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -46,6 +51,9 @@
         
     
 
+
+    
+
         
     
     
@@ -57,8 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../history/history.html" />
     
-    <link rel="prev" href="kitchen_scale.html" />
+    
+    <link rel="prev" href="scale_event.html" />
     
 
     </head>
@@ -69,7 +79,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="輸入並搜尋" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -92,7 +102,7 @@
                 <a href="../">
             
                     
-                    概述
+                    Overview
             
                 </a>
             
@@ -131,7 +141,7 @@
                 <span>
             
                     
-                    工作流程
+                    work process
             
                 </span>
             
@@ -140,12 +150,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
+        <li class="chapter " data-level="1.4.1" data-path="../flow/ble_scale.html">
             
-                <a href="ble_scale.html">
+                <a href="../flow/ble_scale.html">
             
                     
-                    普通蓝牙秤
+                    Common Bluetooth scale
             
                 </a>
             
@@ -153,12 +163,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="ble_scale_custom_connect.html">
+        <li class="chapter " data-level="1.4.2" data-path="../flow/ble_scale_wsp.html">
             
-                <a href="ble_scale_custom_connect.html">
+                <a href="../flow/ble_scale_wsp.html">
             
                     
-                    普通蓝牙秤-自主管理蓝牙
+                    WSP Bluetooth WiFi scale
             
                 </a>
             
@@ -166,77 +176,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="flow_dm.html">
+        <li class="chapter " data-level="1.4.3" data-path="../flow/kitchen_scale.html">
             
-                <a href="flow_dm.html">
-            
-                    
-                    普通蓝牙秤-带有 Wifi 功能
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="ble_scale_wsp.html">
-            
-                <a href="ble_scale_wsp.html">
+                <a href="../flow/kitchen_scale.html">
             
                     
-                    WSP 蓝牙 WiFi 秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.5" data-path="broadcast_scale.html">
-            
-                <a href="broadcast_scale.html">
-            
-                    
-                    广播秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6" data-path="broadcast_scale_custom_scan.html">
-            
-                <a href="broadcast_scale_custom_scan.html">
-            
-                    
-                    广播秤-自定义蓝牙扫描
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.7" data-path="kitchen_scale.html">
-            
-                <a href="kitchen_scale.html">
-            
-                    
-                    厨房秤
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.4.8" data-path="kitchen_scale_custom_scan.html">
-            
-                <a href="kitchen_scale_custom_scan.html">
-            
-                    
-                    厨房秤-自定义蓝牙扫描
+                    Kitchen scale
             
                 </a>
             
@@ -526,6 +471,19 @@
     
         <li class="chapter " data-level="1.5.1.20" data-path="../api/QNBleApi.html">
             
+                <a href="../api/QNBleApi.html#connectdevicesetwifi">
+            
+                    
+                    connectDeviceSetWiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.21" data-path="../api/QNBleApi.html">
+            
                 <a href="../api/QNBleApi.html#generatescaledata">
             
                     
@@ -633,33 +591,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="../api/QNScaleDataListener.html">
-            
-                <a href="../api/QNScaleDataListener.html">
-            
-                    
-                    QNScaleDataListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.10" data-path="../api/QNWspScaleDataListener.html">
-            
-                <a href="../api/QNWspScaleDataListener.html">
-            
-                    
-                    QNWspScaleDataListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.11" data-path="../api/QNBleStateListener.html">
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNBleStateListener.html">
             
                 <a href="../api/QNBleStateListener.html">
             
@@ -672,7 +604,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.12" data-path="../api/QNLogListener.html">
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNLogListener.html">
             
                 <a href="../api/QNLogListener.html">
             
@@ -685,7 +630,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.13" data-path="../api/QNConfig.html">
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNConfig.html">
             
                 <a href="../api/QNConfig.html">
             
@@ -698,7 +643,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.14" data-path="../api/QNWiFiConfig.html">
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNWiFiConfig.html">
             
                 <a href="../api/QNWiFiConfig.html">
             
@@ -711,7 +656,85 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.15" data-path="../api/QNWspConfig.html">
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNWspScaleDataListener.html">
+            
+                <a href="../api/QNWspScaleDataListener.html">
+            
+                    
+                    QNWspScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleStateListener.html">
+            
+                <a href="../api/QNBleStateListener.html">
+            
+                    
+                    QNBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNLogListener.html">
+            
+                <a href="../api/QNLogListener.html">
+            
+                    
+                    QNLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNConfig.html">
+            
+                <a href="../api/QNConfig.html">
+            
+                    
+                    QNConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNWiFiConfig.html">
+            
+                <a href="../api/QNWiFiConfig.html">
+            
+                    
+                    QNWiFiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../api/QNWspConfig.html">
             
                 <a href="../api/QNWspConfig.html">
             
@@ -724,7 +747,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleConnectionChangeListener.html">
+        <li class="chapter " data-level="1.5.21" data-path="../api/QNBleConnectionChangeListener.html">
             
                 <a href="../api/QNBleConnectionChangeListener.html">
             
@@ -737,7 +760,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.17" data-path="../api/QNBleDeviceDiscoveryListener.html">
+        <li class="chapter " data-level="1.5.22" data-path="../api/QNBleDeviceDiscoveryListener.html">
             
                 <a href="../api/QNBleDeviceDiscoveryListener.html">
             
@@ -750,7 +773,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.18" data-path="../api/QNScaleData.html">
+        <li class="chapter " data-level="1.5.23" data-path="../api/QNScaleData.html">
             
                 <a href="../api/QNScaleData.html">
             
@@ -763,7 +786,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.19" data-path="../api/QNShareData.html">
+        <li class="chapter " data-level="1.5.24" data-path="../api/QNShareData.html">
             
                 <a href="../api/QNShareData.html">
             
@@ -776,7 +799,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.20" data-path="../api/QNScaleStoreData.html">
+        <li class="chapter " data-level="1.5.25" data-path="../api/QNScaleStoreData.html">
             
                 <a href="../api/QNScaleStoreData.html">
             
@@ -789,7 +812,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.21" data-path="../api/QNScaleItemData.html">
+        <li class="chapter " data-level="1.5.26" data-path="../api/QNScaleItemData.html">
             
                 <a href="../api/QNScaleItemData.html">
             
@@ -802,12 +825,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.22" data-path="../api/QNBleProtocolHandler.html">
+        <li class="chapter " data-level="1.5.27" data-path="../api/QNBleProtocolHandler.html">
             
                 <a href="../api/QNBleProtocolHandler.html">
             
                     
                     QNBleProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="../api/QNBleProtocolDelegate.html">
+            
+                <a href="../api/QNBleProtocolDelegate.html">
+            
+                    
+                    QNBleProtocolDelegate
             
                 </a>
             
@@ -825,7 +861,7 @@
                 <span>
             
                     
-                    附表
+                    Schedule
             
                 </span>
             
@@ -834,12 +870,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../attouched_list/faq.html">
+        <li class="chapter " data-level="1.6.1" data-path="faq.html">
             
-                <a href="../attouched_list/faq.html">
+                <a href="faq.html">
             
                     
-                    常见问题
+                    FAQ
             
                 </a>
             
@@ -847,12 +883,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../attouched_list/body_indexes.html">
+        <li class="chapter " data-level="1.6.2" data-path="body_indexes.html">
             
-                <a href="../attouched_list/body_indexes.html">
+                <a href="body_indexes.html">
             
                     
-                    身体指标常量
+                    Body Index Constant
             
                 </a>
             
@@ -860,12 +896,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../attouched_list/device_type.html">
+        <li class="chapter " data-level="1.6.3" data-path="device_type.html">
             
-                <a href="../attouched_list/device_type.html">
+                <a href="device_type.html">
             
                     
-                    设备类型
+                    Device Type
             
                 </a>
             
@@ -873,12 +909,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../attouched_list/body_shape.html">
+        <li class="chapter " data-level="1.6.4" data-path="body_shape.html">
             
-                <a href="../attouched_list/body_shape.html">
+                <a href="body_shape.html">
             
                     
-                    体型对照表
+                    Body shape comparison table
             
                 </a>
             
@@ -886,12 +922,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="../attouched_list/error_code.html">
+        <li class="chapter " data-level="1.6.5" data-path="error_code.html">
             
-                <a href="../attouched_list/error_code.html">
+                <a href="error_code.html">
             
                     
-                    错误码
+                    Error Code
             
                 </a>
             
@@ -899,12 +935,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/scan_error.html">
+        <li class="chapter " data-level="1.6.6" data-path="scan_error.html">
             
-                <a href="../attouched_list/scan_error.html">
+                <a href="scan_error.html">
             
                     
-                    扫描错误码
+                    Scan Error Code
             
                 </a>
             
@@ -912,12 +948,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/scale_state.html">
+        <li class="chapter " data-level="1.6.7" data-path="scale_state.html">
             
-                <a href="../attouched_list/scale_state.html">
+                <a href="scale_state.html">
             
                     
-                    秤状态定义
+                    Scale State Definition
             
                 </a>
             
@@ -925,12 +961,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scale_event.html">
+        <li class="chapter " data-level="1.6.8" data-path="scale_event.html">
             
-                <a href="../attouched_list/scale_event.html">
+                <a href="scale_event.html">
             
                     
-                    秤事件定义
+                    Scale event definition
             
                 </a>
             
@@ -938,12 +974,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../history/history.html">
+        <li class="chapter active" data-level="1.6.9" data-path="test_list.html">
+            
+                <a href="test_list.html">
+            
+                    
+                    Test Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../history/history.html">
             
                 <a href="../history/history.html">
             
                     
-                    更新日志
+                    Update Log
             
                 </a>
             
@@ -963,7 +1012,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            本書使用 GitBook 釋出
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -986,7 +1035,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >厨房秤-自定义蓝牙扫描</a>
+        <a href=".." >Test Case</a>
     </h1>
 </div>
 
@@ -1001,18 +1050,138 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x53A8;&#x623F;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;">&#x53A8;&#x623F;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;</h1>
-<p>&#x8BE5;&#x7BC7;&#x7AE0;&#x662F;&#x7ED9;&#x5BF9;&#x84DD;&#x7259;&#x6709;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#xFF0C;&#x5E76;&#x5728;APP&#x4E2D;&#x6709;&#x81EA;&#x5DF1;&#x84DD;&#x7259;&#x6846;&#x67B6;&#x7684;&#x7528;&#x6237;&#x4F7F;&#x7528; </p>
-<p>&#x53A8;&#x623F;&#x79E4;&#x5728;&#x6D4B;&#x91CF;&#x65F6;&#xFF0C;&#x4F1A;&#x4E0D;&#x65AD;&#x5411;&#x5916;&#x53D1;&#x5C04;&#x84DD;&#x7259;&#x5E7F;&#x64AD;&#x4FE1;&#x53F7;&#xFF0C;&#x91CC;&#x9762;&#x4F1A;&#x5305;&#x542B;&#x79F0;&#x91CD;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
-<p>&#x4E0B;&#x6587;&#x7684;&#x8BF4;&#x660E;&#x662F;&#x57FA;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x5DF2;&#x7ECF;&#x5BF9;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x6709;&#x4E86;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#x3002;&#x5982;&#x679C;&#x9047;&#x5230;&#x5F88;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;SDK&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x7684;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x3002;</p>
-<p>&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x548C;<a href="broadcast_scale_custom_scan.html">&#x5E7F;&#x64AD;&#x79E4;</a>&#x6D41;&#x7A0B;&#x4E00;&#x81F4;&#xFF1A;</p>
-<h2 id="&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;">&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;</h2>
-<p>&#x4F7F;&#x7528;<a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a>&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x524D;&#x6587;&#x5DF2;&#x6709;&#x76F8;&#x5173;&#x4ECB;&#x7ECD;&#xFF0C;<a href="../#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x8BF7;&#x67E5;&#x770B;</a></p>
-<h2 id="&#x4E8C;&#x3001;&#x626B;&#x63CF;">&#x4E8C;&#x3001;&#x626B;&#x63CF;</h2>
-<p>&#x81EA;&#x884C;&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;</p>
-<p>&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x540E;&#xFF0C;&#x628A;&#x626B;&#x63CF;&#x5230;&#x7684;&#x5E7F;&#x64AD;&#x4FE1;&#x606F;&#x4F20;&#x7ED9;SDK&#xFF0C;&#x901A;&#x8FC7;<a href="../api/QNBleApi.html#buildkitchendevice">QNBleApi.buildkitchenDevice</a></p>
-<h2 id="&#x7ED3;&#x679C;&#x5904;&#x7406;">&#x7ED3;&#x679C;&#x5904;&#x7406;</h2>
-<p>&#x62FF;&#x5230;<a href="../api/QNBleKitchenDevice.html">QNBleKitchenDevice</a>&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x9762;&#x7684;&#x5904;&#x7406;&#x8BF7;&#x53C2;&#x8003;<a href="kitchen_scale.html">&#x53A8;&#x623F;&#x79E4;&#x63A5;&#x5165;&#x6D41;&#x7A0B;</a></p>
+                                <h1 id="test-case">Test case</h1>
+<p><a href="SDK_Checklist.xlsx">Excel version download address</a></p>
+<blockquote>
+<p>You can download the file with the right mouse button</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Use case number</th>
+<th style="text-align:center">Use case title</th>
+<th style="text-align:center">priority</th>
+<th style="text-align:center">Preconditions</th>
+<th style="text-align:center">Test procedure</th>
+<th style="text-align:center">Checkpoints and precautions</th>
+<th style="text-align:center">expected results</th>
+<th style="text-align:center">Remarks</th>
+<th style="text-align:center">Test Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">SDK_01</td>
+<td style="text-align:center">Verify that it can be installed and run on the phone normally</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Install the application package on the phone<br>2. Open the app</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Enter the measurement module normally</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_02</td>
+<td style="text-align:center">Verify that the Bluetooth shutdown prompt is normal</td>
+<td style="text-align:center">in</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Turn off the phone&apos;s Bluetooth<br>2. Add connection scale</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Interface prompt:<br>&#x201C;Bluetooth off&#x201D;Hints like</td>
+<td style="text-align:center">This is based on the client company&apos;s own Bluetooth shutdown prompt</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_03</td>
+<td style="text-align:center">Verify that the normal data can be measured and the IOS and Android measurement results are consistent</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Must be measured barefoot</td>
+<td style="text-align:center">1. Install and open the SDK application<br>2. Enter personal physical information, such as height: 161cm, age 1991-01-01, male<br>3. Use the same data of Android and IOS to weigh the scale and measure one complete</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The measurement data of Android and iOS are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_04</td>
+<td style="text-align:center">Verify that the measurement indicators for wearing shoes are normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Shoe measurement</td>
+<td style="text-align:center">1. Enter your own personal data<br>2. Connect the scale and measure a complete data on the scale</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The interface display is normal, the measurement data results only show two indicators of weight and BMI</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_05</td>
+<td style="text-align:center">Verify that the number of indicators is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Must be measured barefoot</td>
+<td style="text-align:center">1. Edit normal profile<br>2. Connect a scale to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Measurement indicators show the same as expected</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_06</td>
+<td style="text-align:center">Verify that switching between different gender measurement data is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Use an Android phone: edit your personal data, and measure the complete data for each of the male and female scales<br>2. Change the IOS phone again: use the same data on the scale to measure a piece of data for men and women</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The data measured on both sides of the platform are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_07</td>
+<td style="text-align:center">Verify that the data for different height measurements is normal</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Recommended height input range is 40cm--240cm, minimum is 40cm, maximum is 240cm</td>
+<td style="text-align:center">1. Enter 40cm, 161cm, 240cm respectively, other body data will not change<br>2. Connect the scale to the scale and measure a complete data with the three different heights above</td>
+<td style="text-align:center">Take 56kg body weight as an example</td>
+<td style="text-align:center">1. The height is the lowest, and the measured body fat rate is the highest. Body fat rate at 70%<br>2. Height is 161cm, body fat rate is within the normal range<br>3. The height is the highest and the measured body fat rate is the lowest. Body fat rate at 5.1%</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_08</td>
+<td style="text-align:center">Verify correct measurement data for different ages</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Recommended age range 4 years old-80 years old</td>
+<td style="text-align:center">Android and ios use the same data for measurement&#xFF1B;<br>1. Enter the birthday as 5 years old, 28 years old, 80 years old, other information remains unchanged<br>2. Connect a scale with a different age to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The data measured on both sides of the platform are the same</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_09</td>
+<td style="text-align:center">Verify that switching between kg, Ib, kg, and st units is normal.</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center">Set the pound unit, the scale does not support the pound, the scale defaults kg, set the st unit, the scale does not support, the scale defaults Ib</td>
+<td style="text-align:center">1. Edit personal data, switch between different units<br>2. Connect scales in different units</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The unit displayed on the scale is the same as the unit set on the phone</td>
+<td style="text-align:center">App supports display units according to your company&apos;s needs</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">SDK_10</td>
+<td style="text-align:center">Verify that the measured data of the modified data is larger than the measured data before the modification</td>
+<td style="text-align:center">high</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1. Edit personal data and connect to the scale<br>The scale measures a complete piece of data<br>2. Modify personal information, (the modified information is different from the previous one), weigh on the scale again to measure a complete data</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">The two measurement data are very different</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -1040,10 +1209,14 @@
 
             
                 
-                <a href="kitchen_scale.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 厨房秤">
+                <a href="scale_event.html" class="navigation navigation-prev " aria-label="Previous page: Scale event definition">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../history/history.html" class="navigation navigation-next " aria-label="Next page: Update Log">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1052,17 +1225,18 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"厨房秤-自定义蓝牙扫描","level":"1.4.8","depth":2,"next":{"title":"API","level":"1.5","depth":1,"ref":"","articles":[{"title":"QNBleApi","level":"1.5.1","depth":2,"path":"api/QNBleApi.md","ref":"api/QNBleApi.md","articles":[{"title":"initSdk","level":"1.5.1.1","depth":3,"anchor":"#initsdk","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#initsdk","articles":[]},{"title":"setSysBleStateListener","level":"1.5.1.2","depth":3,"anchor":"#setsysblestatelistener","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#setsysblestatelistener","articles":[]},{"title":"setBleDeviceDiscoveryListener","level":"1.5.1.3","depth":3,"anchor":"#setbledevicediscoverylistener","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#setbledevicediscoverylistener","articles":[]},{"title":"startBleDeviceDiscovery","level":"1.5.1.4","depth":3,"anchor":"#startbledevicediscovery","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#startbledevicediscovery","articles":[]},{"title":"stopBleDeviceDiscovery","level":"1.5.1.5","depth":3,"anchor":"#stopbledevicediscovery","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#stopbledevicediscovery","articles":[]},{"title":"connectDevice","level":"1.5.1.6","depth":3,"anchor":"#connectdevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#connectdevice","articles":[]},{"title":"connectWspDevice","level":"1.5.1.7","depth":3,"anchor":"#connectwspdevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#connectwspdevice","articles":[]},{"title":"connectDeviceSetWiFi","level":"1.5.1.8","depth":3,"anchor":"#connectdevicesetwifi","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#connectdevicesetwifi","articles":[]},{"title":"disconnectDevice","level":"1.5.1.9","depth":3,"anchor":"#disconnectdevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#disconnectdevice","articles":[]},{"title":"registerWiFiBleDevice","level":"1.5.1.10","depth":3,"anchor":"#registerwifibledevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#registerwifibledevice","articles":[]},{"title":"setBleConnectionChangeListener","level":"1.5.1.11","depth":3,"anchor":"#setbleconnectionchangelistener","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#setbleconnectionchangelistener","articles":[]},{"title":"setScaleDataListener","level":"1.5.1.12","depth":3,"anchor":"#setScaleDataListener","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#setScaleDataListener","articles":[]},{"title":"setLogListener","level":"1.5.1.13","depth":3,"anchor":"#setloglistener","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#setloglistener","articles":[]},{"title":"getConfig","level":"1.5.1.14","depth":3,"anchor":"#getconfig","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#getconfig","articles":[]},{"title":"convertWeightWithTargetUnit","level":"1.5.1.15","depth":3,"anchor":"#convertweightwithtargetunit","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#convertweightwithtargetunit","articles":[]},{"title":"buildUser","level":"1.5.1.16","depth":3,"anchor":"#builduser","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#builduser","articles":[]},{"title":"buildDevice","level":"1.5.1.17","depth":3,"anchor":"#builddevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#builddevice","articles":[]},{"title":"buildProtocolHandler","level":"1.5.1.18","depth":3,"anchor":"#buildprotocolhandler","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#buildprotocolhandler","articles":[]},{"title":"buildBroadcastDevice","level":"1.5.1.19","depth":3,"anchor":"#buildbroadcastdevice","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#buildbroadcastdevice","articles":[]},{"title":"generateScaleData","level":"1.5.1.20","depth":3,"anchor":"#generatescaledata","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#generatescaledata","articles":[]}]},{"title":"QNBleProtocolDelegate","level":"1.5.2","depth":2,"path":"api/QNBleProtocolDelegate.md","ref":"api/QNBleProtocolDelegate.md","articles":[]},{"title":"QNUtils","level":"1.5.3","depth":2,"path":"api/QNUtils.md","ref":"api/QNUtils.md","articles":[]},{"title":"QNResultCallback","level":"1.5.4","depth":2,"path":"api/QNResultCallback.md","ref":"api/QNResultCallback.md","articles":[]},{"title":"QNBleDevice","level":"1.5.5","depth":2,"path":"api/QNBleDevice.md","ref":"api/QNBleDevice.md","articles":[]},{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"path":"api/QNBleKitchenDevice.md","ref":"api/QNBleKitchenDevice.md","articles":[]},{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},{"title":"QNScaleDataListener","level":"1.5.9","depth":2,"path":"api/QNScaleDataListener.md","ref":"api/QNScaleDataListener.md","articles":[]},{"title":"QNWspScaleDataListener","level":"1.5.10","depth":2,"path":"api/QNWspScaleDataListener.md","ref":"api/QNWspScaleDataListener.md","articles":[]},{"title":"QNBleStateListener","level":"1.5.11","depth":2,"path":"api/QNBleStateListener.md","ref":"api/QNBleStateListener.md","articles":[]},{"title":"QNLogListener","level":"1.5.12","depth":2,"path":"api/QNLogListener.md","ref":"api/QNLogListener.md","articles":[]},{"title":"QNConfig","level":"1.5.13","depth":2,"path":"api/QNConfig.md","ref":"api/QNConfig.md","articles":[]},{"title":"QNWiFiConfig","level":"1.5.14","depth":2,"path":"api/QNWiFiConfig.md","ref":"api/QNWiFiConfig.md","articles":[]},{"title":"QNWspConfig","level":"1.5.15","depth":2,"path":"api/QNWspConfig.md","ref":"api/QNWspConfig.md","articles":[]},{"title":"QNBleConnectionChangeListener","level":"1.5.16","depth":2,"path":"api/QNBleConnectionChangeListener.md","ref":"api/QNBleConnectionChangeListener.md","articles":[]},{"title":"QNBleDeviceDiscoveryListener","level":"1.5.17","depth":2,"path":"api/QNBleDeviceDiscoveryListener.md","ref":"api/QNBleDeviceDiscoveryListener.md","articles":[]},{"title":"QNScaleData","level":"1.5.18","depth":2,"path":"api/QNScaleData.md","ref":"api/QNScaleData.md","articles":[]},{"title":"QNShareData","level":"1.5.19","depth":2,"path":"api/QNShareData.md","ref":"api/QNShareData.md","articles":[]},{"title":"QNScaleStoreData","level":"1.5.20","depth":2,"path":"api/QNScaleStoreData.md","ref":"api/QNScaleStoreData.md","articles":[]},{"title":"QNScaleItemData","level":"1.5.21","depth":2,"path":"api/QNScaleItemData.md","ref":"api/QNScaleItemData.md","articles":[]},{"title":"QNBleProtocolHandler","level":"1.5.22","depth":2,"path":"api/QNBleProtocolHandler.md","ref":"api/QNBleProtocolHandler.md","articles":[]}]},"previous":{"title":"厨房秤","level":"1.4.7","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/kitchen_scale_custom_scan.md","mtime":"2020-05-14T05:48:28.012Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T13:00:18.641Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"Test Case","level":"1.6.9","depth":2,"next":{"title":"Update Log","level":"1.6.10","depth":2,"path":"history/history.md","ref":"history/history.md","articles":[]},"previous":{"title":"Scale event definition","level":"1.6.8","depth":2,"path":"attouched_list/scale_event.md","ref":"attouched_list/scale_event.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"attouched_list/test_list.md","mtime":"2020-06-17T03:16:20.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:19:42.863Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
@@ -1089,6 +1263,8 @@
         <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

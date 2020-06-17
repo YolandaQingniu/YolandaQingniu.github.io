@@ -1,0 +1,1378 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>WSP Bluetooth WiFi scale · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="kitchen_scale.html" />
+    
+    
+    <link rel="prev" href="ble_scale.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guide/android.html">
+            
+                <a href="../guide/android.html">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guide/ios.html">
+            
+                <a href="../guide/ios.html">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    work process
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
+            
+                <a href="ble_scale.html">
+            
+                    
+                    Common Bluetooth scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="ble_scale_wsp.html">
+            
+                <a href="ble_scale_wsp.html">
+            
+                    
+                    WSP Bluetooth WiFi scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="kitchen_scale.html">
+            
+                <a href="kitchen_scale.html">
+            
+                    
+                    Kitchen scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html">
+            
+                    
+                    QNBleApi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#initsdk">
+            
+                    
+                    initSdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setsysblestatelistener">
+            
+                    
+                    setSysBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbledevicediscoverylistener">
+            
+                    
+                    setBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#startbledevicediscovery">
+            
+                    
+                    startBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#stopbledevicediscovery">
+            
+                    
+                    stopBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevice">
+            
+                    
+                    connectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectwspdevice">
+            
+                    
+                    connectWspDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevicesetwifi">
+            
+                    
+                    connectDeviceSetWiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#disconnectdevice">
+            
+                    
+                    disconnectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#registerwifibledevice">
+            
+                    
+                    registerWiFiBleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbleconnectionchangelistener">
+            
+                    
+                    setBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setScaleDataListener">
+            
+                    
+                    setScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setloglistener">
+            
+                    
+                    setLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getconfig">
+            
+                    
+                    getConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#convertweightwithtargetunit">
+            
+                    
+                    convertWeightWithTargetUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#builduser">
+            
+                    
+                    buildUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#builddevice">
+            
+                    
+                    buildDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.18" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#buildprotocolhandler">
+            
+                    
+                    buildProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.19" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#buildbroadcastdevice">
+            
+                    
+                    buildBroadcastDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.20" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevicesetwifi">
+            
+                    
+                    connectDeviceSetWiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.21" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#generatescaledata">
+            
+                    
+                    generateScaleData
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api/QNBleProtocolDelegate.html">
+            
+                <a href="../api/QNBleProtocolDelegate.html">
+            
+                    
+                    QNBleProtocolDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api/QNUtils.html">
+            
+                <a href="../api/QNUtils.html">
+            
+                    
+                    QNUtils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../api/QNResultCallback.html">
+            
+                <a href="../api/QNResultCallback.html">
+            
+                    
+                    QNResultCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../api/QNBleDevice.html">
+            
+                <a href="../api/QNBleDevice.html">
+            
+                    
+                    QNBleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleBroadcastDevice.html">
+            
+                <a href="../api/QNBleBroadcastDevice.html">
+            
+                    
+                    QNBleBroadcastDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../api/QNBleKitchenDevice.html">
+            
+                <a href="../api/QNBleKitchenDevice.html">
+            
+                    
+                    QNBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../api/QNUser.html">
+            
+                <a href="../api/QNUser.html">
+            
+                    
+                    QNUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNBleStateListener.html">
+            
+                <a href="../api/QNBleStateListener.html">
+            
+                    
+                    QNBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNLogListener.html">
+            
+                <a href="../api/QNLogListener.html">
+            
+                    
+                    QNLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNConfig.html">
+            
+                <a href="../api/QNConfig.html">
+            
+                    
+                    QNConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNWiFiConfig.html">
+            
+                <a href="../api/QNWiFiConfig.html">
+            
+                    
+                    QNWiFiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNWspScaleDataListener.html">
+            
+                <a href="../api/QNWspScaleDataListener.html">
+            
+                    
+                    QNWspScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleStateListener.html">
+            
+                <a href="../api/QNBleStateListener.html">
+            
+                    
+                    QNBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNLogListener.html">
+            
+                <a href="../api/QNLogListener.html">
+            
+                    
+                    QNLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNConfig.html">
+            
+                <a href="../api/QNConfig.html">
+            
+                    
+                    QNConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNWiFiConfig.html">
+            
+                <a href="../api/QNWiFiConfig.html">
+            
+                    
+                    QNWiFiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../api/QNWspConfig.html">
+            
+                <a href="../api/QNWspConfig.html">
+            
+                    
+                    QNWspConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../api/QNBleConnectionChangeListener.html">
+            
+                <a href="../api/QNBleConnectionChangeListener.html">
+            
+                    
+                    QNBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="../api/QNBleDeviceDiscoveryListener.html">
+            
+                <a href="../api/QNBleDeviceDiscoveryListener.html">
+            
+                    
+                    QNBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="../api/QNScaleData.html">
+            
+                <a href="../api/QNScaleData.html">
+            
+                    
+                    QNScaleData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="../api/QNShareData.html">
+            
+                <a href="../api/QNShareData.html">
+            
+                    
+                    QNShareData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="../api/QNScaleStoreData.html">
+            
+                <a href="../api/QNScaleStoreData.html">
+            
+                    
+                    QNScaleStoreData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="../api/QNScaleItemData.html">
+            
+                <a href="../api/QNScaleItemData.html">
+            
+                    
+                    QNScaleItemData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="../api/QNBleProtocolHandler.html">
+            
+                <a href="../api/QNBleProtocolHandler.html">
+            
+                    
+                    QNBleProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="../api/QNBleProtocolDelegate.html">
+            
+                <a href="../api/QNBleProtocolDelegate.html">
+            
+                    
+                    QNBleProtocolDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Schedule
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../attouched_list/faq.html">
+            
+                <a href="../attouched_list/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../attouched_list/body_indexes.html">
+            
+                <a href="../attouched_list/body_indexes.html">
+            
+                    
+                    Body Index Constant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../attouched_list/device_type.html">
+            
+                <a href="../attouched_list/device_type.html">
+            
+                    
+                    Device Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../attouched_list/body_shape.html">
+            
+                <a href="../attouched_list/body_shape.html">
+            
+                    
+                    Body shape comparison table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../attouched_list/error_code.html">
+            
+                <a href="../attouched_list/error_code.html">
+            
+                    
+                    Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/scan_error.html">
+            
+                <a href="../attouched_list/scan_error.html">
+            
+                    
+                    Scan Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/scale_state.html">
+            
+                <a href="../attouched_list/scale_state.html">
+            
+                    
+                    Scale State Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scale_event.html">
+            
+                <a href="../attouched_list/scale_event.html">
+            
+                    
+                    Scale event definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/test_list.html">
+            
+                <a href="../attouched_list/test_list.html">
+            
+                    
+                    Test Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../history/history.html">
+            
+                <a href="../history/history.html">
+            
+                    
+                    Update Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >WSP Bluetooth WiFi scale</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wsp-bluetooth-wifi-scale">WSP Bluetooth WiFi scale</h1>
+<p>WSP Bluetooth WiFi scale is a smart device launched by our company that supports automatic recognition of user measurements, directly displays the measurement results on the scale display without the app, and automatically uploads the measurement results.</p>
+<p>This device avoids the step in which users need to use Bluetooth to connect to the device in order to make detailed measurements during the measurement process, and improves the user experience. As long as the device is connected to the network and the user information to be measured is registered with the device once, the user can subsequently use the app without the app. Registered users can measure on the scale without using a mobile phone. After the measurement is completed, the scale will automatically identify which registered user the measurement data belongs to. After successful recognition, the indicators of the measurement will be displayed on the device and the measurement data Last time to the corresponding server.</p>
+<h2 id="brief-description-of-scale-user">Brief description of scale user</h2>
+<p>At present, the WSP device allows up to 8 users, and users on the scale end need to register users with the device through Bluetooth connection. When 8 users have been registered and the user is registered with the device again, the scale will return to the status of registration failure. Therefore, before registering users, it is recommended to determine whether you need to delete the invalid users in the scale to avoid invalid users occupying resources.</p>
+<p>When registering a user with the device, the user key needs to be issued to the device (the key is generally generated by the server for the user&apos;s unique identifier). When the registration is successful, the device will record the user key and return the user&apos;s unique sequence number. Therefore, after successfully registering the user, the app needs to save the serial number and secret key that the device returns to the user. When updating user data via Bluetooth connection or measuring via Bluetooth connection, the user &#x2019;s serial number and secret key must be used to access the designated user on the scale side successfully. At the same time, the serial number is also used as an identification of the registered user to which the uploaded measurement data belongs, and as a necessary condition for deleting the user.</p>
+<ul>
+<li>registered user</li>
+</ul>
+<p>The scale can cache the registered user information, and identify the user to which the measurement data when the Bluetooth is not connected by the registered user information, so as to obtain detailed measurement data using the identified user information</p>
+<ul>
+<li>Visit users</li>
+</ul>
+<p>When operating the scale, you need to access the registered user first, and then you can enter the corresponding operation after successful access, such as modifying user information&#x3001;Connect to Bluetooth for measurement, etc.</p>
+<ul>
+<li>delete users</li>
+</ul>
+<p>After the user has been registered with the scale, subsequent users unbind the scale, and the user on the scale side needs to be deleted to avoid resource occupation</p>
+<h2 id="visitor-mode-measurement">Visitor Mode Measurement</h2>
+<p>Guest mode is a common channel measurement method provided by the scale body. This method does not require registered users to use it directly. Guest mode uses temporary users. The existence time of this user is from connection to disconnection. Temporary user when the device is disconnected That is to destroy, while in the guest mode will not generate and receive stored data</p>
+<h2 id="wsp-device-protocol-brief">WSP Device Protocol Brief</h2>
+<p>The protocol of the wsp device is basically optimized and modified in <a href="../attouched_list/WSP_v1.0.0.pdf">WSP Official Agreement</a>. The wsp protocol interaction is more complicated. The following are the parts involved in the device protocol</p>
+<p>Aspects covered by the agreement:</p>
+<ul>
+<li>User</li>
+<li>registered user</li>
+<li>Visit users</li>
+<li>Update user information</li>
+<li>Age</li>
+<li>Height</li>
+<li>Gender</li>
+<li>delete users</li>
+<li>Measurement</li>
+<li>Measurement status</li>
+<li>Real-time weight</li>
+<li>Storing data</li>
+<li>Measurement data</li>
+<li>Distribution network</li>
+<li>WiFi name</li>
+<li>WiFi password</li>
+<li>Data upload address</li>
+<li>OTA upgrade address</li>
+<li>Communication key</li>
+<li>Distribution results</li>
+<li>Other</li>
+<li>Unit</li>
+</ul>
+<p>The device involves many aspects, and the communication process between protocols and the enabling method are strictly required. Our company has packaged it into SDK for easy access.</p>
+<h2 id="workflow-in-different-situations">Workflow in different situations</h2>
+<ul>
+<li>The first time to use the binding distribution network</li>
+</ul>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5hcHA6IOaJk-W8gEFQUOi_m-WFpea1i-mHj1xudXNlci0-PnNjYWxlOiDnlKjmiLfouKnnp6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNlcnZlcjog6K-35rGC5b6F5Yig6Zmk55So5oi3XG5zZXJ2ZXItPj5hcHA6IOS4i-WPkeW-heWIoOmZpOeUqOaIt1xuYXBwLT4-c2VydmVyOiDor7fmsYLlr4bpkqVcbnNlcnZlci0-PmFwcDog5LiL5Y-R5a-G6ZKlXG5hcHAtPj5zY2FsZTog5Y-R6LW36L-e5o6lXG5zY2FsZS0-PmFwcDog5bu656uL6JOd54mZ6L-e5o6lXG5hcHAtPj5zY2FsZTog5ZCM5q2l5pe26Ze0XG5hcHAtPj5zY2FsZTog5ZCM5q2l5Y2V5L2NXG5hcHAtPj5zY2FsZTog5Y-R6YCB5Yig6Zmk55So5oi35ZG95LukXG5zY2FsZS0-PnNjYWxlOiDliKDpmaTnlKjmiLdcbmFwcC0-PnNjYWxlOiDms6jlhoznlKjmiLdcbnNjYWxlLT4-YXBwOiDov5Tlm57ntKLlvJXlgLxcbmFwcC0-PnNlcnZlcjog5Y-R6YCB5Y2g5L2N5oiQ5Yqf5L-h5oGvXG5hcHAtPj5zY2FsZTog6K6_6Zeu55So5oi3XG5hcHAtPj5zY2FsZTog5pu05paw5oCn5YirXG5hcHAtPj5zY2FsZTog5pu05paw6Lqr6auYXG5hcHAtPj5zY2FsZTog5pu05paw55Sf5pelXG5hcHAtPj5zY2FsZTog5pu05paw5bm06b6EXG5hcHAtPj5zY2FsZTog5pu05paw566X5rOVXG51c2VyLT4-c2NhbGU656ew6YeNXG5sb29wOiDmnKrnqLPlrprph43ph4_mtYvph49cbnNjYWxlLT4-YXBwOiDlrp7ml7bnp7Dph43ph43ph49cbmVuZFxudXNlci0-PnNjYWxlOiDnq5nnqLNcbnNjYWxlLT4-YXBwOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546H77yI6Iul5pSv5oyB77yJXG5zY2FsZS0-PmFwcDog56iz5a6a5rWL6YeP5pWw5o2uXG5hcHAtPj5zY2FsZTog5pat5byA6L-e5o6lXG5zY2FsZS0-PnVzZXI6IOWxleekuua1i-mHj-aVsOaNrlxudXNlci0-PnNjYWxlOiDkuIvnp6RcbmFwcC0-PnVzZXI6IOWxleekuuivpue7hua1i-mHj-aVsOaNrlxuYXBwLT4-c2VydmVyOiDkuIrkvKDnlKjmiLfmtYvph4_mlbDmja5cbmFwcC0-PnVzZXI6IOaPkOekuumFjee9kVxudXNlci0-PmFwcDog54K55Ye76L-b5YWl6YWN572RXG5hcHAtPj5zZXJ2ZXI6IOivt-axguWKoOWvhuWvhumSpe-8jE9UQemTvuaOpeetiVxudXNlci0-PnNjYWxlOiDouKnkuq7np6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNjYWxlOiDlj5Hotbfov57mjqVcbnNjYWxlLT4-YXBwOiDlu7rnq4vok53niZnov57mjqVcbmFwcC0-PnNjYWxlOiDlkIzmraXml7bpl7RcbmFwcC0-PnNjYWxlOiDlkIzmraXljZXkvY1cbmFwcC0-PnNjYWxlOiDorr_pl67nlKjmiLdcbmFwcC0-PnNjYWxlOiDpgJrnn6Xov5vlhaXphY3nvZFcbmFwcC0-PnNjYWxlOiDlj5HpgIF3aWZp5ZCN56ewXG5hcHAtPj5zY2FsZTog5Y-R6YCBd2lmaeWvhueggVxuYXBwLT4-c2NhbGU6IOWPkemAgeacjeWKoeWZqOWcsOWdgFxuYXBwLT4-c2NhbGU6IOWPkemAgU9UQeWcsOWdgFxuYXBwLT4-c2NhbGU6IOWPkemAgeWKoOWvhuWvhumSpVxuYXBwLT4-c2VydmVyOiDpgJrnn6XmnI3liqHlmajlj5jmm7TpgJrorq_lr4bpkqVcbnNjYWxlLT4-c2NhbGU6IOi_nuaOpXdpZmlcbnNjYWxlLT4-YXBwOiDkuIrlj5HphY3nvZHnu5PmnpxcbmFwcC0-PnNjYWxlOiDmlq3lvIDov57mjqVcbnNjYWxlLT4-c2VydmVyOiDlj5HpgIHor7fmsYLvvIzmtYvor5Xpk77mjqVcbnNlcnZlci0-PnNjYWxlOiDlk43lupTor7fmsYJcbmFwcC0-PnNlcnZlcjog5L-d5a2Y6YWN572R57uT5p6cXG5hcHAtPj51c2VyOiDlsZXnpLrphY3nvZHnu5PmnpxcblxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" frameborder="0" width="750" height="1950"></iframe>
+
+<ul>
+<li><p>Measurement with Bluetooth connection</p>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5hcHA6IOaJk-W8gEFQUOi_m-WFpea1i-mHj1xudXNlci0-PnNjYWxlOiDnlKjmiLfouKnnp6RcbnNjYWxlLT4-YXBwOiDlj5HlsITlub_mkq1cbmFwcC0-PnNjYWxlOiDlj5Hotbfov57mjqVcbnNjYWxlLT4-YXBwOiDlu7rnq4vok53niZnov57mjqVcbmFwcC0-PnNjYWxlOiDlkIzmraXml7bpl7RcbmFwcC0-PnNjYWxlOiDlkIzmraXljZXkvY1cbmFwcC0-PnNjYWxlOiDorr_pl67nlKjmiLdcbmFwcC0-PnNjYWxlOiDmm7TmlrDmgKfliKtcbmFwcC0-PnNjYWxlOiDmm7TmlrDouqvpq5hcbmFwcC0-PnNjYWxlOiDmm7TmlrDnlJ_ml6VcbmFwcC0-PnNjYWxlOiDmm7TmlrDlubTpvoRcbmFwcC0-PnNjYWxlOiDmm7TmlrDnrpfms5VcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5hcHA6IOWunuaXtuensOmHjemHjemHj1xuZW5kXG51c2VyLT4-c2NhbGU6IOermeeos1xuc2NhbGUtPj5hcHA6IOmHjemHj-eos-Wumlxuc2NhbGUtPj5zY2FsZTog5rWL5Lq65L2T55Sf54mp6Zi75oqXXG5zY2FsZS0-PnNjYWxlOiDmtYvph4_lv4PnjofvvIjoi6XmlK_mjIHvvIlcbnNjYWxlLT4-YXBwOiDnqLPlrprmtYvph4_mlbDmja5cbmFwcC0-PnNjYWxlOiDmlq3lvIDov57mjqVcbnNjYWxlLT4-dXNlcjog5bGV56S65rWL6YeP5pWw5o2uXG51c2VyLT4-c2NhbGU6IOS4i-enpFxuYXBwLT4-dXNlcjog5bGV56S66K-m57uG5rWL6YeP5pWw5o2uXG5hcHAtPj5zZXJ2ZXI6IOS4iuS8oOeUqOaIt-a1i-mHj-aVsOaNrlxuXG5cdFx0XHRcdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" frameborder="0" width="750" height="950"></iframe>
+</li>
+<li><p>Normal measurement</p>
+</li>
+</ul>
+<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5zY2FsZTog55So5oi36Lip56ekXG5zY2FsZS0-PnNjYWxlOiDov57mjqXot6_nlLHlmahcbnNjYWxlLT4-c2VydmVyOiDor6Lpl67ljYfnuqfkv6Hmga9cbnNlcnZlci0-PnNjYWxlOiDml6DljYfnuqfkv6Hmga_kuI7nlKjmiLflj5jmm7Tkv6Hmga9cbnNjYWxlLT4-c2VydmVyOiDnoa7orqTliKDpmaTnlKjmiLdcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5zY2FsZTog5a6e5pe256ew6YeN6YeN6YePXG5lbmRcbnVzZXItPj5zY2FsZTog56uZ56izXG5zY2FsZS0-PnNjYWxlOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-mHj-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546H77yI6Iul5pSv5oyB77yJXG5zY2FsZS0-PnNjYWxlOiDor4bliKvnlKjmiLdcbnNjYWxlLT4-dXNlcjog5bGV56S65rWL6YeP5pWw5o2uXG51c2VyLT4-c2NhbGU6IOS4i-enpFxubG9vcDog5LiK5Lyg5a2Y5YKo5pWw5o2uXG5zY2FsZS0-PnNlcnZlcjog5LiK5Lyg5a2Y5YKo5pWw5o2uXG5zZXJ2ZXItPj5zY2FsZTog5Zue5aSN5pS25YiwXG5lbmRcbnNjYWxlLT4-c2VydmVyOiDkuIrlj5HmtYvph4_mlbDmja5cbnNlcnZlci0-PnNjYWxlOiDlm57lpI3mlLbliLBcbnVzZXItPj5hcHA6IOaJk-W8gEFQUFxuYXBwLT4-c2VydmVyOiDmi4nlj5bmnIDmlrDmlbDmja5cbnNlcnZlci0-PmFwcDog5LiL5Y-R5rWL6YeP5pWw5o2uXG5hcHAtPj51c2VyOiDlsZXnpLror6bnu4bmtYvph4_mlbDmja5cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" frameborder="0" width="750" height="990"></iframe>
+
+<ul>
+<li>Measurement of unidentified users<iframe src="https://mermaid-js.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5pyN5Yqh5ZmoXG5cbnVzZXItPj5zY2FsZTog55So5oi36Lip56ekXG5zY2FsZS0-PnNjYWxlOiDov57mjqXot6_nlLHlmahcbnNjYWxlLT4-c2VydmVyOiDor6Lpl67ljYfnuqfkv6Hmga9cbnNlcnZlci0-PnNjYWxlOiDml6DljYfnuqfkv6Hmga_kuI7nlKjmiLflj5jmm7Tkv6Hmga9cbnNjYWxlLT4-c2VydmVyOiDnoa7orqTliKDpmaTnlKjmiLdcbnVzZXItPj5zY2FsZTrnp7Dph41cbmxvb3A6IOacqueos-WumumHjemHj-a1i-mHj1xuc2NhbGUtPj5zY2FsZTog5a6e5pe256ew6YeN6YeN6YePXG5lbmRcbnVzZXItPj5zY2FsZTog56uZ56izXG5zY2FsZS0-PnNjYWxlOiDph43ph4_nqLPlrppcbnNjYWxlLT4-c2NhbGU6IOa1i-mHj-S6uuS9k-eUn-eJqemYu-aKl1xuc2NhbGUtPj5zY2FsZTog5rWL6YeP5b-D546HKOiLpeaUr-aMgSlcbnNjYWxlLT4-c2NhbGU6IOivhuWIq-eUqOaIt1xuc2NhbGUtPj51c2VyOiDmj5DnpLrmiZPlvIBBUFDlpITnkIZcbnVzZXItPj5zY2FsZTog5LiL56ekXG5zY2FsZS0-PnNlcnZlcjog5LiK5Y-R5pyq55-l5rWL6YeP5pWw5o2uXG51c2VyLT4-YXBwOiDmiZPlvIBBUFBcbmFwcC0-PnNlcnZlcjog5ouJ5Y-W5pyA5paw5pWw5o2uXG5zZXJ2ZXItPj5hcHA6IOS4i-WPkeacquefpea1i-mHj-aVsOaNrlxuYXBwLT4-dXNlcjog5bGV56S65pyq55-l5rWL6YeP5pWw5o2uXG51c2VyLT4-YXBwOiDorqTpoobmtYvph4_mlbDmja5cbmFwcC0-PnVzZXI6IOWxleekuuivpue7hua1i-mHj-aVsOaNrlxuYXBwLT4-c2VydmVyOiDkuIrlj5HorqTpoobnu5Pmnpxcblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" frameborder="0" width="750" height="990"></iframe>
+
+</li>
+</ul>
+<h2 id="one&#x3001;initialization">One&#x3001;initialization</h2>
+<p>Use <a href="../api/QNBleApi.html#initsdk">QNBleApi.initSdk</a> to initialize</p>
+<h2 id="2-scanning">2. scanning</h2>
+<h3 id="1-set-the-bluetooth-scan-callback-monitor-class">1. Set the Bluetooth scan callback monitor class</h3>
+<p>Before scanning, you need to set the listener class. The method is <a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>. This method only needs to be called once. When you do not need to scan, remember to set to null/nil</p>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).setBleDeviceDiscoveryListener(<span class="hljs-keyword">new</span> QNBleDeviceDiscoveryListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice device)</span> </span>{
+<span class="hljs-comment">//This method calls back the device object, which can be processed by the device object</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStartScan</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">//Back to start scanning</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStopScan</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">//return to the end of the scan</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScanFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code)</span> </span>{
+<span class="hljs-comment">//The callback for the scan failure will be returned with an error code. For details, please refer to the error code details page</span>
+    }
+});
+</code></pre>
+<p>iOS example:</p>
+<pre><code>//set proxy
+QNBleApi *bleApi = [QNBleApi sharedBleApi];
+bleApi.discoveryListener = self;
+
+//Implement the proxy method
+- (void)onDeviceDiscover:(QNBleDevice *)device {
+//This method will call back after the device is found
+}
+
+- (void)onStopScan {
+//Callback when scanning is stopped
+}
+
+- (void)onStartScan {
+//Callback when starting scanning
+}
+</code></pre><h3 id="2-start-the-scan">2. Start the scan</h3>
+<p>Confirm that Bluetooth is turned on, and Android needs to check the <code>location permission</code> and<code>location switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
+<blockquote>
+<p>After Android 6.0, targetSdkVersion&gt;= 23 App above, you need to obtain positioning permission for Bluetooth scanning, please check <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
+The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.</p>
+<p>iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning</p>
+</blockquote>
+<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-called-back-in-the-<a href="../api/qnbledevicediscoverylistener.md">qnbledevicediscoverylistener</a> in the scanning interface set above.</p>
+<p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, and the content to be set has been basically covered.</p>
+<blockquote>
+<p>Usually APP will have an interface dedicated to measurement. We generally perform Bluetooth scanning after the interface is displayed, and stop scanning when the interface disappears.</p>
+</blockquote>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).startBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+<span class="hljs-comment">//This method does not return to the device, but indicates whether the scan was started successfully</span>
+                <span class="hljs-keyword">if</span> (code != CheckStatus.OK.getCode()) {
+                   ToastMaker.show(ScanActivity.<span class="hljs-keyword">this</span>,code+<span class="hljs-string">&quot;:&quot;</span>+msg);
+                }
+            }
+        });
+</code></pre>
+<p>iOS example:</p>
+<pre><code>//start scan
+[[QNBleApi sharedBleApi] startBleDeviceDiscovery:^(NSError *error) {
+//The callback here indicates whether the scan method is successfully started
+    if (error) {
+        NSLog([NSString stringWithFormat:@&quot;Failed to start scanning method, reason: %@&quot;,error]);
+    }
+}];
+</code></pre><h2 id="three&#x3001;connection">three&#x3001;connection</h2>
+<p>After receiving the callback device, you can determine whether it is a device that needs to be connected (this is the business logic of APP), and if so, connect it.</p>
+<p>Before connecting, you need to set the connection status callback and measurement data callback.</p>
+<p>The method for setting the connection status callback is: <a href="../api/QNBleApi.html#setbleconnectionchangelistener">QNBleApi.setBleConnectionChangeListener</a>, this method is the same as setting the scan callback method, multiple connections only need to be set once, if it is determined that no longer need to connect Time, set to null/nil</p>
+<p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setdatalistener">QNBleApi.setDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).setDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetUnsteadyWeight</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
+<span class="hljs-comment">//This method received unstable weight data. During one measurement, this method will call back multiple times until the data is stable and complete data is obtained.</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetScaleData</span><span class="hljs-params">(QNBleDevice device, QNScaleData data)</span> </span>{
+<span class="hljs-comment">//The method is to receive the complete measurement data</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetStoredScale</span><span class="hljs-params">(QNBleDevice device, List&lt;QNScaleStoreData&gt; storedDataList)</span> </span>{
+<span class="hljs-comment">//This method is to receive the stored data on the scale side, the processing method of the stored data can refer to the demo, or you can define it yourself</span>
+    }
+
+<span class="hljs-comment">//Connection status during measurement</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScaleStateChange</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">int</span> status)</span> </span>{
+        setBleStatus(status);
+    }
+});
+</code></pre>
+<p>iOS example:</p>
+<pre><code>- (void)onGetUnsteadyWeight:(QNBleDevice *)device weight:(double)weight {
+//This method received unstable weight data. During one measurement, the method will call back multiple times until the data is stable and complete data is obtained
+}
+
+- (void)onGetScaleData:(QNBleDevice *)device data:(QNScaleData *)scaleData {
+//The method is to receive the complete measurement data
+}
+
+- (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
+//This method is to receive the stored data on the scale side, the processing method of the stored data can refer to the demo, or you can define it yourself
+}
+
+- (void)onScaleStateChange:(QNBleDevice *)device scaleState:(QNScaleState)state {
+//Connection status during measurement
+}
+
+- (void)wspRegisterUserComplete:(QNBleDevice *)device user:(QNUser *)user {
+//callback for registered user success
+}
+
+- (void)onScaleEventChange:(QNBleDevice *)device scaleEvent:(QNScaleEvent)scaleEvent {
+//callback of device transaction
+}
+</code></pre><p>In addition, before calling the connection, it is best to stop the previous scan (we found that some mobile phones have Bluetooth scanning and Bluetooth connection at the same time, which will reduce the failure rate of successful connection). After stopping the scan, delaying the call for 200 ~ 500ms before calling the connection will increase the success rate of the connection.
+The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbledevicediscovery">QNBleApi.stopBleDeviceDiscovery</a>.</p>
+<p>android example:</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).stopBleDeviceDiscovery(<span class="hljs-keyword">new</span> QNResultCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+        <span class="hljs-keyword">if</span> (code == CheckStatus.OK.getCode()) {
+            isScanning = <span class="hljs-keyword">false</span>;
+        }
+    }
+});
+</code></pre>
+<p>iOS example:</p>
+<pre><code>[[QNBleApi sharedBleApi] stopBleDeviceDiscovery:^(NSError *error) {
+//The callback here indicates whether the method to stop scanning is successful
+    if (error) {
+        NSLog([NSString stringWithFormat:@&quot;Failed to stop scanning method, reason: %@&quot;,error]);
+    }
+}];
+</code></pre><p>The method of connecting the device needs to pass the Yolanda Bluetooth device object (<a href="../api/QNBleDevice.html">QNBleDevice</a>) and the Yolanda user profile object (<a href="../api/QNUser.html">QNUser</a>), where <a href="../api/QNBleDevice.html">QNBleDevice</a><a href="../api/QNUser.html">QNUser</a> is created as: <a href="../api/QNBleApi.html#builduser">QNBleApi.buildUser</a>, the specific method of use can be Refer to the method description.</p>
+<p>After confirming OK in the previous operation, you can finally connect. The connection method is: <a href="../api/QNBleApi.html#connectdevice">QNBleApi.connectDevice</a>.-the-connection-status-callback-method-is-the-above-<a href="../api/qnbleconnectionchangelistener.md">qnbleconnectionchangelistener</a></p>
+<p>android example:</p>
+<pre><code class="lang-java"> QNWspConfig qnWspConfig = <span class="hljs-keyword">new</span> QNWspConfig();
+    <span class="hljs-comment">//.......Make configuration settings</span>
+    mQNBleApi.connectWspDevice(device, qnWspConfig, <span class="hljs-keyword">new</span> QNResultCallback() {
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+            QNLogUtils.log(<span class="hljs-string">&quot;WspScaleActivity&quot;</span>, <span class="hljs-string">&quot;wifi Configuration code:&quot;</span> + code + <span class="hljs-string">&quot;,msg:&quot;</span> + msg);
+        }
+    });
+</code></pre>
+<p>iOS example:</p>
+<pre><code>//Set the operation configuration of wsp device
+    QNWspConfig *config = [[QNWspConfig alloc] init];
+    [[QNBleApi sharedBleApi] connectWspDevice:device config:config callback:^(NSError *error) {
+
+    }];
+</code></pre><h2 id="weighing-process">Weighing process</h2>
+<p>The data and status of the weighing process will be recalled in the above-mentioned <a href="../api/QNScaleDataListener.html">QNScaleDataListener</a></p>
+<h2 id="end-of-measurement">End of measurement</h2>
+<p>After receiving stable data (that is, <a href="../api/QNScaleDataListener.html#ongetscalesata">QNScaleDataListener.onGetScaleData</a>), the measurement is completed. When the measurement is completed, the device will automatically disconnect.</p>
+<p>At this point, the basic process of the device has been completed, and the APP can save the data and display the data after receiving the stable data. Data standards can be judged by our company-<a href="../attouched_list/SDK%20indicator%20standard%20description.pdf">SDK indicator standard description</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ble_scale.html" class="navigation navigation-prev " aria-label="Previous page: Common Bluetooth scale">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="kitchen_scale.html" class="navigation navigation-next " aria-label="Next page: Kitchen scale">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WSP Bluetooth WiFi scale","level":"1.4.2","depth":2,"next":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale_wsp.md","mtime":"2020-06-17T03:16:24.973Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:19:42.863Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
