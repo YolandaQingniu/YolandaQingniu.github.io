@@ -365,10 +365,10 @@
     
         <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
             
-                <a href="../api/QNBleApi.html#setScaleDataListener">
+                <a href="../api/QNBleApi.html#setDataListener">
             
                     
-                    setScaleDataListener
+                    setDataListener
             
                 </a>
             
@@ -1199,9 +1199,9 @@ The location service switch is not mandatory, but some phones do not turn on thi
 - (void)onConnectError:(QNBleDevice *)device error:(NSError *)error {
 //callback for connection failure
 }
-</code></pre><p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setscaledatalistener">QNBleApi.setScaleDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
+</code></pre><p>After setting the Bluetooth status callback, you also need to set the callback interface of the measurement data. The method is: <a href="../api/QNBleApi.html#setdatalistener">QNBleApi.setDataListener</a>, which can also be set once, please set it when it is no longer used Null/nil</p>
 <p>android example:</p>
-<pre><code class="lang-java">QNBleApi.getInstance(context).setScaleDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
+<pre><code class="lang-java">QNBleApi.getInstance(context).setDataListener(<span class="hljs-keyword">new</span> QNScaleDataListener() {
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetUnsteadyWeight</span><span class="hljs-params">(QNBleDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
 <span class="hljs-comment">//This method received unstable weight data. During one measurement, this method will call back multiple times until the data is stable and complete data is obtained.</span>
@@ -1333,7 +1333,7 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"next":{"title":"WSP Bluetooth WiFi scale","level":"1.4.2","depth":2,"path":"flow/ble_scale_wsp.md","ref":"flow/ble_scale_wsp.md","articles":[]},"previous":{"title":"work process","level":"1.4","depth":1,"ref":"","articles":[{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},{"title":"WSP Bluetooth WiFi scale","level":"1.4.2","depth":2,"path":"flow/ble_scale_wsp.md","ref":"flow/ble_scale_wsp.md","articles":[]},{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale.md","mtime":"2020-06-17T03:16:20.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:19:42.863Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"next":{"title":"WSP Bluetooth WiFi scale","level":"1.4.2","depth":2,"path":"flow/ble_scale_wsp.md","ref":"flow/ble_scale_wsp.md","articles":[]},"previous":{"title":"work process","level":"1.4","depth":1,"ref":"","articles":[{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},{"title":"WSP Bluetooth WiFi scale","level":"1.4.2","depth":2,"path":"flow/ble_scale_wsp.md","ref":"flow/ble_scale_wsp.md","articles":[]},{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale.md","mtime":"2020-06-17T03:19:23.068Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:22:44.175Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
