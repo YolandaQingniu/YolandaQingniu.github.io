@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="en" >
+<html lang="zh" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNBleStateListener · GitBook</title>
+        <title>广播秤-自定义蓝牙扫描 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,14 +12,9 @@
         
         
     
-    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
@@ -51,9 +46,6 @@
         
     
 
-
-    
-
         
     
     
@@ -65,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNScaleDataListener.html" />
+    <link rel="next" href="kitchen_scale.html" />
     
     
-    <link rel="prev" href="QNUser.html" />
+    <link rel="prev" href="broadcast_scale.html" />
     
 
     </head>
@@ -79,7 +71,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="輸入並搜尋" />
 </div>
 
             
@@ -102,7 +94,7 @@
                 <a href="../">
             
                     
-                    Overview
+                    概述
             
                 </a>
             
@@ -141,7 +133,7 @@
                 <span>
             
                     
-                    work process
+                    工作流程
             
                 </span>
             
@@ -150,12 +142,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../flow/ble_scale.html">
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
             
-                <a href="../flow/ble_scale.html">
+                <a href="ble_scale.html">
             
                     
-                    Common Bluetooth scale
+                    普通蓝牙秤
             
                 </a>
             
@@ -163,12 +155,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../flow/ble_scale_wsp.html">
+        <li class="chapter " data-level="1.4.2" data-path="ble_scale_custom_connect.html">
             
-                <a href="../flow/ble_scale_wsp.html">
+                <a href="ble_scale_custom_connect.html">
             
                     
-                    WSP Bluetooth WiFi scale
+                    普通蓝牙秤-自主管理蓝牙
             
                 </a>
             
@@ -176,12 +168,77 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../flow/kitchen_scale.html">
+        <li class="chapter " data-level="1.4.3" data-path="flow_dm.html">
             
-                <a href="../flow/kitchen_scale.html">
+                <a href="flow_dm.html">
             
                     
-                    Kitchen scale
+                    普通蓝牙秤-带有 Wifi 功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ble_scale_wsp.html">
+            
+                <a href="ble_scale_wsp.html">
+            
+                    
+                    WSP 蓝牙 WiFi 秤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="broadcast_scale.html">
+            
+                <a href="broadcast_scale.html">
+            
+                    
+                    广播秤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="broadcast_scale_custom_scan.html">
+            
+                <a href="broadcast_scale_custom_scan.html">
+            
+                    
+                    广播秤-自定义蓝牙扫描
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="kitchen_scale.html">
+            
+                <a href="kitchen_scale.html">
+            
+                    
+                    厨房秤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="kitchen_scale_custom_scan.html">
+            
+                <a href="kitchen_scale_custom_scan.html">
+            
+                    
+                    厨房秤-自定义蓝牙扫描
             
                 </a>
             
@@ -208,9 +265,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html">
+                <a href="../api/QNBleApi.html">
             
                     
                     QNBleApi
@@ -222,9 +279,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.1" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#initsdk">
+                <a href="../api/QNBleApi.html#initsdk">
             
                     
                     initSdk
@@ -235,9 +292,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.2" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.2" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#setsysblestatelistener">
+                <a href="../api/QNBleApi.html#setsysblestatelistener">
             
                     
                     setSysBleStateListener
@@ -248,9 +305,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.3" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#setbledevicediscoverylistener">
+                <a href="../api/QNBleApi.html#setbledevicediscoverylistener">
             
                     
                     setBleDeviceDiscoveryListener
@@ -261,9 +318,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.4" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#startbledevicediscovery">
+                <a href="../api/QNBleApi.html#startbledevicediscovery">
             
                     
                     startBleDeviceDiscovery
@@ -274,9 +331,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.5" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#stopbledevicediscovery">
+                <a href="../api/QNBleApi.html#stopbledevicediscovery">
             
                     
                     stopBleDeviceDiscovery
@@ -287,9 +344,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.6" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#connectdevice">
+                <a href="../api/QNBleApi.html#connectdevice">
             
                     
                     connectDevice
@@ -300,9 +357,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.7" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#connectwspdevice">
+                <a href="../api/QNBleApi.html#connectwspdevice">
             
                     
                     connectWspDevice
@@ -313,9 +370,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.8" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#connectdevicesetwifi">
+                <a href="../api/QNBleApi.html#connectdevicesetwifi">
             
                     
                     connectDeviceSetWiFi
@@ -326,9 +383,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.9" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#disconnectdevice">
+                <a href="../api/QNBleApi.html#disconnectdevice">
             
                     
                     disconnectDevice
@@ -339,9 +396,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.10" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#registerwifibledevice">
+                <a href="../api/QNBleApi.html#registerwifibledevice">
             
                     
                     registerWiFiBleDevice
@@ -352,9 +409,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.11" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#setbleconnectionchangelistener">
+                <a href="../api/QNBleApi.html#setbleconnectionchangelistener">
             
                     
                     setBleConnectionChangeListener
@@ -365,9 +422,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.12" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#setScaleDataListener">
+                <a href="../api/QNBleApi.html#setScaleDataListener">
             
                     
                     setScaleDataListener
@@ -378,9 +435,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.13" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#setloglistener">
+                <a href="../api/QNBleApi.html#setloglistener">
             
                     
                     setLogListener
@@ -391,9 +448,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.14" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#getconfig">
+                <a href="../api/QNBleApi.html#getconfig">
             
                     
                     getConfig
@@ -404,9 +461,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.15" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#convertweightwithtargetunit">
+                <a href="../api/QNBleApi.html#convertweightwithtargetunit">
             
                     
                     convertWeightWithTargetUnit
@@ -417,9 +474,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.16" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#builduser">
+                <a href="../api/QNBleApi.html#builduser">
             
                     
                     buildUser
@@ -430,9 +487,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.17" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#builddevice">
+                <a href="../api/QNBleApi.html#builddevice">
             
                     
                     buildDevice
@@ -443,9 +500,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.18" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.18" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#buildprotocolhandler">
+                <a href="../api/QNBleApi.html#buildprotocolhandler">
             
                     
                     buildProtocolHandler
@@ -456,9 +513,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.19" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.19" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#buildbroadcastdevice">
+                <a href="../api/QNBleApi.html#buildbroadcastdevice">
             
                     
                     buildBroadcastDevice
@@ -469,22 +526,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.20" data-path="QNBleApi.html">
+        <li class="chapter " data-level="1.5.1.20" data-path="../api/QNBleApi.html">
             
-                <a href="QNBleApi.html#connectdevicesetwifi">
-            
-                    
-                    connectDeviceSetWiFi
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.1.21" data-path="QNBleApi.html">
-            
-                <a href="QNBleApi.html#generatescaledata">
+                <a href="../api/QNBleApi.html#generatescaledata">
             
                     
                     generateScaleData
@@ -500,9 +544,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="QNBleProtocolDelegate.html">
+        <li class="chapter " data-level="1.5.2" data-path="../api/QNBleProtocolDelegate.html">
             
-                <a href="QNBleProtocolDelegate.html">
+                <a href="../api/QNBleProtocolDelegate.html">
             
                     
                     QNBleProtocolDelegate
@@ -513,9 +557,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="QNUtils.html">
+        <li class="chapter " data-level="1.5.3" data-path="../api/QNUtils.html">
             
-                <a href="QNUtils.html">
+                <a href="../api/QNUtils.html">
             
                     
                     QNUtils
@@ -526,9 +570,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="QNResultCallback.html">
+        <li class="chapter " data-level="1.5.4" data-path="../api/QNResultCallback.html">
             
-                <a href="QNResultCallback.html">
+                <a href="../api/QNResultCallback.html">
             
                     
                     QNResultCallback
@@ -539,9 +583,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="QNBleDevice.html">
+        <li class="chapter " data-level="1.5.5" data-path="../api/QNBleDevice.html">
             
-                <a href="QNBleDevice.html">
+                <a href="../api/QNBleDevice.html">
             
                     
                     QNBleDevice
@@ -552,9 +596,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="QNBleBroadcastDevice.html">
+        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleBroadcastDevice.html">
             
-                <a href="QNBleBroadcastDevice.html">
+                <a href="../api/QNBleBroadcastDevice.html">
             
                     
                     QNBleBroadcastDevice
@@ -565,9 +609,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="QNBleKitchenDevice.html">
+        <li class="chapter " data-level="1.5.7" data-path="../api/QNBleKitchenDevice.html">
             
-                <a href="QNBleKitchenDevice.html">
+                <a href="../api/QNBleKitchenDevice.html">
             
                     
                     QNBleKitchenDevice
@@ -578,9 +622,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="QNUser.html">
+        <li class="chapter " data-level="1.5.8" data-path="../api/QNUser.html">
             
-                <a href="QNUser.html">
+                <a href="../api/QNUser.html">
             
                     
                     QNUser
@@ -591,22 +635,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.9" data-path="QNBleStateListener.html">
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNScaleDataListener.html">
             
-                <a href="QNBleStateListener.html">
-            
-                    
-                    QNBleStateListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.10" data-path="QNScaleDataListener.html">
-            
-                <a href="QNScaleDataListener.html">
+                <a href="../api/QNScaleDataListener.html">
             
                     
                     QNScaleDataListener
@@ -617,61 +648,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="QNLogListener.html">
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNWspScaleDataListener.html">
             
-                <a href="QNLogListener.html">
-            
-                    
-                    QNLogListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.12" data-path="QNConfig.html">
-            
-                <a href="QNConfig.html">
-            
-                    
-                    QNConfig
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.13" data-path="QNWiFiConfig.html">
-            
-                <a href="QNWiFiConfig.html">
-            
-                    
-                    QNWiFiConfig
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.14" data-path="QNScaleDataListener.html">
-            
-                <a href="QNScaleDataListener.html">
-            
-                    
-                    QNScaleDataListener
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.15" data-path="QNWspScaleDataListener.html">
-            
-                <a href="QNWspScaleDataListener.html">
+                <a href="../api/QNWspScaleDataListener.html">
             
                     
                     QNWspScaleDataListener
@@ -682,9 +661,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.16" data-path="QNBleStateListener.html">
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNBleStateListener.html">
             
-                <a href="QNBleStateListener.html">
+                <a href="../api/QNBleStateListener.html">
             
                     
                     QNBleStateListener
@@ -695,9 +674,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.17" data-path="QNLogListener.html">
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNLogListener.html">
             
-                <a href="QNLogListener.html">
+                <a href="../api/QNLogListener.html">
             
                     
                     QNLogListener
@@ -708,9 +687,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.18" data-path="QNConfig.html">
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNConfig.html">
             
-                <a href="QNConfig.html">
+                <a href="../api/QNConfig.html">
             
                     
                     QNConfig
@@ -721,9 +700,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.19" data-path="QNWiFiConfig.html">
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNWiFiConfig.html">
             
-                <a href="QNWiFiConfig.html">
+                <a href="../api/QNWiFiConfig.html">
             
                     
                     QNWiFiConfig
@@ -734,9 +713,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.20" data-path="QNWspConfig.html">
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNWspConfig.html">
             
-                <a href="QNWspConfig.html">
+                <a href="../api/QNWspConfig.html">
             
                     
                     QNWspConfig
@@ -747,9 +726,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.21" data-path="QNBleConnectionChangeListener.html">
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleConnectionChangeListener.html">
             
-                <a href="QNBleConnectionChangeListener.html">
+                <a href="../api/QNBleConnectionChangeListener.html">
             
                     
                     QNBleConnectionChangeListener
@@ -760,9 +739,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.22" data-path="QNBleDeviceDiscoveryListener.html">
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNBleDeviceDiscoveryListener.html">
             
-                <a href="QNBleDeviceDiscoveryListener.html">
+                <a href="../api/QNBleDeviceDiscoveryListener.html">
             
                     
                     QNBleDeviceDiscoveryListener
@@ -773,9 +752,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.23" data-path="QNScaleData.html">
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNScaleData.html">
             
-                <a href="QNScaleData.html">
+                <a href="../api/QNScaleData.html">
             
                     
                     QNScaleData
@@ -786,9 +765,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.24" data-path="QNShareData.html">
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNShareData.html">
             
-                <a href="QNShareData.html">
+                <a href="../api/QNShareData.html">
             
                     
                     QNShareData
@@ -799,9 +778,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.25" data-path="QNScaleStoreData.html">
+        <li class="chapter " data-level="1.5.20" data-path="../api/QNScaleStoreData.html">
             
-                <a href="QNScaleStoreData.html">
+                <a href="../api/QNScaleStoreData.html">
             
                     
                     QNScaleStoreData
@@ -812,9 +791,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.26" data-path="QNScaleItemData.html">
+        <li class="chapter " data-level="1.5.21" data-path="../api/QNScaleItemData.html">
             
-                <a href="QNScaleItemData.html">
+                <a href="../api/QNScaleItemData.html">
             
                     
                     QNScaleItemData
@@ -825,25 +804,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.27" data-path="QNBleProtocolHandler.html">
+        <li class="chapter " data-level="1.5.22" data-path="../api/QNBleProtocolHandler.html">
             
-                <a href="QNBleProtocolHandler.html">
+                <a href="../api/QNBleProtocolHandler.html">
             
                     
                     QNBleProtocolHandler
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.28" data-path="QNBleProtocolDelegate.html">
-            
-                <a href="QNBleProtocolDelegate.html">
-            
-                    
-                    QNBleProtocolDelegate
             
                 </a>
             
@@ -861,7 +827,7 @@
                 <span>
             
                     
-                    Schedule
+                    附表
             
                 </span>
             
@@ -875,7 +841,7 @@
                 <a href="../attouched_list/faq.html">
             
                     
-                    FAQ
+                    常见问题
             
                 </a>
             
@@ -888,7 +854,7 @@
                 <a href="../attouched_list/body_indexes.html">
             
                     
-                    Body Index Constant
+                    身体指标常量
             
                 </a>
             
@@ -901,7 +867,7 @@
                 <a href="../attouched_list/device_type.html">
             
                     
-                    Device Type
+                    设备类型
             
                 </a>
             
@@ -914,7 +880,7 @@
                 <a href="../attouched_list/body_shape.html">
             
                     
-                    Body shape comparison table
+                    体型对照表
             
                 </a>
             
@@ -927,7 +893,7 @@
                 <a href="../attouched_list/error_code.html">
             
                     
-                    Error Code
+                    错误码
             
                 </a>
             
@@ -940,7 +906,7 @@
                 <a href="../attouched_list/scan_error.html">
             
                     
-                    Scan Error Code
+                    扫描错误码
             
                 </a>
             
@@ -953,7 +919,7 @@
                 <a href="../attouched_list/scale_state.html">
             
                     
-                    Scale State Definition
+                    秤状态定义
             
                 </a>
             
@@ -966,7 +932,7 @@
                 <a href="../attouched_list/scale_event.html">
             
                     
-                    Scale event definition
+                    秤事件定义
             
                 </a>
             
@@ -974,25 +940,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/test_list.html">
-            
-                <a href="../attouched_list/test_list.html">
-            
-                    
-                    Test Case
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.10" data-path="../history/history.html">
+        <li class="chapter " data-level="1.6.9" data-path="../history/history.html">
             
                 <a href="../history/history.html">
             
                     
-                    Update Log
+                    更新日志
             
                 </a>
             
@@ -1012,7 +965,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本書使用 GitBook 釋出
         </a>
     </li>
 </ul>
@@ -1035,7 +988,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNBleStateListener</a>
+        <a href=".." >广播秤-自定义蓝牙扫描</a>
     </h1>
 </div>
 
@@ -1050,70 +1003,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnblestatelistener">QNBleStateListener</h1>
-<p>System Bluetooth status monitoring</p>
-<h4 id="status-type">Status type</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">value</th>
-<th style="text-align:left">Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">unknown</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">Unknown state, this state will be called back for the first time when initializing Bluetooth</td>
-</tr>
-<tr>
-<td style="text-align:left">resetting</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">System Bluetooth is resetting</td>
-</tr>
-<tr>
-<td style="text-align:left">unsupported</td>
-<td style="text-align:left">2</td>
-<td style="text-align:left">The system does not support Bluetooth</td>
-</tr>
-<tr>
-<td style="text-align:left">unauthorized</td>
-<td style="text-align:left">3</td>
-<td style="text-align:left">unauthorized</td>
-</tr>
-<tr>
-<td style="text-align:left">poweredOff</td>
-<td style="text-align:left">4</td>
-<td style="text-align:left">System Bluetooth is off</td>
-</tr>
-<tr>
-<td style="text-align:left">poweredOn</td>
-<td style="text-align:left">5</td>
-<td style="text-align:left">System Bluetooth is on</td>
-</tr>
-</tbody>
-</table>
-<h2 id="method">Method</h2>
-<h3 id="onblesystemstate">onBleSystemState</h3>
-<p>Callback of system Bluetooth status change</p>
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">state</td>
-<td style="text-align:left">int</td>
-<td style="text-align:left">system status</td>
-</tr>
-</tbody>
-</table>
+                                <h1 id="&#x5E7F;&#x64AD;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;">&#x5E7F;&#x64AD;&#x79E4;-&#x81EA;&#x5B9A;&#x4E49;&#x84DD;&#x7259;&#x626B;&#x63CF;</h1>
+<p>&#x8BE5;&#x7BC7;&#x7AE0;&#x662F;&#x7ED9;&#x5BF9;&#x84DD;&#x7259;&#x6709;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#xFF0C;&#x5E76;&#x5728;APP&#x4E2D;&#x6709;&#x81EA;&#x5DF1;&#x84DD;&#x7259;&#x6846;&#x67B6;&#x7684;&#x7528;&#x6237;&#x4F7F;&#x7528; </p>
+<p>&#x5E7F;&#x64AD;&#x79E4;&#x5728;&#x6D4B;&#x91CF;&#x65F6;&#xFF0C;&#x4F1A;&#x4E0D;&#x65AD;&#x5411;&#x5916;&#x53D1;&#x5C04;&#x84DD;&#x7259;&#x5E7F;&#x64AD;&#x4FE1;&#x53F7;&#xFF0C;&#x91CC;&#x9762;&#x4F1A;&#x5305;&#x542B;&#x7528;&#x6237;&#x79F0;&#x91CD;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4E0B;&#x6587;&#x7684;&#x8BF4;&#x660E;&#x662F;&#x57FA;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x5DF2;&#x7ECF;&#x5BF9;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x6709;&#x4E86;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#x3002;&#x5982;&#x679C;&#x9047;&#x5230;&#x5F88;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;SDK&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x7684;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5927;&#x7EA6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ek56uvXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5LqR56uvXG5cbnVzZXItPj5hcHA65omT5byAQVBQXG5hcHAtLT5hcHA6IOWQr-WKqOaJq-aPj1xudXNlci0-PnNjYWxlOiDouKnkuq7np6RcbnNjYWxlLT4-YXBwOiDlj5HlsITok53niZnlub_mkq1cbmFwcC0-PmFwcDog6Kej5p6Q5bm_5pKt5pWw5o2uKOmHjemHj-OAgeWNleS9jeOAgeeKtuaAgeetiSlcbnVzZXItLT51c2VyOiDnq5nnqLNcbnNjYWxlLT4-YXBwOiDnqLPlrprmlbDmja5cbmFwcC0tPmFwcDog6K6h566X5L2T6ISC5pWw5o2uXG5hcHAtPj51c2VyOiDmmL7npLrlrozmlbTmtYvph4_nu5PmnpxcbmFwcC0-PnNlcnZlcjog5LiK5Lyg5rWL6YeP5pWw5o2uXG51c2VyLS0-dXNlcjog5LiL56ek5bm25p-l55yL5pWw5o2uXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="600"></iframe>
+
+<h2 id="&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;">&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;</h2>
+<p>&#x4F7F;&#x7528;<a href="../api/QNBleApi.html#initSdk">QNBleApi.initSdk</a>&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x524D;&#x6587;&#x5DF2;&#x6709;&#x76F8;&#x5173;&#x4ECB;&#x7ECD;&#xFF0C;<a href="../#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x8BF7;&#x67E5;&#x770B;</a></p>
+<h2 id="&#x4E8C;&#x3001;&#x626B;&#x63CF;">&#x4E8C;&#x3001;&#x626B;&#x63CF;</h2>
+<p>&#x81EA;&#x884C;&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;</p>
+<p>&#x8C03;&#x7528;&#x84DD;&#x7259;&#x626B;&#x63CF;&#x540E;&#xFF0C;&#x628A;&#x626B;&#x63CF;&#x5230;&#x7684;&#x5E7F;&#x64AD;&#x4FE1;&#x606F;&#x4F20;&#x7ED9;SDK&#xFF0C;&#x901A;&#x8FC7;<a href="../api/QNBleApi.html#buildbroadcastdevice">QNBleApi.buildBroadcastDevice</a></p>
+<h2 id="&#x7ED3;&#x679C;&#x5904;&#x7406;">&#x7ED3;&#x679C;&#x5904;&#x7406;</h2>
+<p>&#x62FF;&#x5230;<a href="../api/QNBleBroadcastDevice.html">QNBleBroadcastDevice</a>&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x9762;&#x7684;&#x5904;&#x7406;&#x8BF7;&#x53C2;&#x8003;<a href="broadcast_scale.html">&#x5E7F;&#x64AD;&#x79E4;&#x63A5;&#x5165;&#x6D41;&#x7A0B;</a></p>
 
                                 
                                 </section>
@@ -1141,12 +1044,12 @@
 
             
                 
-                <a href="QNUser.html" class="navigation navigation-prev " aria-label="Previous page: QNUser">
+                <a href="broadcast_scale.html" class="navigation navigation-prev " aria-label="Previous page: 广播秤">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QNScaleDataListener.html" class="navigation navigation-next " aria-label="Next page: QNScaleDataListener">
+                <a href="kitchen_scale.html" class="navigation navigation-next " aria-label="Next page: 厨房秤">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1157,18 +1060,17 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleStateListener","level":"1.5.9","depth":2,"next":{"title":"QNScaleDataListener","level":"1.5.10","depth":2,"path":"api/QNScaleDataListener.md","ref":"api/QNScaleDataListener.md","articles":[]},"previous":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNBleStateListener.md","mtime":"2020-06-17T02:42:30.726Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:13:59.910Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"广播秤-自定义蓝牙扫描","level":"1.4.6","depth":2,"next":{"title":"厨房秤","level":"1.4.7","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"广播秤","level":"1.4.5","depth":2,"path":"flow/broadcast_scale.md","ref":"flow/broadcast_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/broadcast_scale_custom_scan.md","mtime":"2020-05-14T05:48:28.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-15T13:00:18.641Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
 
         
-    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
@@ -1195,8 +1097,6 @@
         <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
-
-    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
