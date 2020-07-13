@@ -1099,46 +1099,47 @@ dependencies {
 </li>
 <li><p>Download the latest <a href="https://github.com/YolandaQingniu/qnscalesdk/releases/" target="_blank">jar and so library</a>Import the downloaded <code>jar and so library</code></p>
 </li>
-<li>Apply for Bluetooth permission in the manifest file&#x3001;Location permissions&#x3001;Network permissions (not required for offline SDK)<pre><code class="lang-xml"> <span class="hljs-comment">&lt;!--Bluetooth permission--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH_ADMIN&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--6.0 and later need to apply dynamically--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--Used to store logs--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.READ_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--If it is an online sdk, network permission is required--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span>
-<span class="hljs-comment">&lt;!--qnscalesdk: Versions before 1.1.3-beta3 (including 1.1.3-beta3) need to add this permission, later versions do not need to--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.FOREGROUND_SERVICE&quot;</span> /&gt;</span>
-<span class="hljs-comment">&lt;!--qnscalesdk: Versions after 1.1.3-beta3 (starting from 1.1.3-beta4) need to add this permission, the previous version does not need--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WAKE_LOCK&quot;</span> /&gt;</span>
-</code></pre>
-</li>
-<li>Need to be in <strong>AndroidManifest.xml</strong> Register the components in the SDK:
-   ```xml<pre><code>&lt;!--qnscalesdk: version configuration before 1.1.3-beta3 (including 1.1.3-beta3)--&gt;
-</code></pre><service android:name="com.qingniu.qnble.scanner.BleScanService">
-<service android:name="com.qingniu.scale.measure.ble.ScaleBleService">
-<service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService"><service android:name=".measure.broadcast.ScaleFoodBroadcastService">
-
-
-</service></service></service></service></li>
+<li>Apply for Bluetooth permission in the manifest file&#x3001;Location permissions&#x3001;Network permissions (not required for offline SDK)<pre><code>  xml
+ &lt;!--Bluetooth permission--&gt;
+ &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;
+ &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;
+ &lt;!--6.0 and later need to apply dynamically--&gt;
+ &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;
+ &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+ &lt;!--Used to store logs--&gt;
+ &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;
+ &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+ &lt;!--If it is an online sdk, network permission is required--&gt;
+ &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+&lt;!--qnscalesdk: Versions before 1.1.3-beta3 (including 1.1.3-beta3) need to add this permission, later versions do not need to--&gt;
+&lt;uses-permission android:name=&quot;android.permission.FOREGROUND_SERVICE&quot; /&gt;
+&lt;!--qnscalesdk: Versions after 1.1.3-beta3 (starting from 1.1.3-beta4) need to add this permission, the previous version does not need--&gt;
+&lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;
+</code></pre></li>
+<li>Need to be in <strong>AndroidManifest.xml</strong> Register the components in the SDK:</li>
 </ul>
-<!--qnscalesdk: Version configuration after 1.1.3-beta3 (starting from 1.1.3-beta4)-->
-<p><service android:name="com.qingniu.qnble.scanner.BleScanService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
-<p><service android:name="com.qingniu.scale.measure.ble.ScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
-<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
-<p><service android:name="com.qingniu.scale.wsp.ble.ScaleWspBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
-<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
-<p><service android:name=".measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE">
- <service android:name="com.qingniu.heightscale.ble.HeightScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></service></p>
-<pre><code>* The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project
+<pre><code>xml
+&lt;!--qnscalesdk: version configuration before 1.1.3-beta3 (including 1.1.3-beta3)--&gt;
+&lt;service android:name=&quot;com.qingniu.qnble.scanner.BleScanService&quot;/&gt;
+&lt;service android:name=&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot;/&gt;
+&lt;service android:name=&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot;/&gt;
+&lt;service android:name=&quot;.measure.broadcast.ScaleFoodBroadcastService&quot; /&gt;
 
-## Obfuscated configuration (proguard-rules)
-</code></pre><p>-keep class com.qingniu.scale.model.BleScaleData{*;}
-```</p>
-<h2 id="other">Other</h2>
+
+&lt;!--qnscalesdk: Version configuration after 1.1.3-beta3 (starting from 1.1.3-beta4)--&gt;
+&lt;service android:name=&quot;com.qingniu.qnble.scanner.BleScanService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot;/&gt;
+&lt;service android:name=&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot;/&gt;
+&lt;service android:name=&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot;/&gt;
+&lt;service android:name=&quot;com.qingniu.scale.wsp.ble.ScaleWspBleService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot; /&gt;
+&lt;service android:name=&quot;com.qingniu.scale.measure.broadcast.ScaleFoodBroadcastService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot; /&gt;
+&lt;service android:name=&quot;.measure.broadcast.ScaleFoodBroadcastService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot; /&gt;
+&lt;service android:name=&quot;com.qingniu.heightscale.ble.HeightScaleBleService&quot; android:permission=&quot;android.permission.BIND_JOB_SERVICE&quot; /&gt;
+</code></pre><ul>
+<li>The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project</li>
+</ul>
+<h2 id="obfuscated-configuration-proguard-rules">Obfuscated configuration (proguard-rules)</h2>
+<pre><code>-keep class com.qingniu.scale.model.BleScaleData{*;}
+</code></pre><h2 id="other">Other</h2>
 <p>The integration method of configuration file can refer to demo. Put it in the <code>assets</code> directory and use it during initialization:&quot; file:///android_asset/filename.qn &quot;to pass the file path</p>
 
                                 
@@ -1183,7 +1184,7 @@ dependencies {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-07-13T10:27:52.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T10:27:58.852Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-07-13T11:20:54.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T11:21:46.655Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
