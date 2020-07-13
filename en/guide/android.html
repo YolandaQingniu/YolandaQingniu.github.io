@@ -1109,21 +1109,35 @@ dependencies {
  <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
  <span class="hljs-comment">&lt;!--If it is an online sdk, network permission is required--&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span>
+<span class="hljs-comment">&lt;!--qnscalesdk: Versions before 1.1.3-beta3 (including 1.1.3-beta3) need to add this permission, later versions do not need to--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.FOREGROUND_SERVICE&quot;</span> /&gt;</span>
+<span class="hljs-comment">&lt;!--qnscalesdk: Versions after 1.1.3-beta3 (starting from 1.1.3-beta4) need to add this permission, the previous version does not need--&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WAKE_LOCK&quot;</span> /&gt;</span>
 </code></pre>
 </li>
-<li>Need to be in <strong>AndroidManifest.xml</strong> Register the components in the SDK:<pre><code class="lang-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">!-Bluetooth</span> <span class="hljs-attr">scanning</span> <span class="hljs-attr">service-</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.qnble.scanner.BleScanService&quot;</span>/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">!-Bluetooth</span> <span class="hljs-attr">connection</span> <span class="hljs-attr">service-</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!--Requires compatibility with broadcast scales, you need to register the following services again, this service is not required for versions after 0.6.4--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot;</span>/&gt;</span>
-</code></pre>
-</li>
-<li>The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project</li>
+<li>Need to be in <strong>AndroidManifest.xml</strong> Register the components in the SDK:
+   ```xml<pre><code>&lt;!--qnscalesdk: version configuration before 1.1.3-beta3 (including 1.1.3-beta3)--&gt;
+</code></pre><service android:name="com.qingniu.qnble.scanner.BleScanService">
+<service android:name="com.qingniu.scale.measure.ble.ScaleBleService">
+<service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService"><service android:name=".measure.broadcast.ScaleFoodBroadcastService">
+
+
+</service></service></service></service></li>
 </ul>
-<h2 id="obfuscated-configuration-proguard-rules">Obfuscated configuration (proguard-rules)</h2>
-<pre><code>-keep class com.qingniu.scale.model.BleScaleData{*;}
-</code></pre><h2 id="other">Other</h2>
+<!--qnscalesdk: Version configuration after 1.1.3-beta3 (starting from 1.1.3-beta4)-->
+<p><service android:name="com.qingniu.qnble.scanner.BleScanService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.ble.ScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.wsp.ble.ScaleWspBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name=".measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE">
+ <service android:name="com.qingniu.heightscale.ble.HeightScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></service></p>
+<pre><code>* The resources of the v4 package are used in the SDK, and the resources of the v4 package need to be introduced in the developer project
+
+## Obfuscated configuration (proguard-rules)
+</code></pre><p>-keep class com.qingniu.scale.model.BleScaleData{*;}
+```</p>
+<h2 id="other">Other</h2>
 <p>The integration method of configuration file can refer to demo. Put it in the <code>assets</code> directory and use it during initialization:&quot; file:///android_asset/filename.qn &quot;to pass the file path</p>
 
                                 
@@ -1168,7 +1182,7 @@ dependencies {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-06-28T03:26:03.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-07T07:44:53.947Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-07-13T10:25:01.105Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T10:25:16.694Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

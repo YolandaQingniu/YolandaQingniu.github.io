@@ -1087,43 +1087,61 @@
   }
 }
 </code></pre></li>
-<li><p>&#x5728;&#x4F60;&#x7684;module&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684;<strong>build.gradle</strong>&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</p>
-<pre><code>&lt;!--&#x8FD9;&#x91CC;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;0.6.4-beta2 &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E3A;&#x4EFB;&#x610F;release&#x7248;&#x672C;--&gt;
-&lt;!--&#x5982;&#x679C;&#x5E0C;&#x671B;&#x4E00;&#x76F4;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x66FF;&#x6362; 0.6.4-beta2 &#x4E3A; master-SNAPSHOT --&gt;
-dependencies {
-      ...
-      compile &apos;com.github.YolandaQingniu:qnscalesdk:0.6.4-beta2&apos;
-}
-</code></pre><h3 id="eclipse">Eclipse</h3>
+<li>&#x5728;&#x4F60;&#x7684;module&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x7684;<strong>build.gradle</strong>&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;
+<a href="https://github.com/YolandaQingniu/qnscalesdk/releases/" target="_blank">&#x6700;&#x65B0;&#x7248;&#x672C;&#x67E5;&#x770B;&#x5730;&#x5740;</a>
+```<!--这里的版本号，x.x.x 可以指定为任意release版本-->
+<!--如果希望一直使用最新版本可以替换 x.x.x 为 master-SNAPSHOT -->
 </li>
-<li><p>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684;<a href="https://github.com/YolandaQingniu/qnscalesdk/releases/download/0.6.4-beta2/qnsdk-0.6.4-beta2-Android.zip" target="_blank">jar&#x548C;so&#x5E93;</a>&#xFF0C;&#x5BFC;&#x5165;&#x4E0B;&#x8F7D;&#x7684;<code>jar&#x548C;so&#x5E93;</code></p>
-</li>
-<li>&#x5728;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x7533;&#x8BF7;&#x84DD;&#x7259;&#x6743;&#x9650;&#x3001;&#x4F4D;&#x7F6E;&#x6743;&#x9650;&#x3001;&#x7F51;&#x7EDC;&#x6743;&#x9650;&#xFF08;&#x79BB;&#x7EBF;SDK&#x4E0D;&#x9700;&#x8981;&#xFF09;<pre><code class="lang-xml"> <span class="hljs-comment">&lt;!--&#x84DD;&#x7259;&#x6743;&#x9650;--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.BLUETOOTH_ADMIN&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--6.0&#x53CA;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x52A8;&#x6001;&#x7533;&#x8BF7;--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--&#x7528;&#x6765;&#x5B58;&#x50A8;&#x65E5;&#x5FD7;--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.READ_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span>
- <span class="hljs-comment">&lt;!--&#x5982;&#x679C;&#x662F;&#x5728;&#x7EBF;&#x7684;sdk&#x9700;&#x8981;&#x7F51;&#x7EDC;&#x6743;&#x9650;--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span>
-</code></pre>
-</li>
-<li>&#x9700;&#x8981;&#x5728;<strong>AndroidManifest.xml</strong>&#x6CE8;&#x518C;SDK&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;<pre><code class="lang-xml">  <span class="hljs-comment">&lt;!-- &#x84DD;&#x7259;&#x626B;&#x63CF;&#x670D;&#x52A1;--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.qnble.scanner.BleScanService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!-- &#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x670D;&#x52A1;--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.ble.ScaleBleService&quot;</span>/&gt;</span>
-<span class="hljs-comment">&lt;!--&#x9700;&#x8981;&#x517C;&#x5BB9;&#x5E7F;&#x64AD;&#x79E4;&#xFF0C;&#x9700;&#x8981;&#x518D;&#x6CE8;&#x518C;&#x5982;&#x4E0B;&#x670D;&#x52A1;,0.6.4&#x540E;&#x7684;&#x7248;&#x672C;&#x53EF;&#x65E0;&#x9700;&#x6B64;&#x670D;&#x52A1;--&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.qingniu.scale.measure.broadcast.ScaleBroadcastService&quot;</span>/&gt;</span>
-</code></pre>
-</li>
-<li>SDK&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86;v4&#x5305;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9879;&#x76EE;&#x4E2D;&#x9700;&#x8981;&#x5F15;&#x5165;v4&#x5305;&#x7684;&#x8D44;&#x6E90;</li>
 </ul>
-<h2 id="&#x6DF7;&#x6DC6;&#x914D;&#x7F6E;proguard-rules">&#x6DF7;&#x6DC6;&#x914D;&#x7F6E;(proguard-rules)</h2>
-<pre><code>-keep class com.qingniu.scale.model.BleScaleData{*;}
-</code></pre><h2 id="&#x5176;&#x5B83;">&#x5176;&#x5B83;</h2>
+<p>dependencies {
+        ...
+        compile &apos;com.github.YolandaQingniu:qnscalesdk:x.x.x&apos;
+}</p>
+<pre><code>### &#x672C;&#x5730;&#x4F9D;&#x8D56;
+
+
+* &#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684;[jar&#x548C;so&#x5E93;](https://github.com/YolandaQingniu/qnscalesdk/releases/)&#xFF0C;&#x5BFC;&#x5165;&#x4E0B;&#x8F7D;&#x7684;.zip&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x7684;`jar&#x548C;so&#x5E93;`
+* &#x5728;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x7533;&#x8BF7;&#x84DD;&#x7259;&#x6743;&#x9650;&#x3001;&#x4F4D;&#x7F6E;&#x6743;&#x9650;&#x3001;&#x7F51;&#x7EDC;&#x6743;&#x9650;&#xFF08;&#x79BB;&#x7EBF;SDK&#x4E0D;&#x9700;&#x8981;&#xFF09;
+    ```xml
+   &lt;!--&#x84DD;&#x7259;&#x6743;&#x9650;--&gt;
+   &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;
+   &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;
+   &lt;!--6.0&#x53CA;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x52A8;&#x6001;&#x7533;&#x8BF7;--&gt;
+   &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;
+   &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+   &lt;!--&#x7528;&#x6765;&#x5B58;&#x50A8;&#x65E5;&#x5FD7;--&gt;
+   &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;
+   &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+   &lt;!--&#x5982;&#x679C;&#x662F;&#x5728;&#x7EBF;&#x7684;sdk&#x9700;&#x8981;&#x7F51;&#x7EDC;&#x6743;&#x9650;--&gt;
+   &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+   &lt;!--qnscalesdk:1.1.3-beta3 &#x4E4B;&#x524D;(&#x5305;&#x542B;1.1.3-beta3)&#x7684;&#x7248;&#x672C;&#x9700;&#x8981;&#x589E;&#x52A0;&#x6B64;&#x6743;&#x9650;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x9700;&#x8981;--&gt;
+  &lt;uses-permission android:name=&quot;android.permission.FOREGROUND_SERVICE&quot; /&gt;
+  &lt;!--qnscalesdk:1.1.3-beta3 &#x4E4B;&#x540E;(1.1.3-beta4&#x5F00;&#x59CB;)&#x7684;&#x7248;&#x672C;&#x9700;&#x8981;&#x589E;&#x52A0;&#x6B64;&#x6743;&#x9650;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x9700;&#x8981;--&gt;
+   &lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;
+</code></pre><ul>
+<li>&#x9700;&#x8981;&#x5728;<strong>AndroidManifest.xml</strong>&#x6CE8;&#x518C;SDK&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;
+   ```xml  <!--qnscalesdk:1.1.3-beta3之前(包含1.1.3-beta3)的版本配置-->
+<service android:name="com.qingniu.qnble.scanner.BleScanService">
+<service android:name="com.qingniu.scale.measure.ble.ScaleBleService">
+<service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService"><service android:name=".measure.broadcast.ScaleFoodBroadcastService">
+
+
+</service></service></service></service></li>
+</ul>
+<!--qnscalesdk:1.1.3-beta3 之后(1.1.3-beta4开始)的版本配置-->
+<p><service android:name="com.qingniu.qnble.scanner.BleScanService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.ble.ScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.wsp.ble.ScaleWspBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name="com.qingniu.scale.measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE"></service></p>
+<p><service android:name=".measure.broadcast.ScaleFoodBroadcastService" android:permission="android.permission.BIND_JOB_SERVICE">
+ <service android:name="com.qingniu.heightscale.ble.HeightScaleBleService" android:permission="android.permission.BIND_JOB_SERVICE"></service></service></p>
+<pre><code>* SDK&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86;v4&#x5305;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9879;&#x76EE;&#x4E2D;&#x9700;&#x8981;&#x5F15;&#x5165;v4&#x5305;&#x7684;&#x8D44;&#x6E90;
+
+## &#x6DF7;&#x6DC6;&#x914D;&#x7F6E;(proguard-rules)
+</code></pre><p>-keep class com.qingniu.scale.model.BleScaleData{*;}
+```</p>
+<h2 id="&#x5176;&#x5B83;">&#x5176;&#x5B83;</h2>
 <p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x96C6;&#x6210;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;demo&#x3002;&#x653E;&#x5728;<code>assets</code>&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F7F;&#x7528;&#xFF1A;&quot;file:///android_asset/&#x6587;&#x4EF6;&#x540D;.qn&quot;&#x6765;&#x4F20;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
 
                                 
@@ -1168,7 +1186,7 @@ dependencies {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-05-14T05:48:28.013Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-07T07:44:53.947Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"android","level":"1.2","depth":1,"next":{"title":"ios","level":"1.3","depth":1,"path":"guide/ios.md","ref":"guide/ios.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"guide/android.md","mtime":"2020-07-13T10:24:40.515Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T10:25:16.694Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
