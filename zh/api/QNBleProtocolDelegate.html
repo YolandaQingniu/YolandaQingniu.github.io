@@ -1106,6 +1106,11 @@
 <td style="text-align:left">byte[]/NSData</td>
 <td style="text-align:left">&#x9700;&#x8981;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5B89;&#x5353;&#x662F;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;iOS&#x662F;NSData&#x5BF9;&#x8C61;</td>
 </tr>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left"><a href="QNBleDevice.html">QNBleDevice</a></td>
+<td style="text-align:left">&#x9700;&#x8981;&#x5199;&#x5165;&#x6570;&#x636E;&#x7684;&#x8BBE;&#x5907;</td>
+</tr>
 </tbody>
 </table>
 <p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
@@ -1116,7 +1121,7 @@ gatt.writeCharacteristic(characteristic)
 </code></pre>
 <pre><code class="lang-swift"><span class="hljs-comment">//iOS swift</span>
 <span class="hljs-comment">//&#x6839;&#x636E;&#x670D;&#x52A1;UUID&#x548C;&#x7279;&#x5F81;&#x503C;UUID&#x5148;&#x67E5;&#x627E;&#x5230;&#x7279;&#x5F81;&#x503C;</span>
-peripheral.writeValue(data, <span class="hljs-keyword">for</span>: characteristic, type: <span class="hljs-type">CBCharacteristicWriteType</span>.withResponse )
+peripheral.writeValue(data, <span class="hljs-keyword">for</span>: characteristic, type: <span class="hljs-type">CBCharacteristicWriteType</span>.withResponse)
 </code></pre>
 <h3 id="readcharacteristicvalue">readCharacteristicValue</h3>
 <p>&#x8BFB;&#x53D6;&#x7279;&#x5F81;&#x503C;</p>
@@ -1138,6 +1143,11 @@ peripheral.writeValue(data, <span class="hljs-keyword">for</span>: characteristi
 <td style="text-align:left">characteristic_uuid</td>
 <td style="text-align:left">string</td>
 <td style="text-align:left">&#x7279;&#x5F81;&#x503C;&#x7684;UUID</td>
+</tr>
+<tr>
+<td style="text-align:left">device</td>
+<td style="text-align:left"><a href="QNBleDevice.html">QNBleDevice</a></td>
+<td style="text-align:left">&#x9700;&#x8981;&#x5199;&#x5165;&#x6570;&#x636E;&#x7684;&#x8BBE;&#x5907;</td>
 </tr>
 </tbody>
 </table>
@@ -1192,7 +1202,7 @@ peripheral.readValue(<span class="hljs-keyword">for</span>: characteristic)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleProtocolDelegate","level":"1.5.2","depth":2,"next":{"title":"QNUtils","level":"1.5.3","depth":2,"path":"api/QNUtils.md","ref":"api/QNUtils.md","articles":[]},"previous":{"title":"generateScaleData","level":"1.5.1.21","depth":3,"anchor":"#generatescaledata","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#generatescaledata","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleProtocolDelegate.md","mtime":"2020-05-14T05:48:27.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-28T06:10:53.064Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNBleProtocolDelegate","level":"1.5.2","depth":2,"next":{"title":"QNUtils","level":"1.5.3","depth":2,"path":"api/QNUtils.md","ref":"api/QNUtils.md","articles":[]},"previous":{"title":"generateScaleData","level":"1.5.1.21","depth":3,"anchor":"#generatescaledata","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#generatescaledata","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleProtocolDelegate.md","mtime":"2020-10-21T10:18:18.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-23T05:59:03.956Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
