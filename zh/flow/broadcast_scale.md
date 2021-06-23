@@ -239,4 +239,4 @@ iOS示例：
 Demo地址如下：
 [iOSDemo](https://github.com/YolandaQingniu/sdk-ios-demo.git)
 
-[AndroidDemo](https://github.com/YolandaQingniu/qnscalesdk.git)
+[AndroidDemo](https://github.com/YolandaQingniu/qnscalesdkX.git)

@@ -239,4 +239,4 @@ For other problems, please refer to the code in the Demo first. If you have any 
 Demo address is as follows:
 [iOSDemo](https://github.com/YolandaQingniu/sdk-ios-demo.git)
 
-[AndroidDemo](https://github.com/YolandaQingniu/qnscalesdk.git)
+[AndroidDemo](https://github.com/YolandaQingniu/qnscalesdkX.git)
