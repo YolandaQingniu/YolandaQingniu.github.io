@@ -4,7 +4,7 @@ ghpages.publish(
   "_book",
   {
     branch: "master",
-    repo: "https://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@github.com/YolandaQingniu/YolandaQingniu.github.io.git"
+    repo: "https://github.com/YolandaQingniu/YolandaQingniu.github.io.git"
   },
   function(err) {
     console.log("github更新" + err);

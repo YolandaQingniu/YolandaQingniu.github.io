@@ -495,6 +495,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.1.21" data-path="QNBleApi.html">
+            
+                <a href="QNBleApi.html#setblekitchendeviceconfig">
+            
+                    
+                    setBleKitchenDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.22" data-path="QNBleApi.html">
+            
+                <a href="QNBleApi.html#connectblekitchendevice">
+            
+                    
+                    connectBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -786,6 +812,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.24" data-path="QNBleKitchenListener.html">
+            
+                <a href="QNBleKitchenListener.html">
+            
+                    
+                    QNBleKitchenListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="QNBleKitchenConfig.html">
+            
+                <a href="QNBleKitchenConfig.html">
+            
+                    
+                    QNBleKitchenConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -896,7 +948,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/test_list.html">
+        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/area_type.html">
+            
+                <a href="../attouched_list/area_type.html">
+            
+                    
+                    区域类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/test_list.html">
             
                 <a href="../attouched_list/test_list.html">
             
@@ -909,7 +974,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../history/history.html">
+        <li class="chapter " data-level="1.6.10" data-path="../history/history.html">
             
                 <a href="../history/history.html">
             
@@ -973,9 +1038,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="qnblekitchendevice">QNBleKitchenDevice</h1>
-<p>Yolanda&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
+<p>Yolanda&#x53A8;&#x623F;&#x79E4;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;, &#x53A8;&#x623F;&#x79E4;&#x8BBE;&#x5907;&#x5206;&#x4E3A; &#x5E7F;&#x64AD;&#x8BBE;&#x5907; &#x4E0E; &#x84DD;&#x7259;&#x8BBE;&#x5907; &#x4E24;&#x79CD;&#x3002;</p>
 <p>&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x662F;&#x4E00;&#x6B3E;&#x65E0;&#x9700;&#x8FDE;&#x63A5;&#xFF0C;&#x901A;&#x8FC7;&#x63A5;&#x6536;&#x8BBE;&#x5907;&#x53D1;&#x51FA;&#x7684;&#x5E7F;&#x64AD;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x6570;&#x636E;&#x7684;&#x8BBE;&#x5907;&#x3002;&#x8BE5;&#x79E4;&#x4E0E;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x4E0D;&#x540C;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x5728;&#x626B;&#x63CF;&#x5230;&#x5468;&#x56F4;&#x7684;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x8D77;&#x5BF9;&#x5468;&#x56F4;&#x67D0;&#x4E00;&#x8BBE;&#x5907;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x5426;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x5468;&#x56F4;&#x7684;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x4E0D;&#x5F71;&#x54CD;&#x4ECE;&#x5DF2;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x4E2D;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x7684;&#x6D4B;&#x91CF;&#x4FE1;&#x606F;&#x3002;</p>
 <p>&#x7136;&#x800C;&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x7531;&#x4E8E;&#x662F;&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x5468;&#x56F4;&#x8BBE;&#x5907;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x8FDB;&#x800C;&#x5206;&#x6790;&#x76F8;&#x5173;&#x7684;&#x6D4B;&#x91CF;&#x4FE1;&#x606F;&#xFF0C;&#x65E0;&#x9700;&#x5BF9;&#x67D0;&#x4E00;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;&#x56E0;&#x6B64;&#x5018;&#x82E5;&#x5728;&#x4F7F;&#x7528;&#x5E7F;&#x64AD;&#x79E4;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x505C;&#x6B62;&#x4E86;&#x5BF9;&#x5468;&#x56F4;&#x8BBE;&#x5907;&#x7684;&#x626B;&#x63CF;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x8FD9;&#x6B21;&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x662F;&#x4E00;&#x6B3E;&#x4E0E;&#x666E;&#x901A;&#x84DD;&#x7259;&#x79E4;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x4E0A;&#x51E0;&#x4E4E;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x8BBE;&#x5907;, &#x5728;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x65F6;, &#x9700;&#x8981;&#x5148;&#x626B;&#x63CF;&#x53D1;&#x73B0;&#x5916;&#x90E8;&#x8BBE;&#x5907;, &#x7136;&#x540E;&#x4E3B;&#x52A8;&#x53D1;&#x8D77;&#x8FDE;&#x3002;&#x5728;&#x94FE;&#x63A5;&#x6210;&#x529F;&#x540E;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x4F1A;&#x4E3B;&#x52A8;&#x4E0A;&#x4F20;&#x79F0;&#x7AEF;&#x6570;&#x636E;,&#x5176;&#x4E2D;&#x5305;&#x542B;&#x79F0;&#x7AEF;&#x91CD;&#x91CF;,&#x5355;&#x4F4D;,&#x662F;&#x5426;&#x53BB;&#x76AE;&#x7B49;&#x4E00;&#x7CFB;&#x5217;&#x6570;&#x636E;&#x4FE1;&#x606F;&#x3002;</p>
 <h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
 <table>
 <thead>
@@ -1031,6 +1097,21 @@
 <td style="text-align:left">boolean</td>
 <td style="text-align:left">&#x5F53;&#x524D;&#x79E4;&#x662F;&#x5426;&#x8D85;&#x8F7D;,true&#x4E3A;&#x8D85;&#x8F7D;</td>
 </tr>
+<tr>
+<td style="text-align:left">isBluetooth</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x79E4;&#x662F;&#x5426;&#x662F;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;</td>
+</tr>
+<tr>
+<td style="text-align:left">isStable</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">&#x6D4B;&#x91CF;&#x91CD;&#x91CF;&#x662F;&#x5426;&#x7A33;&#x5B9A;, &#x9488;&#x5BF9;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td style="text-align:left">bluetoothName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x84DD;&#x7259;&#x540D;</td>
+</tr>
 </tbody>
 </table>
 
@@ -1076,7 +1157,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2020-06-28T03:26:03.871Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-26T12:15:38.094Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2021-09-10T11:54:36.497Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-10T12:41:18.984Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

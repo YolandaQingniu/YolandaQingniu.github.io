@@ -495,6 +495,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.1.21" data-path="QNBleApi.html">
+            
+                <a href="QNBleApi.html#setblekitchendeviceconfig">
+            
+                    
+                    setBleKitchenDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.22" data-path="QNBleApi.html">
+            
+                <a href="QNBleApi.html#connectblekitchendevice">
+            
+                    
+                    connectBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -799,6 +825,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.25" data-path="QNBleKitchenListener.html">
+            
+                <a href="QNBleKitchenListener.html">
+            
+                    
+                    QNBleKitchenListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="QNBleKitchenConfig.html">
+            
+                <a href="QNBleKitchenConfig.html">
+            
+                    
+                    QNBleKitchenConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -883,7 +935,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/scan_error.html">
+        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/area_type.html">
+            
+                <a href="../attouched_list/area_type.html">
+            
+                    
+                    Area Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/scan_error.html">
             
                 <a href="../attouched_list/scan_error.html">
             
@@ -896,7 +961,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/scale_state.html">
+        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scale_state.html">
             
                 <a href="../attouched_list/scale_state.html">
             
@@ -909,7 +974,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scale_event.html">
+        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/scale_event.html">
             
                 <a href="../attouched_list/scale_event.html">
             
@@ -922,7 +987,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/test_list.html">
+        <li class="chapter " data-level="1.6.10" data-path="../attouched_list/test_list.html">
             
                 <a href="../attouched_list/test_list.html">
             
@@ -935,7 +1000,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="../history/history.html">
+        <li class="chapter " data-level="1.6.11" data-path="../history/history.html">
             
                 <a href="../history/history.html">
             
@@ -999,9 +1064,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="qnblekitchendevice">QNBleKitchenDevice</h1>
-<p>Yolanda Broadcast Kitchen Scale Bluetooth Device Object</p>
+<p>Yolanda kitchen scale equipment object, kitchen scale equipment is divided into two types: broadcast equipment and Bluetooth equipment.</p>
 <p>The broadcast kitchen scale is a device that does not need to be connected and obtains relevant data through the broadcast sent by the receiving device. The scale is different from the ordinary Bluetooth scale, the difference is that when the ordinary Bluetooth scale scans the surrounding device information, it can initiate a connection to a surrounding device, so you can choose whether to stop scanning the surrounding device information without affecting the connected device To obtain relevant measurement information.</p>
 <p>However, the broadcast kitchen scale analyzes related measurement information by acquiring broadcast data from surrounding devices, so there is no need to connect a device. Therefore, if the scanning of the surrounding equipment is stopped during the measurement process using the broadcast scale, it means that the measurement data of this time cannot be obtained.</p>
+<p>The Bluetooth kitchen scale is a device that is almost identical to the ordinary Bluetooth scale in the use process. When using the Bluetooth kitchen scale, you need to scan and find the external device first, and then initiate a connection. After the link is successful, the Bluetooth kitchen scale will actively upload the weighing terminal data, which contains a series of data information such as the weighing terminal weight, unit, and whether to tare or not.</p>
 <h3 id="attributes">Attributes</h3>
 <table>
 <thead>
@@ -1057,6 +1123,21 @@
 <td style="text-align:left">boolean</td>
 <td style="text-align:left">Whether the current scale is overloaded, true is overloaded</td>
 </tr>
+<tr>
+<td style="text-align:left">isBluetooth</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Is the current scale a Bluetooth kitchen scale</td>
+</tr>
+<tr>
+<td style="text-align:left">isStable</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Measure whether the weight is stable, effective for Bluetooth kitchen scales</td>
+</tr>
+<tr>
+<td style="text-align:left">bluetoothName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Bluetooth kitchen scale Bluetooth name</td>
+</tr>
 </tbody>
 </table>
 
@@ -1102,7 +1183,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2020-06-28T03:26:03.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-26T12:15:38.094Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenDevice","level":"1.5.7","depth":2,"next":{"title":"QNUser","level":"1.5.8","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"previous":{"title":"QNBleBroadcastDevice","level":"1.5.6","depth":2,"path":"api/QNBleBroadcastDevice.md","ref":"api/QNBleBroadcastDevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNBleKitchenDevice.md","mtime":"2021-09-10T11:54:36.502Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-10T12:41:18.984Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

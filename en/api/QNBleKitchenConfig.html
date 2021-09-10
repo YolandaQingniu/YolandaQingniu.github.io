@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNWiFiConfig · GitBook</title>
+        <title>QNBleKitchenConfig · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNScaleDataListener.html" />
     
-    
-    <link rel="prev" href="QNConfig.html" />
+    <link rel="prev" href="QNBleKitchenListener.html" />
     
 
     </head>
@@ -669,7 +667,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.13" data-path="QNWiFiConfig.html">
+        <li class="chapter " data-level="1.5.13" data-path="QNWiFiConfig.html">
             
                 <a href="QNWiFiConfig.html">
             
@@ -838,7 +836,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.26" data-path="QNBleKitchenConfig.html">
+        <li class="chapter active" data-level="1.5.26" data-path="QNBleKitchenConfig.html">
             
                 <a href="QNBleKitchenConfig.html">
             
@@ -1048,7 +1046,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNWiFiConfig</a>
+        <a href=".." >QNBleKitchenConfig</a>
     </h1>
 </div>
 
@@ -1063,8 +1061,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnwificonfig">QNWiFiConfig</h1>
-<p>WiFi information</p>
+                                <h1 id="qnblekitchenconfig">QNBleKitchenConfig</h1>
+<p>Bluetooth kitchen scale setting information</p>
 <h3 id="attributes">Attributes</h3>
 <table>
 <thead>
@@ -1076,31 +1074,17 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">ssid</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">wifi name (length must be less than 32 bytes)</td>
+<td style="text-align:left">unit</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Scale display unit <br> 10 &#x4E3A; g <br>11 &#x4E3A; ml <br>12 &#x4E3A; oz<br>13 &#x4E3A; lb:oz<br></td>
 </tr>
 <tr>
-<td style="text-align:left">pwd</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">wifi password (when there is a password, the password length must be greater than or equal to 8 bytes and less than 64 bytes<br>(No password, you can pass nil)</td>
-</tr>
-<tr>
-<td style="text-align:left">serveUrl</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">Data transmission address, <code>WSP device setting is valid</code>, <code>Other devices can be set to null</code>, the format requires <a href="http://hostname:port/path/" target="_blank">http://hostname:port/path/</a>, the maximum length is 128 bytes</td>
+<td style="text-align:left">isPeel</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">Whether to set the scale end peeling</td>
 </tr>
 </tbody>
 </table>
-<h2 id="method">Method</h2>
-<h3 id="checkssidvail">checkSSIDVail</h3>
-<p>Check the validity of the WiFi name</p>
-<h4 id="return-value">return value</h4>
-<p>Type: Boolean</p>
-<h3 id="checkpwdvail">checkPWDVail</h3>
-<p>Check the validity of the WiFi password</p>
-<h4 id="return-value">return value</h4>
-<p>Type: Boolean</p>
 
                                 
                                 </section>
@@ -1128,14 +1112,10 @@
 
             
                 
-                <a href="QNConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNConfig">
+                <a href="QNBleKitchenListener.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: QNBleKitchenListener">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="QNScaleDataListener.html" class="navigation navigation-next " aria-label="Next page: QNScaleDataListener">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1144,7 +1124,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNWiFiConfig","level":"1.5.13","depth":2,"next":{"title":"QNScaleDataListener","level":"1.5.14","depth":2,"path":"api/QNScaleDataListener.md","ref":"api/QNScaleDataListener.md","articles":[]},"previous":{"title":"QNConfig","level":"1.5.12","depth":2,"path":"api/QNConfig.md","ref":"api/QNConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNWiFiConfig.md","mtime":"2021-07-22T12:46:39.775Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-10T12:41:18.984Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenConfig","level":"1.5.26","depth":2,"next":{"title":"Schedule","level":"1.6","depth":1,"ref":"","articles":[{"title":"FAQ","level":"1.6.1","depth":2,"path":"attouched_list/faq.md","ref":"attouched_list/faq.md","articles":[]},{"title":"Body Index Constant","level":"1.6.2","depth":2,"path":"attouched_list/body_indexes.md","ref":"attouched_list/body_indexes.md","articles":[]},{"title":"Device Type","level":"1.6.3","depth":2,"path":"attouched_list/device_type.md","ref":"attouched_list/device_type.md","articles":[]},{"title":"Body shape comparison table","level":"1.6.4","depth":2,"path":"attouched_list/body_shape.md","ref":"attouched_list/body_shape.md","articles":[]},{"title":"Error Code","level":"1.6.5","depth":2,"path":"attouched_list/error_code.md","ref":"attouched_list/error_code.md","articles":[]},{"title":"Area Type","level":"1.6.6","depth":2,"path":"attouched_list/area_type.md","ref":"attouched_list/area_type.md","articles":[]},{"title":"Scan Error Code","level":"1.6.7","depth":2,"path":"attouched_list/scan_error.md","ref":"attouched_list/scan_error.md","articles":[]},{"title":"Scale State Definition","level":"1.6.8","depth":2,"path":"attouched_list/scale_state.md","ref":"attouched_list/scale_state.md","articles":[]},{"title":"Scale event definition","level":"1.6.9","depth":2,"path":"attouched_list/scale_event.md","ref":"attouched_list/scale_event.md","articles":[]},{"title":"Test Case","level":"1.6.10","depth":2,"path":"attouched_list/test_list.md","ref":"attouched_list/test_list.md","articles":[]},{"title":"Update Log","level":"1.6.11","depth":2,"path":"history/history.md","ref":"history/history.md","articles":[]}]},"previous":{"title":"QNBleKitchenListener","level":"1.5.25","depth":2,"path":"api/QNBleKitchenListener.md","ref":"api/QNBleKitchenListener.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNBleKitchenConfig.md","mtime":"2021-09-10T11:36:26.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-10T12:41:18.984Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
