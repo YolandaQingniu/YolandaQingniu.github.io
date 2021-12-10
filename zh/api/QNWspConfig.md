@@ -11,14 +11,13 @@ WSP 设备配置类，由它来控制 WSP 操作
 
 ## 属性
 
-| 名称        | 类型                              | 说明                                                                                                                             |
-| :---------- | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| wifiConfig  | [QNWiFiConfig](./QNWiFiConfig.md) | 是否配网，当 value 值为 null 时，不进行配网操作 ；当 value 值为 QNWiFiConfig 对象时，根据对象中的值进行配网设置                  |
-| curUser     | [QNUser](./QNUser.md)             | 当前测量用户，当只需配网无需测量时，可设置为null，当curUser为null时、isRegist、isChagne、isVisitor设置均无效                                                                                                                     |                                                                     |
-| dataUrl     | String                            | 数据传输地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`http://hostname:port/path/`, 最大长度为 128 个字节       |
-| otaUrl      | String                            | OTA 升级地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`protocol://hostname[:port]/path/`, 最大长度为 128 个字节 |
-| encryption  | String                            | 通讯秘钥，必须为 16 字节，只有 wifiConfig 有值时才起作用，否则可设为 null                                                        |
-| isReadSN  | Boolean                            | 是否读取SN码，默认不读取                                                        |
-| longitude   | String                            | 经度，例如："+134.5"、"90.5"、"-87.8"。整数部分最多支持三个数字，对于支持天气查询的秤，需要设置经纬度，用于做天气的查询，如果为空，则不设置       |
-| latitude    | String                            | 纬度，规则同longitude|
-| isDelayScreenOff | Boolean                       | 是否延迟显示屏熄屏时间(大约延时60s)，默认false|
+| 名称        | 类型                             |  是否必须  | 说明                                                                                                                             |
+| :---------- | :--------------------------------| :--------------------------------  | :------------------------------------------------------------------------------------------------------------------------------- |
+| wifiConfig  | [QNWiFiConfig](./QNWiFiConfig.md) | N | 是否配网，当 value 值为 null 时，不进行配网操作 ；当 value 值为 QNWiFiConfig 对象时，根据对象中的值进行配网设置                  |
+| userlist |  [int]                         | N | 称端用户 index 集合                                                                                                        |                |
+| curUser     | [QNUser](./QNUser.md)             | N | 当前测量用户，当只需配网无需测量时，可设置为null                                                                                                                    |
+| isVisitor   | Boolean                           | 是否使用访客进行测量，使用访客进行测量时不必设置 [QNUser](./QNUser.md)无需设置 index、secret           |
+| dataUrl     | String                            | N | 数据传输地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`http://hostname:port/path/`, 最大长度为 128 个字节       |
+| otaUrl      | String                            | N | OTA 升级地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`protocol://hostname[:port]/path/`, 最大长度为 128 个字节 |
+| isDelayScreenOff | Boolean                       | N | 是否延迟显示屏熄屏时间(大约延时60s)，默认false|
+| OTAConfig |    [QNBleOTAConfig](./QNBleOTAConfig.md)                    | 是否蓝牙OTA, 当 value 值为 null 时，不进行OTA ；当 value 值为 QNOtaConfig 对象时，根据对象中的值进行OTA |

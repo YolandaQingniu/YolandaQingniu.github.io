@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNUser · GitBook</title>
+        <title>QNUserScaleConfig · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNScaleData.html" />
+    <link rel="next" href="QNBleKitchenConfig.html" />
     
     
-    <link rel="prev" href="QNBleApi.html" />
+    <link rel="prev" href="QNWiFiConfig.html" />
     
 
     </head>
@@ -513,7 +513,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="QNUser.html">
+        <li class="chapter " data-level="1.5.2" data-path="QNUser.html">
             
                 <a href="QNUser.html">
             
@@ -630,7 +630,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="QNUserScaleConfig.html">
+        <li class="chapter active" data-level="1.5.11" data-path="QNUserScaleConfig.html">
             
                 <a href="QNUserScaleConfig.html">
             
@@ -1009,7 +1009,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNUser</a>
+        <a href=".." >QNUserScaleConfig</a>
     </h1>
 </div>
 
@@ -1024,9 +1024,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnuser">QNUser</h1>
-<p>Yolanda &#x7528;&#x6237;&#x5BF9;&#x8C61;</p>
-<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+                                <h1 id="qnuserscaleconfig">QNUserScaleConfig</h1>
+<p> &#x7528;&#x6237;&#x79E4;&#x8BBE;&#x5907;&#x914D;&#x7F6E;&#x7C7B;&#xFF0C;&#x7531;&#x5B83;&#x6765;&#x63A7;&#x5236;&#x7528;&#x6237;&#x79E4;&#x64CD;&#x4F5C;</p>
+<p>&#x914D;&#x7F6E;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>wifiConfig = null &amp;&amp; curUser != null&#x65F6;&#xFF0C;SDK&#x4EC5;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x8BBF;&#x95EE;&#x7B49;&#x64CD;&#x4F5C;</li>
+<li>wifiConfig != null &amp;&amp; curUser == null&#x65F6;&#xFF0C;SDK&#x4EC5;&#x5BF9;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#x64CD;&#x4F5C;</li>
+<li>wifiConfig != null &amp;&amp; curUser != null&#x65F6;&#xFF0C;SDK&#x4F1A;&#x5148;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#xFF0C;&#x914D;&#x7F51;&#x6210;&#x529F;&#x540E;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x8BBF;&#x95EE;&#x7B49;&#x64CD;&#x4F5C;&#xFF1B;&#x82E5;&#x914D;&#x7F51;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x6709;&#x6CE8;&#x518C;&#x8BBF;&#x95EE;&#x7B49;&#x64CD;&#x4F5C;</li>
+</ul>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
 <table>
 <thead>
 <tr>
@@ -1038,40 +1044,40 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">height</td>
-<td style="text-align:left">int</td>
-<td style="text-align:left">Y</td>
-<td style="text-align:left">&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D; cm&#xFF0C;&#x6700;&#x4F4E; 40&#xFF0C;&#x6700;&#x9AD8; 240</td>
-</tr>
-<tr>
-<td style="text-align:left">gender</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">Y</td>
-<td style="text-align:left">&#x6027;&#x522B;&#xFF0C;&#x7537;: male&#xFF0C;&#x5973;: female</td>
-</tr>
-<tr>
-<td style="text-align:left">birthday</td>
-<td style="text-align:left">Date</td>
-<td style="text-align:left">Y</td>
-<td style="text-align:left">&#x751F;&#x65E5;&#xFF0C;&#x7528;&#x4EE5;&#x8BA1;&#x7B97;&#x5E74;&#x9F84;&#xFF0C;&#x65E5;&#x671F;&#x7CBE;&#x5EA6;&#x7CBE;&#x786E;&#x5230;&#x5929;&#xFF0C;&#x8BA1;&#x7B97;&#x7684;&#x5E74;&#x9F84;&#x8303;&#x56F4;&#x662F; 3~80&#xFF0C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x7684;&#xFF0C;&#x7B49;&#x4E8E;&#x4E0A;&#x9650;&#x6216;&#x4E0B;&#x9650;&#x3002;</td>
-</tr>
-<tr>
-<td style="text-align:left">athleteType</td>
-<td style="text-align:left">int</td>
-<td style="text-align:left">Y</td>
-<td style="text-align:left">&#x662F;&#x5426;&#x4E3A;&#x8FD0;&#x52A8;&#x5458;&#x6A21;&#x5F0F;&#xFF08;0 &#x4E3A;&#x666E;&#x901A;&#x7B97;&#x6CD5;,1 &#x4E3A;&#x8FD0;&#x52A8;&#x5458;&#x7B97;&#x6CD5;)&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x53EA;&#x5728;&#x5E74;&#x9F84;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; 18 &#x5C81;&#x65F6;&#x624D;&#x751F;&#x6548;</td>
-</tr>
-<tr>
-<td style="text-align:left">clothesWeight</td>
-<td style="text-align:left">double</td>
-<td style="text-align:left">Y</td>
-<td style="text-align:left">&#x5355;&#x4F4D;: KG <br>&#x8863;&#x7269;&#x91CD;&#x91CF;&#xFF0C;&#x8BBE;&#x7F6E;&#x8BE5;&#x503C;&#x65F6;&#xFF0C;&#x6D4B;&#x91CF;&#x4F53;&#x91CD;&#x503C;&#x8FD4;&#x56DE;&#x7684;&#x5C06;&#x662F;&#x51CF;&#x53BB;&#x8863;&#x7269;&#x91CD;&#x91CF;&#x7684;&#x503C;&#x3002;<br>&#x8863;&#x7269;&#x91CD;&#x91CF;&#x4E0D;&#x53EF;&#x8D85;&#x8FC7;&#x4F53;&#x91CD;&#x7684;&#x4E00;&#x534A;,&#x5426;&#x5219;&#x5C06;&#x4F1A;&#x5FFD;&#x7565;&#x8D85;&#x8FC7;&#x7684;&#x503C;</td>
-</tr>
-<tr>
-<td style="text-align:left">index</td>
-<td style="text-align:left">int</td>
+<td style="text-align:left">wifiConfig</td>
+<td style="text-align:left"><a href="QNWiFiConfig.html">QNWiFiConfig</a></td>
 <td style="text-align:left">N</td>
-<td style="text-align:left">&#x7528;&#x6237;&#x79E4;&#x8BBE;&#x5907;&#x4E13;&#x7528;&#xFF0C;&#x79E4;&#x7AEF;&#x8BE5;&#x7528;&#x6237;&#x7D22;&#x5F15;&#xFF0C;&#x8BE5;&#x503C;&#x7531;&#x5411;&#x79E4;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#x3002;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x5230;&#x670D;&#x52A1;&#x5668; &#x8BBF;&#x95EE;&#x7528;&#x6237;&#x65F6;&#x9700;&#x8981;&#x4F20;&#x9012;</td>
+<td style="text-align:left">&#x914D;&#x7F51;&#x4FE1;&#x606F;&#x3002;&#x9488;&#x5BF9;&#x652F;&#x6301;WiF&#x8BBE;&#x5907;,&#x5F53; value &#x503C;&#x4E3A; null &#x65F6;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#x64CD;&#x4F5C; &#xFF1B;&#x5F53; value &#x503C;&#x4E3A; QNWiFiConfig &#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6839;&#x636E;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">userlist</td>
+<td style="text-align:left"><a href="QNUser.html">QNUser</a></td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">&#x5DF2;&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5217;&#x8868;, &#x7528;&#x4E8E;&#x540C;&#x6B65;&#x79E4;&#x7AEF;&#x7528;&#x6237;index&#x4FE1;&#x606F;,&#x5220;&#x9664;&#x79E4;&#x7AEF;&#x591A;&#x4F59;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td style="text-align:left">curUser</td>
+<td style="text-align:left"><a href="QNUser.html">QNUser</a></td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x6D4B;&#x91CF;&#x7528;&#x6237;&#xFF0C;&#x5F53;&#x53EA;&#x9700;&#x914D;&#x7F51;&#x65E0;&#x9700;&#x6D4B;&#x91CF;&#x65F6;&#xFF0C;&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;null</td>
+</tr>
+<tr>
+<td style="text-align:left">isVisitor</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#x65F6;&#x4E0D;&#x5FC5;&#x8BBE;&#x7F6E; <a href="QNUser.html">QNUser</a>&#x65E0;&#x9700;&#x8BBE;&#x7F6E; index&#x3001;secret</td>
+</tr>
+<tr>
+<td style="text-align:left">otaUrl</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">OTA &#x5347;&#x7EA7;&#x5730;&#x5740;&#xFF0C;&#x53EA;&#x6709; wifiConfig &#x6709;&#x503C;&#x65F6;&#x624D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x8BBE;&#x4E3A; null&#xFF0C;&#x683C;&#x5F0F;&#x8981;&#x6C42;<code>protocol://hostname[:port]/path/</code>, &#x6700;&#x5927;&#x957F;&#x5EA6;&#x4E3A; 128 &#x4E2A;&#x5B57;&#x8282;</td>
+</tr>
+<tr>
+<td style="text-align:left">isDelayScreenOff</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x5EF6;&#x8FDF;&#x663E;&#x793A;&#x5C4F;&#x7184;&#x5C4F;&#x65F6;&#x95F4;(&#x5927;&#x7EA6;&#x5EF6;&#x65F6;60s)&#xFF0C;&#x9ED8;&#x8BA4;false</td>
 </tr>
 </tbody>
 </table>
@@ -1102,12 +1108,12 @@
 
             
                 
-                <a href="QNBleApi.html#physiquecalculation" class="navigation navigation-prev " aria-label="Previous page: physiqueCalculation">
+                <a href="QNWiFiConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNWiFiConfig">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QNScaleData.html" class="navigation navigation-next " aria-label="Next page: QNScaleData">
+                <a href="QNBleKitchenConfig.html" class="navigation navigation-next " aria-label="Next page: QNBleKitchenConfig">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1118,7 +1124,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNUser","level":"1.5.2","depth":2,"next":{"title":"QNScaleData","level":"1.5.3","depth":2,"path":"api/QNScaleData.md","ref":"api/QNScaleData.md","articles":[]},"previous":{"title":"physiqueCalculation","level":"1.5.1.21","depth":3,"anchor":"#physiquecalculation","path":"api/QNBleApi.md","ref":"api/QNBleApi.md#physiquecalculation","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNUser.md","mtime":"2021-12-02T08:54:42.871Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-10T09:45:55.487Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNUserScaleConfig","level":"1.5.11","depth":2,"next":{"title":"QNBleKitchenConfig","level":"1.5.12","depth":2,"path":"api/QNBleKitchenConfig.md","ref":"api/QNBleKitchenConfig.md","articles":[]},"previous":{"title":"QNWiFiConfig","level":"1.5.10","depth":2,"path":"api/QNWiFiConfig.md","ref":"api/QNWiFiConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNUserScaleConfig.md","mtime":"2021-12-02T12:09:04.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-10T09:45:55.487Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
