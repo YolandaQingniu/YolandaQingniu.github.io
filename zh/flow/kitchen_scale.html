@@ -851,6 +851,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.25" data-path="../api/QNWspScaleDataListener.html">
+            
+                <a href="../api/QNWspScaleDataListener.html">
+            
+                    
+                    QNWspScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1114,7 +1127,37 @@
     }
      <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
-        <span class="hljs-comment">//&#x53A8;&#x623F;&#x79E4;&#xFF0C;&#x8BE5;&#x7C7B;&#x8BBE;&#x5907;&#x9700;&#x8981;&#x5728;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x4E2D;&#x5904;&#x7406;&#x4E8B;&#x4EF6;</span>
+        <span class="hljs-keyword">if</span> (device.isBluetooth()) {
+          <span class="hljs-comment">//&#x6B64;&#x5904;&#x9700;&#x4FDD;&#x5B58;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x5BF9;&#x8C61;&#xFF0C;&#x7559;&#x5F85;&#x540E;&#x7EED;&#x8FDE;&#x63A5;</span>
+        }
+    }
+});
+
+<span class="hljs-comment">//(&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x4E13;&#x5C5E;)&#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;</span>
+QNBleApi.getInstance(context).setKitchenDataListener(<span class="hljs-keyword">new</span> QNBleKitchenDataListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetBleKitchenWeight</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenConnecting</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_CONNECTING);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenConnected</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_CONNECTED);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenDisconnected</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenError</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">int</span> errorCode)</span> </span>{
+        Log.d(<span class="hljs-string">&quot;ConnectActivity&quot;</span>, <span class="hljs-string">&quot;onConnectError:&quot;</span> + errorCode);
+        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
     }
 });
 </code></pre>
@@ -1181,12 +1224,31 @@ iOS13&#x7CFB;&#x7EDF;&#x589E;&#x52A0;&#x4E86;&#x84DD;&#x7259;&#x4F7F;&#x7528;&#x
         NSLog([NSString stringWithFormat:@&quot;&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65B9;&#x6CD5;&#x5931;&#x8D25;,&#x539F;&#x56E0;: %@&quot;,error]);
     }
 }];
+</code></pre><h3 id="3-&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#xFF08;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x4E13;&#x7528;&#xFF09;">3. &#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#xFF08;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x4E13;&#x7528;&#xFF09;</h3>
+<p>&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;&#x8FDE;&#x63A5;onKitchenDeviceDiscover&#x4E2D;&#x56DE;&#x8C03;&#x7684;&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
+<p>android&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).connectBleKitchenDevice(device, <span class="hljs-keyword">new</span> QNResultCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+
+    }
+});
+</code></pre>
+<p>iOS&#x793A;&#x4F8B;:</p>
+<pre><code>[_bleApi connectBleKitchenDevice:kitchenDevice callback:^(NSError *error) {
+
+        }];
 </code></pre><h2 id="&#x4E09;&#x3001;&#x7ED3;&#x679C;&#x5904;&#x7406;">&#x4E09;&#x3001;&#x7ED3;&#x679C;&#x5904;&#x7406;</h2>
 <p>android&#x793A;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+<pre><code class="lang-java"><span class="hljs-comment">//&#x5E7F;&#x64AD;&#x53A8;&#x623F;&#x79E4;&#x6570;&#x636E;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> != device &amp;&amp; device.getMac().equals(mBleDevice.getMac())) {
        <span class="hljs-comment">//&#x5904;&#x7406;&#x6570;&#x636E;</span>
     }
+}
+
+<span class="hljs-comment">//&#x84DD;&#x7259;&#x53A8;&#x623F;&#x79E4;&#x6570;&#x636E;&#x5904;&#x7406;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetBleKitchenWeight</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
 }
 </code></pre>
 <p>iOS&#x793A;&#x4F8B;&#xFF1A;</p>
@@ -1247,7 +1309,7 @@ iOS13&#x7CFB;&#x7EDF;&#x589E;&#x52A0;&#x4E86;&#x84DD;&#x7259;&#x4F7F;&#x7528;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"厨房秤","level":"1.4.3","depth":2,"next":{"title":"用户秤","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2022-01-10T06:43:19.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T02:17:28.659Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"厨房秤","level":"1.4.3","depth":2,"next":{"title":"用户秤","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2022-03-11T09:39:25.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-11T09:40:37.887Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

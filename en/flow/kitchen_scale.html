@@ -838,6 +838,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.25" data-path="../api/QNWspScaleDataListener.html">
+            
+                <a href="../api/QNWspScaleDataListener.html">
+            
+                    
+                    QNWspScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1091,11 +1104,40 @@
 <span class="hljs-comment">//Kitchen scale, this kind of equipment needs to handle events in this callback</span>
     }
 });
+
+<span class="hljs-comment">//(BleKitchenScale exclusive)DataListener</span>
+QNBleApi.getInstance(context).setKitchenDataListener(<span class="hljs-keyword">new</span> QNBleKitchenDataListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetBleKitchenWeight</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenConnecting</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_CONNECTING);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenConnected</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_CONNECTED);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenDisconnected</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
+        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onBleKitchenError</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">int</span> errorCode)</span> </span>{
+        Log.d(<span class="hljs-string">&quot;ConnectActivity&quot;</span>, <span class="hljs-string">&quot;onConnectError:&quot;</span> + errorCode);
+        setBleStatus(QNScaleStatus.STATE_DISCONNECTED);
+    }
+});
 </code></pre>
 <p>iOS example:</p>
 <pre><code>//set proxy
 QNBleApi *bleApi = [QNBleApi sharedBleApi];
 bleApi.discoveryListener = self;
+bleApi.bleKitchenDataListener = self; //(BleKitchenScale exclusive)DataListener
 
 //Implement the proxy method
 - (void)onDeviceDiscover:(QNBleDevice *)device {
@@ -1154,6 +1196,20 @@ iOS13 system has added Bluetooth usage permission, you need to check whether the
         NSLog([NSString stringWithFormat:@&quot;Failed to start scanning method, reason: %@&quot;,error]);
     }
 }];
+</code></pre><h3 id="3-connect-device&#xFF08;blekitchenscale-exclusive&#xFF09;">3. connect device&#xFF08;BleKitchenScale exclusive&#xFF09;</h3>
+<p>Call the connection method to connect QNBleKitchenDevice object which callbacked in onKitchenDeviceDiscover</p>
+<p>android example&#xFF1A;</p>
+<pre><code class="lang-java">QNBleApi.getInstance(context).connectBleKitchenDevice(device, <span class="hljs-keyword">new</span> QNResultCallback() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+
+    }
+});
+</code></pre>
+<p>iOS example:</p>
+<pre><code>[_bleApi connectBleKitchenDevice:kitchenDevice callback:^(NSError *error) {
+
+        }];
 </code></pre><h2 id="three&#x3001;results-processing">three&#x3001;Results processing</h2>
 <p>android example:</p>
 <pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onKitchenDeviceDiscover</span><span class="hljs-params">(QNBleKitchenDevice device)</span> </span>{
@@ -1161,11 +1217,18 @@ iOS13 system has added Bluetooth usage permission, you need to check whether the
 <span class="hljs-comment">//Data processing</span>
     }
 }
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGetBleKitchenWeight</span><span class="hljs-params">(QNBleKitchenDevice device, <span class="hljs-keyword">double</span> weight)</span> </span>{
+}
 </code></pre>
 <p>iOS example:</p>
 <pre><code># pragma mark-Kitchen scale processing logic
 - (void)onKitchenDeviceDiscover:(QNBleKitchenDevice *)device {
 //Data processing
+}
+
+- (void)onGetBleKitchenWeight:(QNBleKitchenDevice *)device weight:(double)weight  {
+    //Data processing
 }
 </code></pre><p>At this point, the basic process of the broadcast scale has been completed, the APP can save the data and display the data after receiving the analytical data.
 For other problems, please refer to the code in the Demo first. If you have any questions, you can also check <a href="../attouched_list/faq.html">FAQ</a>. Common problems have not found related problems, you can try to search in the SDK if there are related APIs or instructions, if not, please contact our technical staff to assist in docking.</p>
@@ -1215,7 +1278,7 @@ For other problems, please refer to the code in the Demo first. If you have any 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2022-01-10T06:43:19.944Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T02:17:28.659Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2022-03-11T09:39:25.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-11T09:40:37.887Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
