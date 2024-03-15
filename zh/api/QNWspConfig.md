@@ -1,6 +1,6 @@
-# QNWspConfig
+# ~~QNWspConfig~~
 
-WSP 设备配置类，由它来控制 WSP 操作
+WSP 设备配置类，由它来控制 WSP 操作，**此类已废弃**
 
 配置说明:
 
@@ -20,4 +20,3 @@ WSP 设备配置类，由它来控制 WSP 操作
 | dataUrl     | String                            | N | 数据传输地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`http://hostname:port/path/`, 最大长度为 128 个字节       |
 | otaUrl      | String                            | N | OTA 升级地址，只有 wifiConfig 有值时才起作用，否则可设为 null，格式要求`protocol://hostname[:port]/path/`, 最大长度为 128 个字节 |
 | isDelayScreenOff | Boolean                       | N | 是否延迟显示屏熄屏时间(大约延时60s)，默认false|
-| OTAConfig |    [QNBleOTAConfig](./QNBleOTAConfig.md)                    | 是否蓝牙OTA, 当 value 值为 null 时，不进行OTA ；当 value 值为 QNOtaConfig 对象时，根据对象中的值进行OTA |

@@ -1,6 +1,6 @@
-# QNWspConfig
+# ~~QNWspConfig~~
 
-WSP device configuration class, which controls WSP operation
+WSP device configuration class, which controls WSP operation,**This class is deprecated.**
 
 ## Attributes
 
