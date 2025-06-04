@@ -10,7 +10,7 @@ The work flow of this device is the same as that of [broadcast_scale_custom_scan
 
 
 ## One、initialization
-Use [QNBleApi.initSdk](../api/QNBleApi.md#initsdk)-to-initialize,-there-are-related-introductions-in-the-previous-article,-[please-check](../readme.md#development-process)
+Use [QNBleApi.initSdk](../api/QNBleApi.md#initsdk)-to-initialize,-there-are-related-introductions-in-the-previous-article,-[please-check](../README.md#development-process)
 
 ## 2. scanning
 

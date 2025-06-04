@@ -573,6 +573,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.1.26" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#calculatescaledatabyhmac">
+            
+                    
+                    calculateScaleDataByHmac
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1091,19 +1104,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../history/history.html">
-            
-                <a href="../history/history.html">
-            
-                    
-                    Update Log
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -1421,8 +1421,8 @@ The location service switch is not mandatory, but some mobile phones do not turn
 </code></pre><h3 id="connect-device-accessregistration-measurement">Connect device access/registration measurement</h3>
 <h4 id="1-connect-the-device">1. Connect the device</h4>
 <p>After the APP receives the SDK callback device, it can judge whether it is a device that needs to be connected (this belongs to the business logic of the APP), and realize the connection device by calling the <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> method. .</p>
-<p>When we connects a device,  <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> passes the parameter <a href="../api/QNUser.html#index">QNUserScaleConfig.curUser.index</a> , and the user index is greater than 0, it will be considered that this connection goes through the access measurement process When the user index is equal to 0, the SDK will consider that this connection needs to go through the registration measurement process.
-Of course, by setting <a href="../api/QNUserScaleConfig.html#isvisitor">QNUserScaleConfig.isVisitor</a>, the SDK will consider this measurement as a visitor visit measurement, and the scale will not assign an index to the user to register the scale user. The transmitted user information is only valid for this measurement.</p>
+<p>When we connects a device,  <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> passes the parameter <a href="../api/QNUser.html#Attributes">QNUserScaleConfig.curUser.index</a> , and the user index is greater than 0, it will be considered that this connection goes through the access measurement process When the user index is equal to 0, the SDK will consider that this connection needs to go through the registration measurement process.
+Of course, by setting <a href="../api/QNUserScaleConfig.html#Parameters">QNUserScaleConfig.isVisitor</a>, the SDK will consider this measurement as a visitor visit measurement, and the scale will not assign an index to the user to register the scale user. The transmitted user information is only valid for this measurement.</p>
 <p>android example:</p>
 <pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice qnBleDevice)</span> </span>{
   <span class="hljs-comment">// Scanned bluetooth device callback</span>
@@ -1466,7 +1466,7 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
 </code></pre><h4 id="2-measurement-data">2. Measurement data</h4>
 <p>The data and status of the weighing process will be called back in the above-mentioned <a href="../api/QNScaleDataListener.html">QNScaleDataListener</a></p>
 <h4 id="3-measurement-ends">3. Measurement ends</h4>
-<p>After receiving stable data (that is, receiving <a href="../api/QNScaleDataListener.html#ongetscalesata">QNScaleDataListener.onGetScaleData</a>), the measurement is completed, and the device will automatically disconnect.</p>
+<p>After receiving stable data (that is, receiving <a href="../api/QNScaleDataListener.html#ongetscaledata">QNScaleDataListener.onGetScaleData</a>), the measurement is completed, and the device will automatically disconnect.</p>
 <p>So far, the basic process of the device has been completed, and the APP can save the data and display the data by itself after receiving the stable data. Data standard judgment can be done in our way-<a href="../attouched_list/SDK%20indicator%20standard%20description.pdf">SDK indicator standard description</a>.</p>
 <h3 id="bluetooth-wifi-dual-mode-scale-configuration-network">Bluetooth WiFi dual-mode scale configuration network</h3>
 <p>For the Bluetooth WiFi dual-mode scale, in addition to using the Bluetooth function, it needs to be connected to the SDK, and it also needs to cooperate with the server integration <a href="https://github.com/YolandaQingniu/qn_wsp_full_server_doc/blob/main/README.en.md" target="_blank">Docker</a>.</p>
@@ -1576,7 +1576,7 @@ android example:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.4","depth":2,"next":{"title":"Bluetooth ruler","level":"1.4.5","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2024-08-13T03:08:56.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-16T02:53:29.956Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.4","depth":2,"next":{"title":"Bluetooth ruler","level":"1.4.5","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2025-06-04T02:41:39.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-04T07:08:53.533Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

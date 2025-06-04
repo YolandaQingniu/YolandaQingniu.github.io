@@ -93,7 +93,7 @@ Confirm that Bluetooth is turned on, and Android needs to check the `location pe
 
 > iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning
 
-The scanning method is [QNBleApi.startBleDeviceDiscovery](../api/QNBleApi.md#startbledevicediscovery),-the-scanned-device-data-will-be-called-back-in-the-[qnbledevicediscoverylistener](../api/qnbledevicediscoverylistener.md) in the scanning interface set above.
+The scanning method is [QNBleApi.startBleDeviceDiscovery](../api/QNBleApi.md#startbledevicediscovery),-the-scanned-device-data-will-be-called-back-in-the-[qnbledevicediscoverylistener](../api/QNBleDeviceDiscoveryListener.md) in the scanning interface set above.
 
 In addition, some feature settings related to scanning can be set in [QNConfig](../api/QNConfig.md), and the content to be set has been basically covered.
 
@@ -210,9 +210,9 @@ iOS example:
 }];
 ```
 
-The method of connecting the device needs to pass the Yolanda Bluetooth device object ([QNBleDevice](../api/QNBleDevice.md)) and the Yolanda user profile object ([QNUser](../api/QNUser.md)), where [QNBleDevice](../api/QNBleDevice.md)[QNUser](../api/QNUser.md) is created as: [QNBleApi.buildUser](../api/QNBleApi.md#builduser), the specific method of use can be Refer to the method description.
+The method of connecting the device needs to pass the Yolanda Bluetooth device object ([QNBleDevice](../api/QNBleDevice.md)) and the Yolanda user profile object ([QNUser](../api/QNUser.md)), where [QNUser](../api/QNUser.md) is created as: [QNBleApi.buildUser](../api/QNBleApi.md#builduser), the specific method of use can be Refer to the method description.
 
-After confirming OK in the previous operation, you can finally connect. The connection method is: [QNBleApi.connectWspDevice](../api/QNBleApi.md#connectwspdevice).-the-connection-status-callback-method-is-the-above-[qnbleconnectionchangelistener](../api/qnbleconnectionchangelistener.md)
+After confirming OK in the previous operation, you can finally connect. The connection method is: [QNBleApi.connectWspDevice](../api/QNBleApi.md#connectwspdevice).-the-connection-status-callback-method-is-the-above-[qnbleconnectionchangelistener](../api/QNBleConnectionChangeListener.md)
 
 android example:
 

@@ -573,6 +573,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.1.26" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#calculatescaledatabyhmac">
+            
+                    
+                    calculateScaleDataByHmac
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1091,19 +1104,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../history/history.html">
-            
-                <a href="../history/history.html">
-            
-                    
-                    Update Log
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -1160,7 +1160,7 @@
 <p>The working process of this device is the same as <a href="broadcast_scale.md">Broadcast Scale</a>:</p>
 <p>  When the Bluetooth kitchen scale is measuring, you need to find that the Bluetooth kitchen scale device is connected to the device before it can upload data normally.</p>
 <h2 id="1-initialization">1. initialization</h2>
-<p>Use <a href="../api/QNBleApi.html#initsdk">QNBleApi.initSdk</a>-to-initialize,-there-are-related-introductions-in-the-previous-article,-<a href="../readme.md#development-process">please-check</a></p>
+<p>Use <a href="../api/QNBleApi.html#initsdk">QNBleApi.initSdk</a>-to-initialize,-there-are-related-introductions-in-the-previous-article,-<a href="../#development-process">please-check</a></p>
 <h2 id="2-scanning">2. scanning</h2>
 <h3 id="1-set-the-bluetooth-scan-callback-monitor-class">1. Set the Bluetooth scan callback monitor class</h3>
 <p>Before scanning, you need to set the listener class, the method is <a href="../api/QNBleApi.html#setbledevicediscoverylistener">QNBleApi.setBleDeviceDiscoveryListener</a>, this method only needs to be called once, remember to set to null/nil when you are sure you do n&#x2019;t need to scan</p>
@@ -1263,7 +1263,7 @@ bleApi.bleKitchenDataListener = self; //(BleKitchenScale exclusive)DataListener
 The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.
 iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning</p>
 </blockquote>
-<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-in-the-scanning-interface-set-above-<a href="../api/qnbledevicediscoverylistener.md">qnbledevicediscoverylistener</a> Callback.</p>
+<p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-in-the-scanning-interface-set-above-<a href="../api/QNBleDeviceDiscoveryListener.html">qnbledevicediscoverylistener</a> Callback.</p>
 <p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, these options should be sufficient.</p>
 <blockquote>
 <p>Usually the APP will have an interface dedicated to measurement. We generally scan for Bluetooth after the interface is displayed, and stop scanning when the interface disappears.</p>
@@ -1369,7 +1369,7 @@ For other problems, please refer to the code in the Demo first. If you have any 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2024-08-13T03:08:56.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-16T02:53:29.956Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2025-06-04T02:41:39.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-04T07:08:53.533Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

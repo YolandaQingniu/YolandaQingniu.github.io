@@ -254,7 +254,7 @@ iOS 示例：
 }];
 ```
 
-连接设备的方法需要传Yolanda蓝牙设备对象([QNBleDevice](../api/QNBleDevice.md))以及Yolanda用户资料对象（[QNUser](../api/QNUser.md)），其中[QNBleDevice](../api/QNBleDevice.md)[QNUser](../api/QNUser.md)的创建方法为：[QNBleApi.buildUser](../api/QNBleApi.md#builduser)，具体使用方法可以参考方法说明。
+连接设备的方法需要传Yolanda蓝牙设备对象([QNBleDevice](../api/QNBleDevice.md))以及Yolanda用户资料对象（[QNUser](../api/QNUser.md)），其中[QNUser](../api/QNUser.md)的创建方法为：[QNBleApi.buildUser](../api/QNBleApi.md#builduser)，具体使用方法可以参考方法说明。
 
 前面的操作确认 OK 后，终于可以进行连接了，连接的方法为：[QNBleApi.connectDevice](../api/QNBleApi.md#connectDevice)。连接状态回调方法为上述[QNBleConnectionChangeListener](../api/QNBleConnectionChangeListener.md)
 
@@ -287,6 +287,6 @@ iOS 示例：
 
 ## 测量结束
 
-收到稳定数据后（即收到[QNScaleDataListener.onGetScaleData](../api/QNScaleDataListener.md#ongetscalesata)）即表示测量完成，当测量完成后，设备会自动断开连接。
+收到稳定数据后（即收到[QNScaleDataListener.onGetScaleData](../api/QNScaleDataListener.md#ongetscaledata)）即表示测量完成，当测量完成后，设备会自动断开连接。
 
 至此，设备的基本流程已经走完，APP 可以在收到稳定数据后自行保存数据和展示数据。数据标准判断可以我司的方式-[SDK 指标标准描述](../attouched_list/SDK指标标准描述.pdf)。

@@ -7,7 +7,7 @@ The workflow of the device is approximately as follows:
 <iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCB1c2VyIGFzIOeUqOaIt1xucGFydGljaXBhbnQgc2NhbGUgYXMg56ek56uvXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZXJ2ZXIgYXMg5LqR56uvXG5cbnVzZXItPj5hcHA65omT5byAQVBQXG5hcHAtLT5hcHA6IOWQr-WKqOaJq-aPj1xudXNlci0-PnNjYWxlOiDouKnkuq7np6RcbnNjYWxlLT4-YXBwOiDlj5HlsITok53niZnlub_mkq1cbmFwcC0-PmFwcDog6Kej5p6Q5bm_5pKt5pWw5o2uKOmHjemHj-OAgeWNleS9jeOAgeeKtuaAgeetiSlcbnVzZXItLT51c2VyOiDnq5nnqLNcbnNjYWxlLT4-YXBwOiDnqLPlrprmlbDmja5cbmFwcC0tPmFwcDog6K6h566X5L2T6ISC5pWw5o2uXG5hcHAtPj51c2VyOiDmmL7npLrlrozmlbTmtYvph4_nu5PmnpxcbmFwcC0-PnNlcnZlcjog5LiK5Lyg5rWL6YeP5pWw5o2uXG51c2VyLS0-dXNlcjog5LiL56ek5bm25p-l55yL5pWw5o2uXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ"  frameborder=0 width=750 height=600></iframe>
 
 ## One、initialization
-Use [QNBleApi.initSdk](../api/QNBleApi.md#initsdk)-to-initialize,-there-are-related-introductions-in-the-previous-article,-[please-check](../readme.md#development-process)
+Use [QNBleApi.initSdk](../api/QNBleApi.md#initsdk)-to-initialize,-there-are-related-introductions-in-the-previous-article,-[please-check](../README.md#development-process)
 
 ## 2. scanning
 
@@ -78,7 +78,7 @@ Confirm that Bluetooth is turned on, and Android needs to check the `location pe
 > The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.
 > iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning
 
-The scanning method is [QNBleApi.startBleDeviceDiscovery](./../api/QNBleApi.md#startbledevicediscovery),-the-scanned-device-data-will-be-in-the-scanning-interface-set-above-[qnbledevicediscoverylistener](../api/qnbledevicediscoverylistener.md) Callback.
+The scanning method is [QNBleApi.startBleDeviceDiscovery](./../api/QNBleApi.md#startbledevicediscovery),-the-scanned-device-data-will-be-in-the-scanning-interface-set-above-[qnbledevicediscoverylistener](../api/QNBleDeviceDiscoveryListener.md) Callback.
 
 In addition, some feature settings related to scanning can be set in [QNConfig](../api/QNConfig.md), these options should be sufficient.
 

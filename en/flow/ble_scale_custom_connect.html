@@ -573,6 +573,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.1.26" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#calculatescaledatabyhmac">
+            
+                    
+                    calculateScaleDataByHmac
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1091,19 +1104,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../history/history.html">
-            
-                <a href="../history/history.html">
-            
-                    
-                    Update Log
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -1159,10 +1159,41 @@
 <blockquote>
 <p>If you are not familiar with Bluetooth, or do not have your own Bluetooth framework, it is not recommended to use this method to access, otherwise it will increase the cost of access</p>
 </blockquote>
-<iframe src="https://mermaidjs.github.io/mermaid-live-editor/#/view/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtIFxucGFydGljaXBhbnQgc2NhbGUgYXMg56ekXG5wYXJ0aWNpcGFudCBhcHAgYXMgQVBQXG5wYXJ0aWNpcGFudCBzZGsgYXMgU0RLXG5cbnNjYWxlLS0-PnNjYWxlOiAg5Lqu5bGP5Y-R6YCB5bm_5pKtXG5hcHAtLT4-YXBwOiAg5omr5o-P5ZGo5Zu05bm_5pKtXG5hcHAtPj5zY2FsZTogIOaJq-aPj-WIsOiuvuWkh1xuYXBwLT4-c2RrOiDosIPnlKhidWlsZERldmljZVxuc2RrLT4-YXBwOiDmnoTlu7pRTkJsZURldmljZVxuYXBwLS0-PmFwcDog5Yik5pat5piv5ZCm5Li655uu5qCH6K6-5aSHXG5hcHAtPj5zZGs6IOiwg-eUqGJ1aWxkUHJvdG9jb2xIYW5kbGVyXG5zZGstPj5hcHA6IOWbnuS8oFFOQmxlUHJvdG90b2xIYW5kbGVyXG5hcHAtPj5zY2FsZTog6L-b6KGM6JOd54mZ6L-e5o6lXG5zY2FsZS0-PmFwcDog6L-e5o6l5oiQ5YqfXG5hcHAtLT4-YXBwOuWPkeeOsOacjeWKoVxuYXBwLS0-PmFwcDog5L2_6IO954m55b6B5YC8XG5hcHAtPj5zZGs66LCD55SoUU5CbGVQcm90b3RvbEhhbmRsZXIucHJlcGFyZVxuc2RrLS0-PnNkazog5Y2P6K6u5aSE55CG57G75Yid5aeL5YyW5a6M5oiQXG5zY2FsZS0-PmFwcDog5Y-R6YCB6JOd54mZ5pWw5o2uXG5hcHAtPj5zZGs6IOiwg-eUqG9uR2V0QmxlRGF0YVxuc2RrLS0-PnNkazog5YiG5p6Q5pWw5o2uXG5zZGstPj5hcHA6IOWbnuS8oOaVsOaNrlxuc2NhbGUtLT4-c2RrOiDmtYvph4_lrozmiJBcbnNkay0-PmFwcDrorqHnrpflubblm57kvKDnqLPlrprmlbDmja5cbnNjYWxlLT4-YXBwOiDmlq3lvIDov57mjqVcbmFwcC0tPj5hcHA6IOWkhOeQhuWSjOaYvuekuuaVsOaNrlxuXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ" frameborder="0" width="750" height="1200"></iframe>
+<div class="mermaid">
+sequenceDiagram
+    participant scale as Scale
+    participant app as APP
+    participant sdk as SDK
+
+    scale--&gt;&gt;scale: Screen on &amp; broadcast
+    app--&gt;&gt;app: Scan nearby broadcasts
+    app-&gt;&gt;scale: Device scanned
+    app-&gt;&gt;sdk: Call buildDevice()
+    sdk-&gt;&gt;app: Build QNBLEDevice
+    app--&gt;&gt;app: Determine whether it is the target device
+    app-&gt;&gt;sdk: Call buildProtocolHandler()
+    sdk-&gt;&gt;app: Return QNBleProtocolHandler
+    app-&gt;&gt;scale: Create Bluetooth connection
+    scale-&gt;&gt;app: Connection successful
+    app--&gt;&gt;app: Discover services
+    app--&gt;&gt;app: Enable characteristics
+    app-&gt;&gt;sdk: Call QNBleProtocolHandler.prepare()
+    sdk--&gt;&gt;sdk: Protocol handler initialized
+
+    scale-&gt;&gt;app: Send Bluetooth data
+    app-&gt;&gt;sdk: Call onGetBleData()
+    sdk--&gt;&gt;sdk: Analyze data
+    sdk-&gt;&gt;app: Return processed data
+
+    scale--&gt;&gt;sdk: Measurement completed
+    sdk-&gt;&gt;app: Calculate &amp; return stable data
+
+    scale-&gt;&gt;app: Disconnect
+    app--&gt;&gt;app: Process &amp; display data
+</div>
 
 <h2 id="one&#x3001;start-bluetooth-scan">One&#x3001;Start Bluetooth Scan</h2>
-<p>The customer starts and stops the Bluetooth scan by himself, and passes the scanned device information to our SDK (call <a href="../api/QNBleApi.html#builddevice">QNBleApi.buildDevice</a>),-if-it-belongs-to-our-device,-the-sdk-<a href="../api/qnbledevice.md">qnbledevice</a> will be built, if it is not our device, it will return null/nil.</p>
+<p>The customer starts and stops the Bluetooth scan by himself, and passes the scanned device information to our SDK (call <a href="../api/QNBleApi.html#builddevice">QNBleApi.buildDevice</a>),-if-it-belongs-to-our-device,-the-sdk-<a href="../api/QNBleDevice.html">qnbledevice</a> will be built, if it is not our device, it will return null/nil.</p>
 <blockquote>
 <p>Usually the bluetooth name of our device is QN-Scale or QN-Scale1, and we can also filter our products by this bluetooth name
 After obtaining the target device, it is up to the APP to decide whether to stop scanning. We usually recommend that you stop Bluetooth scanning before connecting.</p>
@@ -1170,7 +1201,7 @@ After obtaining the target device, it is up to the APP to decide whether to stop
 <h2 id="2-create-bluetooth-protocol-proxy-class">2. Create Bluetooth protocol proxy class</h2>
 <p>Create your own Bluetooth protocol proxy class <a href="../api/QNBleProtocolDelegate.html">QNBleProtocolDelegate</a> and implement all its methods. The specific way of implementation can be <strong>Demo</strong></p>
 <h2 id="three&#x3001;create-bluetooth-protocol-processing-class">three&#x3001;Create Bluetooth protocol processing class</h2>
-<p>Use <a href="../api/QNBleApi.html#buildprotocolhandler">QNBleApi.buildProtocolHandler</a>-to-create-<a href="../api/qnbleprotocolhandler.md">protocol-handler-class-qnbleprotocolhandler</a></p>
+<p>Use <a href="../api/QNBleApi.html#buildprotocolhandler">QNBleApi.buildProtocolHandler</a>-to-create-<a href="../api/QNBleProtocolHandler.html">protocol-handler-class-qnbleprotocolhandler</a></p>
 <h2 id="four&#x3001;connect-bluetooth-yourself">Four&#x3001;Connect Bluetooth yourself</h2>
 <p>Connected devices using system API or own Bluetooth framework.</p>
 <p>The logic of this part is handled by the APP itself</p>
@@ -1251,7 +1282,7 @@ There are only two characteristic values below it, one for data callback and one
 </table>
 <h2 id="data-interaction">Data interaction</h2>
 <p>After the feature value is enabled, you can receive the data uploaded by the scale.</p>
-<p>After receiving the callback data from the scale, the APP sends it to the SDK for analysis through the method <a href="../api/QNBleProtocolHandler.html#ongetbledata">QNBleProtocolHandler.onGetBleData</a>,-and-the-parsed-data-will-pass-<a href="../api/qnscaledatalistener.-md">qnscaledatalistener</a> callback.</p>
+<p>After receiving the callback data from the scale, the APP sends it to the SDK for analysis through the method <a href="../api/QNBleProtocolHandler.html#ongetbledata">QNBleProtocolHandler.onGetBleData</a>,-and-the-parsed-data-will-pass-<a href="../api/QNScaleDataListener.html">qnscaledatalistener</a> callback.</p>
 <p>In addition, if you need to write data, you will use <a href="../api/QNBleProtocolDelegate.html#writecharacteristicvalue">QNBleProtocolDelegate.writeCharacteristicValue</a> to let the APP write for you.</p>
 <h2 id="measurement-completed">Measurement completed</h2>
 <p>After the measurement is completed, the complete data will be called back through <a href="../api/QNScaleDataListener.html">QNScaleDataListener</a>, after which the scale will actively disconnect.</p>
@@ -1299,7 +1330,7 @@ There are only two characteristic values below it, one for data callback and one
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"next":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale_custom_connect.md","mtime":"2024-08-13T03:08:56.973Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-16T02:53:29.956Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"next":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"previous":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale_custom_connect.md","mtime":"2025-06-04T07:07:06.601Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-04T07:08:53.533Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
