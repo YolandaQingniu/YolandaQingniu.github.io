@@ -1351,6 +1351,92 @@
 </tr>
 </tbody>
 </table>
+<h2 id="ongetbarcode">onGetBarCode</h2>
+<p>&#x83B7;&#x53D6;&#x6761;&#x5F62;&#x7801;&#x6210;&#x529F;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">barCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x6761;&#x5F62;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x8BBE;&#x5907;Mac</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ongetbarcodefail">onGetBarCodeFail</h2>
+<p>&#x83B7;&#x53D6;&#x6761;&#x5F62;&#x7801;&#x5931;&#x8D25;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x8BBE;&#x5907;Mac</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ongetbarcodegunstate">onGetBarCodeGunState</h2>
+<p>&#x83B7;&#x53D6;&#x626B;&#x7801;&#x67AA;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">state</td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x8FDE;&#x63A5;(&#x662F;&#x5426;&#x5B89;&#x88C5;)</td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x8BBE;&#x5907;Mac</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ongetresulttoheightscalefunctionsetting">onGetResultToHeightScaleFunctionSetting</h2>
+<p>&#x79E4;&#x7AEF;&#x529F;&#x80FD;&#x8BBE;&#x7F6E;&#x7ED3;&#x679C;&#xFF08;&#x8EAB;&#x9AD8;&#x4E00;&#x4F53;&#x79F0;&#x4E13;&#x5C5E;&#xFF09;</p>
+<h4 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">setResult</td>
+<td style="text-align:left"><a href="QNHeightDeviceConfig.md">QNHeightDeviceSetFunctionResult</a></td>
+<td style="text-align:left">&#x5404;&#x529F;&#x80FD;&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x4E0E;&#x5426;&#x7684;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -1394,7 +1480,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNScaleDataListener","level":"1.5.16","depth":2,"next":{"title":"QNUserScaleDataListener","level":"1.5.17","depth":2,"path":"api/QNUserScaleDataListener.md","ref":"api/QNUserScaleDataListener.md","articles":[]},"previous":{"title":"QNBleConnectionChangeListener","level":"1.5.15","depth":2,"path":"api/QNBleConnectionChangeListener.md","ref":"api/QNBleConnectionChangeListener.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNScaleDataListener.md","mtime":"2024-08-13T03:08:56.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-16T09:48:22.515Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNScaleDataListener","level":"1.5.16","depth":2,"next":{"title":"QNUserScaleDataListener","level":"1.5.17","depth":2,"path":"api/QNUserScaleDataListener.md","ref":"api/QNUserScaleDataListener.md","articles":[]},"previous":{"title":"QNBleConnectionChangeListener","level":"1.5.15","depth":2,"path":"api/QNBleConnectionChangeListener.md","ref":"api/QNBleConnectionChangeListener.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNScaleDataListener.md","mtime":"2025-09-10T08:39:01.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-09-10T08:44:27.677Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
@@ -1406,10 +1492,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
