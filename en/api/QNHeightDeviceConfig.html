@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNBleKitchenListener · GitBook</title>
+        <title>QNHeightDeviceConfig · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNLogListener.html" />
+    <link rel="next" href="QNBleKitchenConfig.html" />
     
     
-    <link rel="prev" href="QNUserScaleDataListener.html" />
+    <link rel="prev" href="QNUserScaleConfig.html" />
     
 
     </head>
@@ -760,7 +760,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.12" data-path="QNHeightDeviceConfig.html">
+        <li class="chapter active" data-level="1.5.12" data-path="QNHeightDeviceConfig.html">
             
                 <a href="QNHeightDeviceConfig.html">
             
@@ -851,7 +851,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.19" data-path="QNBleKitchenListener.html">
+        <li class="chapter " data-level="1.5.19" data-path="QNBleKitchenListener.html">
             
                 <a href="QNBleKitchenListener.html">
             
@@ -1191,7 +1191,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNBleKitchenListener</a>
+        <a href=".." >QNHeightDeviceConfig</a>
     </h1>
 </div>
 
@@ -1206,101 +1206,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qnblekitchenlistener">QNBleKitchenListener</h1>
-<p>Bluetooth kitchen scale Device link status Measurement data monitor</p>
-<h2 id="onblekitchenconnecting">onBleKitchenConnecting</h2>
-<p>Connecting to the device is in progress, after calling the connected device, it will call back immediately</p>
-<h4 id="parameters">Parameters</h4>
+                                <h1 id="qnheightdeviceconfig">QNHeightDeviceConfig</h1>
+<p>The Height Scale Device Configuration Class, which controls the device-side configuration of the height scale.</p>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleKitchenDevice.html">QNBleKitchenDevice</a></td>
-<td style="text-align:left">Kitchen scale equipment object</td>
-</tr>
-</tbody>
-</table>
-<h2 id="onblekitchenconnected">onBleKitchenConnected</h2>
-<p>The device is successfully connected
-Will call back the device object</p>
-<h2 id="onblekitchendisconnected">onBleKitchenDisconnected</h2>
-<p>Bluetooth disconnected</p>
-<h2 id="onblekitchenconnecterror">onBleKitchenConnectError</h2>
-<p>A connection error occurred</p>
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleKitchenDevice.html">QNBleKitchenDevice</a></td>
-<td style="text-align:left">Kitchen scale equipment object</td>
+<td style="text-align:left">wifiConfig</td>
+<td style="text-align:left"><a href="QNWiFiConfig.html">QNWiFiConfig</a></td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">Network distribution information. For devices supporting WiFi, when the value is null, no network distribution operation is performed; when the value is a QNWiFiConfig object, network settings are configured based on the values within the object.</td>
 </tr>
 <tr>
-<td style="text-align:left">errorCode</td>
+<td style="text-align:left">user</td>
+<td style="text-align:left"><a href="QNUser.html">QNUser</a></td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">List of registered device-side users, used to synchronize and delete excess users on the device side. When the list is null, no user list synchronization operation will be performed.</td>
+</tr>
+<tr>
+<td style="text-align:left">weightUnit</td>
 <td style="text-align:left">int</td>
-<td style="text-align:left">Error code reference <a href="../attouched_list/error_code.html">attached table-error code</a>, the second parameter of IOS uses system error object</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ongetblekitchenweight">onGetBleKitchenWeight</h2>
-<p>Bluetooth kitchen scale measurement data callback</p>
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleKitchenDevice.html">QNBleKitchenDevice</a></td>
-<td style="text-align:left">Kitchen scale equipment object</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">Weight Unit</td>
 </tr>
 <tr>
-<td style="text-align:left">weight</td>
-<td style="text-align:left">double</td>
-<td style="text-align:left">Weight at the end of the scale, the value is the weight in g</td>
-</tr>
-</tbody>
-</table>
-<h3 id="onblekitchenstatechange">onBleKitchenStateChange</h3>
-<p>Bluetooth kitchen scale measurement data callback</p>
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">device</td>
-<td style="text-align:left"><a href="QNBleKitchenDevice.html">QNBleKitchenDevice</a></td>
-<td style="text-align:left">Kitchen scale equipment object</td>
-</tr>
-<tr>
-<td style="text-align:left">scaleState</td>
+<td style="text-align:left">heightUnit</td>
 <td style="text-align:left">int</td>
-<td style="text-align:left">Refer to <a href="../attouched_list/scale_event.html">Scale Events</a></td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">Height Unit</td>
+</tr>
+<tr>
+<td style="text-align:left">voiceLanguage</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">N</td>
+<td style="text-align:left">Voice broadcast language</td>
 </tr>
 </tbody>
 </table>
@@ -1331,12 +1278,12 @@ Will call back the device object</p>
 
             
                 
-                <a href="QNUserScaleDataListener.html" class="navigation navigation-prev " aria-label="Previous page: QNUserScaleDataListener">
+                <a href="QNUserScaleConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNUserScaleConfig">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QNLogListener.html" class="navigation navigation-next " aria-label="Next page: QNLogListener">
+                <a href="QNBleKitchenConfig.html" class="navigation navigation-next " aria-label="Next page: QNBleKitchenConfig">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1347,7 +1294,7 @@ Will call back the device object</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNBleKitchenListener","level":"1.5.19","depth":2,"next":{"title":"QNLogListener","level":"1.5.20","depth":2,"path":"api/QNLogListener.md","ref":"api/QNLogListener.md","articles":[]},"previous":{"title":"QNUserScaleDataListener","level":"1.5.18","depth":2,"path":"api/QNUserScaleDataListener.md","ref":"api/QNUserScaleDataListener.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNBleKitchenListener.md","mtime":"2025-08-26T01:54:55.201Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-09-11T06:50:17.676Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QNHeightDeviceConfig","level":"1.5.12","depth":2,"next":{"title":"QNBleKitchenConfig","level":"1.5.13","depth":2,"path":"api/QNBleKitchenConfig.md","ref":"api/QNBleKitchenConfig.md","articles":[]},"previous":{"title":"QNUserScaleConfig","level":"1.5.11","depth":2,"path":"api/QNUserScaleConfig.md","ref":"api/QNUserScaleConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNHeightDeviceConfig.md","mtime":"2025-09-11T06:11:03.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-09-11T06:50:17.676Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
