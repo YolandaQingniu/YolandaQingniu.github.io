@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QNUtils · GitBook</title>
+        <title>QNHeightDeviceFunction · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="QNBleProtocolHandler.html" />
+    <link rel="next" href="QNBleKitchenConfig.html" />
     
     
-    <link rel="prev" href="QNShareData.html" />
+    <link rel="prev" href="QNHeightDeviceConfig.html" />
     
 
     </head>
@@ -864,7 +864,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.13" data-path="QNHeightDeviceFunction.html">
+        <li class="chapter active" data-level="1.5.13" data-path="QNHeightDeviceFunction.html">
             
                 <a href="QNHeightDeviceFunction.html">
             
@@ -1007,7 +1007,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.24" data-path="QNUtils.html">
+        <li class="chapter " data-level="1.5.24" data-path="QNUtils.html">
             
                 <a href="QNUtils.html">
             
@@ -1295,7 +1295,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QNUtils</a>
+        <a href=".." >QNHeightDeviceFunction</a>
     </h1>
 </div>
 
@@ -1310,40 +1310,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="decodesharedata">decodeShareData</h3>
-<p>Get shared scale measurement data</p>
-<p>The scan string after the measurement result of the shared scale is passed into this method to obtain the measurement result data</p>
-<h4 id="return-value">return value</h4>
-<p>Types of: <a href="QNShareData.html">QNShareData</a></p>
-<h4 id="parameters">Parameters</h4>
+                                <h1 id="qnheightdevicefunction">QNHeightDeviceFunction</h1>
+<p>Height scale function configuration class</p>
+<h2 id="properties">Properties:</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">name</th>
-<th style="text-align:left">Types of</th>
-<th style="text-align:left">Explanation</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Required</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">qnCode</td>
-<td style="text-align:left">String</td>
-<td style="text-align:left">URL</td>
+<td style="text-align:left">language</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Voice broadcast language type -1: no change 1: Chinese 2: English</td>
 </tr>
 <tr>
-<td style="text-align:left">user</td>
-<td style="text-align:left"><a href="QNUser.html">QNUser</a></td>
-<td style="text-align:left">User Info</td>
+<td style="text-align:left">weightUnit</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Weight unit -1: no change, 0: kg, 1: lb, 2: jin, 3: st:lb, 4: st</td>
 </tr>
 <tr>
-<td style="text-align:left">validTime</td>
-<td style="text-align:left">long</td>
-<td style="text-align:left">The QR code valid time, unit s, is always valid when set to 0. The set value cannot be negative</td>
+<td style="text-align:left">heightUnit</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Height unit -1: no change, 0: cm, 1: FT_IN</td>
 </tr>
 <tr>
-<td style="text-align:left">callback</td>
-<td style="text-align:left"><a href="QNResultCallback.html">QNResultCallback</a></td>
-<td style="text-align:left">Android is an interface, IOS uses block or closure) callback method, and returns the result of initialization. Refer to the attached table for error codes.</td>
+<td style="text-align:left">volume</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Volume -1: no change, 0: mute, 1: level 1 volume, 2: level 2 volume, 3: level 3 volume</td>
 </tr>
 </tbody>
 </table>
@@ -1374,12 +1376,12 @@
 
             
                 
-                <a href="QNShareData.html" class="navigation navigation-prev " aria-label="Previous page: QNShareData">
+                <a href="QNHeightDeviceConfig.html" class="navigation navigation-prev " aria-label="Previous page: QNHeightDeviceConfig">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QNBleProtocolHandler.html" class="navigation navigation-next " aria-label="Next page: QNBleProtocolHandler">
+                <a href="QNBleKitchenConfig.html" class="navigation navigation-next " aria-label="Next page: QNBleKitchenConfig">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1390,7 +1392,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNUtils","level":"1.5.24","depth":2,"next":{"title":"QNBleProtocolHandler","level":"1.5.25","depth":2,"path":"api/QNBleProtocolHandler.md","ref":"api/QNBleProtocolHandler.md","articles":[]},"previous":{"title":"QNShareData","level":"1.5.23","depth":2,"path":"api/QNShareData.md","ref":"api/QNShareData.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNUtils.md","mtime":"2025-08-26T01:54:55.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-22T08:46:00.224Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"QNHeightDeviceFunction","level":"1.5.13","depth":2,"next":{"title":"QNBleKitchenConfig","level":"1.5.14","depth":2,"path":"api/QNBleKitchenConfig.md","ref":"api/QNBleKitchenConfig.md","articles":[]},"previous":{"title":"QNHeightDeviceConfig","level":"1.5.12","depth":2,"path":"api/QNHeightDeviceConfig.md","ref":"api/QNHeightDeviceConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"api/QNHeightDeviceFunction.md","mtime":"2025-10-22T06:10:51.749Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-22T08:46:00.224Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
