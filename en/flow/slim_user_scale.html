@@ -1519,11 +1519,20 @@ self.bleApi.discoveryListener = self;
     // Device discovered callback
 }
 </code></pre><h2 id="3-start-bluetooth-scanning">3. Start Bluetooth Scanning</h2>
-<p>Ensure Bluetooth is enabled. For Android, also verify location permissions and services are enabled. Then start scanning with <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>.</p>
+<p>Then start scanning with <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>.</p>
+<p>Make sure that Bluetooth is turned on. On the Android side, you also need to check that the corresponding permissions have been authorized and the location service switch is turned on. Then you can start the Bluetooth scan
+If the targetSdk of your app is greater than 30 and the system version of your phone is Android 12 or above, the following permissions are required</p>
 <blockquote>
-<p>For Android 6.0+, Bluetooth scanning requires location permissions for targetSdkVersion&gt;=23 apps. Some devices may also require location services enabled.</p>
-<p>iOS 13+ requires Bluetooth usage permission. Verify authorization before scanning.</p>
+<p>android.permission.BLUETOOTH_ADVERTISE
+android.permission.BLUETOOTH_SCAN
+android.permission.BLUETOOTH_CONNECT</p>
+<p>Otherwise, it is required
+android.permission.BLUETOOTH
+android.permission.BLUETOOTH_ADMIN
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_FINE_LOCATION</p>
 </blockquote>
+<p>The iOS13 system has added Bluetooth usage permission. You need to check if you have the usage permission. After confirming that you are authorized and Bluetooth is turned on, start the scan</p>
 <p>Android Example:</p>
 <pre><code>QNBleApi.getInstance(context).startBleDeviceDiscovery(new QNResultCallback() {
     @Override
@@ -1791,7 +1800,7 @@ user.index = 0; // 0 for register, 1-8 for existing
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Slim User Scale","level":"1.4.5","depth":2,"next":{"title":"Bluetooth ruler","level":"1.4.6","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},"previous":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/slim_user_scale.md","mtime":"2025-11-06T09:29:19.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-06T09:30:14.869Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Slim User Scale","level":"1.4.5","depth":2,"next":{"title":"Bluetooth ruler","level":"1.4.6","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},"previous":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/slim_user_scale.md","mtime":"2025-11-07T10:22:32.443Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-07T10:24:05.322Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1803,6 +1812,10 @@ user.index = 0; // 0 for register, 1-8 for existing
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

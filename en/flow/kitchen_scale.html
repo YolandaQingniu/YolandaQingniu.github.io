@@ -1530,12 +1530,19 @@ bleApi.bleKitchenDataListener = self; //(BleKitchenScale exclusive)DataListener
 //Callback when starting scanning
 }
 </code></pre><h3 id="2-start-the-scan">2. Start the scan</h3>
-<p>Confirm that Bluetooth is turned on, and Android needs to check the <code>location permission</code> and<code>location switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
+<p>Make sure that Bluetooth is turned on. On the Android side, you also need to check that the corresponding permissions have been authorized and the location service switch is turned on. Then you can start the Bluetooth scan
+If the targetSdk of your app is greater than 30 and the system version of your phone is Android 12 or above, the following permissions are required</p>
 <blockquote>
-<p>After Android 6.0, targetSdkVersion&gt;= App above 23, you need to obtain positioning permission for Bluetooth scanning, please check <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
-The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.
-iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning</p>
+<p>android.permission.BLUETOOTH_ADVERTISE
+android.permission.BLUETOOTH_SCAN
+android.permission.BLUETOOTH_CONNECT</p>
+<p>Otherwise, it is required
+android.permission.BLUETOOTH
+android.permission.BLUETOOTH_ADMIN
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_FINE_LOCATION</p>
 </blockquote>
+<p>The iOS13 system has added Bluetooth usage permission. You need to check if you have the usage permission. After confirming that you are authorized and Bluetooth is turned on, start the scan</p>
 <p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-in-the-scanning-interface-set-above-<a href="../api/QNBleDeviceDiscoveryListener.html">qnbledevicediscoverylistener</a> Callback.</p>
 <p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, these options should be sufficient.</p>
 <blockquote>
@@ -1642,7 +1649,7 @@ For other problems, please refer to the code in the Demo first. If you have any 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2025-06-04T02:41:39.868Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-06T09:30:14.869Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Kitchen scale","level":"1.4.3","depth":2,"next":{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},"previous":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/kitchen_scale.md","mtime":"2025-11-07T10:20:09.510Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-07T10:24:05.322Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1654,6 +1661,10 @@ For other problems, please refer to the code in the Demo first. If you have any 
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

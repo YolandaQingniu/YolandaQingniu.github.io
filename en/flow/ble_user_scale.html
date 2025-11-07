@@ -1661,12 +1661,19 @@ bleApi.dataListener = self;
    //scale connection or measurement state change callback
 }
 </code></pre><h3 id="start-the-scan">Start the scan</h3>
-<p>After confirming that Bluetooth is turned on, the Android side also needs to check the <code>Location Permission</code> and <code>Location Switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
+<p>Make sure that Bluetooth is turned on. On the Android side, you also need to check that the corresponding permissions have been authorized and the location service switch is turned on. Then you can start the Bluetooth scan
+If the targetSdk of your app is greater than 30 and the system version of your phone is Android 12 or above, the following permissions are required</p>
 <blockquote>
-<p>After Android 6.0, for apps with targetSdkVersion&gt;=23 and above, Bluetooth scanning needs to obtain positioning permission. For details, see <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
-The location service switch is not mandatory, but some mobile phones do not turn on this switch and cannot scan the device, which is related to the mobile phone system of each company</p>
-<p>The iOS13 system has added Bluetooth access rights, you need to check whether you have access rights, and start scanning after confirming that it has been authorized and Bluetooth is turned on</p>
+<p>android.permission.BLUETOOTH_ADVERTISE
+android.permission.BLUETOOTH_SCAN
+android.permission.BLUETOOTH_CONNECT</p>
+<p>Otherwise, it is required
+android.permission.BLUETOOTH
+android.permission.BLUETOOTH_ADMIN
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_FINE_LOCATION</p>
 </blockquote>
+<p>The iOS13 system has added Bluetooth usage permission. You need to check if you have the usage permission. After confirming that you are authorized and Bluetooth is turned on, start the scan</p>
 <p>The scan method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>, and the scanned device data will be called back in the scan interface set above <a href="../api/QNBleDeviceDiscoveryListener.html">QNBleDeviceDiscoveryListener</a>.</p>
 <p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, and the content that needs to be set has been basically covered.</p>
 <blockquote>
@@ -1849,7 +1856,7 @@ android example:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.4","depth":2,"next":{"title":"Slim User Scale","level":"1.4.5","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2025-06-04T02:41:39.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-06T09:30:14.869Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.4","depth":2,"next":{"title":"Slim User Scale","level":"1.4.5","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2025-11-07T10:21:20.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-07T10:24:05.322Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1861,6 +1868,10 @@ android example:</p>
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
