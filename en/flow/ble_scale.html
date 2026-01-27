@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ble_scale_custom_connect.html" />
+    <link rel="next" href="eight_electrode_scale.html" />
     
     
 
@@ -161,7 +161,52 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="ble_scale_custom_connect.html">
+        <li class="chapter " data-level="1.4.2" data-path="eight_electrode_scale.html">
+            
+                <a href="eight_electrode_scale.html">
+            
+                    
+                    Eight electrode scale
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="eight_electrode_scale_ios.html">
+            
+                <a href="eight_electrode_scale_ios.html">
+            
+                    
+                    iOS Integration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="eight_electrode_scale_android.html">
+            
+                <a href="eight_electrode_scale_android.html">
+            
+                    
+                    Android Integration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ble_scale_custom_connect.html">
             
                 <a href="ble_scale_custom_connect.html">
             
@@ -174,7 +219,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="kitchen_scale.html">
+        <li class="chapter " data-level="1.4.4" data-path="kitchen_scale.html">
             
                 <a href="kitchen_scale.html">
             
@@ -187,7 +232,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="ble_user_scale.html">
+        <li class="chapter " data-level="1.4.5" data-path="ble_user_scale.html">
             
                 <a href="ble_user_scale.html">
             
@@ -200,7 +245,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="slim_user_scale.html">
+        <li class="chapter " data-level="1.4.6" data-path="slim_user_scale.html">
             
                 <a href="slim_user_scale.html">
             
@@ -213,7 +258,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="ble_ruler.html">
+        <li class="chapter " data-level="1.4.7" data-path="ble_ruler.html">
             
                 <a href="ble_ruler.html">
             
@@ -226,7 +271,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="ble_weightHeight.html">
+        <li class="chapter " data-level="1.4.8" data-path="ble_weightHeight.html">
             
                 <a href="ble_weightHeight.html">
             
@@ -1529,12 +1574,19 @@ bleApi.discoveryListener = self;
 //Callback when starting scanning
 }
 </code></pre><h3 id="2-start-the-scan">2. Start the scan</h3>
-<p>Confirm that Bluetooth is turned on, and Android needs to check the <code>location permission</code> and<code>location switch</code>. If you confirm that Bluetooth is turned on, the location permission is authorized, and the location service switch is turned on, you can start Bluetooth scanning</p>
+<p>Make sure that Bluetooth is turned on. On the Android side, you also need to check that the corresponding permissions have been authorized and the location service switch is turned on. Then you can start the Bluetooth scan
+If the targetSdk of your app is greater than 30 and the system version of your phone is Android 12 or above, the following permissions are required</p>
 <blockquote>
-<p>After Android 6.0, targetSdkVersion&gt;= 23 App above, you need to obtain positioning permission for Bluetooth scanning, please check <a href="https://developer.android.com/guide/topics/connectivity/bluetooth-le" target="_blank">About</a>
-The location service switch is not mandatory, but some phones do not turn on this switch, and the device cannot be scanned, which is related to each mobile phone system.</p>
-<p>iOS13 system has added Bluetooth usage permission, you need to check whether there is usage permission, confirm that authorized and Bluetooth is turned on, start scanning</p>
+<p>android.permission.BLUETOOTH_ADVERTISE
+android.permission.BLUETOOTH_SCAN
+android.permission.BLUETOOTH_CONNECT</p>
+<p>Otherwise, it is required
+android.permission.BLUETOOTH
+android.permission.BLUETOOTH_ADMIN
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_FINE_LOCATION</p>
 </blockquote>
+<p>The iOS13 system has added Bluetooth usage permission. You need to check if you have the usage permission. After confirming that you are authorized and Bluetooth is turned on, start the scan</p>
 <p>The scanning method is <a href="../api/QNBleApi.html#startbledevicediscovery">QNBleApi.startBleDeviceDiscovery</a>,-the-scanned-device-data-will-be-called-back-in-the-<a href="../api/QNBleDeviceDiscoveryListener.html">qnbledevicediscoverylistener</a> in the scanning interface set above.</p>
 <p>In addition, some feature settings related to scanning can be set in <a href="../api/QNConfig.html">QNConfig</a>, and the content to be set has been basically covered.</p>
 <blockquote>
@@ -1743,7 +1795,7 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
             
                 
                 
-                <a href="ble_scale_custom_connect.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Common Bluetooth Scale-Self-managed Bluetooth">
+                <a href="eight_electrode_scale.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Eight electrode scale">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1754,7 +1806,7 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"next":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"work process","level":"1.4","depth":1,"ref":"","articles":[{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.2","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},{"title":"Kitchen scale","level":"1.4.3","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},{"title":"User Scale","level":"1.4.4","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},{"title":"Slim User Scale","level":"1.4.5","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},{"title":"Bluetooth ruler","level":"1.4.6","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},{"title":"Weight Height scale","level":"1.4.7","depth":2,"path":"flow/ble_weightHeight.md","ref":"flow/ble_weightHeight.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale.md","mtime":"2025-08-26T01:54:55.209Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-11-07T10:24:05.322Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"next":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"previous":{"title":"work process","level":"1.4","depth":1,"ref":"","articles":[{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},{"title":"Eight electrode scale","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},{"title":"Kitchen scale","level":"1.4.4","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},{"title":"User Scale","level":"1.4.5","depth":2,"path":"flow/ble_user_scale.md","ref":"flow/ble_user_scale.md","articles":[]},{"title":"Slim User Scale","level":"1.4.6","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},{"title":"Bluetooth ruler","level":"1.4.7","depth":2,"path":"flow/ble_ruler.md","ref":"flow/ble_ruler.md","articles":[]},{"title":"Weight Height scale","level":"1.4.8","depth":2,"path":"flow/ble_weightHeight.md","ref":"flow/ble_weightHeight.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_scale.md","mtime":"2026-01-27T04:37:52.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-27T13:09:36.891Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1766,10 +1818,6 @@ The method to stop Bluetooth scanning is: <a href="../api/QNBleApi.html#stopbled
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

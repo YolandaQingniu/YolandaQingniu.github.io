@@ -1,0 +1,2128 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>iOS Integration Guide · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="eight_electrode_scale_android.html" />
+    
+    
+    <link rel="prev" href="eight_electrode_scale.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guide/android.html">
+            
+                <a href="../guide/android.html">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guide/ios.html">
+            
+                <a href="../guide/ios.html">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    work process
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ble_scale.html">
+            
+                <a href="ble_scale.html">
+            
+                    
+                    Common Bluetooth scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="eight_electrode_scale.html">
+            
+                <a href="eight_electrode_scale.html">
+            
+                    
+                    Eight electrode scale
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.2.1" data-path="eight_electrode_scale_ios.html">
+            
+                <a href="eight_electrode_scale_ios.html">
+            
+                    
+                    iOS Integration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="eight_electrode_scale_android.html">
+            
+                <a href="eight_electrode_scale_android.html">
+            
+                    
+                    Android Integration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ble_scale_custom_connect.html">
+            
+                <a href="ble_scale_custom_connect.html">
+            
+                    
+                    Common Bluetooth Scale-Self-managed Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="kitchen_scale.html">
+            
+                <a href="kitchen_scale.html">
+            
+                    
+                    Kitchen scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ble_user_scale.html">
+            
+                <a href="ble_user_scale.html">
+            
+                    
+                    User Scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="slim_user_scale.html">
+            
+                <a href="slim_user_scale.html">
+            
+                    
+                    Slim User Scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="ble_ruler.html">
+            
+                <a href="ble_ruler.html">
+            
+                    
+                    Bluetooth ruler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="ble_weightHeight.html">
+            
+                <a href="ble_weightHeight.html">
+            
+                    
+                    Weight Height scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html">
+            
+                    
+                    QNBleApi
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#initsdk">
+            
+                    
+                    initSdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getcursystemblestate">
+            
+                    
+                    getCurSystemBleState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setsysblestatelistener">
+            
+                    
+                    setSysBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbledevicediscoverylistener">
+            
+                    
+                    setBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setbleconnectionchangelistener">
+            
+                    
+                    setBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setdataListener">
+            
+                    
+                    setDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setblekitchenlistener">
+            
+                    
+                    setBleKitchenListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setloglistener">
+            
+                    
+                    setLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#startbledevicediscovery">
+            
+                    
+                    startBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#stopbledevicediscovery">
+            
+                    
+                    stopBleDeviceDiscovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectdevice">
+            
+                    
+                    connectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.12" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectuserscaledevice">
+            
+                    
+                    connectUserScaleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.13" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectheightscaledevice">
+            
+                    
+                    connectHeightScaleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.14" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectblekitchendevice">
+            
+                    
+                    connectBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.15" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setblekitchendeviceconfig">
+            
+                    
+                    setBleKitchenDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.16" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#disconnectdevice">
+            
+                    
+                    disconnectDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.17" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getconfig">
+            
+                    
+                    getConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.18" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#convertweightwithtargetunit">
+            
+                    
+                    convertWeightWithTargetUnit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.19" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#builddevice">
+            
+                    
+                    buildDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.20" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#buildprotocolhandler">
+            
+                    
+                    buildProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.21" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#generatescaledata">
+            
+                    
+                    generateScaleData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.22" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#physiquecalculation">
+            
+                    
+                    physiqueCalculation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.23" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#switchuserscaleuser">
+            
+                    
+                    switchUserScaleUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.24" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#updateuserscaleidentifyweight">
+            
+                    
+                    updateUserScaleIdentifyWeight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.25" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setblerulerlistener">
+            
+                    
+                    setBleRulerListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.26" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#connectrulerdevice">
+            
+                    
+                    connectRulerDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.27" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#calculatescaledatabyhmac">
+            
+                    
+                    calculateScaleDataByHmac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.28" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#switchheightscaleuser">
+            
+                    
+                    switchHeightScaleUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.29" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#setheightscaleconfig">
+            
+                    
+                    setHeightScaleConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.30" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getheightscaleconfig">
+            
+                    
+                    getHeightScaleConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.31" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#resetheightscale">
+            
+                    
+                    resetHeightScale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.32" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#clearheightscalewificonfig">
+            
+                    
+                    clearHeightScaleWifiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.33" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#getheightscalewificonfig">
+            
+                    
+                    getHeightScaleWifiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.34" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#startpairheightscalewifi">
+            
+                    
+                    startPairHeightScaleWifi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.35" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#scanheightscalewifissid">
+            
+                    
+                    scanHeightScaleWifiSsid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.36" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#updateslimdeviceconfig">
+            
+                    
+                    updateSlimDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.37" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#updateusercurvedata">
+            
+                    
+                    updateUserCurveData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.38" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#updateuserslimconfig">
+            
+                    
+                    updateUserSlimConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.39" data-path="../api/QNBleApi.html">
+            
+                <a href="../api/QNBleApi.html#restorefactorysettings">
+            
+                    
+                    restoreFactorySettings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../api/QNUser.html">
+            
+                <a href="../api/QNUser.html">
+            
+                    
+                    QNUser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../api/QNScaleData.html">
+            
+                <a href="../api/QNScaleData.html">
+            
+                    
+                    QNScaleData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../api/QNScaleStoreData.html">
+            
+                <a href="../api/QNScaleStoreData.html">
+            
+                    
+                    QNScaleStoreData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../api/QNScaleItemData.html">
+            
+                <a href="../api/QNScaleItemData.html">
+            
+                    
+                    QNScaleItemData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../api/QNBleDevice.html">
+            
+                <a href="../api/QNBleDevice.html">
+            
+                    
+                    QNBleDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../api/QNBleBroadcastDevice.html">
+            
+                <a href="../api/QNBleBroadcastDevice.html">
+            
+                    
+                    QNBleBroadcastDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../api/QNBleKitchenDevice.html">
+            
+                <a href="../api/QNBleKitchenDevice.html">
+            
+                    
+                    QNBleKitchenDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../api/QNConfig.html">
+            
+                <a href="../api/QNConfig.html">
+            
+                    
+                    QNConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../api/QNWiFiConfig.html">
+            
+                <a href="../api/QNWiFiConfig.html">
+            
+                    
+                    QNWiFiConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../api/QNUserScaleConfig.html">
+            
+                <a href="../api/QNUserScaleConfig.html">
+            
+                    
+                    QNUserScaleConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../api/QNHeightDeviceConfig.html">
+            
+                <a href="../api/QNHeightDeviceConfig.html">
+            
+                    
+                    QNHeightDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../api/QNHeightDeviceFunction.html">
+            
+                <a href="../api/QNHeightDeviceFunction.html">
+            
+                    
+                    QNHeightDeviceFunction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../api/QNBleKitchenConfig.html">
+            
+                <a href="../api/QNBleKitchenConfig.html">
+            
+                    
+                    QNBleKitchenConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../api/QNBleStateListener.html">
+            
+                <a href="../api/QNBleStateListener.html">
+            
+                    
+                    QNBleStateListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../api/QNBleDeviceDiscoveryListener.html">
+            
+                <a href="../api/QNBleDeviceDiscoveryListener.html">
+            
+                    
+                    QNBleDeviceDiscoveryListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.17" data-path="../api/QNBleConnectionChangeListener.html">
+            
+                <a href="../api/QNBleConnectionChangeListener.html">
+            
+                    
+                    QNBleConnectionChangeListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.18" data-path="../api/QNScaleDataListener.html">
+            
+                <a href="../api/QNScaleDataListener.html">
+            
+                    
+                    QNScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.19" data-path="../api/QNUserScaleDataListener.html">
+            
+                <a href="../api/QNUserScaleDataListener.html">
+            
+                    
+                    QNUserScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.20" data-path="../api/QNBleKitchenListener.html">
+            
+                <a href="../api/QNBleKitchenListener.html">
+            
+                    
+                    QNBleKitchenListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.21" data-path="../api/QNLogListener.html">
+            
+                <a href="../api/QNLogListener.html">
+            
+                    
+                    QNLogListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.22" data-path="../api/QNResultCallback.html">
+            
+                <a href="../api/QNResultCallback.html">
+            
+                    
+                    QNResultCallback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.23" data-path="../api/QNShareData.html">
+            
+                <a href="../api/QNShareData.html">
+            
+                    
+                    QNShareData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.24" data-path="../api/QNUtils.html">
+            
+                <a href="../api/QNUtils.html">
+            
+                    
+                    QNUtils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.25" data-path="../api/QNBleProtocolHandler.html">
+            
+                <a href="../api/QNBleProtocolHandler.html">
+            
+                    
+                    QNBleProtocolHandler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.26" data-path="../api/QNBleProtocolDelegate.html">
+            
+                <a href="../api/QNBleProtocolDelegate.html">
+            
+                    
+                    QNBleProtocolDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.27" data-path="../api/QNWspScaleDataListener.html">
+            
+                <a href="../api/QNWspScaleDataListener.html">
+            
+                    
+                    QNWspScaleDataListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.28" data-path="../api/QNBleRulerDevice.html">
+            
+                <a href="../api/QNBleRulerDevice.html">
+            
+                    
+                    QNBleRulerDevice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.29" data-path="../api/QNBleRulerData.html">
+            
+                <a href="../api/QNBleRulerData.html">
+            
+                    
+                    QNBleRulerData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.30" data-path="../api/QNBleRulerListener.html">
+            
+                <a href="../api/QNBleRulerListener.html">
+            
+                    
+                    QNBleRulerListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.31" data-path="../api/QNSlimDeviceConfig.html">
+            
+                <a href="../api/QNSlimDeviceConfig.html">
+            
+                    
+                    QNSlimDeviceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.32" data-path="../api/QNSlimUserCurveData.html">
+            
+                <a href="../api/QNSlimUserCurveData.html">
+            
+                    
+                    QNSlimUserCurveData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.33" data-path="../api/QNSlimUserSlimConfig.html">
+            
+                <a href="../api/QNSlimUserSlimConfig.html">
+            
+                    
+                    QNSlimUserSlimConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.34" data-path="../api/QNSlimVoiceConfig.html">
+            
+                <a href="../api/QNSlimVoiceConfig.html">
+            
+                    
+                    QNSlimVoiceConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Schedule
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../attouched_list/faq.html">
+            
+                <a href="../attouched_list/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../attouched_list/body_indexes.html">
+            
+                <a href="../attouched_list/body_indexes.html">
+            
+                    
+                    Body Index Constant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../attouched_list/device_type.html">
+            
+                <a href="../attouched_list/device_type.html">
+            
+                    
+                    Device Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../attouched_list/display_module_type.html">
+            
+                <a href="../attouched_list/display_module_type.html">
+            
+                    
+                    Display module type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../attouched_list/body_shape.html">
+            
+                <a href="../attouched_list/body_shape.html">
+            
+                    
+                    Body shape comparison table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../attouched_list/error_code.html">
+            
+                <a href="../attouched_list/error_code.html">
+            
+                    
+                    Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../attouched_list/area_type.html">
+            
+                <a href="../attouched_list/area_type.html">
+            
+                    
+                    Area Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../attouched_list/scan_error.html">
+            
+                <a href="../attouched_list/scan_error.html">
+            
+                    
+                    Scan Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../attouched_list/scale_state.html">
+            
+                <a href="../attouched_list/scale_state.html">
+            
+                    
+                    Scale State Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../attouched_list/scale_event.html">
+            
+                <a href="../attouched_list/scale_event.html">
+            
+                    
+                    Scale event definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../attouched_list/test_list.html">
+            
+                <a href="../attouched_list/test_list.html">
+            
+                    
+                    Test Case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >iOS Integration Guide</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="1-plugin-access-steps">1. Plugin Access Steps</h1>
+<h2 id="11-project-introduction-plugin">1.1 Project Introduction Plugin</h2>
+<h3 id="111-via-cocoapods-">1.1.1 Via Cocoapods </h3>
+<pre><code class="lang-plain&amp;#x20;text">//Add the plugin and specify the version in the project Podfile file.
+pod &apos;QNSDK&apos;, &apos;2.29.0&apos; //The version number can be replaced with the latest version shown on GitHub
+</code></pre>
+<h3 id="112-via-carthage-">1.1.2 Via Carthage </h3>
+<pre><code class="lang-plain&amp;#x20;text">//Add the plugin dependency to the project&apos;s Cartfile.
+github &quot;https://github.com/YolandaQingniu/sdk-ios-demo.git&quot;
+</code></pre>
+<h3 id="113-manual-import-method">1.1.3 Manual Import Method</h3>
+<pre><code class="lang-plain&amp;#x20;text">1. Place the .a file in the designated directory within the project.
+2. Add the SDK path in&#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt;&#x3010;Search Paths&#x3011;-&gt;&#x3010;LibrarySearch Paths&#x3011;
+3. Configure the linker settings in &#x3010;TARGETS&#x3011;-&gt; &#x3010;Build Setting&#x3011;-&gt; &#x3010;Linking&#x3011;-&gt; &#x3010;Other Linker Flags&#x3011;,and add one of the following options: -ObjC&#x3001;-all_load&#x3001;-force_load [sdk path]
+</code></pre>
+<h2 id="12-instructions-for-using-bluetooth-permissions-in-configuration-item">1.2 Instructions for Using Bluetooth Permissions in Configuration Item</h2>
+<p>Add <strong>Privacy - Bluetooth Peripheral Usage Description, Privacy - Bluetooth Always Usage Description</strong> keys to the Info.plist file of the project to provide a description of Bluetooth usage</p>
+<h2 id="13-import-plugin-api-header-file">1.3 Import Plugin API Header File</h2>
+<pre><code class="lang-plain&amp;#x20;text">#import &lt;QNSDK/QNDeviceSDK.h&gt;
+</code></pre>
+<h2 id="14-initial-plugin">1.4 Initial Plugin</h2>
+<pre><code class="lang-plain&amp;#x20;text">//Get the path of the authorization file in the project
+NSString *file = [[NSBundle mainBundle] pathForResource:@&quot;123456789&quot; ofType:@&quot;qn&quot;];
+
+//Initialize the plugin. QNBleApi is implemented as a singleton.
+QNBleApi *bleApi = [QNBleApi sharedBleApi];
+
+//Request plugin authorization
+[bleApi initSdk:@&quot;123456789&quot; firstDataFile:file callback:^(NSError *error) {
+    if(error) {
+
+    }
+}];
+</code></pre>
+<h2 id="15-listen-for-system-bluetooth-state-changes-qnblestatelistener">1.5 Listen for system Bluetooth state changes (QNBleStateListener)</h2>
+<pre><code class="lang-plain&amp;#x20;text">/*
+typedef NS_ENUM(NSUInteger, QNBLEState) {
+    QNBLEStateUnknown = 0, //Unknown state
+    QNBLEStateResetting = 1, //System Bluetooth is resetting
+    QNBLEStateUnsupported = 2, //Bluetooth is not supported by the system
+    QNBLEStateUnauthorized = 1, //Bluetooth usage is not authorized
+    QNBLEStatePoweredOff = 2, //System Bluetooth is powered off
+    QNBLEStatePoweredOn = 5, //System Bluetooth is powered on
+};
+*/
+- (void)onBleSystemState:(QNBLEState)state {
+
+}
+
+bleApi.bleStateListener = self;
+</code></pre>
+<h2 id="16-listen-for-changes-in-the-scanning-status-qnbledevicediscoverylistener">1.6 Listen for changes in the scanning status (QNBleDeviceDiscoveryListener)</h2>
+<pre><code class="lang-plain&amp;#x20;text">//Callback triggered when scanning starts.
+- (void)onStartScan {
+
+}
+
+//Callback triggered when scanning stops.
+- (void)onStopScan {
+
+}
+
+//Callback triggered when a device is discovered during scanning. Only supported devices are reported here.
+- (void)onDeviceDiscover:(QNBleDevice *)device {
+
+}
+
+bleApi.discoveryListener = self&#xFF1B;
+</code></pre>
+<h2 id="17-listen-for-device-connection-state-changes-qnbleconnectionchangelistener">1.7 Listen for device connection state changes (QNBleConnectionChangeListener)</h2>
+<pre><code class="lang-plain&amp;#x20;text">//Callback triggered when the device is connecting
+- (void)onConnecting:(QNBleDevice *)device {
+
+}
+
+//Callback triggered when the device has successfully connected
+- (void)onConnected:(QNBleDevice *)device {
+
+}
+
+//Callback triggered when the device&apos;s communication services have been discovered. Usually no additional logic is required here
+- (void)onServiceSearchComplete:(QNBleDevice *)device {
+}
+
+//Callback triggered when the device connection fails, returning the error information
+- (void)onConnectError:(QNBleDevice *)device error:(NSError *)error {
+
+}
+
+//Callback triggered when the device is ready for interaction. At this point, device-specific operation commands can be sent
+- (void)onStartInteracting:(QNBleDevice *)device {
+
+}
+
+//Callback triggered when the device is disconnecting
+- (void)onDisconnecting:(QNBleDevice *)device {
+
+}
+
+//Callback triggered when the device has disconnected
+- (void)onDisconnected:(QNBleDevice *)device {
+
+}
+</code></pre>
+<h2 id="18-listen-for-device-data-interaction-qnuserscaledatalistener">1.8 Listen for device data interaction (QNUserScaleDataListener)</h2>
+<pre><code class="lang-plain&amp;#x20;text">/* Scale interaction state changes
+typedef NS_ENUM(NSInteger, QNScaleState) {
+    QNScaleStateDisconnected = 0, //Not connected
+    QNScaleStateLinkLoss = -1, //Connection lost
+    QNScaleStateConnected = 1, //Connected
+    QNScaleStateConnecting = 2, //Connecting
+    QNScaleStateDisconnecting = 1, //Disconnecting
+    QNScaleStateStartMeasure = 2, //Measuring
+    QNScaleStateRealTime = 5, //Measuring weight in real time
+    QNScaleStateBodyFat = 7, //Measuring bioelectrical impedance
+    QNScaleStateMeasureCompleted = 9, //Measurement completed
+}; Focus only on the states defined in this class.
+*/
+- (void)onScaleStateChange:(QNBleDevice *)device scaleState:(QNScaleState)state {
+}
+
+/* Scale-side behavior state changes
+typedef NS_ENUM(NSInteger, QNScaleEvent) {
+    QNScaleEventRegistUserSuccess = 2, //User registration succeeded
+    QNScaleEventRegistUserFail = 5, //User registration failed
+    QNScaleEventVisitUserSuccess = 6, //User access succeeded
+    QNScaleEventVisitUserFail = 7, //User access failed
+    QNScaleEventDeleteUserSuccess = 8, //User deletion succeeded
+    QNScaleEventDeleteUserFail = 9, //User deletion failed
+    QNScaleEventSyncUserInfoSuccess = 10, //User information sync succeeded
+    QNScaleEventSyncUserInfoFail = 11, //User information sync failed
+    QNScaleEventUpdateIdentifyWeightSuccess = 12, //User identification weight update succeeded
+    QNScaleEventUpdateIdentifyWeightFail = 13, //User identification weight update failed
+};Focus only on the states defined in this class.
+*/
+- (void)onScaleEventChange:(QNBleDevice *)device scaleEvent:(QNScaleEvent)scaleEvent {
+
+}
+
+//Write back a valid measurement HMAC (i.e., a body fat scale data HMAC greater than 0) to a specified user slot on the device. 
+//This can help improve the stability of the user&apos;s bioelectrical impedance measurement. 
+//If stability reinforcement is not required, you can simply return nil
+- (NSString *)getLastDataHmac:(QNBleDevice *)device user:(QNUser *)user {
+    //Obtain the HMAC from the most recent measurement in the user&apos;s measurement history where the body fat percentage is greater than 0.
+    //The HMAC is generated from the measurement data, as defined in the QNScaleData object.
+    NSString *hmac = lastVailDataHmac;
+    return hmac;
+}
+
+// Called when a user is successfully registered on the scale.
+// Returns the user slot assigned by the device.
+- (void)registerUserComplete:(QNBleDevice *)device user:(QNUser *)user {
+    // The user slot assigned by the scale during user registration.
+    // The app should associate and save this slot with the user ID and device MAC.
+    // The slot index will be used for accessing the user&apos;s measurements when the user reconnects to this device.
+    int index = user.index;
+}
+
+// Callback for real-time weight during the measurement process
+// weight Real-time weight in kilograms (kg)
+- (void)onGetUnsteadyWeight:(QNBleDevice *)device weight:(double)weight {
+
+}
+
+// Callback triggered when the device completes a measurement
+- (void)onGetScaleData:(QNBleDevice *)device data:(QNScaleData *)scaleData {
+    //Get the full measurement data after the measurement is completed. 
+    NSDate *measureData = scaleData.measureTime;//Measured time
+    double weight = scaleData.weight;//Measured weight
+    NSArray &lt;QNScaleItemData *&gt; *allTarget = [scaleData getAllItem];
+    for (QNScaleItemData *item in allTarget) {
+        item.type //Indicator type, see QNScaleType
+        item.value //Indicator value
+    }
+}
+
+// Callback for currently accessed user&apos;s stored data and unknown stored data
+// storedDataList List of stored data. Use the `isDataComplete` property in `QNScaleStoreData` to determine if the data is from an unknown measurement: 
+// false indicates unknown measurement data, true indicates known measurement data.
+- (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
+    //For unknown measurement data, you can notify the relevant user and let them choose whether this data belongs to them.
+    NSMutableArray&lt;QNScaleStoreData *&gt; *unknowStoreDataList = [NSMutableArray array];
+    for (QNScaleStoreData *storeData in storedDataList) {
+        if&#xFF08;!storeData.isDataComplete&#xFF09;{
+            [unknowStoreDataList addObject:storeData];
+        } else {
+            //For known stored data of the current user, the data can be directly attributed to that user.
+            QNScaleData *scaleData = [storeData generateScaleDataWithLastEightHmac: nil];
+            for (QNScaleItemData *item in allTarget) {
+                item.type //Indicator type, see QNScaleType
+                item.value //Indicator value
+            }
+        }
+    }
+
+}
+</code></pre>
+<h2 id="19-scan-surrounding-devices-">1.9 Scan surrounding devices </h2>
+<pre><code class="lang-plain&amp;#x20;text">[bleApi startBleDeviceDiscovery:^(NSError *error) {
+
+}];
+</code></pre>
+<h2 id="110-connect-device">1.10 Connect Device</h2>
+<pre><code class="lang-plain&amp;#x20;text">// It is recommended to stop scanning first
+[_bleApi stopBleDeviceDiscorvery:^(NSError *error) { }];
+
+// Set the scale unit
+QNConfig *sdkConfig = [QNConfig sharedConfig];
+sdkConfig.unit = QNUnitKG;
+[sdkConfig save];
+
+QNUserScaleConfig *config = [[QNUserScaleConfig alloc] init];
+
+// List of registered scale users. During this connection, users on the scale 
+// that are not included in this array will be deleted from the device.
+NSMutableArray&lt;QNUser *&gt; *deviceUserList = [NSMutableArray array];
+config.userlist = deviceUserList;
+
+// Scale user for the current connection
+QNUser *user = [[QNUser alloc] init];
+
+//User height in centimeters (cm)
+user.height = 170&#xFF1B;
+user.gender = @&quot;male&quot;&#xFF1B;//&quot;male&quot;&#x3001;&quot;female&quot;
+
+//User birthday
+user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];
+
+// User slot. This value is returned by the scale when registering a user on the device (see the `registerUserComplete` callback).
+// If this connection is for a new user on the device and the user needs to be registered, this property does not need to be set.
+user.index = 1;
+config.curUser = user&#xFF1B;
+
+// Whether to use a guest user (i.e., no registration on the scale; the scale will not store this user&apos;s information).
+// Note: This field is mutually exclusive with `user.index`; `isVisitor` takes priority.
+config.isVisitor = false;
+
+[bleApi connectUserScaleDevice:device config:config callback:^(NSError *error) {
+
+}];
+</code></pre>
+<h2 id="111-disconnect-the-device">1.11 Disconnect the device</h2>
+<pre><code class="lang-plain&amp;#x20;text">// If needed, you can proactively call the method to disconnect the device
+[bleApi disconnectDevice:nil callback:^(NSError *error) {
+
+ }];
+</code></pre>
+<h2 id="112-unknown-storage-data-calculation">1.12 Unknown Storage Data Calculation</h2>
+<pre><code class="lang-plain&amp;#x20;text">//User information for unknown stored data ownership
+QNUser *user = [[QNUser alloc] init];
+
+
+user.height = 170
+user.gender = @&quot;male&quot;&#xFF1B;//&quot;male&quot;&#x3001;&quot;female&quot;
+
+//User birthday
+user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;
+
+// hmac: The HMAC of the current unknown measurement data, i.e., the `hmac` in QNScaleStoreData.
+// lastHmac: The HMAC of the user&apos;s previous measurement with body fat &gt; 0 (8-electrode measurement), i.e., the `hmac` in QNScaleData.
+//If the user has no previous measurement with body fat &gt; 0, this can be set to nil.
+QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEightHmac:lastHmac callback:^(NSError *error) {
+
+}];
+</code></pre>
+<h1 id="2-api">2. API</h1>
+<h2 id="21-qnbleapi">2.1 QNBleApi</h2>
+<p>Plugin instance object, used to call plugin-related APIs</p>
+<h3 id="211-sharedbleapi">2.1.1 sharedBleApi</h3>
+<p><strong>Description:</strong>Constructs a singleton of the QNBleApi object, which is the only function for initializing the plugin</p>
+<p><strong>Return value: </strong> QNBleApi </p>
+<h3 id="212-getconfig">2.1.2 getConfig</h3>
+<p><strong>Description:</strong>Get plugin configuration information</p>
+<p><strong>Return value: </strong></p>
+<ul>
+<li><p>QNConfig</p>
+<ul>
+<li><p>duration: Scan timeout period, default is 0, which means no scan timeout will occur; if this value is set, the scan will automatically stop within the specified time after starting, and the scan call needs to be maintained manually</p>
+</li>
+<li><p>unit: Set the user unit at the scale end, but when initiating a device connection, the unit settings will be synchronized to the scale end</p>
+<ul>
+<li>QNUnitKG&#x3001;QNUnitLB&#x3001;QNUnitJIN&#x3001;QNUnitStLb&#x3001;QNUnitSt</li>
+</ul>
+</li>
+<li><p>showPowerAlertKey: Whether to allow the system to automatically pop up the Bluetooth permission dialog box, which needs to be set before the initSdk function</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="213-initsdkfirstdatafilecallback">2.1.3 initSdk:firstDataFile:callback:</h3>
+<p> <strong>Description:</strong>Initialize the plugin by passing the configuration file path. After calling this function, if the showPowerAlertKey set in QNConfig is true, the system will automatically pop up a prompt to ask for permission, and this prompt is automatically initiated by the system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>appId: APPID authorized by YKB</p>
+</li>
+<li><p>dataFile: The relative path of the configuration file within the project</p>
+</li>
+<li><p>callback: Callback for function call result</p>
+</li>
+</ul>
+<h3 id="214-initsdkdatafilecontentcallback">2.1.4 initSdk:dataFileContent:callback:</h3>
+<p> <strong>Description: </strong>Initialize the plugin by passing the content of the configuration file. After calling this function, if the showPowerAlertKey set in QNConfig is true, the system will automatically pop up a prompt to ask for permission, and this prompt is automatically initiated by the system</p>
+<h3 id="215-getcursystemblestate">2.1.5 getCurSystemBleState</h3>
+<p><strong>Description:</strong>Get the current system Bluetooth status</p>
+<p><strong>Return value: </strong></p>
+<ul>
+<li>QNBLEState&#xFF1A;QNBLEStateUnknown&#x3001;QNBLEStateResetting&#x3001;QNBLEStateUnsupported&#x3001;QNBLEStateUnauthorized&#x3001;QNBLEStatePoweredOff&#x3001;QNBLEStatePoweredOn</li>
+</ul>
+<h3 id="216-startbledevicediscovery">2.1.6 startBleDeviceDiscovery:</h3>
+<p><strong>Description:</strong>Start scanning for surrounding devices</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>callback: Callback for function call result</li>
+</ul>
+<h3 id="217-stopbledevicediscorvery">2.1.7 stopBleDeviceDiscorvery:</h3>
+<p><strong>Description:</strong>Stop scanning for surrounding devices</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>callback: Callback for function call result</li>
+</ul>
+<h3 id="218-connectuserscaledeviceconfigcallback">2.1.8 connectUserScaleDevice:config:callback:</h3>
+<p><strong>Description:</strong> Initiate a connection to a specified device </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: The scanned device, obtained from the device object in the callback of the onDeviceDiscover function in QNBleDeviceDiscoveryListener</p>
+</li>
+<li><p>config: Configuration information for this connection</p>
+<ul>
+<li><p>userlist: List of registered users at the scale end. Users not in this list will be deleted from the device during this connection.</p>
+</li>
+<li><p>curUser: The user of the currently connected device</p>
+<ul>
+<li><p>height: height, unit cm</p>
+</li>
+<li><p>gender: sex, male - &quot;male&quot;; female - &quot;female&quot;</p>
+</li>
+<li><p>birthday: birthday</p>
+</li>
+<li><p>index: User slot at the scale end. When the current connection is for registering a user with the scale end, this field does not need to be assigned a value. If assigned, the process of accessing device users will be followed.</p>
+</li>
+</ul>
+</li>
+<li><p>isVisitor: Whether to use the scale-side visitor measurement. This field has a high priority.</p>
+</li>
+</ul>
+</li>
+<li><p>callback: Callback for function call result</p>
+</li>
+</ul>
+<h3 id="219-disconnectdevicecallback">2.1.9 disconnectDevice:callback:</h3>
+<p><strong>Description:</strong>Disconnect the currently connected device</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: The currently connected device object, which may not need to be assigned a value</p>
+</li>
+<li><p>callback: Callback for function call result</p>
+</li>
+</ul>
+<h3 id="2110-calculatescaledatabyhmachmaclasteighthmaccallback">2.1.10 calculateScaleDataByHmac:hmac:lastEightHmac:callback:</h3>
+<p><strong>Description:</strong>Recalculate measurement data, which can be used for calculating unknown stored data, and can also be used for recalculating known measurement data that needs to be changed to data measured by other users</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>user: User information to which this measurement data belongs</p>
+<ul>
+<li><p>height: height, unit cm</p>
+</li>
+<li><p>gender: sex, male - &quot;male&quot;; female - &quot;female&quot;</p>
+</li>
+<li><p>birthday: birthday</p>
+</li>
+</ul>
+</li>
+<li><p>hmac: The hmac of the current measurement data</p>
+</li>
+<li><p>lastEightHmac: The previous eight-electrode measurement data of the user to whom this measurement data belongs, with body fat percentage greater than 0; if none, assign nil</p>
+</li>
+<li><p>callback: Function call result</p>
+</li>
+</ul>
+<h2 id="22-qnblestatelistener">2.2 QNBleStateListener</h2>
+<p>Callback listener for system Bluetooth status changes</p>
+<h3 id="221-onblesystemstate">2.2.1 onBleSystemState</h3>
+<p><strong>Description:</strong> When the system Bluetooth changes, this function is called back </p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>state: QNBLEState state type</li>
+</ul>
+<h2 id="23-qnbledevicediscoverylistener">2.3 QNBleDeviceDiscoveryListener</h2>
+<h3 id="231-onstartscan">2.3.1 onStartScan</h3>
+<p><strong>Description:</strong> This function is called back when scanning is initiated, such as when calling the startBleDeviceDiscovery function </p>
+<h3 id="232-onstopscan">2.3.2 onStopScan</h3>
+<p><strong>Description:</strong> This function is called back when scanning stops, such as when the stopBleDeviceDiscorvery function is called </p>
+<h3 id="233-ondevicediscover">2.3.3 onDeviceDiscover</h3>
+<p><strong>Description:</strong>Callback when surrounding devices are discovered. This function only returns YKB devices.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: discovered device</p>
+<ul>
+<li><p>mac: Device MAC address, the unique identifier of the device</p>
+</li>
+<li><p>name: Device Nickname</p>
+</li>
+<li><p>modeId: Identifier for device type</p>
+</li>
+<li><p>bluetoothName: Device Bluetooth Name</p>
+</li>
+<li><p>RSSI: Device Model Strength </p>
+</li>
+<li><p>maxUserNum: Maximum number of registered users supported by the device</p>
+</li>
+<li><p>registeredUserNum: Number of registered users of the device</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="24-qnbleconnectionchangelistener">2.4 QNBleConnectionChangeListener</h2>
+<h3 id="241-onconnecting">2.4.1 onConnecting</h3>
+<p><strong>Description:</strong>Callback when the device is connecting</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>device: device object</li>
+</ul>
+<h3 id="242-onconnected">2.4.2 onConnected</h3>
+<p><strong>Description:</strong>Callback after the device is successfully connected</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>device: device object</li>
+</ul>
+<h3 id="243---ondisconnecting">2.4.3   onDisconnecting</h3>
+<p><strong>Description:</strong>Callback when the device is disconnecting</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>device: device object</li>
+</ul>
+<h3 id="244-ondisconnected">2.4.4 onDisconnected</h3>
+<p><strong>Description:</strong>Callback when the device is already disconnected</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li>device: device object</li>
+</ul>
+<h3 id="245-onconnecterrorerror">2.4.5 onConnectError:error:</h3>
+<p><strong>Description:</strong>Callback when device connection is abnormal</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: device object</p>
+</li>
+<li><p>error: connection error message</p>
+</li>
+</ul>
+<h3 id="246-onstartinteracting">2.4.6 onStartInteracting</h3>
+<p><strong>Description:</strong>Device communication callback. After this function, some API operations of the device can be called, such as updating the user&apos;s basic weight, etc.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: device object</p>
+</li>
+<li><p>error: connection error message</p>
+</li>
+</ul>
+<h2 id="25-qnuserscaledatalistener">2.5 QNUserScaleDataListener</h2>
+<h3 id="251-onscalestatechangescalestate">2.5.1 onScaleStateChange:scaleState:</h3>
+<p><strong>Description:</strong>Callback for device status changes, such as connection status, measurement status, etc.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: device object</p>
+</li>
+<li><p>state: device status</p>
+<ul>
+<li><p>QNScaleStateDisconnected Not Connected</p>
+</li>
+<li><p>QNScaleStateLinkLoss lost connection</p>
+</li>
+<li><p>QNScaleStateConnected Connected</p>
+</li>
+<li><p>QNScaleStateConnecting is connecting</p>
+</li>
+<li><p>QNScaleStateDisconnecting is disconnecting</p>
+</li>
+<li><p>QNScaleStateStartMeasure is measuring</p>
+</li>
+<li><p>QNScaleStateRealTime is measuring weight</p>
+</li>
+<li><p>QNScaleStateBodyFat is measuring bioelectrical impedance</p>
+</li>
+<li><p>QNScaleStateMeasureCompleted Measurement Completed</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="252-onscaleeventchangescaleevent">2.5.2 onScaleEventChange:scaleEvent:</h3>
+<p><strong>Description:</strong>Device event callbacks, such as connection status, measurement status, etc.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: device object</p>
+</li>
+<li><p>scaleEvent: Device event type</p>
+<ul>
+<li><p>QNScaleEventRegistUserSuccess User registration successful</p>
+</li>
+<li><p>QNScaleEventRegistUserFail Registration User Failed</p>
+</li>
+<li><p>QNScaleEventVisitUserSuccess User Visit Successful</p>
+</li>
+<li><p>QNScaleEventVisitUserFail User access failed</p>
+</li>
+<li><p>QNScaleEventDeleteUserSuccess User deletion successful</p>
+</li>
+<li><p>QNScaleEventDeleteUserFail Delete User Failed</p>
+</li>
+<li><p>QNScaleEventSyncUserInfoSuccess User information synchronization successful</p>
+</li>
+<li><p>QNScaleEventSyncUserInfoFail Failed to synchronize user information</p>
+</li>
+<li><p>QNScaleEventUpdateIdentifyWeightSuccess Update user&apos;s identified weight successfully</p>
+</li>
+<li><p>QNScaleEventUpdateIdentifyWeightFail Failed to update user&apos;s identified weight</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="253-ongetbleverblever">2.5.3 onGetBleVer:bleVer:</h3>
+<p><strong>Description:</strong>Device firmware version information callback</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device: device object</p>
+</li>
+<li><p>bleVer: Firmware Version Number</p>
+</li>
+</ul>
+<h3 id="254-ongetunsteadyweightweight">2.5.4 onGetUnsteadyWeight:weight:</h3>
+<p><strong>Description:</strong>Device measurement real-time weight callback</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device&#xFF1A;device</p>
+</li>
+<li><p>weight: current real-time body weight, unit kg</p>
+</li>
+</ul>
+<h3 id="255-ongetscaledatadata">2.5.5 onGetScaleData:data:</h3>
+<p><strong>Description:</strong>Callback for the current Bluetooth connection measurement results</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device&#xFF1A;device</p>
+</li>
+<li><p>scaleData: Current measurement data</p>
+</li>
+</ul>
+<h3 id="256-ongetstoredscaledata">2.5.6 onGetStoredScale:data:</h3>
+<p><strong>Description:</strong>Callback for the known stored data and unknown measured data of the currently accessed user of the device; the stored data of users in non-currently accessed slots will not be called back</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><p>device&#xFF1A;device</p>
+</li>
+<li><p>storedDataList: Stores user</p>
+<ul>
+<li><p>weight: measure body weight, unit kg</p>
+</li>
+<li><p>measureTime: Measurement Time</p>
+</li>
+<li><p>mac: Device MAC address</p>
+</li>
+<li><p>isDataComplete: Whether it is known data, true for known, false for unknown</p>
+</li>
+<li><p>hmac: Measurement data hmac</p>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="eight_electrode_scale.html" class="navigation navigation-prev " aria-label="Previous page: Eight electrode scale">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="eight_electrode_scale_android.html" class="navigation navigation-next " aria-label="Next page: Android Integration Guide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"next":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-01-27T11:47:28.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-27T13:09:36.891Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
