@@ -1461,6 +1461,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.13" data-path="../attouched_list/eight_exception_tip.html">
+            
+                <a href="../attouched_list/eight_exception_tip.html">
+            
+                    
+                    八电极异常测量提示
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1557,6 +1570,21 @@
 <td style="text-align:center">barCode</td>
 <td style="text-align:center">String</td>
 <td style="text-align:center">&#x6761;&#x5F62;&#x7801;&#x6570;&#x636E;(&#x53EA;&#x6709;&#x643A;&#x5E26;&#x626B;&#x7801;&#x67AA;&#x7684;&#x8EAB;&#x9AD8;&#x79E4;&#x6709;&#x503C;)</td>
+</tr>
+<tr>
+<td style="text-align:center">newEightModel</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">&#xFF08;&#x516B;&#x7535;&#x6781;&#x7528;&#x6237;&#x79E4;&#x4E13;&#x5C5E;&#xFF09;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x65B9;&#x6848; 0-&#x9ED8;&#x8BA4;&#x65B9;&#x6848;&#x3001;1-&#x65B0;&#x65B9;&#x6848;</td>
+</tr>
+<tr>
+<td style="text-align:center">eightIsAbnormal</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">&#xFF08;&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x4E13;&#x5C5E;&#xFF09;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x662F;&#x5426;&#x5F02;&#x5E38;&#xFF0C;0-&#x6B63;&#x5E38;&#xFF1B;1-&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:center">eightReasonMask</td>
+<td style="text-align:center">int</td>
+<td style="text-align:center">&#xFF08;&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x4E13;&#x5C5E;&#xFF09;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x5F02;&#x5E38;&#x539F;&#x56E0;&#xFF0C;0-&#x6B63;&#x5E38;&#xFF1B;1-&#x624B;&#x90E8;&#x5F02;&#x5E38;&#xFF1B;2-&#x817F;&#x90E8;&#x5F02;&#x5E38;&#xFF1B;3-&#x624B;&#x811A;&#x5747;&#x5F02;&#x5E38;</td>
 </tr>
 </tbody>
 </table>
@@ -1686,7 +1714,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.5.3","depth":2,"next":{"title":"QNScaleStoreData","level":"1.5.4","depth":2,"path":"api/QNScaleStoreData.md","ref":"api/QNScaleStoreData.md","articles":[]},"previous":{"title":"QNUser","level":"1.5.2","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNScaleData.md","mtime":"2026-07-02T07:08:53.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-02T07:36:52.621Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"QNScaleData","level":"1.5.3","depth":2,"next":{"title":"QNScaleStoreData","level":"1.5.4","depth":2,"path":"api/QNScaleStoreData.md","ref":"api/QNScaleStoreData.md","articles":[]},"previous":{"title":"QNUser","level":"1.5.2","depth":2,"path":"api/QNUser.md","ref":"api/QNUser.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"api/QNScaleData.md","mtime":"2026-07-09T08:05:09.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-09T08:06:18.508Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

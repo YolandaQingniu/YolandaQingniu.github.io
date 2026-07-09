@@ -1461,6 +1461,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.13" data-path="../attouched_list/eight_exception_tip.html">
+            
+                <a href="../attouched_list/eight_exception_tip.html">
+            
+                    
+                    八电极异常测量提示
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1517,6 +1530,9 @@
 <pre><code class="lang-plain&amp;#x20;text">//&#x5728;&#x9879;&#x76EE;Podfile&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x589E;&#x52A0;&#x63D2;&#x4EF6;&#x53CA;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;&#x5F15;&#x5165;
 pod &apos;QNSDK&apos;, &apos;2.29.0&apos; //&#x6B64;&#x5904;&#x7248;&#x672C;&#x53F7;&#x53EF;&#x6839;&#x636E;github&#x4E2D;&#x663E;&#x793A;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x8FDB;&#x884C;&#x5F15;&#x5165;
 </code></pre>
+<blockquote>
+<p>GIthub&#x5730;&#x5740;&#xFF1A;<strong><a href="https://github.com/YolandaQingniu/sdk-ios-demo" target="_blank">sdk-ios-demo</a></strong></p>
+</blockquote>
 <h3 id="112-&#x901A;&#x8FC7;carthage&#x65B9;&#x5F0F;">1.1.2 &#x901A;&#x8FC7;carthage&#x65B9;&#x5F0F;</h3>
 <pre><code class="lang-plain&amp;#x20;text">//&#x5728;&#x9879;&#x76EE;Cartfile&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x589E;&#x52A0;&#x63D2;&#x4EF6;&#x5F15;&#x5165;
 github &quot;https://github.com/YolandaQingniu/sdk-ios-demo.git&quot;
@@ -1529,14 +1545,14 @@ github &quot;https://github.com/YolandaQingniu/sdk-ios-demo.git&quot;
 <h2 id="12-&#x914D;&#x7F6E;&#x9879;&#x76EE;&#x84DD;&#x7259;&#x6743;&#x9650;&#x4F7F;&#x7528;&#x8BF4;&#x660E;">1.2 &#x914D;&#x7F6E;&#x9879;&#x76EE;&#x84DD;&#x7259;&#x6743;&#x9650;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h2>
 <p>&#x5728;&#x9879;&#x76EE;&#x7684;Info.plist&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x589E;&#x52A0; <strong>Privacy - Bluetooth Peripheral Usage Description&#x3001;Privacy - Bluetooth Always Usage Description</strong> &#x952E;&#xFF0C;&#x8FDB;&#x884C;&#x84DD;&#x7259;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</p>
 <h2 id="13-&#x5BFC;&#x5165;&#x63D2;&#x4EF6;api&#x5934;&#x6587;&#x4EF6;">1.3 &#x5BFC;&#x5165;&#x63D2;&#x4EF6;API&#x5934;&#x6587;&#x4EF6;</h2>
-<pre><code class="lang-plain&amp;#x20;text">#import &lt;QNSDK/QNDeviceSDK.h&gt;
+<pre><code class="lang-objective-c">#import &lt;QNSDK/QNDeviceSDK.h&gt;
 </code></pre>
 <h2 id="14-&#x521D;&#x59CB;&#x63D2;&#x4EF6;">1.4 &#x521D;&#x59CB;&#x63D2;&#x4EF6;</h2>
-<pre><code class="lang-plain&amp;#x20;text">//&#x83B7;&#x53D6;&#x9879;&#x76EE;&#x4E2D;&#x6388;&#x6743;&#x6587;&#x4EF6;&#x5730;&#x5740;
+<pre><code class="lang-objective-c">//&#x83B7;&#x53D6;&#x9879;&#x76EE;&#x4E2D;&#x6388;&#x6743;&#x6587;&#x4EF6;&#x5730;&#x5740;&#xFF08;&#x5165;&#x53C2;&#x4E3A;qn&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x548C;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#xFF09;
 NSString *file = [[NSBundle mainBundle] pathForResource:@&quot;123456789&quot; ofType:@&quot;qn&quot;];
 //&#x5B9E;&#x4F8B;&#x5316;&#x63D2;&#x4EF6;, QNBleApi&#x4E3A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;
 QNBleApi *bleApi = [QNBleApi sharedBleApi];
-//&#x83B7;&#x53D6;&#x63D2;&#x4EF6;&#x6388;&#x6743;
+//&#x83B7;&#x53D6;&#x63D2;&#x4EF6;&#x6388;&#x6743;&#xFF08;&#x5165;&#x53C2;&#x4E3A;appid&#x548C;qn&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF09;
 [bleApi initSdk:@&quot;123456789&quot; firstDataFile:file callback:^(NSError *error) {
     if(error) {
        //&#x76D1;&#x542C;&#x5F02;&#x5E38;&#x56DE;&#x8C03;
@@ -1544,7 +1560,10 @@ QNBleApi *bleApi = [QNBleApi sharedBleApi];
 }];
 </code></pre>
 <h2 id="15-&#x76D1;&#x542C;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x53D8;&#x5316;qnblestatelistener">1.5 &#x76D1;&#x542C;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x53D8;&#x5316;(QNBleStateListener)</h2>
-<pre><code class="lang-plain&amp;#x20;text">/*
+<pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x72B6;&#x6001;&#xFF09;
+bleApi.bleStateListener = self;
+
+/*
 typedef NS_ENUM(NSUInteger, QNBLEState) {
     QNBLEStateUnknown = 0, //&#x672A;&#x77E5;&#x72B6;&#x6001;
     QNBLEStateResetting = 1, //&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x6B63;&#x5728;&#x91CD;&#x7F6E;
@@ -1557,11 +1576,26 @@ typedef NS_ENUM(NSUInteger, QNBLEState) {
 - (void)onBleSystemState:(QNBLEState)state {
 
 }
-
-bleApi.bleStateListener = self;
 </code></pre>
-<h2 id="16-&#x76D1;&#x542C;&#x626B;&#x63CF;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;qnbledevicediscoverylistener">1.6 &#x76D1;&#x542C;&#x626B;&#x63CF;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;(QNBleDeviceDiscoveryListener)</h2>
-<pre><code class="lang-plain&amp;#x20;text">//&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65F6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;
+<h2 id="16-&#x76D1;&#x542C;sdk&#x65E5;&#x5FD7;&#xFF08;qnlogprotocol&#xFF09;">1.6 &#x76D1;&#x542C;SDK&#x65E5;&#x5FD7;&#xFF08;QNLogProtocol&#xFF09;</h2>
+<pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;SDK&#x65E5;&#x5FD7;&#xFF09;
+bleApi.logListener = self;
+
+- (void)onLog:(nonnull NSString *)log { 
+    //SDK&#x8F93;&#x51FA;&#x7684;&#x65E5;&#x5FD7;&#x4F1A;&#x5728;&#x6B64;&#x5904;&#x8FD4;&#x56DE;
+}
+</code></pre>
+<h1 id="2-&#x5F00;&#x542F;&#x84DD;&#x7259;&#x626B;&#x63CF;&#xFF0C;&#x62FF;&#x5230;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;">2. &#x5F00;&#x542F;&#x84DD;&#x7259;&#x626B;&#x63CF;&#xFF0C;&#x62FF;&#x5230;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</h1>
+<h2 id="21-&#x5F00;&#x542F;&#x84DD;&#x7259;&#x626B;&#x63CF;">2.1 &#x5F00;&#x542F;&#x84DD;&#x7259;&#x626B;&#x63CF;</h2>
+<pre><code class="lang-objective-c">[bleApi startBleDeviceDiscovery:^(NSError *error) {
+
+}];
+</code></pre>
+<h2 id="22-&#x76D1;&#x542C;&#x626B;&#x63CF;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;qnbledevicediscoverylistener">2.2 &#x76D1;&#x542C;&#x626B;&#x63CF;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;(QNBleDeviceDiscoveryListener)</h2>
+<pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;&#x626B;&#x63CF;&#x8BBE;&#x5907;&#xFF09;
+bleApi.discoveryListener = self;
+
+//&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65F6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;
 - (void)onStartScan {
 
 }
@@ -1573,13 +1607,88 @@ bleApi.bleStateListener = self;
 
 //&#x5F53;&#x542F;&#x52A8;&#x626B;&#x63CF;&#xFF0C;&#x626B;&#x63CF;&#x5230;&#x8BBE;&#x5907;&#x65F6;&#x4F1A;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;&#x3002;&#x6B64;&#x5904;&#x4EC5;&#x56DE;&#x8C03;&#x6240;&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;
 - (void)onDeviceDiscover:(QNBleDevice *)device {
-
+    //&#x540E;&#x7EED;&#x8C03;&#x7528;SDK&#x53D1;&#x8D77;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;&#x8BE5;device
 }
-
-bleApi.discoveryListener = self&#xFF1B;
 </code></pre>
-<h2 id="17-&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;qnbleconnectionchangelistener">1.7 &#x76D1;&#x542C;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;(QNBleConnectionChangeListener)</h2>
-<pre><code class="lang-plain&amp;#x20;text">//&#x8BBE;&#x5907;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x4E2D;&#x56DE;&#x8C03;
+<h1 id="3-&#x8FDE;&#x63A5;&#x8BBE;&#x5907;">3. &#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h1>
+<h2 id="31-&#x5F00;&#x59CB;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;">3.1 &#x5F00;&#x59CB;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h2>
+<pre><code class="lang-objective-c">//&#x5EFA;&#x8BAE;&#x5148;&#x505C;&#x6B62;&#x626B;&#x63CF;
+[_bleApi stopBleDeviceDiscorvery:^(NSError *error) { }];
+
+//&#x8BBE;&#x7F6E;&#x79E4;&#x7AEF;&#x5355;&#x4F4D;
+QNConfig *sdkConfig = [QNConfig sharedConfig];
+sdkConfig.unit = QNUnitKG;
+[sdkConfig save];
+
+//&#x5F00;&#x59CB;&#x8FDE;&#x63A5;&#x79E4;&#x8BBE;&#x5907;
+/*
+device:&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x5373;&#x626B;&#x63CF;&#x8BBE;&#x5907;&#x76D1;&#x542C;&#x65B9;&#x6CD5;onDeviceDiscover&#x8FD4;&#x56DE;&#x7684;(QNBleDevice *)device
+config:&#x8FDE;&#x63A5;&#x7528;&#x6237;&#x79E4;&#x8BBE;&#x5907;&#x65F6;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x793A;&#x4F8B;
+*/
+[bleApi connectUserScaleDevice:device config:config callback:^(NSError *error) {
+
+}];
+
+//config&#x53C2;&#x6570;&#x793A;&#x4F8B;&#xFF1A;
+QNUserScaleConfig *config = [[QNUserScaleConfig alloc] init];
+
+//&#x6B64;&#x6B21;&#x6D4B;&#x91CF;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+QNUser *user = [[QNUser alloc] init];
+user.userId = &quot;&quot;;//&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4E2D;&#x7528;&#x6237;&#x533A;&#x5206;&#x5224;&#x65AD;
+user.height = 170&#xFF1B;//&#x7528;&#x6237;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm
+user.gender = @&quot;male&quot;&#xFF1B;//&#x7528;&#x6237;&#x6027;&#x522B;&#xFF0C;&quot;male&quot; &#x7537;&#x6027;&#xFF0C;&quot;female&quot; &#x5973;&#x6027;
+user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;&#xFF0C;&#x5165;&#x53C2;&#x662F;&#x79D2;&#x7EA7;&#x65F6;&#x95F4;&#x6233;
+user.hmac = lastValidEightScaleData; //&#x6CE8;&#x610F;&#xFF1A;&#x9700;&#x8981;&#x662F;&#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x4E00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;
+
+
+/*
+&#x6D4B;&#x91CF;&#x6A21;&#x5F0F;&#x4E00;&#x822C;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F; &#x548C; &#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x54EA;&#x4E00;&#x79CD;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8D35;&#x53F8;&#x7684;APP&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x51B3;&#x5B9A;
+*/
+//1. &#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;
+/*
+&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E34;&#x65F6;&#x7528;&#x79E4;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x53EA;&#x5728;&#x6B64;&#x6B21;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x8FC7;&#x7A0B;&#x4E2D;&#x751F;&#x6548;&#xFF0C;&#x79E4;&#x7AEF;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58;
+
+&#x6CE8;&#x610F;&#xFF1A;config.isVisitor&#x5B57;&#x6BB5;&#x4E0E;user.index&#x662F;&#x4E92;&#x65A5;&#x7684;&#xFF0C;isVisitor&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF0C;&#x5373;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;user.index&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#x5373;&#x53EF;&#xFF08;user.index&#x662F;&#x4E3A;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#x6240;&#x8BBE;&#x8BA1;&#x7684;&#x5B57;&#x6BB5;&#xFF09;
+*/
+config.isVisitor = YES; //&#x662F;&#x5426;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF1B;YES-&#x8BBF;&#x5BA2;&#xFF0C;NO-&#x975E;&#x8BBF;&#x5BA2;&#xFF0C;&#x5373;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF1B;
+config.curUser = user&#xFF1B;
+
+//2. &#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;
+//2.1 &#x6CE8;&#x518C;&#x7528;&#x6237;
+/*
+&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;
+
+&#x6CE8;&#x518C;&#x7528;&#x6237;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x6838;&#x5B9E;&#x4E00;&#x4E0B;&#x79E4;&#x8BBE;&#x5907;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x662F;&#x5426;&#x5DF2;&#x6EE1;&#xFF08;&#x79E4;&#x7AEF;&#x6700;&#x591A;&#x5B58;&#x50A8;8&#x4E2A;&#x7528;&#x6237;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;QNBleDevice&#x7684;registeredUserNum&#x8FDB;&#x884C;&#x5224;&#x65AD;
+
+&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;SDK&#x4F1A;&#x62FF;&#x5230;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;user.index&#xFF0C;&#x89C1;registerUserComplete&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;
+
+&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x5230;&#x79E4;&#x7AEF;&#x7684;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x6570;&#x636E;&#x548C;&#x7ED3;&#x679C;&#x6570;&#x636E;
+
+*/
+config.curUser = user&#xFF1B;
+
+//2.2&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x3010;&#x6CE8;&#x518C;&#x548C;&#x8BBF;&#x95EE;&#x662F;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x7684;&#x3011;
+/*
+&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#xFF08;&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x5DF2;&#x7ECF;&#x6709;&#x7684;&#x7528;&#x6237;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;user.index&#xFF0C;&#x7528;&#x4E8E;&#x79E4;&#x7AEF;&#x6821;&#x9A8C;&#xFF0C;&#x5982;&#x679C;&#x4E0E;&#x79E4;&#x7AEF;&#x5B58;&#x50A8;&#x7684;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x4F1A;&#x8BBF;&#x95EE;&#x5931;&#x8D25;
+
+&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x4F20;&#x5165;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x4F1A;&#x66F4;&#x65B0;&#x79E4;&#x7AEF;&#x4FDD;&#x5B58;&#x7684;&#x5BF9;&#x5E94;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x79E4;&#x7AEF;&#x9488;&#x5BF9;&#x8BE5;&#x7528;&#x6237;&#x4FDD;&#x5B58;&#x7684;&#x8EAB;&#x9AD8;&#x662F;170cm&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x6B21;&#x4F20;&#x5165;&#x7684;&#x65F6;171cm&#xFF0C;&#x90A3;&#x4E48;&#x79E4;&#x7AEF;&#x5C31;&#x4F1A;&#x66F4;&#x65B0;&#x4E3A;171cm
+
+&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x5230;&#x79E4;&#x7AEF;&#x7684;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x6570;&#x636E;&#x548C;&#x7ED3;&#x679C;&#x6570;&#x636E;
+*/
+user.index = 1; //&#x7528;&#x6237;&#x5751;&#x4F4D;&#xFF0C;&#x5373;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x7D22;&#x5F15;&#xFF0C;&#x6709;&#x6548;&#x8303;&#x56F4;[1,8],&#x4EE3;&#x8868;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x79E4;&#x7AEF;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7528;&#x6237;&#x3002;&#x8BE5;&#x503C;&#x7531;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#xFF0C;&#x89C1;registerUserComplete&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;
+config.curUser = user&#xFF1B;
+
+//2.3&#x5220;&#x9664;&#x7528;&#x6237;&#x3010;SDK&#x4F1A;&#x5148;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6216;&#x8005;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x3011;
+//&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x5728;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x5411;&#x79E4;&#x7AEF;&#x5220;&#x9664;&#x8BE5;&#x6570;&#x7EC4;&#x4E0D;&#x5305;&#x542B;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;
+NSMutableArray&lt;QNUser *&gt; *registeredUserList = [NSMutableArray array];
+config.userlist = registeredUserList;
+</code></pre>
+<h2 id="32-&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;qnbleconnectionchangelistener">3.2 &#x76D1;&#x542C;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;(QNBleConnectionChangeListener)</h2>
+<pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;&#xFF09;
+bleApi.connectionChangeListener = self;
+
+
+//&#x8BBE;&#x5907;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x4E2D;&#x56DE;&#x8C03;
 - (void)onConnecting:(QNBleDevice *)device {
 
 }
@@ -1613,8 +1722,18 @@ bleApi.discoveryListener = self&#xFF1B;
 
 }
 </code></pre>
-<h2 id="18-&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x4EA4;&#x4E92;qnuserscaledatalistener">1.8 &#x76D1;&#x542C;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x4EA4;&#x4E92;(QNUserScaleDataListener)</h2>
-<pre><code class="lang-plain&amp;#x20;text">/* &#x79E4;&#x7AEF;&#x4EA4;&#x4E92;&#x8FC7;&#x7A0B;&#x72B6;&#x6001;&#x53D8;&#x5316;
+<h1 id="4-&#x62FF;&#x5230;&#x8BBE;&#x5907;&#x6570;&#x636E;">4. &#x62FF;&#x5230;&#x8BBE;&#x5907;&#x6570;&#x636E;</h1>
+<h2 id="41-&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x4EA4;&#x4E92;qnscaledatalistener">4.1 &#x76D1;&#x542C;&#x8BBE;&#x5907;&#x6570;&#x636E;&#x4EA4;&#x4E92;(QNScaleDataListener)</h2>
+<pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;&#xFF09;
+bleApi.dataListener = self;
+
+//&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;&#xFF0C;&#x56DE;&#x8C03;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x7528;&#x6237;&#x5751;&#x4F4D;&#x3010;&#x9002;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x8BE5;&#x65B9;&#x6CD5;&#x3011;
+- (void)registerUserComplete:(QNBleDevice *)device user:(QNUser *)user {
+    //&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x5751;&#x4F4D;&#x3002;app&#x7AEF;&#x5E94;&#x5C06;&#x8BE5;&#x5751;&#x4F4D;&#x3001;&#x7528;&#x6237;id&#x3001;&#x8BBE;&#x5907;mac&#x8FDB;&#x884C;&#x5173;&#x8054;&#x4FDD;&#x5B58;&#x3002;&#x4E0B;&#x6B21;&#x8BE5;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x8BE5;&#x8BBE;&#x5907;&#x65F6;&#x9700;&#x7528;&#x5230;&#x8BE5;index&#x8FDB;&#x884C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6D4B;&#x91CF;
+    int index = user.index;
+}
+
+/* &#x79E4;&#x7AEF;&#x4EA4;&#x4E92;&#x8FC7;&#x7A0B;&#x72B6;&#x6001;&#x53D8;&#x5316;
 typedef NS_ENUM(NSInteger, QNScaleState) {
     QNScaleStateDisconnected = 0, //&#x672A;&#x8FDE;&#x63A5;
     QNScaleStateLinkLoss = -1, //&#x5931;&#x53BB;&#x8FDE;&#x63A5;
@@ -1648,19 +1767,6 @@ typedef NS_ENUM(NSInteger, QNScaleEvent) {
 
 }
 
-//&#x5411;&#x8BBE;&#x5907;&#x4E2D;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x5751;&#x4F4D;&#x53CD;&#x5199;&#x4E0A;&#x4E00;&#x7B14;&#x6709;&#x6548;&#x6D4B;&#x91CF;&#x6570;&#x636E;hmac(&#x6307;&#x4F53;&#x8102;&#x79E4;&#x5927;&#x4E8E;0&#x7684;&#x6570;&#x636E;hmac)&#x3002;&#x8BE5;&#x65B9;&#x5F0F;&#x6709;&#x52A9;&#x4E8E;&#x7528;&#x6237;&#x751F;&#x7269;&#x963B;&#x6297;&#x6D4B;&#x91CF;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x82E5;&#x65E0;&#x9700;&#x52A0;&#x5F3A;&#x7A33;&#x5B9A;&#x6027;&#x53EF;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;nil
-- (NSString *)getLastDataHmac:(QNBleDevice *)device user:(QNUser *)user {
-    //&#x4ECE;&#x7528;&#x6237;&#x6D4B;&#x91CF;&#x6D4B;&#x91CF;&#x5386;&#x53F2;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x6761;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x7684;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E2D;&#x7684;hmac&#x3002;hmac&#x7531;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4EA7;&#x751F;&#xFF0C;&#x89C1;QNScaleData&#x5BF9;&#x8C61;
-    NSString *hmac = lastVailDataHmac;
-    return hmac;
-}
-
-//&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;&#xFF0C;&#x56DE;&#x8C03;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x7528;&#x6237;&#x5751;&#x4F4D;
-- (void)registerUserComplete:(QNBleDevice *)device user:(QNUser *)user {
-    //&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x5751;&#x4F4D;&#x3002;app&#x7AEF;&#x5E94;&#x5C06;&#x8BE5;&#x5751;&#x4F4D;&#x3001;&#x7528;&#x6237;id&#x3001;&#x8BBE;&#x5907;mac&#x8FDB;&#x884C;&#x5173;&#x8054;&#x4FDD;&#x5B58;&#x3002;&#x4E0B;&#x6B21;&#x8BE5;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x8BE5;&#x8BBE;&#x5907;&#x65F6;&#x9700;&#x7528;&#x5230;&#x8BE5;index&#x8FDB;&#x884C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6D4B;&#x91CF;
-    int index = user.index;
-}
-
 
 /*
  &#x8BBE;&#x5907;&#x6D4B;&#x91CF;&#x8FC7;&#x7A0B;&#x5B9E;&#x65F6;&#x91CD;&#x91CF;&#x7684;&#x56DE;&#x8C03;
@@ -1675,392 +1781,99 @@ typedef NS_ENUM(NSInteger, QNScaleEvent) {
  @param scaleData &#x6D4B;&#x91CF;&#x6570;&#x636E;
 */
 - (void)onGetScaleData:(QNBleDevice *)device data:(QNScaleData *)scaleData {
-    //&#x6D4B;&#x91CF;&#x5B8C;&#x6210;&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x6D4B;&#x91CF;&#x6570;&#x636E;
+    //&#x6D4B;&#x91CF;&#x5B8C;&#x6210;&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x9488;&#x5BF9;&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#xFF0C;&#x9700;&#x5224;&#x65AD;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x662F;&#x5426;&#x5F02;&#x5E38;
+    if (scaleData.newEightModel == 1) { //&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;
+        //&#xFF08;&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x4E13;&#x5C5E;&#xFF09;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x662F;&#x5426;&#x5F02;&#x5E38;&#xFF0C;0-&#x6B63;&#x5E38;&#xFF1B;1-&#x5F02;&#x5E38;&#x3002;
+        if (scaleData.eightIsAbnormal == 1) {
+            //&#xFF08;&#x65B0;&#x65B9;&#x6848;&#x516B;&#x7535;&#x6781;&#x4E13;&#x5C5E;&#xFF09;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x5F02;&#x5E38;&#x539F;&#x56E0;&#xFF0C;0-&#x6B63;&#x5E38;&#xFF1B;1-&#x624B;&#x90E8;&#x5F02;&#x5E38;&#xFF1B;2-&#x817F;&#x90E8;&#x5F02;&#x5E38;&#xFF1B;3-&#x624B;&#x811A;&#x5747;&#x5F02;&#x5E38;&#x3002;
+            NSInteger reasonMask = scaleData.eightReasonMask;
+            //&#x6839;&#x636E;&#x5F02;&#x5E38;&#x539F;&#x56E0;&#xFF0C;&#x53EF;&#x63D0;&#x793A;&#x7528;&#x6237;&#x91CD;&#x65B0;&#x6D4B;&#x91CF;
+
+            return;
+        }
+    }
     NSDate *measureData = scaleData.measureTime;//&#x6D4B;&#x91CF;&#x65F6;&#x95F4;
     double weight = scaleData.weight;//&#x6D4B;&#x91CF;&#x4F53;&#x91CD;
     NSArray &lt;QNScaleItemData *&gt; *allTarget = [scaleData getAllItem];
     for (QNScaleItemData *item in allTarget) {
+        item.name //&#x6307;&#x6807;&#x540D;&#x5B57;
         item.type //&#x6307;&#x6807;&#x7C7B;&#x578B;&#xFF0C;&#x89C1;QNScaleType
-        item.value //&#x6307;&#x6807;&#x6570;&#x503C;
+        item.value //&#x6307;&#x6807;&#x6570;&#x503C;&#xFF0C;&#x6839;&#x636E;QNValueType&#x786E;&#x8BA4;&#x8BE5;value&#x7684;&#x7CBE;&#x786E;&#x5EA6;
     }
+      /*
+      &#x4E1A;&#x52A1;&#x5C42;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E8C;&#x6B21;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x662F;&#x5426;&#x6709;&#x6D4B;&#x5230;&#x4F53;&#x8102;
+      &#x6216;&#x8005;&#x4E0E;&#x7528;&#x6237;&#x7684;&#x4E0A;&#x4E00;&#x7B14;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x4F53;&#x91CD;/&#x4F53;&#x8102;&#x5BF9;&#x6BD4;&#xFF0C;&#x5DEE;&#x5F02;&#x5728;&#x67D0;&#x4E2A;&#x4E1A;&#x52A1;&#x9608;&#x503C;&#x5916;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x63D0;&#x793A;&#x7528;&#x6237;&#x91CD;&#x65B0;&#x6D4B;&#x91CF;
+
+      &#x5982;&#x679C;&#x6700;&#x7EC8;&#x9700;&#x5C06;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#xFF0C;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E0A;&#x9700;&#x8981;&#x989D;&#x5916;&#x4FDD;&#x5B58;QNScaleData&#x7C7B;&#x4E2D;&#x7684;hmac&#x4E0E;newEightModel&#x5B57;&#x6BB5;&#xFF0C;&#x7528;&#x4E8E;&#x4E0B;&#x6B21;&#x8FDE;&#x63A5;&#x6D4B;&#x91CF;&#x65F6;&#x7684;&#x5224;&#x65AD;&#x4E0E;&#x5165;&#x53C2;
+        */
 }
 
 
 /*
- &#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x53CA;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x56DE;&#x8C03;
- @param storedDataList &#x5B58;&#x50A8;&#x6570;&#x636E;&#x5217;&#x8868;&#xFF0C;&#x901A;&#x8FC7;QNScaleStoreData&#x5BF9;&#x8C61;&#x4E2D;&#x7684;isDataComplete&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;false&#x4E3A;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;true&#x4E3A;&#x5DF2;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;
+ &#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x53CA;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x56DE;&#x8C03;
+ @param storedDataList &#x5B58;&#x50A8;&#x6570;&#x636E;&#x5217;&#x8868;
 */
 - (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
-    //&#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;&#x7528;&#x6237;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x7684;
+    /*
+    &#x901A;&#x8FC7;QNScaleStoreData&#x5BF9;&#x8C61;&#x4E2D;&#x7684;isDataComplete&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;false&#x4E3A;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;true&#x4E3A;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF1B;
+    1. &#x9488;&#x5BF9;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x90FD;&#x662F;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;;
+    2. &#x9488;&#x5BF9;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF08;&#x5373;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF09;&#x548C;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;
+    3. &#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;APP&#x7528;&#x6237;&#x8FDB;&#x884C;&#x8BA4;&#x9886;&#xFF0C;&#x5373;&#x8BA9;APP&#x7528;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x7684;
+    4. &#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;
+        4.1 &#x8BBE;&#x7F6E;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x62E5;&#x6709;&#x8005;(&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x4E00;&#x6B65;) [storeData setUser:&lt;#(QNUser *)#&gt;];
+        4.2 &#x5C06;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;  [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]
+        &#x6CE8;&#x610F;&#xFF1A;lastValidEightHmac&#x662F;&#x6570;&#x636E;&#x62E5;&#x6709;&#x8005;&#x7684;&#x4E0A;&#x4E00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;
+    */
     NSMutableArray&lt;QNScaleStoreData *&gt; *unknowStoreDataList = [NSMutableArray array];
     for (QNScaleStoreData *storeData in storedDataList) {
         if&#xFF08;!storeData.isDataComplete&#xFF09;{
             [unknowStoreDataList addObject:storeData];
         } else {
-            //&#x5DF2;&#x77E5;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x53EF;&#x76F4;&#x63A5;&#x5F52;&#x5C5E;&#x5230;&#x8BE5;&#x7528;&#x6237;&#x4E0B;
-            QNScaleData *scaleData = [storeData generateScaleDataWithLastEightHmac: nil];
+            NSString *lastValidEightHmac = @&quot;xxxxxx&quot;;
+            QNScaleData *scaleData = [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac];
+            NSDate *measureData = scaleData.measureTime;//&#x6D4B;&#x91CF;&#x65F6;&#x95F4;
+            double weight = scaleData.weight;//&#x6D4B;&#x91CF;&#x4F53;&#x91CD;
+            NSArray &lt;QNScaleItemData *&gt; *allTarget = [scaleData getAllItem];
             for (QNScaleItemData *item in allTarget) {
+                item.name //&#x6307;&#x6807;&#x540D;&#x5B57;
                 item.type //&#x6307;&#x6807;&#x7C7B;&#x578B;&#xFF0C;&#x89C1;QNScaleType
-                item.value //&#x6307;&#x6807;&#x6570;&#x503C;
+                item.value //&#x6307;&#x6807;&#x6570;&#x503C;&#xFF0C;&#x6839;&#x636E;QNValueType&#x786E;&#x8BA4;&#x8BE5;value&#x7684;&#x7CBE;&#x786E;&#x5EA6;
             }
         }
     }
-
 }
 </code></pre>
-<h2 id="19-&#x626B;&#x63CF;&#x5468;&#x56F4;&#x8BBE;&#x5907;">1.9 &#x626B;&#x63CF;&#x5468;&#x56F4;&#x8BBE;&#x5907;</h2>
-<pre><code class="lang-plain&amp;#x20;text">[bleApi startBleDeviceDiscovery:^(NSError *error) {
-
-}];
-</code></pre>
-<h2 id="110-&#x8FDE;&#x63A5;&#x8BBE;&#x5907;">1.10 &#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h2>
-<pre><code class="lang-plain&amp;#x20;text">//&#x5EFA;&#x8BAE;&#x5148;&#x505C;&#x6B62;&#x626B;&#x63CF;
-[_bleApi stopBleDeviceDiscorvery:^(NSError *error) { }];
-
-//&#x8BBE;&#x7F6E;&#x79E4;&#x7AEF;&#x5355;&#x4F4D;
-QNConfig *sdkConfig = [QNConfig sharedConfig];
-sdkConfig.unit = QNUnitKG;
-[sdkConfig save];
-
-QNUserScaleConfig *config = [[QNUserScaleConfig alloc] init];
-//&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x5728;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x5411;&#x79E4;&#x7AEF;&#x5220;&#x9664;&#x8BE5;&#x6570;&#x7EC4;&#x4E0D;&#x5305;&#x542B;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;
-NSMutableArray&lt;QNUser *&gt; *deviceUserList = [NSMutableArray array];
-config.userlist = deviceUserList;
-//&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;
-QNUser *user = [[QNUser alloc] init];
-user.height = 170&#xFF1B;//&#x7528;&#x6237;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm
-user.gender = @&quot;male&quot;&#xFF1B;//&#x7528;&#x6237;&#x6027;&#x522B;&#xFF0C;&quot;male&quot; &#x7537;&#x6027;&#xFF0C;&quot;female&quot; &#x5973;&#x6027;
-user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;
-user.index = 1; //&#x7528;&#x6237;&#x5751;&#x4F4D;&#xFF0C;&#x8BE5;&#x503C;&#x7531;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#xFF0C;&#x89C1;registerUserComplete&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x82E5;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x4E3A;&#x8BE5;&#x8BBE;&#x5907;&#x65B0;&#x7528;&#x6237;&#x9700;&#x8981;&#x5411;&#x7528;&#x6237;&#x6CE8;&#x518C;&#xFF0C;&#x5219;&#x8BE5;&#x5C5E;&#x6027;&#x65E0;&#x9700;&#x586B;&#x5199;
-config.curUser = user&#xFF1B;
-//&#x662F;&#x5426;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;(&#x5373;&#x65E0;&#x9700;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#xFF0C;&#x79E4;&#x7AEF;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;), &#x6CE8;&#x610F;&#x8BE5;&#x5B57;&#x6BB5;&#x4E0E;user.index&#x4E2D;&#x4E92;&#x65A5;&#xFF0C;&#x4F18;&#x5148;&#x53D6;isVisitor
-config.isVisitor = false;
-
-[bleApi connectUserScaleDevice:device config:config callback:^(NSError *error) {
-
-}];
-</code></pre>
-<h2 id="111-&#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;">1.11 &#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;</h2>
+<h1 id="5-&#x4E3B;&#x52A8;&#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;">5. &#x4E3B;&#x52A8;&#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;</h1>
 <pre><code class="lang-plain&amp;#x20;text">//&#x82E5;&#x6709;&#x9700;&#x8981;&#xFF0C;&#x53EF;&#x4E3B;&#x52A8;&#x8C03;&#x7528;&#x65AD;&#x5F00;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5;
 [bleApi disconnectDevice:nil callback:^(NSError *error) {
 
  }];
 </code></pre>
-<h2 id="112-&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8BA1;&#x7B97;">1.12 &#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8BA1;&#x7B97;</h2>
-<pre><code class="lang-plain&amp;#x20;text">//&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5F52;&#x5C5E;&#x7528;&#x6237;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+<h1 id="6-&#x6570;&#x636E;&#x8BA1;&#x7B97;">6. &#x6570;&#x636E;&#x8BA1;&#x7B97;</h1>
+<h2 id="61-&#x91CD;&#x7B97;&#x6307;&#x6807;&#xFF0C;&#x4E5F;&#x9002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x751F;&#x6210;&#x6D4B;&#x91CF;&#x6570;&#x636E;">6.1 &#x91CD;&#x7B97;&#x6307;&#x6807;&#xFF0C;&#x4E5F;&#x9002;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x751F;&#x6210;&#x6D4B;&#x91CF;&#x6570;&#x636E;</h2>
+<pre><code class="lang-objective-c">/// &#x91CD;&#x7B97;&#x6570;&#x636E;&#x6307;&#x6807;
+/// @param user &#x91CD;&#x7B97;&#x6570;&#x636E;&#x6307;&#x6807;&#x7684;&#x76EE;&#x6807;&#x7528;&#x6237;
+/// @param hmac &#x91CD;&#x7B97;&#x6570;&#x636E;&#x7684;hmac
+/// @param lastEightHmac &#x4E0A;&#x6B21;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x62DF;&#x5408;&#x8981;&#x7528;
+/// @param callback &#x56DE;&#x8C03;
+- (QNScaleData *)calculateScaleDataByHmac:(QNUser *)user hmac:(NSString *)hmac lastEightHmac:(nullable NSString *)lastEightHmac callback:(QNResultCallback)callback;
+
+
+&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;
+//&#x76EE;&#x6807;&#x7528;&#x6237;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
 QNUser *user = [[QNUser alloc] init];
 user.height = 170&#xFF1B;//&#x7528;&#x6237;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm
 user.gender = @&quot;male&quot;&#xFF1B;//&#x7528;&#x6237;&#x6027;&#x522B;&#xFF0C;&quot;male&quot; &#x7537;&#x6027;&#xFF0C;&quot;female&quot; &#x5973;&#x6027;
-user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;
+user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;&#xFF0C;&#x4F20;&#x5165;&#x79D2;&#x7EA7;&#x65F6;&#x95F4;&#x6233;
 
-//hmac&#x4E3A;&#x672C;&#x6B21;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E2D;&#x7684;hmac&#xFF0C;&#x5373;QNScaleStoreData&#x4E2D;&#x7684;hmac
-//lastHmac&#x4E3A;&#x8BE5;&#x7528;&#x6237;&#x4E0A;&#x4E00;&#x7B14;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x516B;&#x7535;&#x6781;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x4E2D;&#x7684;hmac&#xFF0C;&#x5373;QNScaleData&#x4E2D;&#x7684;hmac&#x3002;&#x82E5;&#x7528;&#x6237;&#x65E0;&#x4E0A;&#x4E00;&#x7B14;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x516B;&#x7535;&#x6781;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5219;&#x53EF;&#x4F20;nil
-QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEightHmac:lastHmac callback:^(NSError *error) {
+//hmac&#x4E3A;&#x91CD;&#x7B97;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;hmac&#xFF08;&#x5BF9;&#x5E94;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x751F;&#x6210;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF08;&#x5BF9;&#x5E94;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#x6D4B;&#x91CF;&#x6570;&#x636E; &#x91CD;&#x7B97;&#x6307;&#x6807;&#xFF09;
 
+//lastValidEightHmac&#x4E3A;&#x76EE;&#x6807;&#x7528;&#x6237;&#x7684;&#x4E0A;&#x4E00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;
+
+QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEightHmac:lastValidEightHmac callback:^(NSError *error) {
+    //&#x5982;&#x679C;&#x5165;&#x53C2;&#x68C0;&#x9A8C;&#x4E0D;&#x901A;&#x8FC7;&#xFF0C;&#x6B64;&#x5904;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x800C;&#x6709;&#x5BF9;&#x5E94;&#x7684;SDK&#x65E5;&#x5FD7;&#x6253;&#x5370;     
 }];
 </code></pre>
-<h1 id="2-api">2. API</h1>
-<h2 id="21-qnbleapi">2.1 QNBleApi</h2>
-<p>&#x63D2;&#x4EF6;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x7528;&#x63D2;&#x4EF6;&#x76F8;&#x5173;API</p>
-<h3 id="211-sharedbleapi">2.1.1 sharedBleApi</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x6784;&#x5EFA;QNBleApi&#x5BF9;&#x8C61;&#x5355;&#x4F8B;&#xFF0C;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x63D2;&#x4EF6;&#x7684;&#x552F;&#x4E00;&#x51FD;&#x6570;</p>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong>QNBleApi</p>
-<h3 id="212-getconfig">2.1.2 getConfig</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x83B7;&#x53D6;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
-<ul>
-<li><p>QNConfig</p>
-<ul>
-<li><p>duration&#xFF1A;&#x626B;&#x63CF;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x4EE3;&#x8868;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x626B;&#x63CF;&#x8D85;&#x65F6;&#xFF1B;&#x82E5;&#x8BBE;&#x7F6E;&#x8BE5;&#x6307;&#x7AEF;&#xFF0C;&#x5728;&#x542F;&#x52A8;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x4F1A;&#x81EA;&#x52A8;&#x505C;&#x6B62;&#x626B;&#x63CF;&#xFF0C;&#x9700;&#x81EA;&#x884C;&#x7EF4;&#x62A4;&#x626B;&#x63CF;&#x7684;&#x8C03;&#x7528;</p>
-</li>
-<li><p>unit&#xFF1A;&#x8BBE;&#x7F6E;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5355;&#x4F4D;&#xFF0C;&#x4F46;&#x53D1;&#x8D77;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x540C;&#x6B65;&#x5355;&#x4F4D;&#x8BBE;&#x7F6E;&#x5230;&#x79E4;&#x7AEF;</p>
-<ul>
-<li>QNUnitKG&#x3001;QNUnitLB&#x3001;QNUnitJIN&#x3001;QNUnitStLb&#x3001;QNUnitSt</li>
-</ul>
-</li>
-<li><p>showPowerAlertKey&#xFF1A;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x5F39;&#x6846;&#x84DD;&#x7259;&#x6743;&#x9650;&#x5F39;&#x6846;&#xFF0C;&#x9700;&#x8981;&#x5728;initSdk&#x51FD;&#x6570;&#x524D;&#x8BBE;&#x7F6E;</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="213-initsdkfirstdatafilecallback">2.1.3 initSdk:firstDataFile:callback:</h3>
-<p> <strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x7684;&#x65B9;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x63D2;&#x4EF6;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x540E;&#xFF0C;&#x82E5;QNConfig&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;showPowerAlertKey&#x4E3A;true&#xFF0C;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x5F39;&#x51FA;&#x8BE2;&#x95EE;&#x6743;&#x9650;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x8BE5;&#x63D0;&#x793A;&#x7531;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x53D1;&#x8D77;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>appId: YKB&#x6388;&#x6743;&#x7684;APPID</p>
-</li>
-<li><p>dataFile&#xFF1A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</p>
-</li>
-<li><p>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</p>
-</li>
-</ul>
-<h3 id="214-initsdkdatafilecontentcallback">2.1.4 initSdk:dataFileContent:callback:</h3>
-<p> <strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x65B9;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x63D2;&#x4EF6;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#x540E;&#xFF0C;&#x82E5;QNConfig&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;showPowerAlertKey&#x4E3A;true&#xFF0C;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x5F39;&#x51FA;&#x8BE2;&#x95EE;&#x6743;&#x9650;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x8BE5;&#x63D0;&#x793A;&#x7531;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x53D1;&#x8D77;</p>
-<h3 id="215-getcursystemblestate">2.1.5 getCurSystemBleState</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x72B6;&#x6001;</p>
-<p><strong>&#x8FD4;&#x56DE;&#x503C;: </strong></p>
-<ul>
-<li>QNBLEState&#xFF1A;QNBLEStateUnknown&#x3001;QNBLEStateResetting&#x3001;QNBLEStateUnsupported&#x3001;QNBLEStateUnauthorized&#x3001;QNBLEStatePoweredOff&#x3001;QNBLEStatePoweredOn</li>
-</ul>
-<h3 id="216-startbledevicediscovery">2.1.6 startBleDeviceDiscovery:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x542F;&#x52A8;&#x626B;&#x63CF;&#x5468;&#x56F4;&#x8BBE;&#x5907;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</li>
-</ul>
-<h3 id="217-stopbledevicediscorvery">2.1.7 stopBleDeviceDiscorvery:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x505C;&#x6B62;&#x626B;&#x63CF;&#x5468;&#x56F4;&#x8BBE;&#x5907;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</li>
-</ul>
-<h3 id="218-connectuserscaledeviceconfigcallback">2.1.8 connectUserScaleDevice:config:callback:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x53D1;&#x8D77;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x626B;&#x63CF;&#x5230;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x53D6;&#x81EA;&#x4E8E;QNBleDeviceDiscoveryListener&#x4E2D;onDeviceDiscover&#x51FD;&#x6570;&#x56DE;&#x8C03;&#x7684;device&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>config&#xFF1A;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
-<ul>
-<li><p>userlist&#xFF1A;&#x79E4;&#x7AEF;&#x5DF2;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x672A;&#x5728;&#x8BE5;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5747;&#x4F1A;&#x5728;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x5411;&#x8BBE;&#x5907;&#x5220;&#x9664;</p>
-</li>
-<li><p>curUser&#xFF1A;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x7684;&#x7528;&#x6237;</p>
-<ul>
-<li><p>height&#xFF1A;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm</p>
-</li>
-<li><p>gender&#xFF1A;&#x6027;&#x522B;&#xFF0C;&#x7537;-&#x201C;male&#x201D;&#xFF1B;&#x5973;-&#x201C;female&#x201D;</p>
-</li>
-<li><p>birthday&#xFF1A;&#x751F;&#x65E5;</p>
-</li>
-<li><p>index&#xFF1A;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5751;&#x4F4D;&#xFF0C;&#x5F53;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x4E3A;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x65E0;&#x9700;&#x8D4B;&#x503C;&#x3002;&#x82E5;&#x8D4B;&#x503C;&#x5219;&#x8D70;&#x8BBF;&#x95EE;&#x8BBE;&#x5907;&#x7528;&#x6237;&#x6D41;&#x7A0B;</p>
-</li>
-</ul>
-</li>
-<li><p>isVisitor&#xFF1A;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x79E4;&#x7AEF;&#x8BBF;&#x5BA2;&#x6D4B;&#x91CF;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;</p>
-</li>
-</ul>
-</li>
-<li><p>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</p>
-</li>
-</ul>
-<h3 id="219-disconnectdevicecallback">2.1.9 disconnectDevice:callback:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x65AD;&#x5F00;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x7684;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4E0D;&#x8D4B;&#x503C;</p>
-</li>
-<li><p>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</p>
-</li>
-</ul>
-<h3 id="2110-calculatescaledatabyhmachmaclasteighthmaccallback">2.1.10 calculateScaleDataByHmac:hmac:lastEightHmac:callback:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x91CD;&#x7B97;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5BF9;&#x5DF2;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x9700;&#x8981;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x6D4B;&#x91CF;&#x7684;&#x6570;&#x636E;&#x91CD;&#x7B97;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>user&#xFF1A;&#x8BE5;&#x7B14;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5F52;&#x5C5E;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
-<ul>
-<li><p>height&#xFF1A;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm</p>
-</li>
-<li><p>gender&#xFF1A;&#x6027;&#x522B;&#xFF0C;&#x7537;-&#x201C;male&#x201D;&#xFF1B;&#x5973;-&#x201C;female&#x201D;</p>
-</li>
-<li><p>birthday&#xFF1A;&#x751F;&#x65E5;</p>
-</li>
-</ul>
-</li>
-<li><p>hmac&#xFF1A;&#x672C;&#x6B21;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac</p>
-</li>
-<li><p>lastEightHmac&#xFF1A;&#x8BE5;&#x7B14;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5F52;&#x5C5E;&#x7684;&#x7528;&#x6237;&#x7684;&#x4E0A;&#x4E00;&#x7B14;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x7684;&#x516B;&#x7535;&#x6781;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x82E5;&#x65E0;&#x5219;&#x8D4B;nil</p>
-</li>
-<li><p>callback&#xFF1A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED3;&#x679C;</p>
-</li>
-</ul>
-<h2 id="22-qnblestatelistener">2.2 QNBleStateListener</h2>
-<p>&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x7684;&#x56DE;&#x8C03;&#x76D1;&#x542C;</p>
-<h3 id="221-onblesystemstate">2.2.1 onBleSystemState</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x7CFB;&#x7EDF;&#x84DD;&#x7259;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x8BE5;&#x51FD;&#x6570;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>state&#xFF1A;QNBLEState &#x72B6;&#x6001;&#x7C7B;&#x578B;</li>
-</ul>
-<h2 id="23-qnbledevicediscoverylistener">2.3 QNBleDeviceDiscoveryListener</h2>
-<h3 id="231-onstartscan">2.3.1 onStartScan</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x542F;&#x52A8;&#x626B;&#x63CF;&#x65F6;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x8C03;&#x7528;startBleDeviceDiscovery&#x51FD;&#x6570;</p>
-<h3 id="232-onstopscan">2.3.2 onStopScan</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x65F6;&#x56DE;&#x8C03;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x8C03;&#x7528;stopBleDeviceDiscorvery&#x51FD;&#x6570;</p>
-<h3 id="233-ondevicediscover">2.3.3 onDeviceDiscover</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x53D1;&#x73B0;&#x5468;&#x56F4;&#x8BBE;&#x5907;&#x65F6;&#x56DE;&#x8C03;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4EC5;&#x56DE;&#x5230;YKB&#x7684;&#x8BBE;&#x5907;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x53D1;&#x73B0;&#x7684;&#x8BBE;&#x5907;</p>
-<ul>
-<li><p>mac&#xFF1A;&#x8BBE;&#x5907;mac&#x5730;&#x5740;&#xFF0C;&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x6807;&#x8BC6;</p>
-</li>
-<li><p>name&#xFF1A;&#x8BBE;&#x5907;&#x6635;&#x79F0;</p>
-</li>
-<li><p>modeId&#xFF1A;&#x8BBE;&#x5907;&#x7C7B;&#x578B;&#x7684;&#x6807;&#x8BC6;</p>
-</li>
-<li><p>bluetoothName&#xFF1A;&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x540D;</p>
-</li>
-<li><p>RSSI&#xFF1A;&#x8BBE;&#x5907;&#x578B;&#x53F7;&#x5F3A;&#x5EA6;</p>
-</li>
-<li><p>maxUserNum&#xFF1A;&#x8BBE;&#x5907;&#x652F;&#x6301;&#x6700;&#x5927;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6570;</p>
-</li>
-<li><p>registeredUserNum&#xFF1A;&#x8BBE;&#x5907;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;&#x6570;</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="24-qnbleconnectionchangelistener">2.4 QNBleConnectionChangeListener</h2>
-<h3 id="241-onconnecting">2.4.1 onConnecting</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x8BBE;&#x5907;&#x5904;&#x7406;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x65F6;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</li>
-</ul>
-<h3 id="242-onconnected">2.4.2 onConnected</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</li>
-</ul>
-<h3 id="243---ondisconnecting">2.4.3   onDisconnecting</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x8BBE;&#x5907;&#x6B63;&#x5728;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x65F6;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</li>
-</ul>
-<h3 id="244-ondisconnected">2.4.4 onDisconnected</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x8BBE;&#x5907;&#x5DF2;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x65F6;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</li>
-</ul>
-<h3 id="245-onconnecterrorerror">2.4.5 onConnectError:error:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x5F02;&#x5E38;&#x65F6;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>error&#xFF1A;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
-</li>
-</ul>
-<h3 id="246-onstartinteracting">2.4.6 onStartInteracting</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x53EF;&#x901A;&#x8BAF;&#x56DE;&#x8C03;&#xFF0C;&#x5728;&#x8BE5;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#x53EF;&#x8C03;&#x7528;&#x8BBE;&#x5907;&#x7684;&#x4E00;&#x4E9B;API&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x66F4;&#x65B0;&#x7528;&#x6237;&#x57FA;&#x7840;&#x4F53;&#x91CD;&#x7B49;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>error&#xFF1A;&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
-</li>
-</ul>
-<h2 id="25-qnuserscaledatalistener">2.5 QNUserScaleDataListener</h2>
-<h3 id="251-onscalestatechangescalestate">2.5.1 onScaleStateChange:scaleState:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5982;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x3001;&#x6D4B;&#x91CF;&#x72B6;&#x6001;&#x7B49;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>state&#xFF1A;&#x8BBE;&#x5907;&#x72B6;&#x6001;</p>
-<ul>
-<li><p>QNScaleStateDisconnected &#x672A;&#x8FDE;&#x63A5;</p>
-</li>
-<li><p>QNScaleStateLinkLoss &#x5931;&#x53BB;&#x8FDE;&#x63A5;</p>
-</li>
-<li><p>QNScaleStateConnected &#x5DF2;&#x8FDE;&#x63A5;</p>
-</li>
-<li><p>QNScaleStateConnecting &#x6B63;&#x5728;&#x8FDE;&#x63A5;</p>
-</li>
-<li><p>QNScaleStateDisconnecting &#x6B63;&#x5728;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</p>
-</li>
-<li><p>QNScaleStateStartMeasure &#x6B63;&#x5728;&#x6D4B;&#x91CF;</p>
-</li>
-<li><p>QNScaleStateRealTime &#x6B63;&#x5728;&#x6D4B;&#x91CF;&#x4F53;&#x91CD;</p>
-</li>
-<li><p>QNScaleStateBodyFat &#x6B63;&#x5728;&#x6D4B;&#x91CF;&#x751F;&#x7269;&#x963B;&#x6297;</p>
-</li>
-<li><p>QNScaleStateMeasureCompleted &#x6D4B;&#x91CF;&#x5B8C;&#x6210;</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="252-onscaleeventchangescaleevent">2.5.2 onScaleEventChange:scaleEvent:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#xFF0C;&#x5982;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x3001;&#x6D4B;&#x91CF;&#x72B6;&#x6001;&#x7B49;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>scaleEvent&#xFF1A;&#x8BBE;&#x5907;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</p>
-<ul>
-<li><p>QNScaleEventRegistUserSuccess &#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;</p>
-</li>
-<li><p>QNScaleEventRegistUserFail &#x6CE8;&#x518C;&#x7528;&#x6237;&#x5931;&#x8D25;</p>
-</li>
-<li><p>QNScaleEventVisitUserSuccess &#x8BBF;&#x95EE;&#x7528;&#x6237;&#x6210;&#x529F;</p>
-</li>
-<li><p>QNScaleEventVisitUserFail &#x8BBF;&#x95EE;&#x7528;&#x6237;&#x5931;&#x8D25;</p>
-</li>
-<li><p>QNScaleEventDeleteUserSuccess &#x5220;&#x9664;&#x7528;&#x6237;&#x6210;&#x529F;</p>
-</li>
-<li><p>QNScaleEventDeleteUserFail &#x5220;&#x9664;&#x7528;&#x6237;&#x5931;&#x8D25;</p>
-</li>
-<li><p>QNScaleEventSyncUserInfoSuccess &#x540C;&#x6B65;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x6210;&#x529F;</p>
-</li>
-<li><p>QNScaleEventSyncUserInfoFail &#x540C;&#x6B65;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5931;&#x8D25;</p>
-</li>
-<li><p>QNScaleEventUpdateIdentifyWeightSuccess &#x66F4;&#x65B0;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x4F53;&#x91CD;&#x6210;&#x529F;</p>
-</li>
-<li><p>QNScaleEventUpdateIdentifyWeightFail &#x66F4;&#x65B0;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x4F53;&#x91CD;&#x5931;&#x8D25;</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="253-ongetbleverblever">2.5.3 onGetBleVer:bleVer:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x56FA;&#x4EF6;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;&#x8BBE;&#x5907;&#x5BF9;&#x8C61;</p>
-</li>
-<li><p>bleVer&#xFF1A;&#x56FA;&#x4EF6;&#x7248;&#x672C;&#x53F7;</p>
-</li>
-</ul>
-<h3 id="254-ongetunsteadyweightweight">2.5.4 onGetUnsteadyWeight:weight:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x6D4B;&#x91CF;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;device</p>
-</li>
-<li><p>weight&#xFF1A;&#x5F53;&#x524D;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#xFF0C;&#x5355;&#x4F4D;kg</p>
-</li>
-</ul>
-<h3 id="255-ongetscaledatadata">2.5.5 onGetScaleData:data:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x5F53;&#x524D;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x7684;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;device</p>
-</li>
-<li><p>scaleData&#xFF1A;&#x5F53;&#x524D;&#x6D4B;&#x91CF;&#x6570;&#x636E;</p>
-</li>
-</ul>
-<h3 id="256-ongetstoredscaledata">2.5.6 onGetStoredScale:data:</h3>
-<p><strong>&#x63CF;&#x8FF0;&#xFF1A;</strong>&#x8BBE;&#x5907;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7684;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x548C;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x975E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x5751;&#x4F4D;&#x7684;&#x7528;&#x6237;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x56DE;&#x8C03;</p>
-<p><strong>&#x53C2;&#x6570;:</strong></p>
-<ul>
-<li><p>device&#xFF1A;device</p>
-</li>
-<li><p>storedDataList&#xFF1A;&#x5B58;&#x50A8;&#x7528;&#x6237;</p>
-<ul>
-<li><p>weight&#xFF1A;&#x6D4B;&#x91CF;&#x4F53;&#x91CD;&#xFF0C;&#x5355;&#x4F4D;kg</p>
-</li>
-<li><p>measureTime&#xFF1A;&#x6D4B;&#x91CF;&#x65F6;&#x95F4;</p>
-</li>
-<li><p>mac&#xFF1A;&#x8BBE;&#x5907;mac&#x5730;&#x5740;</p>
-</li>
-<li><p>isDataComplete&#xFF1A;&#x662F;&#x5426;&#x662F;&#x5DF2;&#x77E5;&#x6570;&#x636E;&#xFF0C;true&#x4E3A;&#x5DF2;&#x77E5;&#xFF0C;false&#x4E3A;&#x672A;&#x77E5;</p>
-</li>
-<li><p>hmac&#xFF1A;&#x6D4B;&#x91CF;&#x6570;&#x636E;hmac</p>
-</li>
-</ul>
-</li>
-</ul>
 
                                 
                                 </section>
@@ -2104,7 +1917,7 @@ QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEigh
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"next":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"抽拉式八电极","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-02T07:08:53.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-02T07:36:52.621Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"next":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"抽拉式八电极","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-09T08:05:09.011Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-09T08:06:18.508Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

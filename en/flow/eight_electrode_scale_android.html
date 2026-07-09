@@ -1435,6 +1435,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.12" data-path="../attouched_list/eight_exception_tip.html">
+            
+                <a href="../attouched_list/eight_exception_tip.html">
+            
+                    
+                    Eight Electrode Abnormal Measurement Prompts
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1485,16 +1498,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="1-plugin-access-steps">1. Plugin Access Steps</h1>
-<h2 id="11-project-introduction-plugin">1.1 Project Introduction Plugin</h2>
-<h3 id="111-dependencyresolutionmanagement">1.1.1 dependencyResolutionManagement</h3>
+                                <h1 id="android">Android</h1>
+<h1 id="1-plugin-integration-steps">1. Plugin Integration Steps</h1>
+<h2 id="11-import-plugin-to-project">1.1 Import Plugin to Project</h2>
+<h3 id="111-dependencyresolutionmanagement-management">1.1.1 dependencyResolutionManagement Management</h3>
 <ul>
-<li>Under the root directory of the project<strong>setting.gradle</strong>add<strong>jitpack</strong>support</li>
+<li>Add <strong>jitpack</strong> support in <strong>setting.gradle</strong> under the project root directory</li>
 </ul>
 <pre><code class="lang-plain&amp;#x20;text">dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
-        //Declare the repository URL
+        //Declare repository address
         maven { url &apos;https://jitpack.io&apos; }
         //Other repository configurations
         ...
@@ -1502,56 +1516,57 @@
 }
 </code></pre>
 <ul>
-<li>Add dependencies to<strong>build.gradle</strong>under the App directory</li>
+<li>Add dependency in <strong>build.gradle</strong> under App directory</li>
 </ul>
 <pre><code class="lang-plain&amp;#x20;text">dependencies {
-    //Declare the dependency. Replace X.Y.Z with the actual version number.
+    //Declare dependency, X.Y.Z needs to be modified to the specific version number
     implementation(&quot;com.github.YolandaQingniu:qnscalesdkX:X.Y.Z&quot;)
 
-    //Other repository configurations
+    //Other third-party dependencies
     ...
 }
 </code></pre>
-<h3 id="112-allprojects">1.1.2 allprojects</h3>
+<h3 id="112-allprojects-management">1.1.2 allprojects Management</h3>
 <ul>
-<li><p>In the root directory of the project <strong>build.gradle </strong>add <strong>jitpack </strong>support</p>
+<li>Add <strong>jitpack</strong> support in <strong>build.gradle</strong> under the project root directory</li>
+</ul>
 <pre><code class="lang-plain&amp;#x20;text">allprojects {
     repositories {
+        //Other repository configurations
         maven { url &apos;https://jitpack.io&apos; }
-        /Other repository configurations
+        //Other repository configurations
         ...
     }
 }
 </code></pre>
-</li>
-<li><p>Add dependencies to<strong>build.gradle</strong>under the App directory</p>
+<ul>
+<li>Add dependency in <strong>build.gradle</strong> under App directory</li>
+</ul>
 <pre><code class="lang-plain&amp;#x20;text">dependencies {
-    //Declare the dependency. Replace X.Y.Z with the actual version number.
+    //Declare dependency, X.Y.Z needs to be modified to the specific version number
     implementation(&quot;com.github.YolandaQingniu:qnscalesdkX:X.Y.Z&quot;)
 
-    //Other repository configurations
+    //Other third-party dependencies
     ...
 }
 </code></pre>
-</li>
-</ul>
-<h2 id="12-instructions-for-using-bluetooth-permissions-in-configuration-item">1.2 Instructions for Using Bluetooth Permissions in Configuration Item</h2>
-<p>If the targetSdk of the app is &gt;30 and the system version of the phone is Android 12 or higher, the following permissions are required </p>
+<h2 id="12-configure-project-bluetooth-permission-usage-instructions">1.2 Configure Project Bluetooth Permission Usage Instructions</h2>
+<p>If app&apos;s targetSdk&gt;30 and the phone&apos;s system version is Android 12 and above, the following permissions are required</p>
 <ul>
-<li><p>android.permission.BLUETOOTH_ADVERTISE </p>
+<li><p>android.permission.BLUETOOTH_ADVERTISE</p>
 </li>
-<li><p>android.permission.BLUETOOTH_SCAN </p>
+<li><p>android.permission.BLUETOOTH_SCAN</p>
 </li>
 <li><p>android.permission.BLUETOOTH_CONNECT</p>
 </li>
 </ul>
-<p>Otherwise, the following permissions are required </p>
+<p>Otherwise, the following permissions are required</p>
 <ul>
-<li><p>android.permission.BLUETOOTH </p>
+<li><p>android.permission.BLUETOOTH</p>
 </li>
 <li><p>android.permission.BLUETOOTH_ADMIN</p>
 </li>
-<li><p>android.permission.ACCESS_COARSE_LOCATION </p>
+<li><p>android.permission.ACCESS_COARSE_LOCATION</p>
 </li>
 <li><p>android.permission.ACCESS_FINE_LOCATION</p>
 </li>
@@ -1560,21 +1575,20 @@
 <pre><code class="lang-plain&amp;#x20;text">-keep class com.qingniu.scale.model.BleScaleData{*;}
 -keep class com.jieli.** {*;}
 </code></pre>
-<h2 id="14-initial-plugin">1.4 Initial Plugin</h2>
-<pre><code class="lang-plain&amp;#x20;text">//Get the path of the authorization file in the project
+<h2 id="14-initialize-plugin">1.4 Initialize Plugin</h2>
+<p>Can be initialized in the <code>onCreate</code> lifecycle method in <code>BaseApplication</code></p>
+<pre><code class="lang-plain&amp;#x20;text">//Get the authorization file path in the project
 String encryptPath = &quot;file:///android_asset/123456789.qn&quot;;
-
-//Initialize the plugin
+//Instantiate plugin, QNBleApi is a singleton object
 QNBleApi bleApi = QNBleApi.getInstance(this);
-
-//Request plugin authorization
+//Get plugin authorization
 bleApi.initSdk(&quot;123456789&quot;, encryptPath, new QNResultCallback() {
     @Override
     public void onResult(int code, String msg) {
     }
 });
 </code></pre>
-<h2 id="15-listen-for-system-bluetooth-state-changes-qnblestatelistener">1.5 Listen for system Bluetooth state changes (QNBleStateListener)</h2>
+<h2 id="15-listen-to-system-bluetooth-state-changesqnblestatelistener">1.5 Listen to System Bluetooth State Changes(QNBleStateListener)</h2>
 <pre><code class="lang-plain&amp;#x20;text">/*
 enum QNBLEState {
     Unknown,
@@ -1591,100 +1605,210 @@ bleApi.setBleStateListener(new QNBleStateListener() {
     }
 });
 </code></pre>
-<h2 id="16-listen-for-changes-in-the-scanning-status-qnbledevicediscoverylistener">1.6 Listen for changes in the scanning status (QNBleDeviceDiscoveryListener)</h2>
+<h2 id="16-listen-to-sdk-logs-qnloglistener">1.6 Listen to SDK Logs (QNLogListener)</h2>
+<p>```plain text
+bleApi.setLogListener(new QNLogListener() {
+    @Override
+    public void onLog(String log) {
+        //SDK output logs will be returned here
+    }
+});</p>
+<pre><code>
+
+
+# 2\. Device Scanning
+
+## 2\.1 Start Bluetooth Scanning
+
+In the business interface where you need to obtain Bluetooth devices, call the following method
+
+```plain&amp;#x20;text
+bleApi.startBleDeviceDiscovery(new QNResultCallback() {
+    @Override
+    public void onResult(int code, String msg) {
+        //The callback result here only indicates whether the method call to scan surrounding devices was successful
+    }
+});
+</code></pre><h2 id="22-get-scanned-bluetooth-devices">2.2 Get Scanned Bluetooth Devices</h2>
+<p>After successfully calling the SDK&apos;s Bluetooth scanning method, the SDK will return the scanned devices through the <code>QNBleDeviceDiscoveryListener</code> listener callback, and this listener can also obtain the SDK&apos;s Bluetooth scanning related status</p>
+<p>Developers can register the listener callback according to the following example. It is recommended to register this callback listener only once in business maintenance</p>
 <pre><code class="lang-plain&amp;#x20;text">bleApi.setBleDeviceDiscoveryListener(new QNBleDeviceDiscoveryListener() {
     @Override
     public void onDeviceDiscover(QNBleDevice device) {
-    //Callback triggered when a device is discovered during scanning. Only supported devices are reported here.
-
+      //When scanning is started and a device is discovered, this function will be called back. Only supported devices are called back here
+      //Here you can determine whether the device object is the target device. If it is the target device, it can be cached in memory for subsequent Bluetooth connection initiation
     }
 
     @Override
     public void onStartScan() {
-    //Callback triggered when scanning starts.
+      //When scanning is started, this function will be called back
 
     }
 
     @Override
     public void onStopScan() {
-    //Callback triggered when scanning stops.
+      //When scanning is stopped, this function will be called back
 
     }
 
      @Override
      public void onScanFail(int code) {
-     //Callback triggered when scanning fails to start
+       //Callback for scan failure
 
      }
 });
 </code></pre>
-<h2 id="17-listen-for-device-connection-status-changes-qnbleconnectionchangelistener">1.7 Listen for device connection status changes (QNBleConnectionChangeListener)</h2>
+<h1 id="3-device-connection">3. Device Connection</h1>
+<h2 id="31-start-device-connection">3.1 Start Device Connection</h2>
+<p>After obtaining the target device object through step 2 scanning, you can call the device connection method as follows</p>
+<pre><code class="lang-plain&amp;#x20;text">//Continuous Bluetooth scanning consumes power, it is recommended to stop scanning before performing connection
+//Google official recommendation: https://developer.android.com/develop/connectivity/bluetooth/ble/find-ble-devices?hl=zh-cn
+bleApi.stopBleDeviceDiscovery(new QNResultCallback() {
+    @Override
+    public void onResult(int code, String msg) {
+
+    }
+});
+
+//Set scale unit
+QNConfig sdkConfig = bleApi.getConfig()
+sdkConfig.unit = 0; //0-kg, 1-lb, 2-Jin, 3-st:lb, 4-st,
+sdkConfig.save();
+
+QNUserScaleConfig config = new QNUserScaleConfig();
+//List of registered scale users. During this connection, the scale will delete scale users not included in this array
+ArrayList&lt;QNUser&gt; deviceUserList = new ArrayList&lt;&gt;();
+config.setUserlist(deviceUserList);
+
+//The following 3 descriptions correspond to different business logic, integrators configure as needed
+//1. If using guest mode (i.e., no need to register user on the scale, the scale will not save this user&apos;s information), note that this field is mutually exclusive with user.index, isVisitor takes priority
+//When this value is set to true, it means guest mode is used, and config.setRegist(boolean) and config.setChange(boolean) settings will be ignored
+config.setVisitor(true)
+int index = 0;
+
+//2. If not using guest mode, then you need to tell the scale whether to register a user or access a scale user during this connection
+//If registering a scale user
+//Before registering a user, you need to verify whether the scale&apos;s user slots are full (the scale can store up to 8 users), which can be determined by QNBleDevice.this.getRegisteredUserNum()
+//After successfully registering a scale user, the SDK will get the user.index returned by the scale, see registerUserComplete callback function.
+//After successfully registering a scale user, you can receive real-time weight data and result data from the scale
+config.setVisitor(false)
+config.setRegist(true)
+config.setChange(false)
+int index = 0;
+
+//3. If accessing a scale user
+//The user information passed in when accessing a user will update the corresponding information saved by the scale. For example, if the scale saved 170cm for this user&apos;s height, and 171cm is passed in this time, the scale will update it to 171cm
+//After successfully accessing a scale user, you can receive real-time weight data and result data from the scale
+config.setVisitor(false)
+config.setRegist(false)
+config.setChange(true)
+int index = 1; //Valid range [1,8], represents which position on the scale the user is accessing. This value is returned by the scale when registering a user, see registerUserComplete callback function.
+
+//Build user information for this connection
+String userId = &quot;&quot;;//User unique identifier in business logic, used to distinguish users in business
+int height = 170;//User height, unit cm
+String gender = &quot;male&quot;; //User gender, &quot;male&quot; for male, &quot;female&quot; for female
+Date birthday = new Date(631199317000L);//User birthday
+
+QNUser user = bleApi.buildUser(userId, height, gender, birthday, 0, UserShape.SHAPE_NONE, UserGoal.GOAL_NONE, 0, index, 0,
+        new QNResultCallback() {
+            @Override
+            public void onResult(int code, String msg) {
+
+            }
+        });
+//lastHmac needs to be data from the previous measurement with body fat percentage greater than 0 and of the same type as hmac. Same type can be determined by whether QNScaleData.this.getNewEightModel() is consistent
+user.setHmac(lastHmac);
+
+config.setCurUser(user);
+
+bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
+    @Override
+    public void onResult(int code, String msg) {
+
+    }
+});
+</code></pre>
+<h2 id="32-device-connection-status-listenerqnbleconnectionchangelistener">3.2 Device Connection Status Listener(QNBleConnectionChangeListener)</h2>
 <pre><code class="lang-plain&amp;#x20;text">bleApi.setBleConnectionChangeListener(new QNBleConnectionChangeListener() {
     @Override
     public void onConnecting(QNBleDevice device) {
-    //Callback triggered when the device is connecting
+    //Callback when device is connecting
 
     }
 
+    //Connected
     @Override
     public void onConnected(QNBleDevice device) {
-    //Callback triggered when the device has successfully connected
+    //Callback when device is connected
 
     }
 
     @Override
     public void onServiceSearchComplete(QNBleDevice device) {
-    //Callback triggered when the device&apos;s communication services have been discovered. Usually no additional logic is required here
+    //Device service search complete
     }
 
     @Override
     public void onDisconnecting(QNBleDevice device) {
-    //Callback triggered when the device is disconnecting
+    //Callback when device is disconnecting
 
     }
 
     @Override
     public void onDisconnected(QNBleDevice device) {
-    //Callback triggered when the device has disconnected
+    //Callback when device is disconnected
 
     }
 
     @Override
     public void onConnectError(QNBleDevice device, int errorCode) {
-    //Callback triggered when the device connection fails, returning the error information
+    //Callback when device connection error occurs
     }
 
     @Override
     public void onStartInteracting(QNBleDevice device) {
-    //Callback triggered when the device is ready for interaction. At this point, device-specific operation commands can be sent
+    //Device can interact, i.e., corresponding operation commands can be sent to the device
 
     }
 });
 </code></pre>
-<h2 id="18-listen-for-device-data-interaction-qnuserscaledatalistener">1.8 Listen for device data interaction (QNUserScaleDataListener)</h2>
-<pre><code class="lang-typescript">bleApi.setDataListener(<span class="hljs-keyword">new</span> QNUserScaleDataListener() {
+<h1 id="4-device-data-acquisition">4. Device Data Acquisition</h1>
+<h2 id="41-device-data-interaction-listenerqnuserscaledatalistener">4.1 Device Data Interaction Listener(QNUserScaleDataListener)</h2>
+<p>After executing step 3.1 and establishing Bluetooth connection with the device, the related data acquisition example is as follows</p>
+<pre><code class="lang-TypeScript">bleApi.setDataListener(<span class="hljs-keyword">new</span> QNUserScaleDataListener() {
+    <span class="hljs-comment">//Successfully registered user on the scale, callback with the user slot assigned by the scale</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> registerUserComplete(QNBleDevice device, QNUser user) {
-    <span class="hljs-comment">// Called when a user is successfully registered on the scale.</span>
-    <span class="hljs-comment">// Returns the user slot assigned by the device.</span>
-
-        <span class="hljs-comment">// The user slot assigned by the scale during user registration.</span>
-        <span class="hljs-comment">// The app should associate and save this slot with the user ID and device MAC.</span>
-        <span class="hljs-comment">// The slot index will be used for accessing the user&apos;s measurements when the user reconnects to this device.</span>
+    <span class="hljs-comment">//When registering a user, the slot assigned by the scale. The app should associate and save this slot, user id, and device mac. This index will be needed for scale user access measurement when this user connects to this device next time</span>
         int index = user.index;
     }
 
+    <span class="hljs-comment">//Callback for real-time weight during device measurement, weight is real-time body weight, unit kg</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onGetUnsteadyWeight(QNBleDevice device, double weight) {
-    <span class="hljs-comment">// Callback for real-time weight during the measurement process</span>
 
     }
 
+    <span class="hljs-comment">//Callback for measurement data when device measurement is complete, data is measurement data</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onGetScaleData(QNBleDevice device, QNScaleData data) {
-    <span class="hljs-comment">// Callback triggered when the device completes a measurement</span>
+        <span class="hljs-comment">//Get complete measurement data after measurement completion. For new solution eight-electrode devices, you can determine whether this measurement data is abnormal</span>
+        <span class="hljs-keyword">if</span> (data.getNewEightModel() == <span class="hljs-number">1</span>) {
+            <span class="hljs-comment">//Whether this measurement is abnormal, 0-normal; 1-abnormal</span>
+            int isAbnormal = data.getEightIsAbnormal();
+            <span class="hljs-keyword">if</span> (isAbnormal == <span class="hljs-number">1</span>) {
+                <span class="hljs-comment">//Reason for this measurement abnormality, 0-normal, 1-hand contact abnormal; 2-leg contact abnormal; 3-hand and foot contact both abnormal</span>
+                int reasonMask = data.getEightReasonMask();
+                <span class="hljs-comment">//According to the abnormal reason, you can prompt the user to re-measure</span>
+                <span class="hljs-comment">//Refer to [Appendix - Eight Electrode Abnormal Measurement Prompt]</span>
 
-        <span class="hljs-built_in">Date</span> measureDate = data.getMeasureTime();<span class="hljs-comment">//Measured time</span>
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+
+        <span class="hljs-comment">//This measurement has normal contact for all body parts (hands and feet)</span>
+        <span class="hljs-built_in">Date</span> measureDate = data.getMeasureTime();
         double weight = data.getWeight();<span class="hljs-comment">//Measured weight</span>
         List&lt;QNScaleItemData&gt; allTarget = data.getAllItem();
 
@@ -1692,22 +1816,32 @@ bleApi.setBleStateListener(new QNBleStateListener() {
             item.getType() <span class="hljs-comment">//Indicator type, see QNScaleType</span>
             item.getValue() <span class="hljs-comment">//Indicator value</span>
         }
+
+        <span class="hljs-comment">//The business layer can also perform a secondary judgment on this measurement data, such as whether body fat was measured</span>
+        <span class="hljs-comment">//Or compare with the user&apos;s previous measurement data&apos;s weight/body fat, if the difference is outside a certain business threshold, you can also prompt the user to re-measure</span>
+
+        <span class="hljs-comment">//If the measurement data needs to be saved ultimately, the business logic needs to additionally save the hmac and newEightModel fields in the QNScaleData class, for judgment and input parameters during the next connection measurement</span>
+
     }
 
+    <span class="hljs-comment">// Current access user stored data and unknown stored callback, storedDataList is stored data list, determine whether it is unknown measurement data through isDataComplete in QNScaleStoreData object, false is unknown measurement data, true is known measurement data</span>
+
+    <span class="hljs-comment">//1. For guest mode, all are unknown stored data;</span>
+    <span class="hljs-comment">//2. For user management mode, there are known stored data (i.e., stored data belonging to the current access user) and unknown stored data</span>
+    <span class="hljs-comment">//3. For unknown measurement data, you can notify related APP users to claim it, i.e., let APP users choose whether this data is theirs</span>
+    <span class="hljs-comment">//4. Converting stored data to measurement data is divided into two steps:</span>
+        <span class="hljs-comment">//4.1 Set the owner of this stored data (known stored data does not need this step) [storeData setUser:&lt;#(QNUser *)#&gt;];</span>
+        <span class="hljs-comment">//4.2 Convert stored data to measurement data [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]</span>
+    <span class="hljs-comment">//Note: lastValidEightHmac is the hmac of the data owner&apos;s previous (measurement where body fat percentage &gt; 0 and is of the same type of eight-electrode device) measurement data, same type can be determined by QNScaleData.newEightModel attribute</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onGetStoredScale(QNBleDevice device, List&lt;QNScaleStoreData&gt; storedDataList) {
-    <span class="hljs-comment">// Callback for currently accessed user&apos;s stored data and unknown stored data</span>
-    <span class="hljs-comment">// storedDataList List of stored data. Use the `isDataComplete` property in `QNScaleStoreData` to determine if the data is from an unknown measurement: </span>
-    <span class="hljs-comment">// false indicates unknown measurement data, true indicates known measurement data. </span>
-
-
-        <span class="hljs-comment">//For unknown measurement data, you can notify the relevant user and let them choose whether this data belongs to them.</span>
+        <span class="hljs-comment">//For unknown measurement data, you can notify relevant users and let users choose whether this data belongs to them</span>
         ArrayList&lt;QNScaleStoreData&gt; unknowStoreDataList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
         <span class="hljs-keyword">for</span> (QNScaleStoreData storeData : storedDataList) {
             <span class="hljs-keyword">if</span>(!storeData.isDataComplete()){
                 unknowStoreDataList.add(storeData);
             } <span class="hljs-keyword">else</span> {
-                <span class="hljs-comment">//For known stored data of the current user, the data can be directly attributed to that user.</span>
+            <span class="hljs-comment">//Known stored data for current user, this stored data can be directly attributed to this user</span>
                 QNScaleData scaleData = storeData.generateScaleData();
                 <span class="hljs-keyword">for</span> (QNScaleItemData item: scaleData.getAllItem()) {
                     item.type <span class="hljs-comment">//Indicator type, see QNScaleType</span>
@@ -1717,95 +1851,17 @@ bleApi.setBleStateListener(new QNBleStateListener() {
         }
     }
 
+    <span class="hljs-comment">//Connection status during measurement</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onScaleStateChange(QNBleDevice device, int status) {
-    <span class="hljs-comment">//Scale interaction state changes</span>
+
     }
 
-    @Override
-    <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onScaleEventChange(QNBleDevice device, int scaleEvent) {
-    <span class="hljs-comment">//Scale-side behavior state changes</span>
-    }
-
-    @Override
-    <span class="hljs-keyword">public</span> <span class="hljs-built_in">String</span> getLastDataHmac(QNBleDevice qnBleDevice, QNUser qnUser) {
-    <span class="hljs-comment">//Write back a valid measurement HMAC (i.e., a body fat scale data HMAC greater than 0) to a specified user slot on the device. </span>
-    <span class="hljs-comment">//This can help improve the stability of the user&apos;s bioelectrical impedance measurement. </span>
-    <span class="hljs-comment">//If stability reinforcement is not required, you can simply return nil</span>
-
-        <span class="hljs-comment">//Obtain the HMAC from the most recent measurement in the user&apos;s measurement history where the body fat percentage is greater than 0.</span>
-        <span class="hljs-comment">//The HMAC is generated from the measurement data, as defined in the QNScaleData object.</span>
-        <span class="hljs-built_in">String</span> hmac = lastVailDataHmac;
-        <span class="hljs-keyword">return</span> hmac;
-    }
 });
 </code></pre>
-<h2 id="19-scan-surrounding-devices-">1.9 Scan surrounding devices </h2>
-<pre><code class="lang-plain&amp;#x20;text">bleApi.startBleDeviceDiscovery(new QNResultCallback() {
-    @Override
-    public void onResult(int code, String msg) {
-
-    }
-});
-</code></pre>
-<h2 id="110-connect-device">1.10 Connect Device</h2>
-<pre><code class="lang-plain&amp;#x20;text">//It is recommended to stop scanning first
-bleApi.stopBleDeviceDiscovery(new QNResultCallback() {
-    @Override
-    public void onResult(int code, String msg) {
-
-    }
-});
-
-//Set the scale unit
-QNConfig sdkConfig = bleApi.getConfig()
-sdkConfig.unit = 0; //0-kg&#xFF0C;1-lb&#xFF0C;2-&#x65A4;&#xFF0C;3-st:lb&#xFF0C;4-st&#xFF0C;
-sdkConfig.save();
-
-QNUserScaleConfig config = new QNUserScaleConfig();
-
-// List of registered scale users. During this connection, users on the scale 
-// that are not included in this array will be deleted from the device.
-ArrayList&lt;QNUser&gt; deviceUserList = new ArrayList&lt;&gt;();
-config.setUserlist(deviceUserList);
-
-// Scale user for the current connection
-mQNBleApi.buildUser(mUser.getUserId(),
-String userId = &quot;&quot;;
-
-//User height in centimeters (cm)
-int height = 170;
-String gender = &quot;male&quot;; //&quot;male&quot;&#x3001;&quot;female&quot;
-
-//User birthday
-Date birthday = new Date(631199317000L);
-
-// User slot. This value is returned by the scale when registering a user on the device (see the `registerUserComplete` callback).
-// If this connection is for a new user on the device and the user needs to be registered, this property does not need to be set.
-int index = 1; 
-
-QNUser user = bleApi.buildUser(userId, height, gender, birthday, 0, UserShape.SHAPE_NONE, UserGoal.GOAL_NONE, 0, index, 0,
-        new QNResultCallback() {
-            @Override
-            public void onResult(int code, String msg) {
-
-            }
-        });;
-config.setCurUser(user);
-
-// Whether to use a guest user (i.e., no registration on the scale; the scale will not store this user&apos;s information).
-// Note: This field is mutually exclusive with `user.index`; `isVisitor` takes priority.
-config.setVisitor(false)
-
-bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
-    @Override
-    public void onResult(int code, String msg) {
-
-    }
-});
-</code></pre>
-<h2 id="111-disconnect-the-device">1.11 Disconnect the device</h2>
-<pre><code class="lang-plain&amp;#x20;text">// If needed, you can proactively call the method to disconnect the device
+<h1 id="5-device-disconnection">5. Device Disconnection</h1>
+<h2 id="51-disconnect-device-connection">5.1 Disconnect Device Connection</h2>
+<pre><code class="lang-plain&amp;#x20;text">//If needed, you can actively call the disconnect device connection method
 bleApi.disconnectDevice(bleApi, new QNResultCallback() {
     @Override
     public void onResult(int code, String msg) {
@@ -1813,16 +1869,13 @@ bleApi.disconnectDevice(bleApi, new QNResultCallback() {
     }
 });
 </code></pre>
-<h2 id="112-unknown-stored-data-calculation">1.12 Unknown stored data calculation</h2>
-<pre><code class="lang-plain&amp;#x20;text">//User information for unknown stored data ownership
+<h1 id="6-data-calculation">6. Data Calculation</h1>
+<h2 id="61-unknown-data-calculation-recalculation">6.1 Unknown Data Calculation, Recalculation</h2>
+<pre><code class="lang-plain&amp;#x20;text">//User information for the user to whom the unknown stored data belongs
 String userId = &quot;&quot;;
-
-//User height in centimeters (cm)
-int height = 170;
-String gender = &quot;male&quot;; //&quot;male&quot;&#x3001;&quot;female&quot;
-
-//User birthday
-Date birthday = new Date(631199317000L);
+int height = 170;//User height, unit cm
+String gender = &quot;male&quot;; //User gender, &quot;male&quot; for male, &quot;female&quot; for female
+Date birthday = new Date(631199317000L);//User birthday
 QNUser user = mQNBleApi.buildUser(userId, height, gender, birthday, new QNResultCallback() {
     @Override
     public void onResult(int code, String msg) {
@@ -1830,255 +1883,10 @@ QNUser user = mQNBleApi.buildUser(userId, height, gender, birthday, new QNResult
     }
 });
 
-// hmac: The HMAC of the current unknown measurement data, i.e., the `hmac` in QNScaleStoreData.
-// lastHmac: The HMAC of the user&apos;s previous measurement with body fat &gt; 0 (8-electrode measurement), i.e., the `hmac` in QNScaleData.
-//If the user has no previous measurement with body fat &gt; 0, this can be set to nil.
+//hmac is the hmac in this unknown measurement data, i.e., hmac in QNScaleStoreData
+//lastHmac needs to be data from the previous measurement with body fat percentage greater than 0 and of the same type as hmac. Same type can be determined by whether QNScaleData.this.getNewEightModel() is consistent
 QNScaleData scaleData = mQNBleApi.calculateScaleDataByHmac(user, hmac,lastHmac);
 </code></pre>
-<h1 id="2-api">2. API</h1>
-<h2 id="21-qnbleapi">2.1 QNBleApi</h2>
-<p>Plugin instance object, used to call plugin-related APIs</p>
-<h3 id="211-getinstance">2.1.1 getInstance</h3>
-<p><strong>Description:</strong>Constructs a QNBleApi object, which is the only function for initializing the plugin</p>
-<p><strong>Return Value:</strong>QNBleApi</p>
-<h3 id="212-getconfig">2.1.2 getConfig</h3>
-<p><strong>Description:</strong>Get plugin configuration information</p>
-<p><strong>Return value: </strong></p>
-<ul>
-<li><p>QNConfig</p>
-<ul>
-<li><p>duration: Scan timeout period, default is 0, which means no scan timeout will occur; if this value is set, the scan will automatically stop within the specified time after starting, and the call to the scan function needs to be maintained manually</p>
-</li>
-<li><p>unit: Sets the user unit at the scale end, but when initiating device connection, it will synchronize the unit settings to the scale end</p>
-<ul>
-<li>For details, please refer to class<strong>QNUnit</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="213-initsdk">2.1.3 initSdk</h3>
-<p><strong>Description:</strong> Initialize the plugin by passing the configuration file path, and call </p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>appId: String: APPID authorized by YKB</p>
-</li>
-<li><p>dataFile: String: The relative path of the configuration file in the project</p>
-</li>
-<li><p>callback:QNResultCallback: Callback for function call result</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="214-getcursystemblestate">2.1.4 getCurSystemBleState</h3>
-<p><strong>Description:</strong>Get the current system Bluetooth status</p>
-<p><strong>Return value: </strong></p>
-<ul>
-<li>int&#xFF1A;QNBLEState.Unknown.ordinal()&#x3001;QNBLEState.setting.ordinal()&#x3001;QNBLEState.Unsupported.ordinal()&#x3001;QNBLEState.Unauthorized.ordinal()&#x3001;QNBLEState.PoweredOff.ordinal()&#x3001;QNBLEState.PoweredOn.ordinal()</li>
-</ul>
-<h3 id="215-startbledevicediscovery">2.1.5 startBleDeviceDiscovery:</h3>
-<p><strong>Description:</strong>Start scanning for surrounding devices</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>callback:QNResultCallback: Callback for function call result</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="216-stopbledevicediscorvery">2.1.6 stopBleDeviceDiscorvery:</h3>
-<p><strong>Description:</strong>Stop scanning for nearby devices</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>callback:QNResultCallback: Callback for function call result</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="217-connectuserscaledevice">2.1.7 connectUserScaleDevice</h3>
-<p><strong>Description:</strong> Initiate a connection to a specified device </p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device: QNBleDevice: The scanned device, obtained from the device object in the callback of the onDeviceDiscover function in QNBleDeviceDiscoveryListener</p>
-</li>
-<li><p>config:QNUserScaleConfig: Configuration information for this connection</p>
-</li>
-<li><p>callback: Callback for function call result</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="218-disconnectdevice">2.1.8 disconnectDevice:</h3>
-<p><strong>Description:</strong>Disconnect the currently connected device</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device: QNBleDevice: The currently connected device object, which can be left unassigned</p>
-</li>
-<li><p>callback:QNResultCallback: Callback for function call result</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="219-calculatescaledatabyhmac">2.1.9 calculateScaleDataByHmac</h3>
-<p><strong>Description:</strong>Recalculate measurement data, which can be used for calculating unknown stored data, and can also be used for recalculating known measurement data that needs to be changed to data measured by other users</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>user:QNUser: User information to which this measurement data belongs</p>
-</li>
-<li><p>hmac:String: The hmac of the current measurement data</p>
-</li>
-<li><p>lastEightHmac: String: The previous eight-electrode measurement data of the user to which this measurement data belongs, where the body fat percentage is greater than 0; if none, assign nil</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>QNScaleData</p>
-<h2 id="22-qnblestatelistener">2.2 QNBleStateListener</h2>
-<p>Callback listener for system Bluetooth status changes</p>
-<h3 id="221-onblesystemstate">2.2.1 onBleSystemState</h3>
-<p><strong>Description:</strong> When the system Bluetooth changes, this function is called back </p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>state&#xFF1A;QNBLEState</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h2 id="23-qnbledevicediscoverylistener">2.3 QNBleDeviceDiscoveryListener</h2>
-<h3 id="231-onstartscan">2.3.1 onStartScan</h3>
-<p><strong>Description:</strong> This function is called back when starting a scan, such as when calling the startBleDeviceDiscovery function </p>
-<p><strong>Parameter:</strong></p>
-<p>None</p>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="232-onstopscan">2.3.2 onStopScan</h3>
-<p><strong>Description:</strong> This function is called back when scanning stops, such as when calling the stopBleDeviceDiscorvery function </p>
-<p><strong>Parameter:</strong></p>
-<p>None</p>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="233-ondevicediscover">2.3.3 onDeviceDiscover</h3>
-<p><strong>Description:</strong>Callback when surrounding devices are discovered. This function only returns YKB devices.</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device: QNBleDevice: Discovered device</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h2 id="24-qnbleconnectionchangelistener">2.4 QNBleConnectionChangeListener</h2>
-<h3 id="241-onconnecting">2.4.1 onConnecting</h3>
-<p><strong>Description:</strong>Callback when the device is connecting</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device:QNBleDevice: device object</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="242-onconnected">2.4.2 onConnected</h3>
-<p><strong>Description:</strong>Callback after the device is successfully connected</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device:QNBleDevice: device object</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="243---ondisconnecting">2.4.3   onDisconnecting</h3>
-<p><strong>Description:</strong>Callback when the device is disconnecting</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device:QNBleDevice: device object</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="244-ondisconnected">2.4.4 onDisconnected</h3>
-<p><strong>Description:</strong>Callback when the device is already disconnected</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device:QNBleDevice: device object</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="245-onconnecterrorerror">2.4.5 onConnectError:error:</h3>
-<p><strong>Description:</strong>Callback when device connection is abnormal</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>error:int: Connection error message</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="246-onstartinteracting">2.4.6 onStartInteracting</h3>
-<p><strong>Description:</strong>Device communication callback. After this function, some API operations of the device can be called, such as updating the user&apos;s basic weight, etc.</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li>device:QNBleDevice: device object</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h2 id="25-qnuserscaledatalistener">2.5 QNUserScaleDataListener</h2>
-<h3 id="251-onscalestatechange">2.5.1 onScaleStateChange</h3>
-<p><strong>Description:</strong>Callback for device state changes, such as connection state, measurement state, etc.</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>state:int: Device status, for details, please refer to the definition in class<strong>QNScaleStatus</strong></p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="252-onscaleeventchange">2.5.2 onScaleEventChange</h3>
-<p><strong>Description:</strong>Device event callback, such as connection status, measurement status, etc.</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>scaleEvent:int: Device event type, for details, please refer to the definition in class<strong>QNScaleEvent</strong></p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="253-ongetblever">2.5.3 onGetBleVer</h3>
-<p><strong>Description:</strong>Device firmware version information callback</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>bleVer: int: Firmware version number</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="254-ongetunsteadyweight">2.5.4 onGetUnsteadyWeight</h3>
-<p><strong>Description:</strong>Callback for device measurement of real-time body weight</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>weight:double: current real-time weight, unit kg</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="255-ongetscaledata">2.5.5 onGetScaleData</h3>
-<p><strong>Description:</strong>Callback for the current Bluetooth connection measurement results</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>scaleData:QNScaleData: Current measurement data</p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
-<h3 id="256-ongetstoredscale">2.5.6 onGetStoredScale</h3>
-<p><strong>Description:</strong>Callback for the known stored data and unknown measured data of the currently accessed user of the device; the stored data of users in non-currently accessed slots will not be called back</p>
-<p><strong>Parameter:</strong></p>
-<ul>
-<li><p>device:QNBleDevice: device object</p>
-</li>
-<li><p>storedDataList: List\<qnscalestoredata>: Stores user</qnscalestoredata></p>
-</li>
-</ul>
-<p><strong>Return value: </strong></p>
-<p>None</p>
 
                                 
                                 </section>
@@ -2122,7 +1930,7 @@ QNScaleData scaleData = mQNBleApi.calculateScaleDataByHmac(user, hmac,lastHmac);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"next":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-02T07:08:53.560Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-02T07:36:52.621Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"next":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-09T08:00:02.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-09T08:06:18.508Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
