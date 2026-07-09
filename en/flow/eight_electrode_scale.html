@@ -1498,46 +1498,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="work-process">Work process</h1>
-<p><img src="../images/eight_scale_flowchart_en.svg" alt=""></p>
-<h1 id="1-apply-for-plugin-appid">1. Apply for Plugin APPID</h1>
-<p>Fill out the data file for applying to access the plugin and provide it to the business for applying for plugin access authorization </p>
-<h1 id="2-overview-of-scale-side-users">2. Overview of Scale-side Users</h1>
-<p>The eight-electrode device is a device with users at the scale end (abbreviated as 8+1 users), where 8 represents 8 users at the scale end. The scale end can store user profiles and reference weights of 8 users, enabling the scale to automatically identify the measured user based on the reference weight and display measurement indicators such as BMI and body fat percentage on the scale surface in offline mode (without Bluetooth connection); 1 represents the guest user at the scale end, who can use the scale immediately upon connection. The scale end does not need to store the user information, and the user information is sent to the device when Bluetooth is connected. After the measurement is completed, the scale end immediately deletes the user information. 
-Regarding the 8 user information items stored at the scale end:</p>
+                                <h1 id="1-apply-for-plugin-appid">1. Apply for Plugin APPID</h1>
+<p>Fill out the application form for plugin access and provide it to the business team to apply for plugin access authorization.</p>
+<h1 id="2-device-introduction">2. Device Introduction</h1>
+<h2 id="21-overview-of-scale-side-users">2.1 Overview of Scale-side Users</h2>
+<p>The pull-out eight-electrode device is a scale-side device with users (abbreviated as 8+1 users), where 8 represents 8 scale-side users. The scale can store user profiles and reference weights for 8 users, enabling automatic user identification based on reference weight during offline measurements (without Bluetooth connection), and display measurement indicators such as BMI and body fat percentage on the scale surface. The 1 represents a guest user on the scale, who can use it immediately without the scale storing their information. User information is sent to the device during Bluetooth connection and destroyed by the scale after measurement completion.</p>
+<p>For the 8 user information slots stored on the scale:</p>
 <ul>
-<li>By way of registration issued to the scale end to create a new user instruction, when a user is not registered in the device for the first time using the device measurement, the user needs to register to use the scale end, that is, in the connectUserScaleDevice connected device function config configuration parameters isVisitor is set to false, and the curUser index is not assigned to the registered user; when the device registration is completed, the callback will inform the registered user of the storage pit value allocated at the scale end, that is, the index field in the user object in the registerUserComplete callback function, after getting the index, it is recommended to form an association between the unique standard, index, and mac of the measuring user and store them at the server level.</li>
-<li>When a registered user successfully connects to Bluetooth again before sending a deletion command to the scale, they can directly measure by accessing the index without duplicate registration. That is, the isVisitor in the config configuration parameter in the connectUserScaleDevice connected device function is set to false, and the index of curUser is filled in the index field corresponding to the user of the device</li>
-<li>When you need to delete a registered user in the device, the config configuration parameter userlist in the connectUserScaleDevice connected device, note that the scale end users who are not in this data will be deleted, and ensure the correctness of the user object index in the userlist
-For visitors to the scale end:</li>
-<li>Visitors can also be used directly on the scale without registration. However, this method measures in offline mode, and the device cannot automatically recognize which user is measuring and display indicators such as BMI and body fat percentage on the scale. When using visitors, simply set isVisitor in the configuration parameters in the config function of the connectUserScaleDevice connected device to true
-Scale end automatically recognizes user logic.</li>
-<li>The scale measures in offline mode. By polling the measured weight with the registered users on the scale, if the absolute difference between the benchmark weight of only one user and the current measured weight is 2kg, it is considered as the user&apos;s measurement data. The user information is used for calculation, and the BMI and body fat rate are displayed on the scale surface. The measurement data is stored on the scale and uploaded when the user completes the next Bluetooth connection measurement. The benchmark weight of the registered user will be updated every time the Bluetooth connection accesses the user to complete the measurement. At the same time, if the measurement in offline mode is recognized as the user&apos;s measurement, it will also be updated</li>
-<li>When the measuring device fails to recognize a specific user in offline mode, the measurement data will be stored as unknown stored data at the scale end and will be recalled upon completion of any Bluetooth connection measurement </li>
+<li><p>Registration is used to send a command to the scale to create a new user. When a user who has not been registered on this device uses it for the first time, they need to register with the scale. This is done by setting isVisitor to false in the config parameter of the connectUserScaleDevice function, and leaving the curUser&apos;s index unassigned for user registration. When device registration is complete, a callback will inform of the storage slot value assigned by the scale to this registered user, which is the index field in the user object of the registerUserComplete callback function. After obtaining the index, it is recommended to associate and store the user&apos;s unique identifier, index, and mac address on the server.</p>
+</li>
+<li><p>When a registered user connects via Bluetooth again before issuing a deletion command to the scale, they can directly measure by accessing via index without re-registering. This is done by setting isVisitor to false in the config parameter of the connectUserScaleDevice function, and filling in the index field of curUser with the index corresponding to this user on this device.</p>
+</li>
+<li><p>When you need to delete a user already registered on the device, use the userlist in the config parameter of the connectUserScaleDevice function. Note that scale-side users not included in this data will be deleted, so ensure the correctness of the user object index in the userlist.</p>
+</li>
 </ul>
-<h1 id="3-plugin-access-steps">3. Plugin Access Steps</h1>
+<p>For scale-side guests:</p>
+<ul>
+<li>You can also directly use the scale-side guest mode without registration. However, in offline mode measurements, the device cannot automatically identify which user is measuring and therefore cannot display indicators such as BMI and body fat percentage on the scale surface. To use guest mode, simply set isVisitor to true in the config parameter of the connectUserScaleDevice function.</li>
+</ul>
+<p>Scale-side automatic user identification logic:</p>
+<ul>
+<li><p>When the scale measures in offline mode, it polls through the measured weight result against the registered users on the scale. If the absolute difference between the reference weight of only one user and the current measured weight is within 2kg, it is considered to be that user&apos;s measurement data. The scale uses that user&apos;s information for calculation, displays BMI and body fat percentage on the scale surface, and stores the measurement data on the scale. This data is uploaded when that user next connects via Bluetooth to complete a measurement. The registered user&apos;s reference weight is updated each time a Bluetooth connection accesses that user and completes a measurement, and is also updated when offline mode measurements identify that user.</p>
+</li>
+<li><p>When the device cannot identify a specific user during offline mode measurement, this measurement data is stored as unknown stored data on the scale and is returned as a callback upon completion of any subsequent Bluetooth connection measurement.</p>
+</li>
+</ul>
+<h2 id="22-workflow-illustration">2.2 Workflow Illustration</h2>
+<p><img src="../images/eight_scale_flowchart.png" alt=""></p>
+<h2 id="23-measurement-data-processing">2.3 Measurement Data Processing</h2>
+<p>If the newEightModel field in the QNScaleData measurement data object is 1, you can determine whether this measurement data is abnormal through the eightIsAbnormal field. If abnormal, you can further determine the specific abnormal reason through the eightReasonMask field, thereby providing users with friendly UI prompts at the business level, explaining the reason for this abnormal measurement and guiding correct measurement posture. For details, please refer to <a href="../attouched_list/eight_exception_tip.html">Appendix - Eight Electrode Abnormal Measurement Prompts</a></p>
+<p>When receiving measurement data, the business layer can also make its own judgment about indicator value differences (for example, compared to the previous measurement data, if weight differs by 4kg or body fat percentage differs by 3%, it can be considered an abnormal measurement), and prompt the user whether to save or remeasure.</p>
+<p>When saving measurement data at the business level, you need to additionally save the hmac and newEightModel fields from the measurement data for judgment and input parameters during the next connection measurement.</p>
+<h1 id="3-plugin-integration-steps">3. Plugin Integration Steps</h1>
 <h3 id="ios-integration-guide"><a href="eight_electrode_scale_ios.html">iOS Integration Guide</a></h3>
 <h3 id="android-integration-guide"><a href="eight_electrode_scale_android.html">Android Integration Guide</a></h3>
-<h1 id="4-device-measurement-metrics">4. Device Measurement Metrics</h1>
-<p>For 8-electrode devices, the SDK will output the following 50 metrics by default: weight&#x3001;BMI&#x3001;body fat rate&#x3001;fat mass&#x3001;subcutaneous fat&#x3001;subcutaneous fat mass&#x3001;visceral fat&#x3001;body water rate&#x3001;water content&#x3001; muscle rate&#x3001;skeletal muscle mass&#x3001;smi&#x3001;bone mass&#x3001; mineral salt rate&#x3001;BMR&#x3001;body type&#x3001;protein&#x3001;protein mass&#x3001;lean body weight&#x3001;muscle mass&#x3001;muscle mass rate&#x3001;metabolic age&#x3001;health score&#x3001;waist-hip ratio&#x3001;obesity degree&#x3001;obesity level&#x3001;stand weight&#x3001;weight control&#x3001;fat control&#x3001;muscle control&#x3001;left upper limb muscle weight&#x3001;right upper limb muscle weight&#x3001;trunk muscle weight &#x3001;lower left muscle weight&#x3001;lower right muscle weight&#x3001;left upper limb fat mass&#x3001;right upper limb fat mass&#x3001;trunk fat mass&#x3001;left leg fat mass&#x3001;right leg fat mass&#x3001;right arm muscle rate&#x3001;left arm muscle ratio&#x3001;sinew trunk ratio&#x3001;left leg muscle ratio &#x3001;right lower limb muscle ratio&#x3001;left upper limb fat&#x3001;right upper limb fat&#x3001;trunk fat &#x3001;right leg fat&#x3001;left leg fat. When performing device integration, you can retrieve and save specific values as needed.</p>
-<h1 id="5-measure-abnormal-ui-prompt">5. Measure abnormal UI prompt</h1>
-<p>If the page displays abnormally after the jump, you can refresh the webpage.
-<a href="../attouched_list/eight_exception_tip.html">Schedule-Eight Electrode Abnormal Measurement Prompts</a></p>
-<h1 id="6-measurement-report-template">6. Measurement Report Template</h1>
-<p>For 8-electrode measurement reports, we provide two types of templates: a web-based deep analysis report and a PDF report, both available in 34-metric and 50-metric versions to shorten the development cycle. You can generate previews or compiled outputs for viewing by following the instructions in the README.md file within the provided template project (please contact your business manager to obtain the project template). For the 50-metric version, two additional parameters, show_50_flag and whr, are required; please refer to the template project for details. If you prefer to develop reports using iOS/Android native technology stacks, you can obtain our native metric standard library from the business manager, which outputs all the metric information involved in the reports.</p>
-<p>If you have minor adjustment requirements for the template report style, you can directly modify the layout within our template project. If you plan to adopt a completely new style, you can extract the eight-electrodes-report-standard file located under the libs folder in the project template. This file outputs all the metric standards involved in the reports.</p>
+<h1 id="4-device-measurement-indicators">4. Device Measurement Indicators</h1>
+<p>For eight-electrode devices, the SDK will uniformly output the following 50 indicators by default: weight, BMI, body fat percentage, fat mass, subcutaneous fat percentage, subcutaneous fat mass, visceral fat level, body water percentage, body water mass, skeletal muscle percentage, skeletal muscle mass, limb skeletal muscle index, bone mass, bone mass percentage, basal metabolic rate, body type, protein percentage, protein mass, lean body mass, muscle mass, muscle mass percentage, body age, score, waist-hip ratio, obesity degree, obesity level, target weight, weight control, fat control, muscle control, left arm muscle mass, right arm muscle mass, trunk muscle mass, left leg muscle mass, right leg muscle mass, left arm fat mass, right arm fat mass, trunk fat mass, left leg fat mass, right leg fat mass, left arm muscle percentage, right arm muscle percentage, trunk muscle percentage, left leg muscle percentage, right leg muscle percentage, left arm fat percentage, right arm fat percentage, trunk fat percentage, trunk fat percentage, left leg fat percentage. When integrating the device, you can retrieve and save values as needed.</p>
+<h1 id="5-measurement-abnormal-ui-prompts">5. Measurement Abnormal UI Prompts</h1>
+<p>If the page displays abnormally after jumping, you can refresh the webpage.
+<a href="../attouched_list/eight_exception_tip.html">Appendix - Eight Electrode Abnormal Measurement Prompts</a></p>
+<h1 id="6-measurement-report-templates">6. Measurement Report Templates</h1>
+<p>For eight-electrode measurement reports, we provide two template versions for both Web-based deep analysis reports and PDF reports with 34 indicators and 50 indicators, simplifying the development cycle. You can generate previews or view compiled products according to the README.md guide in the template project we provide (please contact your business manager to obtain the project template). For 50 indicators, you need to add show_50_flag and whr parameters; see the template project for details. If you need to develop the corresponding reports using iOS/Android native technology stacks, you can obtain our native indicator standard library from your business manager, which will output all indicator information involved in the reports.</p>
+<p>If you have minor adjustment needs for the template report style, you can directly modify the layout in our template project. If you plan to adopt a completely new style, you can also extract the eight-electrodes-report-standard file from the libs folder in the project template, which will output all indicator standards involved in the reports.</p>
 <blockquote>
-<p>Note: 50 metrics require SDK upgrade to V2.32.0 or higher.</p>
+<p>Note: 50 indicators require SDK upgrade to V2.32.0 or higher</p>
 </blockquote>
-<p><strong>36-Indicator Report</strong></p>
-<p><strong>Deep Analysis Report&#xFF1A;</strong>
+<p><strong>34 Indicator Report</strong></p>
+<p><strong>Deep Analysis Report Style:</strong>
 <img src="../images/eight_electrode_scale_report.png" alt=""></p>
-<p><strong>PDF Report&#xFF1A;</strong>
+<p><strong>PDF Report Style:</strong>
 <img src="../images/eight_electrode_scale_pdf.png" alt=""></p>
-<p><strong>50-Indicator Report</strong></p>
-<p><strong>Deep Analysis Report&#xFF1A;</strong>
+<p><strong>50 Indicator Report</strong></p>
+<p><strong>Deep Analysis Report Style:</strong>
 <img src="../images/eight_electrode_scale_report_50.png" alt=""></p>
-<p><strong>PDF Report&#xFF1A;</strong>
+<p><strong>PDF Report Style:</strong>
 <img src="../images/eight_electrode_scale_pdf.png" alt="">
 <img src="../images/eight_electrode_scale_pdf_2.png" alt=""></p>
 
@@ -1583,7 +1597,7 @@ Scale end automatically recognizes user logic.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"next":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"previous":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale.md","mtime":"2026-07-09T01:36:56.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-09T08:37:56.972Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"next":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"previous":{"title":"Common Bluetooth scale","level":"1.4.1","depth":2,"path":"flow/ble_scale.md","ref":"flow/ble_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale.md","mtime":"2026-07-09T12:28:27.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-09T12:30:55.675Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1595,10 +1609,6 @@ Scale end automatically recognizes user logic.</li>
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
