@@ -11,7 +11,6 @@ WSP device configuration class, which controls WSP operation,**This class is dep
 | curUser     | [QNUser](./QNUser.md)             |Current measurement user|
 | isRegist    | Boolean                           |Whether user registration is required, with the isChange attribute, only one of them is allowed to be true|
 | isChange    | Boolean                           |Whether user information needs to be modified, and the isRegist attribute, only one of which is true|
-| isVisitor   | Boolean                           |Whether to use visitors for measurement, it is not necessary to set isRegist and isChange when using visitors for measurement, and [QNUser](./QNUser.md) does not need to set index、secret           |
 | dataUrl     | String                            |Data transmission address, only works when wifiConfig has value, otherwise it can be set to null, the format requires `http://hostname:port/path/`, the maximum length is 128 bytes|
 | otaUrl      | String                            |OTA upgrade address, only works when wifiConfig has value, otherwise it can be set to null, the format requires `protocol://hostname[:port]/path/`, the maximum length is 128 bytes|
 | encryption  | String                            |The communication key must be 16 bytes, and only works if wifiConfig has a value, otherwise it can be set to null|

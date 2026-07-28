@@ -1676,22 +1676,15 @@ sdkConfig.unit = 0; //0-kg, 1-lb, 2-Jin, 3-st:lb, 4-st,
 sdkConfig.save();
 
 QNUserScaleConfig config = new QNUserScaleConfig();
-//List of registered scale users. During this connection, the scale will delete scale users not included in this array
+//1. List of registered scale users. During this connection, the scale will delete scale users not included in this array
 ArrayList&lt;QNUser&gt; deviceUserList = new ArrayList&lt;&gt;();
 config.setUserlist(deviceUserList);
 
-//The following 3 descriptions correspond to different business logic, integrators configure as needed
-//1. If using guest mode (i.e., no need to register user on the scale, the scale will not save this user&apos;s information), note that this field is mutually exclusive with user.index, isVisitor takes priority
-//When this value is set to true, it means guest mode is used, and config.setRegist(boolean) and config.setChange(boolean) settings will be ignored
-config.setVisitor(true)
-int index = 0;
-
-//2. If not using guest mode, then you need to tell the scale whether to register a user or access a scale user during this connection
+//2. You need to tell the scale whether to register a user or access a scale user during this connection
 //If registering a scale user
 //Before registering a user, you need to verify whether the scale&apos;s user slots are full (the scale can store up to 8 users), which can be determined by QNBleDevice.this.getRegisteredUserNum()
 //After successfully registering a scale user, the SDK will get the user.index returned by the scale, see registerUserComplete callback function.
 //After successfully registering a scale user, you can receive real-time weight data and result data from the scale
-config.setVisitor(false)
 config.setRegist(true)
 config.setChange(false)
 int index = 0;
@@ -1699,7 +1692,6 @@ int index = 0;
 //3. If accessing a scale user
 //The user information passed in when accessing a user will update the corresponding information saved by the scale. For example, if the scale saved 170cm for this user&apos;s height, and 171cm is passed in this time, the scale will update it to 171cm
 //After successfully accessing a scale user, you can receive real-time weight data and result data from the scale
-config.setVisitor(false)
 config.setRegist(false)
 config.setChange(true)
 int index = 1; //Valid range [1,8], represents which position on the scale the user is accessing. This value is returned by the scale when registering a user, see registerUserComplete callback function.
@@ -1826,12 +1818,11 @@ bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
 
     <span class="hljs-comment">// Current access user stored data and unknown stored callback, storedDataList is stored data list, determine whether it is unknown measurement data through isDataComplete in QNScaleStoreData object, false is unknown measurement data, true is known measurement data</span>
 
-    <span class="hljs-comment">//1. For guest mode, all are unknown stored data;</span>
-    <span class="hljs-comment">//2. For user management mode, there are known stored data (i.e., stored data belonging to the current access user) and unknown stored data</span>
-    <span class="hljs-comment">//3. For unknown measurement data, you can notify related APP users to claim it, i.e., let APP users choose whether this data is theirs</span>
-    <span class="hljs-comment">//4. Converting stored data to measurement data is divided into two steps:</span>
-        <span class="hljs-comment">//4.1 Set the owner of this stored data (known stored data does not need this step) [storeData setUser:&lt;#(QNUser *)#&gt;];</span>
-        <span class="hljs-comment">//4.2 Convert stored data to measurement data [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]</span>
+    <span class="hljs-comment">//1. There are known stored data (i.e., stored data belonging to the current access user) and unknown stored data</span>
+    <span class="hljs-comment">//2. For unknown measurement data, you can notify related APP users to claim it, i.e., let APP users choose whether this data is theirs</span>
+    <span class="hljs-comment">//3. Converting stored data to measurement data is divided into two steps:</span>
+        <span class="hljs-comment">//3.1 Set the owner of this stored data (known stored data does not need this step) [QNScaleStoreData setUser:&lt;#(QNUser *)#&gt;];</span>
+        <span class="hljs-comment">//3.2 Convert stored data to measurement data [QNScaleStoreData generateScaleData: lastValidEightHmac]</span>
     <span class="hljs-comment">//Note: lastValidEightHmac is the hmac of the data owner&apos;s previous (measurement where body fat percentage &gt; 0 and is of the same type of eight-electrode device) measurement data, same type can be determined by QNScaleData.newEightModel attribute</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onGetStoredScale(QNBleDevice device, List&lt;QNScaleStoreData&gt; storedDataList) {
@@ -1842,7 +1833,7 @@ bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
                 unknowStoreDataList.add(storeData);
             } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">//Known stored data for current user, this stored data can be directly attributed to this user</span>
-                QNScaleData scaleData = storeData.generateScaleData();
+                QNScaleData scaleData = storeData.generateScaleData(lastValidEightHmac);
                 <span class="hljs-keyword">for</span> (QNScaleItemData item: scaleData.getAllItem()) {
                     item.type <span class="hljs-comment">//Indicator type, see QNScaleType</span>
                     item.value <span class="hljs-comment">//Indicator value</span>
@@ -1930,7 +1921,7 @@ QNScaleData scaleData = mQNBleApi.calculateScaleDataByHmac(user, hmac,lastHmac);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"next":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-09T08:00:02.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-10T07:11:32.490Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"next":{"title":"Common Bluetooth Scale-Self-managed Bluetooth","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-28T06:56:58.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-28T07:00:50.807Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

@@ -119,8 +119,6 @@
 
 2020-03-03
 
-- [增加访客模式的说明](../flow/ble_scale_wsp.md)
-- [增加使用访客测量的控制 isVisitor](../api/QNWspConfig.md)
 - [增加存储数据是否完整的标识 isDataComplete](../api/QNScaleStoreData.md)
 - [增加 Wsp 设备监听接口 QNWspScaleDataListener](../api/QNWspScaleDataListener.md)
 

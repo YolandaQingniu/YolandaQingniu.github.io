@@ -1615,18 +1615,6 @@ user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//User birthday
 user.hmac = lastValidEightHmac; //Note: This must be the hmac of the user&apos;s most recent previous measurement data where body fat percentage is greater than 0 and the device is the same type of eight-electrode device. Whether the type is the same can be determined by the QNScaleData.newEightModel property.
 
 
-/*
-There are generally two measurement modes: user management mode and guest mode. Which mode to use depends on your app&apos;s business scenario.
-*/
-//1. Guest mode
-/*
-Guest mode can be understood as temporary scale use. The user information passed in only takes effect during this Bluetooth connection, and the scale will not save it.
-
-Note: The config.isVisitor field and user.index are mutually exclusive. isVisitor has higher priority. In guest mode, user.index can keep its default value. user.index is designed for user management mode.
-*/
-config.isVisitor = YES; //Whether to use guest mode. YES - guest; NO - non-guest, namely user management mode.
-config.curUser = user&#xFF1B;
-
 //2. User management mode
 //2.1 Register user
 /*
@@ -1701,7 +1689,7 @@ bleApi.connectionChangeListener = self;
 <pre><code class="lang-objective-c">//Set the listener for device data.
 bleApi.dataListener = self;
 
-//Callback when scale-side user registration succeeds, returning the user slot assigned by the scale. This applies to user management mode; guest mode can ignore this method.
+//Callback when scale-side user registration succeeds, returning the user slot assigned by the scale
 - (void)registerUserComplete:(QNBleDevice *)device user:(QNUser *)user {
     //The slot assigned by the scale during user registration. The app should associate and save this slot with the user ID and device MAC. This index is required next time the user connects to this device to access the scale-side user for measurement.
     int index = user.index;
@@ -1790,12 +1778,12 @@ typedef NS_ENUM(NSInteger, QNScaleEvent) {
 - (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
     /*
     Use the isDataComplete property in the QNScaleStoreData object to determine whether the data is unknown stored data. false means unknown stored data, and true means known stored data.
-    1. In guest mode, all data is unknown stored data.
-    2. In user management mode, there is known stored data, namely stored data belonging to the currently accessed user, and unknown stored data.
-    3. For unknown measurement data, you can notify relevant app users for claiming, meaning the app user chooses whether this data belongs to them.
-    4. Converting stored data to measurement data has two steps:
-    4.1 Set the owner of the stored data. This step is not required for known stored data. [storeData setUser:&lt;#(QNUser *)#&gt;];
-    4.2 Convert the stored data to measurement data. [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]
+
+    1. There is known stored data, namely stored data belonging to the currently accessed user, and unknown stored data.
+    2. For unknown measurement data, you can notify relevant app users for claiming, meaning the app user chooses whether this data belongs to them.
+    3. Converting stored data to measurement data has two steps:
+        3.1 Set the owner of the stored data. This step is not required for known stored data. [storeData setUser:&lt;#(QNUser *)#&gt;];
+        3.2 Convert the stored data to measurement data. [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]
     Note: lastValidEightHmac is the hmac of the data owner&apos;s most recent previous measurement data where body fat percentage is greater than 0 and the device is the same type of eight-electrode device. Whether the type is the same can be determined by the QNScaleData.newEightModel property.
     */
     NSMutableArray&lt;QNScaleStoreData *&gt; *unknowStoreDataList = [NSMutableArray array];
@@ -1891,7 +1879,7 @@ QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEigh
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"next":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-09T12:30:29.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-10T07:11:32.490Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"next":{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"Eight electrode scale","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS Integration Guide","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android Integration Guide","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-28T06:58:10.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-28T07:00:50.807Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

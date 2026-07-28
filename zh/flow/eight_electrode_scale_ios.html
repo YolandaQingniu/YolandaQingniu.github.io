@@ -1632,7 +1632,7 @@ config:&#x8FDE;&#x63A5;&#x7528;&#x6237;&#x79E4;&#x8BBE;&#x5907;&#x65F6;&#x7684;&
 //config&#x53C2;&#x6570;&#x793A;&#x4F8B;&#xFF1A;
 QNUserScaleConfig *config = [[QNUserScaleConfig alloc] init];
 
-//&#x6B64;&#x6B21;&#x6D4B;&#x91CF;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+//1. &#x6B64;&#x6B21;&#x6D4B;&#x91CF;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
 QNUser *user = [[QNUser alloc] init];
 user.userId = &quot;&quot;;//&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#x7528;&#x6237;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4E2D;&#x7528;&#x6237;&#x533A;&#x5206;&#x5224;&#x65AD;
 user.height = 170&#xFF1B;//&#x7528;&#x6237;&#x8EAB;&#x9AD8;&#xFF0C;&#x5355;&#x4F4D;cm
@@ -1640,18 +1640,6 @@ user.gender = @&quot;male&quot;&#xFF1B;//&#x7528;&#x6237;&#x6027;&#x522B;&#xFF0C
 user.birthday = [NSDate dateWithTimeIntervalSince1970:631199317];//&#x7528;&#x6237;&#x751F;&#x65E5;&#xFF0C;&#x5165;&#x53C2;&#x662F;&#x79D2;&#x7EA7;&#x65F6;&#x95F4;&#x6233;
 user.hmac = lastValidEightHmac; //&#x6CE8;&#x610F;&#xFF1A;&#x9700;&#x8981;&#x662F;&#x8BE5;&#x7528;&#x6237;&#x6700;&#x8FD1;&#x4E00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;
 
-
-/*
-&#x6D4B;&#x91CF;&#x6A21;&#x5F0F;&#x4E00;&#x822C;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F; &#x548C; &#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x54EA;&#x4E00;&#x79CD;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8D35;&#x53F8;&#x7684;APP&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x51B3;&#x5B9A;
-*/
-//1. &#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;
-/*
-&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E34;&#x65F6;&#x7528;&#x79E4;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x53EA;&#x5728;&#x6B64;&#x6B21;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x8FC7;&#x7A0B;&#x4E2D;&#x751F;&#x6548;&#xFF0C;&#x79E4;&#x7AEF;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58;
-
-&#x6CE8;&#x610F;&#xFF1A;config.isVisitor&#x5B57;&#x6BB5;&#x4E0E;user.index&#x662F;&#x4E92;&#x65A5;&#x7684;&#xFF0C;isVisitor&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF0C;&#x5373;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;user.index&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#x5373;&#x53EF;&#xFF08;user.index&#x662F;&#x4E3A;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#x6240;&#x8BBE;&#x8BA1;&#x7684;&#x5B57;&#x6BB5;&#xFF09;
-*/
-config.isVisitor = YES; //&#x662F;&#x5426;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF1B;YES-&#x8BBF;&#x5BA2;&#xFF0C;NO-&#x975E;&#x8BBF;&#x5BA2;&#xFF0C;&#x5373;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF1B;
-config.curUser = user&#xFF1B;
 
 //2. &#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;
 //2.1 &#x6CE8;&#x518C;&#x7528;&#x6237;
@@ -1727,7 +1715,7 @@ bleApi.connectionChangeListener = self;
 <pre><code class="lang-objective-c">//&#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#xFF08;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x53D8;&#x5316;&#xFF09;
 bleApi.dataListener = self;
 
-//&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;&#xFF0C;&#x56DE;&#x8C03;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x7528;&#x6237;&#x5751;&#x4F4D;&#x3010;&#x9002;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x8BE5;&#x65B9;&#x6CD5;&#x3011;
+//&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x6210;&#x529F;&#xFF0C;&#x56DE;&#x8C03;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x7528;&#x6237;&#x5751;&#x4F4D;
 - (void)registerUserComplete:(QNBleDevice *)device user:(QNUser *)user {
     //&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x5751;&#x4F4D;&#x3002;app&#x7AEF;&#x5E94;&#x5C06;&#x8BE5;&#x5751;&#x4F4D;&#x3001;&#x7528;&#x6237;id&#x3001;&#x8BBE;&#x5907;mac&#x8FDB;&#x884C;&#x5173;&#x8054;&#x4FDD;&#x5B58;&#x3002;&#x4E0B;&#x6B21;&#x8BE5;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x8BE5;&#x8BBE;&#x5907;&#x65F6;&#x9700;&#x7528;&#x5230;&#x8BE5;index&#x8FDB;&#x884C;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6D4B;&#x91CF;
     int index = user.index;
@@ -1816,12 +1804,12 @@ typedef NS_ENUM(NSInteger, QNScaleEvent) {
 - (void)onGetStoredScale:(QNBleDevice *)device data:(NSArray &lt;QNScaleStoreData *&gt; *)storedDataList {
     /*
     &#x901A;&#x8FC7;QNScaleStoreData&#x5BF9;&#x8C61;&#x4E2D;&#x7684;isDataComplete&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;false&#x4E3A;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;true&#x4E3A;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF1B;
-    1. &#x9488;&#x5BF9;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x90FD;&#x662F;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;;
-    2. &#x9488;&#x5BF9;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF08;&#x5373;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF09;&#x548C;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;
-    3. &#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;APP&#x7528;&#x6237;&#x8FDB;&#x884C;&#x8BA4;&#x9886;&#xFF0C;&#x5373;&#x8BA9;APP&#x7528;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x7684;
-    4. &#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;
-        4.1 &#x8BBE;&#x7F6E;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x62E5;&#x6709;&#x8005;(&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x4E00;&#x6B65;) [storeData setUser:&lt;#(QNUser *)#&gt;];
-        4.2 &#x5C06;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;  [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]
+
+    1. &#x6709;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF08;&#x5373;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF09;&#x548C;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;
+    2. &#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;APP&#x7528;&#x6237;&#x8FDB;&#x884C;&#x8BA4;&#x9886;&#xFF0C;&#x5373;&#x8BA9;APP&#x7528;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x81EA;&#x5DF1;&#x7684;
+    3. &#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;
+        3.1 &#x8BBE;&#x7F6E;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x62E5;&#x6709;&#x8005;(&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x4E00;&#x6B65;) [storeData setUser:&lt;#(QNUser *)#&gt;];
+        3.2 &#x5C06;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;  [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]
         &#x6CE8;&#x610F;&#xFF1A;lastValidEightHmac&#x662F;&#x6570;&#x636E;&#x62E5;&#x6709;&#x8005;&#x7684;&#x6700;&#x8FD1;&#x4E00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x5927;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x516B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x5224;&#x65AD;
     */
     NSMutableArray&lt;QNScaleStoreData *&gt; *unknowStoreDataList = [NSMutableArray array];
@@ -1917,7 +1905,7 @@ QNScaleData scaleData = [bleApi calculateScaleDataByHmac:user hmac:hmac lastEigh
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"next":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"抽拉式八电极","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-09T12:30:29.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-10T07:11:32.490Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"next":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]},"previous":{"title":"抽拉式八电极","level":"1.4.2","depth":2,"path":"flow/eight_electrode_scale.md","ref":"flow/eight_electrode_scale.md","articles":[{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"path":"flow/eight_electrode_scale_android.md","ref":"flow/eight_electrode_scale_android.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_ios.md","mtime":"2026-07-28T06:27:55.820Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-28T07:00:50.807Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>

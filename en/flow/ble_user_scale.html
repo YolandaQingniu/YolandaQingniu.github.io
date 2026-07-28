@@ -1513,8 +1513,6 @@
 <p>When operating the scale, you need to access the registered user first, and only after the access is successful can you perform corresponding operations, such as modifying user information, connecting to Bluetooth for measurement, etc.</p>
 </li>
 </ul>
-<h2 id="guest-mode-measurements">Guest Mode Measurements</h2>
-<p>The guest mode is a measurement method of a public channel provided by the scale. This method can be used directly without registering . In the guest mode , the user account is temporary. Its existence is from connection to disconnection. When the device is disconnected, the temporary user account will be destroyed .Besides,it can&#x2019;t generate,receive and store data .</p>
 <h2 id="device-protocol-brief">Device Protocol Brief</h2>
 <p>Aspects covered by the agreement:</p>
 <ul>
@@ -1772,14 +1770,12 @@ android.permission.ACCESS_FINE_LOCATION</p>
 </code></pre><h3 id="connect-device-accessregistration-measurement">Connect device access/registration measurement</h3>
 <h4 id="1-connect-the-device">1. Connect the device</h4>
 <p>After the APP receives the SDK callback device, it can judge whether it is a device that needs to be connected (this belongs to the business logic of the APP), and realize the connection device by calling the <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> method. .</p>
-<p>When we connects a device,  <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> passes the parameter <a href="../api/QNUser.html#Attributes">QNUserScaleConfig.curUser.index</a> , and the user index is greater than 0, it will be considered that this connection goes through the access measurement process When the user index is equal to 0, the SDK will consider that this connection needs to go through the registration measurement process.
-Of course, by setting <a href="../api/QNUserScaleConfig.html#Parameters">QNUserScaleConfig.isVisitor</a>, the SDK will consider this measurement as a visitor visit measurement, and the scale will not assign an index to the user to register the scale user. The transmitted user information is only valid for this measurement.</p>
+<p>When we connects a device,  <a href="../api/QNBleApi.html#connectuserscaledevice">QNBleApi.connectUserScaleDevice</a> passes the parameter <a href="../api/QNUser.html#Attributes">QNUserScaleConfig.curUser.index</a> , and the user index is greater than 0, it will be considered that this connection goes through the access measurement process When the user index is equal to 0, the SDK will consider that this connection needs to go through the registration measurement process.</p>
 <p>android example:</p>
 <pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDeviceDiscover</span><span class="hljs-params">(QNBleDevice qnBleDevice)</span> </span>{
   <span class="hljs-comment">// Scanned bluetooth device callback</span>
   QNUserScaleConfig mQNUserScaleConfig= <span class="hljs-keyword">new</span> QNUserScaleConfig();
   mQNUserScaleConfig.setCurUser(qnUser);
-  <span class="hljs-comment">//mQNUserScaleConfig.setVisitor(true);</span>
   mQNBleApi.connectUserScaleDevice(mBleDevice,mQNUserScaleConfig,mCallback);
 }
 </code></pre>
@@ -1790,7 +1786,6 @@ Of course, by setting <a href="../api/QNUserScaleConfig.html#Parameters">QNUserS
         QNUserScaleConfig *config = userConfig;
         config.user.index = userIndex;
         config.user.secret = userSecret;
-        //config.isVisitor = YSE;
         [[QNBleApi sharedBleApi] connectUserScaleDevice:device config:config callback:^(NSError *error) {
         }];
     }
@@ -1927,7 +1922,7 @@ android example:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.5","depth":2,"next":{"title":"Slim User Scale","level":"1.4.6","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.4","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2025-11-07T10:21:20.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-10T07:11:32.490Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"User Scale","level":"1.4.5","depth":2,"next":{"title":"Slim User Scale","level":"1.4.6","depth":2,"path":"flow/slim_user_scale.md","ref":"flow/slim_user_scale.md","articles":[]},"previous":{"title":"Kitchen scale","level":"1.4.4","depth":2,"path":"flow/kitchen_scale.md","ref":"flow/kitchen_scale.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"flow/ble_user_scale.md","mtime":"2026-07-28T06:53:17.905Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-28T07:00:50.807Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

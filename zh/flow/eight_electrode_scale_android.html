@@ -1696,22 +1696,15 @@ sdkConfig.unit = 0; //0-kg&#xFF0C;1-lb&#xFF0C;2-&#x65A4;&#xFF0C;3-st:lb&#xFF0C;4
 sdkConfig.save();
 
 QNUserScaleConfig config = new QNUserScaleConfig();
-//&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x5728;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x5411;&#x79E4;&#x7AEF;&#x5220;&#x9664;&#x8BE5;&#x6570;&#x7EC4;&#x4E0D;&#x5305;&#x542B;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;
+//1&#x3001;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x5728;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x4F1A;&#x5411;&#x79E4;&#x7AEF;&#x5220;&#x9664;&#x8BE5;&#x6570;&#x7EC4;&#x4E0D;&#x5305;&#x542B;&#x7684;&#x79E4;&#x7AEF;&#x7528;&#x6237;
 ArrayList&lt;QNUser&gt; deviceUserList = new ArrayList&lt;&gt;();
 config.setUserlist(deviceUserList);
 
-//&#x4EE5;&#x4E0B;3&#x79CD;&#x63CF;&#x8FF0;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x63A5;&#x5165;&#x65B9;&#x6309;&#x9700;&#x914D;&#x7F6E;
-//1&#x3001;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;(&#x5373;&#x65E0;&#x9700;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#xFF0C;&#x79E4;&#x7AEF;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;), &#x6CE8;&#x610F;&#x8BE5;&#x5B57;&#x6BB5;&#x4E0E;user.index&#x4E2D;&#x4E92;&#x65A5;&#xFF0C;&#x4F18;&#x5148;&#x53D6;isVisitor
-//&#x8BE5;&#x503C;&#x8BBE;&#x4E3A;true&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EE3;&#x8868;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#xFF0C;&#x4F1A;&#x5FFD;&#x7565;config.setRegist(boolean)&#x4EE5;&#x53CA;config.setChange(boolean)&#x8BBE;&#x7F6E;
-config.setVisitor(true)
-int index = 0;
-
-//2&#x3001;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x544A;&#x77E5;&#x79E4;&#x7AEF;&#xFF0C;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x662F;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x8FD8;&#x662F;&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x7528;&#x6237;
+//2&#x3001;&#x9700;&#x8981;&#x544A;&#x77E5;&#x79E4;&#x7AEF;&#xFF0C;&#x672C;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;&#x662F;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x8FD8;&#x662F;&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x7528;&#x6237;
 //&#x5982;&#x679C;&#x662F;&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x7528;&#x6237;
 //&#x6CE8;&#x518C;&#x2F64;&#x6237;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x6838;&#x5B9E;&#x2F00;&#x4E0B;&#x79E4;&#x8BBE;&#x5907;&#x7684;&#x79E4;&#x7AEF;&#x2F64;&#x6237;&#x662F;&#x5426;&#x5DF2;&#x6EE1;&#xFF08;&#x79E4;&#x7AEF;&#x6700;&#x591A;&#x5B58;&#x50A8;8&#x4E2A;&#x2F64;&#x6237;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;QNBleDevice.this.getRegisteredUserNum()&#x8FDB;&#x2F8F;&#x5224;&#x65AD;
 //&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x2F64;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;SDK&#x4F1A;&#x62FF;&#x5230;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;user.index&#xFF0C;&#x2EC5;registerUserComplete&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;
 //&#x6CE8;&#x518C;&#x79E4;&#x7AEF;&#x2F64;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x5230;&#x79E4;&#x7AEF;&#x7684;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x6570;&#x636E;&#x548C;&#x7ED3;&#x679C;&#x6570;&#x636E;
-config.setVisitor(false)
 config.setRegist(true)
 config.setChange(false)
 int index = 0;
@@ -1719,7 +1712,6 @@ int index = 0;
 //3&#x3001;&#x5982;&#x679C;&#x662F;&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x7528;&#x6237;
 //&#x8BBF;&#x95EE;&#x2F64;&#x6237;&#x4F20;&#x2F0A;&#x7684;&#x2F64;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x4F1A;&#x66F4;&#x65B0;&#x79E4;&#x7AEF;&#x4FDD;&#x5B58;&#x7684;&#x5BF9;&#x5E94;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x79E4;&#x7AEF;&#x9488;&#x5BF9;&#x8BE5;&#x2F64;&#x6237;&#x4FDD;&#x5B58;&#x7684;&#x8EAB;&#x2FBC;&#x662F;170cm&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x6B21;&#x4F20;&#x2F0A;&#x7684;&#x65F6;171cm&#xFF0C;&#x90A3;&#x4E48;&#x79E4;&#x7AEF;&#x5C31;&#x4F1A;&#x66F4;&#x65B0;&#x4E3A;171cm
 //&#x8BBF;&#x95EE;&#x79E4;&#x7AEF;&#x2F64;&#x6237;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x5230;&#x79E4;&#x7AEF;&#x7684;&#x5B9E;&#x65F6;&#x4F53;&#x91CD;&#x6570;&#x636E;&#x548C;&#x7ED3;&#x679C;&#x6570;&#x636E;
-config.setVisitor(false)
 config.setRegist(false)
 config.setChange(true)
 int index = 1; //&#x6709;&#x6548;&#x8303;&#x56F4;[1,8],&#x4EE3;&#x8868;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#x79E4;&#x7AEF;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7528;&#x6237;&#x3002;&#x8BE5;&#x503C;&#x7531;&#x5411;&#x79E4;&#x7AEF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x79E4;&#x7AEF;&#x8FD4;&#x56DE;&#xFF0C;&#x89C1;registerUserComplete&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;
@@ -1846,12 +1838,11 @@ bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
 
     <span class="hljs-comment">// &#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x53CA;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x56DE;&#x8C03;&#xFF0C;storedDataList &#x5B58;&#x50A8;&#x6570;&#x636E;&#x5217;&#x8868;&#xFF0C;&#x901A;&#x8FC7;QNScaleStoreData&#x5BF9;&#x8C61;&#x4E2D;&#x7684;isDataComplete&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;false&#x4E3A;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;true&#x4E3A;&#x5DF2;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;</span>
 
-    <span class="hljs-comment">//1. &#x9488;&#x5BF9;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x90FD;&#x662F;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;;</span>
-    <span class="hljs-comment">//2. &#x9488;&#x5BF9;&#x2F64;&#x6237;&#x7BA1;&#x7406;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF08;&#x5373;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x2F64;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF09;&#x548C;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;</span>
-    <span class="hljs-comment">//3. &#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;APP&#x2F64;&#x6237;&#x8FDB;&#x2F8F;&#x8BA4;&#x9886;&#xFF0C;&#x5373;&#x8BA9;APP&#x2F64;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x2F83;&#x2F30;&#x7684;</span>
-    <span class="hljs-comment">//4. &#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;</span>
-        <span class="hljs-comment">//4.1 &#x8BBE;&#x7F6E;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x62E5;&#x6709;&#x8005;(&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x2F00;&#x6B65;) [storeData setUser:&lt;#(QNUser *)#&gt;];</span>
-        <span class="hljs-comment">//4.2 &#x5C06;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E; [storeData generateScaleDataWithLastEightHmac: lastValidEightHmac]</span>
+    <span class="hljs-comment">//1. &#x6709;&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF08;&#x5373;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x8BBF;&#x95EE;&#x2F64;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF09;&#x548C;&#x672A;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;</span>
+    <span class="hljs-comment">//2. &#x5BF9;&#x4E8E;&#x672A;&#x77E5;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x901A;&#x77E5;&#x76F8;&#x5173;APP&#x2F64;&#x6237;&#x8FDB;&#x2F8F;&#x8BA4;&#x9886;&#xFF0C;&#x5373;&#x8BA9;APP&#x2F64;&#x6237;&#x9009;&#x62E9;&#x8FD9;&#x7B14;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x2F83;&#x2F30;&#x7684;</span>
+    <span class="hljs-comment">//3. &#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF1A;</span>
+        <span class="hljs-comment">//4.1 &#x8BBE;&#x7F6E;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x62E5;&#x6709;&#x8005;(&#x5DF2;&#x77E5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5219;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x2F00;&#x6B65;) [QNScaleStoreData setUser:&lt;#(QNUser *)#&gt;];</span>
+        <span class="hljs-comment">//4.2 &#x5C06;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D4B;&#x91CF;&#x6570;&#x636E; [QNScaleStoreData generateScaleData: lastValidEightHmac]</span>
     <span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF1A;lastValidEightHmac&#x662F;&#x6570;&#x636E;&#x62E5;&#x6709;&#x8005;&#x7684;&#x4E0A;&#x2F00;&#x6761;&#xFF08;&#x6D4B;&#x91CF;&#x4F53;&#x8102;&#x7387;&#x2F24;&#x4E8E;0&#x5E76;&#x4E14;&#x662F;&#x540C;&#x7C7B;&#x578B;&#x2F0B;&#x7535;&#x6781;&#x8BBE;&#x5907;&#x7684;&#xFF09;&#x6D4B;&#x91CF;&#x6570;&#x636E;&#x7684;hmac&#xFF0C;&#x540C;&#x7C7B;&#x578B;&#x53EF;&#x6839;&#x636E;QNScaleData.newEightModel&#x5C5E;&#x6027;&#x8FDB;&#x2F8F;&#x5224;&#x65AD;</span>
     @Override
     <span class="hljs-keyword">public</span> <span class="hljs-built_in">void</span> onGetStoredScale(QNBleDevice device, List&lt;QNScaleStoreData&gt; storedDataList) {
@@ -1862,7 +1853,7 @@ bleApi.connectUserScaleDevice(device, config, new QNResultCallback() {
                 unknowStoreDataList.add(storeData);
             } <span class="hljs-keyword">else</span> {
             <span class="hljs-comment">//&#x5DF2;&#x77E5;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x8BE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x53EF;&#x76F4;&#x63A5;&#x5F52;&#x5C5E;&#x5230;&#x8BE5;&#x7528;&#x6237;&#x4E0B;</span>
-                QNScaleData scaleData = storeData.generateScaleData();
+                QNScaleData scaleData = storeData.generateScaleData(lastValidEightHmac);
                 <span class="hljs-keyword">for</span> (QNScaleItemData item: scaleData.getAllItem()) {
                     item.type <span class="hljs-comment">//&#x6307;&#x6807;&#x7C7B;&#x578B;&#xFF0C;&#x89C1;QNScaleType</span>
                     item.value <span class="hljs-comment">//&#x6307;&#x6807;&#x6570;&#x503C;</span>
@@ -1950,7 +1941,7 @@ QNScaleData scaleData = mQNBleApi.calculateScaleDataByHmac(user, hmac,lastHmac);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"next":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-09T07:47:54.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-10T07:11:32.490Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"Android插件集成指引","level":"1.4.2.2","depth":3,"next":{"title":"普通蓝牙秤-自主管理蓝牙","level":"1.4.3","depth":2,"path":"flow/ble_scale_custom_connect.md","ref":"flow/ble_scale_custom_connect.md","articles":[]},"previous":{"title":"iOS插件集成指引","level":"1.4.2.1","depth":3,"path":"flow/eight_electrode_scale_ios.md","ref":"flow/eight_electrode_scale_ios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mermaid-gb3"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"mermaid-gb3":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"flow/eight_electrode_scale_android.md","mtime":"2026-07-28T06:48:29.350Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-28T07:00:50.807Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
